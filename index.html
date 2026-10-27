@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Unsolved Case — Cold Case Unit</title>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.5/dist/peerjs.min.js"></script>
+<style>
+:root{--bg:#0d0d10;--panel:#17171c;--paper:#e8dcc3;--ink:#1a1712;--accent:#c9a227;--accent2:#7fb3a3;--red:#b3402f;--mut:#9a958a;--line:#3a352c;--hi:#ffd75e}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;background:var(--bg);color:#efe9d8;font-family:Georgia,'Times New Roman',serif;min-height:100%}
+body{font-size:16px}
+body.large-text{font-size:19px} body.huge-text{font-size:22px}
+body.hc{background:#000;color:#fff} body.hc .card,body.hc .panel{background:#000;color:#fff;border-color:#fff}
+body.cb .hotspot{outline:3px solid #0072b2!important} body.cb .linked{outline:3px solid #009e73!important}
+h1,h2,h3{font-family:Georgia,serif;letter-spacing:.04em;margin:.2em 0}
+button{font-family:inherit;cursor:pointer}
+.sans{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+#app{max-width:900px;margin:0 auto;min-height:100vh;position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 50% -10%,#23232e,transparent),var(--bg)}
+.topbar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,13,16,.96);z-index:50}
+.topbar .logo{font-size:20px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+.topbar .sp{flex:1}
+.chip{border:1px solid var(--line);border-radius:20px;padding:5px 10px;background:#1e1e24;color:#efe9d8;font-size:13px}
+.chip.on{background:var(--accent);color:#111;border-color:var(--accent)}
+.btn{display:block;width:100%;padding:14px 16px;margin:8px 0;border-radius:10px;border:1px solid var(--accent);background:var(--accent);color:#111;font-size:17px;font-weight:700}
+.btn.ghost{background:transparent;color:var(--paper);border-color:var(--line)}
+.btn.small{width:auto;display:inline-block;padding:9px 14px;font-size:14px;margin:4px}
+.btn.danger{border-color:var(--red);background:var(--red);color:#fff}
+.btn:disabled{opacity:.45}
+.btn.primary-big{font-size:20px;padding:18px}
+.card{background:linear-gradient(180deg,#1d1d23,#141419);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+.screen{display:none;padding:12px 14px 140px;animation:slideIn .28s ease}
+.screen.active{display:block}
+@keyframes slideIn{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 rgba(255,215,94,0)}50%{box-shadow:0 0 22px rgba(255,215,94,.7)}}
+.glow{animation:glow 1s ease 2}
+.scene{position:relative;height:340px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#1c2a3a,#0f141a 55%,#2a1f14);cursor:crosshair}
+.scene .fog{position:absolute;inset:0;background:radial-gradient(400px 180px at 60% 80%,rgba(201,162,39,.25),transparent),radial-gradient(300px 200px at 20% 20%,rgba(127,179,163,.18),transparent)}
+.scene .loc{position:absolute;left:12px;top:10px;background:rgba(0,0,0,.65);padding:6px 10px;border-radius:8px;font-size:13px}
+.hotspot{position:absolute;width:34px;height:34px;margin:-17px;border-radius:50%;border:2px solid var(--hi);background:rgba(255,215,94,.25);display:flex;align-items:center;justify-content:center;font-size:18px;animation:pulse 1.6s infinite}
+.hotspot.found{background:rgba(127,179,163,.55);border-color:var(--accent2);animation:none}
+.hotspot.hidden-tool{display:none}
+.hotspot.tool-revealed{display:flex;border-color:#7fd4ff;background:rgba(127,212,255,.35)}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.tray{position:fixed;left:0;right:0;bottom:0;max-width:900px;margin:0 auto;background:#141419f2;border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom));z-index:60;display:flex;gap:8px;align-items:center}
+.tray .btn{margin:0}
+.navarrows{position:fixed;bottom:64px;right:10px;z-index:55;display:flex;gap:8px}
+.navarrows button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#1e1e24;color:#fff;font-size:20px}
+.meter{height:10px;background:#2a2a30;border-radius:6px;overflow:hidden;margin:4px 0 10px}
+.meter i{display:block;height:100%;background:var(--accent)}
+.meter.red i{background:var(--red)} .meter.teal i{background:var(--accent2)}
+.casegrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.casecard{border:1px solid var(--line);border-radius:12px;padding:12px;background:#1a1a20;cursor:pointer}
+.casecard.locked{opacity:.55}
+.casecard h3{margin:.1em 0;font-size:17px}
+.stars{color:var(--hi);letter-spacing:2px}
+.toolwheel{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.tool{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#1e1e24;color:#efe9d8;font-size:14px}
+.tool.on{background:var(--accent);color:#111;border-color:var(--accent)}
+.tool.locked{opacity:.4}
+.board{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bcard{border:1px solid var(--line);border-radius:10px;padding:10px;background:#efe6cf;color:#1a1712;cursor:pointer;min-height:64px}
+.bcard.sel{outline:3px solid var(--hi)}
+.bcard.linked{outline:3px solid #2e9e6b;background:#d9efe2}
+.bcard.suspect{background:#e6d3c3}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:flex-end;justify-content:center;z-index:100}
+.modal.open{display:flex}
+.modal .sheet{background:#1c1c22;border:1px solid var(--line);border-radius:16px 16px 0 0;width:100%;max-width:900px;max-height:88vh;overflow:auto;padding:16px 16px 90px}
+input,select,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:#22222a;color:#fff;font-size:16px;margin:6px 0}
+label{font-size:13px;color:var(--mut)}
+.avatar{font-size:52px;text-align:center}
+.chat{max-height:180px;overflow:auto;background:#101014;border:1px solid var(--line);border-radius:8px;padding:8px;font-size:14px}
+.chat p{margin:4px 0}
+.tag{display:inline-block;background:#2a2a30;border-radius:12px;padding:2px 8px;font-size:12px;margin:2px}
+.kbd{font-size:12px;color:var(--mut)}
+.cine{border-radius:12px;padding:18px;background:linear-gradient(180deg,#20242e,#12141a);border:1px solid var(--line);font-size:18px;line-height:1.6}
+.cine img{width:100%;border-radius:8px;max-height:220px;object-fit:cover;display:block;margin-bottom:10px}
+.evimg{width:100%;max-height:200px;object-fit:cover;border-radius:8px}
+.tabs{display:flex;gap:8px;margin:8px 0}
+.tabs button{flex:1;padding:10px;border-radius:8px;border:1px solid var(--line);background:#1e1e24;color:#fff}
+.tabs button.on{background:var(--accent);color:#111}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:120px;background:#222;color:#fff;padding:10px 16px;border-radius:20px;border:1px solid var(--accent);z-index:200;display:none}
+@media(max-width:520px){.casegrid{grid-template-columns:1fr}.scene{height:280px}}
+@media(orientation:landscape) and (max-height:600px){.scene{height:260px}}
+</style></head>
+<body>
+<div id="app">
+<div class="topbar"><span class="logo">🕵️ UNSOLVED CASE</span><span class="sp"></span>
+<span id="avatarMini" class="chip">🕵️</span>
+<button class="chip" onclick="toggleAudio()" id="audioBtn">🔊 Sound: On</button>
+<button class="chip" onclick="openCaseFile()">📁 Case File</button>
+<button class="chip" onclick="showScreen('menu')">☰ Menu</button></div>
+
+<section class="screen active" id="screen-menu">
+<div class="card" style="text-align:center;padding:22px 14px"><div style="font-size:54px">🌫️🚢</div>
+<h1>UNSOLVED CASE</h1><p class="sans" style="color:var(--mut)">Cold Case Unit &mdash; Season 1 &middot; A web detective game</p>
+<img src="images/hero.jpg" alt="Rain-slick harbour at night — a detective on the quay" style="width:100%;border-radius:12px;margin:8px 0" loading="lazy">
+<p>Every clue matters. No timers. No paywall. Six cases, one hidden link.</p>
+<button class="btn primary-big" id="continueBtn" onclick="continueGame()">▶ Continue</button>
+<button class="btn" onclick="showScreen('cases')">🗂️ New Case / Case Select</button>
+<button class="btn ghost" onclick="showScreen('lobby')">👥 Party Lobby (Co-op)</button>
+<button class="btn ghost" onclick="showScreen('settings')">⚙️ Settings</button>
+<button class="btn ghost" onclick="showScreen('about')">ℹ️ About</button>
+<p class="kbd">Web build &mdash; no native app, no real voice chat, no server anti-cheat. PeerJS co-op only.</p></div>
+<div class="card"><h3>🕵️ Your Detective</h3><div class="avatar" id="avatarPreview">🕵️</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+<div><label>Face</label><select id="avFace" onchange="saveAvatar()"><option>🕵️ Classic</option><option>👩‍🦰 Red-haired</option><option>👨‍🦱 Curly</option><option>👩‍🦳 Silver</option><option>🧔 Bearded</option><option>👱‍♀️ Blonde</option></select></div>
+<div><label>Outfit</label><select id="avOutfit" onchange="saveAvatar()"><option>🧥 Trench coat</option><option>👔 Suit</option><option>🧶 Knit + scarf</option><option>👕 Casual</option></select></div>
+<div><label>Coat colour</label><select id="avCoat" onchange="saveAvatar()"><option>🖤 Black</option><option>🤎 Brown</option><option>💚 Olive</option><option>💙 Navy</option></select></div></div>
+<p class="kbd">Your avatar appears in the lobby and on the deduction board header.</p></div>
+<div class="card"><h3>How to play</h3><p class="sans" style="font-size:15px;line-height:1.6">Investigate scenes, use tools, interrogate suspects, link evidence on the board, then accuse: culprit + motive + method + key proof. Swipe left/right or use the ◀ ▶ arrows to move between pages. Hints are free but cost stars. Skipped clues are never lost &mdash; they are noted in your Case File.</p></div>
+</section>
+
+<section class="screen" id="screen-cases">
+<h2>Season 1 — Case Select</h2><p class="sans" style="color:var(--mut)">All 6 cases free and unlocked in this build. Stars earned are saved on this device.</p>
+<div class="casegrid" id="caseGrid"></div>
+<button class="btn ghost" onclick="showScreen('menu')">← Back to menu</button>
+</section>
+
+<section class="screen" id="screen-lobby">
+<h2>👥 Party Lobby</h2>
+<div class="panel"><p class="sans"><b>Voice:</b> this web build has <b>no real voice chat</b>. Use an external app (Discord / phone) to talk. Text + quick chat work in-game.</p>
+<p><b>Connection:</b> <span id="connStatus">Solo — not connected</span></p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<button class="btn" onclick="createRoom()">＋ Create room</button>
+<button class="btn ghost" onclick="joinRoomPrompt()">→ Join room</button></div>
+<label>Room code</label><input id="roomCode" maxlength="4" placeholder="e.g. NOIR" style="text-transform:uppercase">
+<label>Case</label><select id="lobbyCase"><option value="1">Case 1 — The Last Ferry</option><option value="2">Case 2 — The Bookseller's Last Chapter</option><option value="3">Case 3 — The Final Dress Rehearsal</option><option value="4">Case 4 — The Silent Choir</option><option value="5">Case 5 — The Glass Tide</option><option value="6">Case 6 — The Anchorman</option></select>
+<label>Share link</label><div style="display:flex;gap:8px"><input id="shareLink" readonly style="flex:1"><button class="btn small" onclick="copyLink()">📋 Copy link</button></div>
+<p class="kbd">Link format: ?room=XXXX&amp;case=N — share it anywhere.</p></div>
+<div class="panel"><h3>Your role <span class="kbd">(swappable between chapters)</span></h3>
+<div id="rolePick"></div>
+<label><input type="checkbox" id="observerMode" style="width:auto" onchange="toggleObserver()"> Observer mode (watch only — hints &amp; answer tools disabled)</label>
+<label><input type="checkbox" id="readyCheck" style="width:auto" onchange="toggleReady()"> ✅ I'm ready</label>
+<div id="partyList" style="margin-top:10px"></div></div>
+<div class="panel"><h3>💬 Party chat</h3><div class="chat" id="chatBox"><p><i>No messages yet.</i></p></div>
+<div style="display:flex;gap:6px"><input id="chatInput" placeholder="Type a message…" style="flex:1"><button class="btn small" onclick="sendChat()">Send</button></div>
+<div style="margin-top:8px"><button class="btn small" onclick="quickChat('👀 I found something!')">👀 I found something</button>
+<button class="btn small" onclick="quickChat('📍 Ping — look here')">📍 Ping</button>
+<button class="btn small" onclick="quickChat('🤔 Need a hint?')">🤔 Hint?</button>
+<button class="btn small" onclick="quickChat('✅ Ready')">✅ Ready</button></div>
+<p class="kbd">Chat has a profanity filter. Mute / block / report any player from the party list.</p></div>
+<button class="btn primary-big" onclick="startFromLobby()">▶ Start case</button>
+<button class="btn ghost" onclick="showScreen('menu')">← Menu</button>
+</section>
+
+<section class="screen" id="screen-briefing"><h2 id="briefTitle">Briefing</h2><div class="cine" id="briefBody"></div>
+<div style="display:flex;gap:8px"><button class="btn small" onclick="speakCurrent()">🔊 Read aloud</button><button class="btn small" onclick="stopSpeak()">⏹ Stop</button></div>
+<p class="kbd" id="coachTip"></p>
+<button class="btn primary-big" onclick="goScene()">🔍 Begin investigation →</button></section>
+
+<section class="screen" id="screen-scene"><h2 id="sceneTitle">Scene</h2>
+<p class="sans" id="sceneDesc" style="color:var(--mut)"></p>
+<div class="scene" id="sceneBox"><div class="fog"></div><div class="loc" id="sceneLoc"></div></div>
+<p class="kbd">Tap a glowing point to inspect it. Camera glides to the hotspot. Use a tool to reveal hidden clues.</p>
+<h3>🧰 Analysis tools</h3><div class="toolwheel" id="toolWheel"></div>
+<div class="panel" id="findingPanel"><b>Finding</b><p class="sans">Tap a hotspot to inspect it.</p></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button class="btn small" onclick="openHints()">💡 Hint</button>
+<button class="btn small" onclick="openPuzzle()">🧩 Mini-puzzle</button>
+<button class="btn small" onclick="finishScene()">✓ Leave scene → Interrogation</button></div></section>
+
+<section class="screen" id="screen-interrogation"><h2>Interrogation</h2>
+<div id="suspectTabs" class="tabs"></div>
+<div class="card" style="text-align:center"><div style="font-size:56px" id="suspectFace">👤</div><h3 id="suspectName">—</h3><p class="sans" id="suspectRole" style="color:var(--mut)"></p>
+<p><b>Pressure</b></p><div class="meter red"><i id="pressureBar" style="width:50%"></i></div>
+<p><b>Trust</b></p><div class="meter teal"><i id="trustBar" style="width:50%"></i></div></div>
+<div id="questionList"></div>
+<div class="panel" id="answerPanel"><b>Answer</b><p class="sans">Choose a question.</p></div>
+<button class="btn" onclick="presentEvidence()">📎 Present Evidence</button>
+<button class="btn ghost" onclick="goBoard()">→ Deduction board</button></section>
+
+<section class="screen" id="screen-board"><h2>📌 Deduction Board <span id="boardAvatar"></span></h2>
+<div class="tabs"><button class="on" id="tabLinks" onclick="boardTab('links')">Links</button><button id="tabTimeline" onclick="boardTab('timeline')">⏰ Timeline</button></div>
+<div id="boardLinksPane"><p class="sans">Tap two cards to propose a link. Correct links glow green. In co-op, one other player must confirm. In solo, tap Confirm to confirm it yourself.</p>
+<div class="board" id="boardGrid"></div>
+<div id="linkConfirm" style="margin-top:10px"></div></div>
+<div id="boardTimelinePane" style="display:none"><h3>⏰ Timeline — place events on the clock</h3><div id="timelineList"></div></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn small" onclick="openHints()">💡 Hint</button><button class="btn small" onclick="goReport()">✓ Chapter report →</button></div>
+<p class="kbd">Live cursors &amp; pings from teammates appear here in co-op. Coloured strings = who linked what.</p></section>
+
+<section class="screen" id="screen-report"><h2>📋 Chapter Report</h2><p class="sans">Wrong answers cost stars / reputation — they never block progress.</p><div id="reportQs"></div>
+<button class="btn primary-big" id="reportNext" onclick="nextChapter()">Next chapter →</button></section>
+
+<section class="screen" id="screen-finale"><h2>⚖️ Final Accusation</h2>
+<div id="voteBox"></div>
+<label>Who did it?</label><select id="accWho"></select>
+<label>Motive</label><select id="accMotive"></select>
+<label>Method</label><select id="accMethod"></select>
+<label>Key proof</label><select id="accProof"></select>
+<button class="btn primary-big" onclick="submitAccusation()">🔒 Submit accusation</button>
+<p class="kbd">In co-op this is a party VOTE — everyone must agree on culprit + motive + method. A tie is decided by the host.</p></section>
+
+<section class="screen" id="screen-result"><h2 id="resultTitle">Case Closed?</h2><div class="card" id="resultBody"></div>
+<div class="cine" id="closingCine"></div>
+<div class="card"><h3>Party recap</h3><div id="recapBox"></div></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn small" onclick="shareResult()">📤 Share result</button><button class="btn small" onclick="copyShareCard()">📋 Copy share card</button><button class="btn small" onclick="showScreen('cases')">🗂️ Case select</button></div></section>
+
+<section class="screen" id="screen-settings"><h2>⚙️ Settings</h2>
+<div class="panel sans">
+<label>Graphics quality</label><select id="setQuality"><option value="low">Low</option><option value="med" selected>Medium</option><option value="high">High</option></select>
+<label>Text size</label><select id="setText"><option value="normal">Normal (16pt)</option><option value="large">Large</option><option value="huge">Huge</option></select>
+<label>Voice set (TTS)</label><select id="setVoice"><option value="female">Female</option><option value="male">Male</option></select>
+<label>Language</label><select id="setLang"><option>English only (other languages after launch)</option></select>
+<label><input type="checkbox" id="setMusic" checked style="width:auto"> Music on</label><br>
+<label><input type="checkbox" id="setSubs" checked style="width:auto"> Subtitles always on</label><br>
+<label><input type="checkbox" id="setHaptics" checked style="width:auto"> Haptics (vibrate where available)</label><br>
+<label><input type="checkbox" id="setHC" style="width:auto"> High-contrast mode</label><br>
+<label><input type="checkbox" id="setCB" style="width:auto"> Colourblind-safe highlights</label><br>
+<label><input type="checkbox" id="setSaver" style="width:auto"> Data saver (fewer images/effects)</label><br>
+<button class="btn" onclick="applySettings()">💾 Save settings</button>
+<button class="btn ghost" onclick="clearSave()">🗑️ Clear saved progress</button></div>
+<button class="btn ghost" onclick="showScreen('menu')">← Menu</button></section>
+
+<section class="screen" id="screen-about"><h2>About Unsolved Case</h2>
+<div class="card sans" style="line-height:1.7"><p><b>What this is:</b> a free, playable <b>web</b> detective game — Season 1, six cases, PeerJS co-op, TTS voices, WebAudio score. No install.</p>
+<p><b>Honest scope:</b> this web build has <b>no</b> native Unity APK/IPA, <b>no</b> real voice chat (use Discord/phone), <b>no</b> server-side anti-cheat and <b>no</b> Firebase/Nakama backend. Solutions live in the case data on your device, so a determined player could peek — that's a web limitation, not a server game. A future Unity/Nakama build would be needed for native apps, server-authoritative play and real voice.</p>
+<p><b>Free-only:</b> no payments, no ads, no hint packs. All 6 cases free in this build.</p>
+<p><b>Content:</b> 16+, fictional crime with restraint, no graphic gore, no violence against children.</p></div>
+<button class="btn ghost" onclick="showScreen('menu')">← Menu</button></section>
+
+<div class="navarrows"><button onclick="swipeNav(-1)" aria-label="Previous page">◀</button><button onclick="swipeNav(1)" aria-label="Next page">▶</button></div>
+<div class="tray"><span id="trayCount" class="sans" style="font-size:13px">🧾 0 clues</span><span style="flex:1"></span>
+<button class="btn small ghost" onclick="openHints()">💡 Hint</button>
+<button class="btn small" onclick="openCaseFile()">📁 Case File</button>
+<button class="btn small" onclick="requestPause()">⏸ Pause</button></div>
+</div>
+
+<div class="modal" id="modal"><div class="sheet" id="modalBody"></div></div>
+<div class="toast" id="toast"></div>
+<script>
+"use strict";
+/* ============ UNSOLVED CASE ENGINE — single-file web game ============ */
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+const CASE_META=[{n:1,title:"The Last Ferry",sub:"A coat on the pier. A friend with the answers. A ten-year-old lie.",pal:"#c9a227"},{n:2,title:"The Bookseller's Last Chapter",sub:"A locked storeroom. A missing page. A ten-year-old debt.",pal:"#7fb3a3"},{n:3,title:"The Final Dress Rehearsal",sub:"A final rehearsal. A poisoned flask. A theatre selling its past.",pal:"#a8c6e8"},{n:4,title:"The Silent Choir",sub:"A choirmaster falls from the loft. The hymnbook says he was pushed.",pal:"#d98a4b"},{n:5,title:"The Glass Tide",sub:"A curator drowns in her own aquarium. The tea cup says it was murder.",pal:"#8fd0d8"},{n:6,title:"The Anchorman",sub:"The Unit's founder is dead in his own archive. The sixth envelope is addressed to you.",pal:"#c96a8a"}];
+const ROLES=[{id:"field",name:"Field Agent",desc:"Extra scene clues, UV / flashlight highlights"},{id:"analyst",name:"Analyst",desc:"Mini-puzzles + lab results"},{id:"interrogator",name:"Interrogator",desc:"Leads questioning, sees pressure meter"},{id:"archivist",name:"Archivist",desc:"Case files, timelines, old statements"}];
+const TOOLS=[{id:"flashlight",icon:"🔦",name:"Flashlight"},{id:"uv",icon:"💡",name:"UV light"},{id:"powder",icon:"🖐️",name:"Fingerprint powder"},{id:"magnifier",icon:"🔍",name:"Magnifier"},{id:"reagent",icon:"🧪",name:"Blood-reagent spray"},{id:"compare",icon:"🖼️",name:"Photo-compare"}];
+</script>
+<script>
+"use strict";
+/* Fallback Case 1 stub — used ONLY if ../cases/case1.json cannot be fetched.
+   Writers' real JSON (same schema) replaces this when present. */
+function fallbackCase(n){
+ const meta=CASE_META[n-1]||CASE_META[0];
+ const suspects=[
+  {id:"mara",name:"Mara Ellison",age:41,role:"Ferry company manager",secret:"She forged the maintenance logs.",motive:"The victim found the forged logs.",alibi:"Claims she was at the office until 22:00.",img:"",pressure:50,trust:50,lieList:["I never left the office that night."],truthList:["I argued with the victim about the accounts."]},
+  {id:"tomas",name:"Tomas Beck",age:58,role:"Harbourmaster — the person you trust most early on",secret:"He moved the victim's coat.",motive:"To protect the ferry company — and himself.",alibi:"Claims he was home by 21:30.",img:"",pressure:50,trust:50,lieList:["I never touched her coat."],truthList:["I found the coat first and moved it to the pier."]},
+  {id:"lena",name:"Lena Ortiz",age:29,role:"Ticket clerk",secret:"She kept a second ledger.",motive:"She owed the victim money.",alibi:"On the last ferry, seen by passengers.",img:"",pressure:50,trust:50,lieList:["I never saw the victim after lunch."],truthList:["She asked me to hold a parcel for her."]},
+  {id:"silas",name:"Silas Grant",age:47,role:"Night watchman",secret:"He slept on duty.",motive:"None — he was asleep.",alibi:"Asleep in the gatehouse.",img:"",pressure:50,trust:50,lieList:["I patrolled every hour."],truthList:["I fell asleep around midnight."]}];
+ const ev=(id,code,title,body,ch,opts)=>Object.assign({id,code,title,body,chapter:ch,roleExclusive:null,key:false,redHerring:false,proves:""},opts||{});
+ const evidence=[
+  ev("e1","COAT","Victim's coat","Found on the pier, damp, one button missing.",1,{key:true,proves:"Victim was on the pier after 21:00."}),
+  ev("e2","TICKET","Torn ferry ticket","A ticket torn in half — the other half is missing.",1,{key:true,proves:"Someone else boarded with the victim."}),
+  ev("e3","LEDGER","Second ledger","Handwritten figures that don't match the company books.",2,{key:true,proves:"Money was being skimmed."}),
+  ev("e4","UVNOTE","UV note","Under UV light: 'meet me at the pier — T' in the victim's diary.",2,{key:true,proves:"Victim planned a night meeting."}),
+  ev("e5","PRINT","Fingerprint on rail","A clear print on the ferry rail, lifted with powder.",4,{key:true,proves:"The harbourmaster was on the deck that night."}),
+  ev("e6","KEY","Locker key","A small key taped under the ticket-office drawer.",1,{proves:"Victim hid something in a locker."}),
+  ev("e7","PHOTO","Old photograph","Victim and harbourmaster at a company picnic, years ago.",3,{proves:"They knew each other well."}),
+  ev("e8","VOICEMAIL","Voicemail","A clipped message: '…don't tell Mara…' — voice unclear.",3,{proves:"Victim feared someone finding out."}),
+  ev("e9","CCTV","CCTV still","Grainy still: a figure in a dark coat on the pier at 22:40.",4,{proves:"Someone was on the pier late."}),
+  ev("e10","BUTTON","Missing button","A coat button found in the harbourmaster's car.",4,{key:true,proves:"Links the coat to the harbourmaster."}),
+  ev("e11","RECEIPT","Fuel receipt","A receipt timed 21:15 — contradicts one alibi.",3,{proves:"An alibi time does not hold."}),
+  ev("e12","NOTE","Torn note","Reassembled: 'the logs are fake — I can prove it'.",2,{key:true,proves:"Victim knew about the forgery."}),
+  ev("e13","SCARF","Red scarf","A scarf that is not the victim's — a red herring.",1,{redHerring:true,proves:"Belongs to a passenger; a distraction."}),
+  ev("e14","COIN","Foreign coin","An old coin under the bench — a red herring.",2,{redHerring:true,proves:"Dropped years ago; unrelated."}),
+  ev("e15","GULL","Gull feather","A feather on the deck — world detail.",4,{redHerring:true,proves:"Just the harbour."}),
+  ev("e16","TIMETABLE","Ferry timetable","The last ferry left at 23:00, not midnight.",1,{proves:"Sets the window for the crime."}),
+  ev("e17","STATEMENT","Old statement","The watchman's original statement, with a gap at midnight.",3,{proves:"His patrol has a hole."}),
+  ev("e18","FERRYLOG","Ferry log","The deck log shows an unscheduled stop.",4,{proves:"The ferry stopped mid-crossing."}),
+  ev("e19","LETTER","Unsent letter","Victim's unsent letter to her sister about leaving town.",2,{proves:"She planned to leave."}),
+  ev("e20","GLASS","Broken glass","A broken lens from a torch — the harbourmaster's torch.",4,{proves:"His torch broke on the deck."})];
+ const ch=(n,title,loc,mech,q,brief,hotspots,tools,puzzle,interro,report)=>({n,title,locationId:loc,mechanic:mech,question:q,briefing:brief,scene:{img:"",hotspots},tools:tools||[],puzzles:puzzle?[puzzle]:[],interrogations:interro||[],report:{questions:report||[]}});
+ const chapters=[
+  ch(1,"Harbor Ticket Office","harbor","Tap to inspect — evidence tray","Who was last to see the victim?","Ten years ago, ferry accountant Ada Venn disappeared. Her coat was found on the pier. New evidence reopens the case. Start where it began: the ticket office.",
+   [{id:"h1",x:22,y:30,label:"🧥 Coat hook",finding:{title:"Coat hook",text:"A hook with a single thread of navy wool — the victim's coat hung here.",clueId:"e1"}},{id:"h2",x:55,y:45,label:"🎫 Ticket drawer",finding:{title:"Ticket drawer",text:"A torn ticket, one half missing.",clueId:"e2"}},{id:"h3",x:78,y:28,label:"🗝️ Locker key",finding:{title:"Under the drawer",text:"A small key taped underneath.",clueId:"e6"}},{id:"h4",x:40,y:70,label:"📅 Timetable",finding:{title:"Timetable",text:"Last ferry 23:00, not midnight.",clueId:"e16"}}],[],
+   {id:"p1",kind:"fingerprint lift",title:"Lift the print",hint:"Dust, then tape.",options:["Dust then lift with tape","Wipe it clean","Photograph only"],correct:0},
+   [{suspectId:"lena",questions:[{id:"q1",text:"When did you last see Ada?",answer:"At lunch. She seemed nervous — she said she had to meet someone tonight.",mood:"calm"},{id:"q2",text:"Did Ada owe you money — or you her?",answer:"…She lent me money once. I paid it back. Mostly.",mood:"tense",confront:"e3"}]}],
+   [{id:"r1",q:"Who was last to see the victim?",options:["Lena Ortiz","Tomas Beck","Silas Grant"],correct:0,explain:"Lena saw Ada at lunch; the others' claims come later."}]),
+  ch(2,"Victim's Apartment","apartment","Flashlight + UV light","Was the victim planning to leave town?","Ada's apartment has been sealed for a decade. Dust, a diary, and a letter she never sent.",
+   [{id:"h1",x:30,y:35,label:"📓 Diary",tool:"uv",finding:{title:"UV note",text:"Under UV: 'meet me at the pier — T'.",clueId:"e4"}},{id:"h2",x:60,y:50,label:"📒 Ledger",tool:"flashlight",finding:{title:"Second ledger",text:"Figures that don't match the company books.",clueId:"e3"}},{id:"h3",x:75,y:65,label:"✉️ Letter",finding:{title:"Unsent letter",text:"Ada planned to leave town — and to tell someone the truth.",clueId:"e19"}},{id:"h4",x:18,y:68,label:"🪙 Coin",finding:{title:"Foreign coin",text:"Old, unrelated — a red herring.",clueId:"e14"}}],["flashlight","uv"],
+   {id:"p2",kind:"torn-note reassemble",title:"Reassemble the torn note",hint:"Match the torn edges.",options:["'the logs are fake — I can prove it'","'meet me for dinner'","'the ferry is late'"],correct:0},
+   [{suspectId:"mara",questions:[{id:"q1",text:"Did Ada find something in the accounts?",answer:"Ada was… thorough. If she found an error, she would have said so.",mood:"tense",confront:"e3"}]}],
+   [{id:"r1",q:"Was the victim planning to leave town?",options:["Yes — her letter says so","No — she just renewed her lease","Unclear"],correct:0,explain:"The unsent letter says she planned to leave."}]),
+  ch(3,"Police Archive + Interview Room","archive","Interrogation — present evidence","Whose alibi does not hold up?","The old files contradict the old statements. Interview the people who were there.",
+   [{id:"h1",x:35,y:40,label:"📄 Old statement",finding:{title:"Old statement",text:"The watchman's statement has a gap at midnight.",clueId:"e17"}},{id:"h2",x:62,y:32,label:"🧾 Fuel receipt",finding:{title:"Fuel receipt",text:"Timed 21:15 — one alibi does not hold.",clueId:"e11"}},{id:"h3",x:50,y:68,label:"📷 Photo",finding:{title:"Old photograph",text:"Ada and Tomas, years ago. They knew each other well.",clueId:"e7"}},{id:"h4",x:80,y:60,label:"☎️ Voicemail",finding:{title:"Voicemail",text:"'…don't tell Mara…' — the voice is unclear.",clueId:"e8"}}],[],
+   {id:"p3",kind:"voicemail cleanup",title:"Clean up the voicemail",hint:"Isolate the voice, drop the static.",options:["Boost voice, cut static","Boost static","Delete the file"],correct:0},
+   [{suspectId:"tomas",questions:[{id:"q1",text:"Where were you at 22:40?",answer:"Home. I was home by 21:30.",mood:"calm",confront:"e9"},{id:"q2",text:"Did you move Ada's coat?",answer:"No. I never touched it.",mood:"tense",confront:"e10"}]},{suspectId:"silas",questions:[{id:"q1",text:"Did you patrol every hour?",answer:"Every hour, like always.",mood:"calm",confront:"e17"}]}],
+   [{id:"r1",q:"Whose alibi does not hold up?",options:["Tomas Beck — the CCTV still places him on the pier","Silas Grant — he admits sleeping","Lena Ortiz"],correct:0,explain:"The 22:40 CCTV still contradicts Tomas's 21:30 claim."}]),
+  ch(4,"Ferry Deck at Night","ferry","Fingerprint puzzle","How did the murder weapon get on board?","Back on the deck, ten years later. The rail, the log, and a print that survived the rain.",
+   [{id:"h1",x:45,y:45,label:"🖐️ Rail print",tool:"powder",finding:{title:"Fingerprint on rail",text:"A clear print — lifted with powder.",clueId:"e5"}},{id:"h2",x:70,y:30,label:"🧥 Button",tool:"magnifier",finding:{title:"Missing button",text:"A coat button — found in the harbourmaster's car.",clueId:"e10"}},{id:"h3",x:25,y:60,label:"📹 CCTV still",finding:{title:"CCTV still",text:"A figure in a dark coat on the pier at 22:40.",clueId:"e9"}},{id:"h4",x:60,y:70,label:"📖 Ferry log",finding:{title:"Ferry log",text:"An unscheduled stop mid-crossing.",clueId:"e18"}}],["powder","magnifier"],
+   {id:"p4",kind:"CCTV enhance",title:"Enhance the CCTV still",hint:"Sharpen, don't smooth.",options:["Sharpen edges + raise contrast","Blur it","Crop the figure out"],correct:0},
+   [{suspectId:"mara",questions:[{id:"q1",text:"Were the maintenance logs forged?",answer:"…I don't know what you're talking about.",mood:"tense",confront:"e12"}]}],
+   [{id:"r1",q:"How did the murder weapon get on board?",options:["Carried aboard in a coat pocket","Thrown from the pier","It was already on the ferry"],correct:0,explain:"The coat, the button and the log point to it being carried aboard."}]),
+  ch(5,"Deduction Board + Finale","board","Linking — confirm a link","Who, why, how?","Everything you found, pinned to one board. Link the evidence, then name the truth.",
+   [{id:"h1",x:50,y:50,label:"📌 The board",finding:{title:"The board",text:"Every clue you found is already pinned here.",clueId:"e20"}}],[],
+   {id:"p5",kind:"damaged ledger",title:"Read the damaged ledger",hint:"Cross-check the totals.",options:["Totals differ by exactly the missing sum","Totals match","The ledger is blank"],correct:0},
+   [{suspectId:"tomas",questions:[{id:"q1",text:"Why did you move the coat?",answer:"…To protect the company. To protect her memory. I was wrong.",mood:"breaks",confront:"e1"}]}],
+   [{id:"r1",q:"Who do you trust least now?",options:["Tomas Beck","Mara Ellison","Silas Grant"],correct:0,explain:"The evidence keeps pointing back to Tomas."}])
+ ];
+ return {id:"case"+n,number:n,title:meta.title,subtitle:meta.sub,season:1,free:true,
+  palette:{primary:meta.pal,accent:"#7fb3a3",bg:"#0d0d10"},
+  premise:meta.sub,
+  coldOpen:{title:meta.title,lines:[{img:"",text:"A cold case. A coastal city. A truth ten years buried.",voice:"female"},{img:"",text:"You are the new detective on the Cold Case Unit. Start where it began.",voice:"female"}]},
+  closing:{lines:[{img:"",text:"The truth, finally, on the record.",voice:"female"},{img:"",text:"Some cases close. The thread between them does not.",voice:"male"}]},
+  locations:[{id:"harbor",name:"Harbor Ticket Office",desc:"Salt, paper, old tickets.",img:""},{id:"apartment",name:"Victim's Apartment",desc:"Sealed for a decade.",img:""},{id:"archive",name:"Police Archive",desc:"Files that contradict each other.",img:""},{id:"ferry",name:"Ferry Deck at Night",desc:"Rain on steel.",img:""},{id:"board",name:"Deduction Board",desc:"Everything pinned at once.",img:""}],
+  suspects, chapters, evidence,
+  boardLinks:[["COAT","BUTTON"],["TICKET","LEDGER"],["UVNOTE","NOTE"],["PRINT","BUTTON"],["CCTV","PRINT"]],
+  timeline:[{t:"21:00",label:"Ada leaves the ticket office",hot:false},{t:"21:15",label:"Fuel receipt — alibi breaks",hot:true},{t:"22:40",label:"Figure on the pier (CCTV)",hot:true},{t:"23:00",label:"Last ferry departs",hot:false}],
+  twists:[{at:"60%",caller:"",title:"The trusted face",body:"The person you trusted most early on knew more than he said."},{at:"finale",caller:"",title:"The coat",body:"The coat was moved — not by the killer's enemy, but by a friend trying to protect the company."}],
+  hints:{nudge:["Look for what doesn't belong in the scene.","Check the times — one of them is lying.","Two clues together prove more than one alone."],direction:["Use the UV light in the apartment and powder on the ferry rail.","Compare the CCTV time with the alibis.","Link COAT to BUTTON on the board."],answer:["Tomas Beck moved the coat and was on the pier at 22:40 — the button and the print prove it."]},
+  solve:{who:"tomas",motive:"protect-company",method:"carried-aboard",keyProof:"BUTTON",
+   options:{who:suspects.map(s=>({id:s.id,label:s.name})),motive:[{id:"protect-company",label:"To protect the ferry company — and himself"},{id:"money",label:"For money"},{id:"jealousy",label:"Jealousy"}],method:[{id:"carried-aboard",label:"Carried aboard in a coat pocket"},{id:"thrown",label:"Thrown from the pier"}],keyProof:evidence.filter(e=>e.key).map(e=>({id:e.code,label:e.title}))},
+   solutionHTML:"<p><b>Tomas Beck</b>, the harbourmaster, met Ada on the pier. She had found the forged logs. He moved her coat to protect the company — and himself. The button in his car and the print on the rail prove he was there.</p>",
+   cleared:[{name:"Ada Venn",text:"Her case is closed. Her truth is on the record."}]},
+  minEvidenceToSolve:["COAT","BUTTON","PRINT"],
+  coopClueMap:{field:["COAT","PRINT"],analyst:["LEDGER","NOTE"],interrogator:["VOICEMAIL","STATEMENT"],archivist:["TIMETABLE","FERRYLOG"]}};
+}
+/* ============ STATE ============ */
+let G={caseNum:1,caseData:null,chapter:0,found:[],notes:{},links:[],pendingLink:null,role:"field",room:null,peer:null,conns:[],players:[{name:"You (host)",role:"field",me:true}],ready:false,observer:false,stars:0,hintLevel:0,hintsUsed:0,reportWrong:0,contrib:{clues:0,links:0},pressure:{},trust:{},puzzleFails:0,currentSuspect:null,selectedTool:null,flow:[],flowIdx:0,paused:false,votes:{},muted:new Set(),blocked:new Set(),save:null};
+let settings=JSON.parse(localStorage.getItem("uc_settings")||"{}");
+settings=Object.assign({quality:"med",text:"normal",voice:"female",music:true,subs:true,haptics:true,hc:false,cb:false,saver:false},settings);
+function saveSettings(){localStorage.setItem("uc_settings",JSON.stringify(settings))}
+function saveGame(){if(!G.caseData)return;const s={caseNum:G.caseNum,chapter:G.chapter,found:G.found,notes:G.notes,links:G.links,stars:G.stars,hintsUsed:G.hintsUsed,reportWrong:G.reportWrong,contrib:G.contrib,pressure:G.pressure,trust:G.trust,role:G.role,room:G.room,ts:Date.now()};localStorage.setItem("uc_save",JSON.stringify(s));G.save=s;const b=$("#continueBtn");if(b)b.textContent="▶ Continue — Case "+G.caseNum+", Chapter "+(G.chapter+1)}
+function loadSave(){try{return JSON.parse(localStorage.getItem("uc_save")||"null")}catch(e){return null}}
+function toast(m){const t=$("#toast");t.textContent=m;t.style.display="block";setTimeout(()=>t.style.display="none",2600)}
+function haptic(ms){if(settings.haptics&&navigator.vibrate)try{navigator.vibrate(ms||20)}catch(e){}}
+/* ============ AUDIO (WebAudio synth) + TTS ============ */
+let AC=null, musicTimer=null, musicOn=true;
+function ac(){if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(AC&&AC.state==="suspended")AC.resume();return AC}
+function tone(f,d,type,g,when){const c=ac();if(!c||!settings.music)return;const o=c.createOscillator(),gn=c.createGain();o.type=type||"sine";o.frequency.value=f;gn.gain.setValueAtTime(0,c.currentTime+(when||0));gn.gain.linearRampToValueAtTime(g||.08,c.currentTime+(when||0)+.02);gn.gain.exponentialRampToValueAtTime(.0001,c.currentTime+(when||0)+d);o.connect(gn).connect(c.destination);o.start(c.currentTime+(when||0));o.stop(c.currentTime+(when||0)+d+.05)}
+function clickSnd(){tone(880,.06,"triangle",.05);haptic(12)}
+function paperSnd(){tone(220,.12,"sawtooth",.03);tone(330,.1,"triangle",.04,.03)}
+function swell(){[523,659,784].forEach((f,i)=>tone(f,.9,"sine",.06,i*.12));haptic(40)}
+function startMusic(mode){stopMusic();if(!settings.music)return;const c=ac();if(!c)return;musicOn=true;const chords=mode==="tense"?[[220,261,311],[196,233,294]]:[[262,330,392],[247,294,370],[220,262,330]];let i=0;const play=()=>{if(!musicOn)return;const ch=chords[i%chords.length];ch.forEach(f=>tone(f,3.2,"sine",.025));i++;musicTimer=setTimeout(play,3200)};play()}
+function stopMusic(){musicOn=false;if(musicTimer)clearTimeout(musicTimer)}
+function toggleAudio(){settings.music=!settings.music;saveSettings();$("#audioBtn").textContent=settings.music?"🔊 Sound: On":"🔇 Sound: Off";if(settings.music)startMusic("calm");else stopMusic();toast(settings.music?"Sound on":"Sound off (visual cues remain)")}
+function pickVoice(){const vs=speechSynthesis.getVoices();if(!vs.length)return null;const want=settings.voice==="male"?/male|daniel|david|james|alex|fred|google us english/i:/female|zira|samantha|karen|moira|google uk english female/i;return vs.find(v=>want.test(v.name))||vs.find(v=>/en/i.test(v.lang))||vs[0]}
+function speak(text){if(!("speechSynthesis" in window)||typeof SpeechSynthesisUtterance==="undefined"){toast("TTS not available on this device — subtitles shown instead.");return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);const v=pickVoice();if(v)u.voice=v;u.pitch=settings.voice==="male"?0.8:1.1;u.rate=0.95;speechSynthesis.speak(u)}
+function stopSpeak(){if("speechSynthesis" in window)speechSynthesis.cancel()}
+let currentCineText="";
+function speakCurrent(){if(currentCineText)speak(currentCineText)}
+</script>
+<script>
+"use strict";
+/* ============ NAVIGATION (swipe / slide, no long scroll) ============ */
+const FLOW=["menu","cases","lobby","briefing","scene","interrogation","board","report","finale","result"];
+let currentScreen="menu";
+function showScreen(id){$$(".screen").forEach(s=>s.classList.remove("active"));const el=$("#screen-"+id);if(el)el.classList.add("active");currentScreen=id;G.flow=FLOW;G.flowIdx=Math.max(0,FLOW.indexOf(id));window.scrollTo(0,0);clickSnd();if(id==="cases")renderCases();if(id==="lobby")renderLobby();if(id==="settings")loadSettingsUI()}
+function swipeNav(dir){const i=FLOW.indexOf(currentScreen);if(i<0)return;const n=i+dir;if(n<0||n>=FLOW.length)return;const next=FLOW[n];
+ if(next==="briefing"&&!G.caseData){toast("Pick a case first.");return}
+ if(next==="scene"&&G.caseData)renderScene();
+ if(next==="interrogation"&&G.caseData)renderInterrogation();
+ if(next==="board"&&G.caseData)renderBoard();
+ if(next==="report"&&G.caseData)renderReport();
+ if(next==="finale"&&G.caseData)renderFinale();
+ showScreen(next)}
+let tx0=null;
+document.addEventListener("touchstart",e=>{tx0=e.touches[0].clientX},{passive:true});
+document.addEventListener("touchend",e=>{if(tx0===null)return;const dx=e.changedTouches[0].clientX-tx0;tx0=null;if(Math.abs(dx)>70){if(dx<0)swipeNav(1);else swipeNav(-1)}},{passive:true});
+function openModal(html){$("#modalBody").innerHTML=html;$("#modal").classList.add("open")}
+function closeModal(){$("#modal").classList.remove("open")}
+$("#modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+/* ============ AVATAR / SETTINGS UI ============ */
+function avatarEmoji(){const f=$("#avFace");return f?f.value.slice(0,2):"🕵️"}
+function saveAvatar(){const a={face:$("#avFace").value,outfit:$("#avOutfit").value,coat:$("#avCoat").value};localStorage.setItem("uc_avatar",JSON.stringify(a));$("#avatarPreview").textContent=a.face.slice(0,2);$("#avatarMini").textContent=a.face.slice(0,2)+" "+a.outfit.slice(0,2);$("#boardAvatar").textContent=a.face.slice(0,2);toast("Detective saved.")}
+function loadAvatar(){try{const a=JSON.parse(localStorage.getItem("uc_avatar")||"null");if(a){$("#avFace").value=a.face;$("#avOutfit").value=a.outfit;$("#avCoat").value=a.coat;$("#avatarPreview").textContent=a.face.slice(0,2);$("#avatarMini").textContent=a.face.slice(0,2);$("#boardAvatar").textContent=a.face.slice(0,2)}}catch(e){}}
+function applySettings(){settings.quality=$("#setQuality").value;settings.text=$("#setText").value;settings.voice=$("#setVoice").value;settings.music=$("#setMusic").checked;settings.subs=$("#setSubs").checked;settings.haptics=$("#setHaptics").checked;settings.hc=$("#setHC").checked;settings.cb=$("#setCB").checked;settings.saver=$("#setSaver").checked;saveSettings();applySettingsBody();toast("Settings saved.")}
+function applySettingsBody(){document.body.classList.toggle("large-text",settings.text==="large");document.body.classList.toggle("huge-text",settings.text==="huge");document.body.classList.toggle("hc",!!settings.hc);document.body.classList.toggle("cb",!!settings.cb);$("#audioBtn").textContent=settings.music?"🔊 Sound: On":"🔇 Sound: Off"}
+function loadSettingsUI(){$("#setQuality").value=settings.quality;$("#setText").value=settings.text;$("#setVoice").value=settings.voice;$("#setMusic").checked=settings.music;$("#setSubs").checked=settings.subs!==false;$("#setHaptics").checked=settings.haptics;$("#setHC").checked=!!settings.hc;$("#setCB").checked=!!settings.cb;$("#setSaver").checked=!!settings.saver}
+function clearSave(){localStorage.removeItem("uc_save");G.found=[];G.links=[];toast("Saved progress cleared.");updateTray()}
+/* ============ CASE LOADING (fetch, graceful missing-file state) ============ */
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+async function loadCase(n){G.caseNum=n;G.caseData=null;
+ try{const r=await fetch("cases/case"+n+".json",{cache:"no-store"});if(!r.ok)throw new Error("HTTP "+r.status);const j=await r.json();if(!j||!j.chapters||!j.evidence)throw new Error("Invalid case JSON");G.caseData=j;toast("Case file loaded: "+j.title)}
+ catch(e){G.caseData=fallbackCase(n);toast("Case "+n+" file could not be loaded — playing the built-in fallback (Case 1 outline only).")}
+ G.chapter=0;G.found=[];G.notes={};G.links=[];G.hintsUsed=0;G.reportWrong=0;G.contrib={clues:0,links:0};G.pressure={};G.trust={};(G.caseData.suspects||[]).forEach(s=>{G.pressure[s.id]=50;G.trust[s.id]=50});
+ if(G.caseData.palette&&G.caseData.palette.primary)document.documentElement.style.setProperty("--accent",G.caseData.palette.primary);
+ updateTray();saveGame()}
+function starsFor(n){try{const s=JSON.parse(localStorage.getItem("uc_stars")||"{}");return s[n]||0}catch(e){return 0}}
+function renderCases(){const g=$("#caseGrid");g.innerHTML=CASE_META.map(m=>{const st=starsFor(m.n);return `<div class="casecard" onclick="pickCase(${m.n})" style="border-top:4px solid ${m.pal}"><h3>Case ${m.n} — ${esc(m.title)}</h3><p class="sans" style="font-size:14px;color:var(--mut)">${esc(m.sub)}</p><p><span class="tag">🔓 Free — unlocked</span> <span class="stars">${"★".repeat(st)}${"☆".repeat(Math.max(0,5-st))}</span></p><p class="kbd">5 chapters · ~20 clues · co-op 2–4</p></div>`}).join("")}
+async function pickCase(n){await loadCase(n);showScreen("lobby");$("#lobbyCase").value=String(n);updateShareLink()}
+async function continueGame(){const s=loadSave();if(!s){toast("No save yet — pick a case.");showScreen("cases");return}await loadCase(s.caseNum);Object.assign(G,{chapter:s.chapter||0,found:s.found||[],notes:s.notes||{},links:s.links||[],hintsUsed:s.hintsUsed||0,reportWrong:s.reportWrong||0,contrib:s.contrib||{clues:0,links:0},pressure:s.pressure||{},trust:s.trust||{},role:s.role||"field",room:s.room||null});updateTray();renderBriefing();showScreen("briefing")}
+function updateTray(){$("#trayCount").textContent="🧾 "+G.found.length+" clues · 🔗 "+G.links.length+" links · ⭐ penalty −"+(G.hintsUsed+G.reportWrong)}
+/* ============ LOBBY + PeerJS ============ */
+function genCode(){const L="ABCDEFGHJKLMNPQRSTUVWXYZ";let c="";for(let i=0;i<4;i++)c+=L[Math.floor(Math.random()*L.length)];return c}
+function updateShareLink(){const code=($("#roomCode").value||"NOIR").toUpperCase();const cn=$("#lobbyCase").value||G.caseNum||1;$("#shareLink").value=location.origin+location.pathname+"?room="+code+"&case="+cn}
+function renderLobby(){$("#rolePick").innerHTML=ROLES.map(r=>`<button class="btn small ${G.role===r.id?"":"ghost"}" onclick="pickRole('${r.id}')">${r.name} — ${r.desc}</button>`).join("");renderParty();updateShareLink()}
+function pickRole(id){G.role=id;renderLobby();broadcast({t:"role",role:id});toast("Role: "+id+" (swappable between chapters)");saveGame()}
+function toggleObserver(){G.observer=$("#observerMode").checked;toast(G.observer?"Observer mode: hints & answer tools disabled.":"Observer mode off.")}
+function toggleReady(){G.ready=$("#readyCheck").checked;broadcast({t:"ready",ready:G.ready});renderParty()}
+function renderParty(){$("#partyList").innerHTML=G.players.map((p,i)=>`<p class="sans">${p.me?"🕵️":"👤"} ${esc(p.name)} — ${esc(p.role||"field")} ${p.ready?"✅ ready":""} ${p.me?"":"<button class='btn small' onclick='mutePlayer("+i+")'>Mute</button> <button class='btn small' onclick='blockPlayer("+i+")'>Block</button> <button class='btn small' onclick='reportPlayer("+i+")'>Report</button>"}</p>`).join("")||"<p>No party yet.</p>"}
+function mutePlayer(i){G.muted.add(i);toast("Player muted.");renderParty()}
+function blockPlayer(i){G.blocked.add(i);G.players=G.players.filter((_,j)=>j!==i);toast("Player blocked and removed from your view.");renderParty()}
+function reportPlayer(i){toast("Report sent (local log). In a hosted build this goes to moderation — here it is recorded in your save.");saveGame()}
+function createRoom(){const code=genCode();$("#roomCode").value=code;G.room=code;updateShareLink();hostPeer("unsolved-"+code.toLowerCase());toast("Room "+code+" created — share the link.")}
+function joinRoomPrompt(){const code=($("#roomCode").value||"").trim().toUpperCase();if(code.length!==4){toast("Enter a 4-letter room code.");return}G.room=code;updateShareLink();joinPeer("unsolved-"+code.toLowerCase());toast("Joining room "+code+"…")}
+function copyLink(){updateShareLink();const v=$("#shareLink").value;if(navigator.clipboard)navigator.clipboard.writeText(v).then(()=>toast("Link copied."));else{$("#shareLink").select();document.execCommand("copy");toast("Link copied.")}}
+function hostPeer(id){if(typeof Peer==="undefined"){toast("PeerJS failed to load (offline?) — solo mode still works.");$("#connStatus").textContent="Offline — solo mode";return}
+ try{G.peer=new Peer(id);G.peer.on("open",()=>{$("#connStatus").textContent="🟢 Hosting room "+G.room+" — waiting for players";toast("Hosting. Share your link!")});
+ G.peer.on("connection",c=>{G.conns.push(c);wireConn(c);$("#connStatus").textContent="🟢 Connected: "+G.conns.length+" player(s)";addPlayer("Teammate "+G.conns.length)});G.peer.on("error",e=>{$("#connStatus").textContent="Peer error: "+(e.type||e);toast("Co-op unavailable — solo mode works.")})}catch(e){toast("Co-op unavailable — solo mode works.")}}
+function joinPeer(id){if(typeof Peer==="undefined"){toast("PeerJS failed to load — solo mode still works.");return}
+ try{G.peer=new Peer();G.peer.on("open",()=>{const c=G.peer.connect(id);G.conns.push(c);wireConn(c);c.on("open",()=>{$("#connStatus").textContent="🟢 Joined room "+G.room;c.send({t:"hello",name:"Teammate",role:G.role});sendRecap(c)});});
+ G.peer.on("error",e=>{$("#connStatus").textContent="Could not join — check the code. Solo mode works.";toast("Could not join that room. Check the code, or play solo.")})}catch(e){toast("Co-op unavailable — solo mode works.")}}
+function wireConn(c){c.on("data",d=>onPeerData(d,c));c.on("close",()=>{$("#connStatus").textContent="A player left. Solo/co-op continues."})}
+function broadcast(msg){msg._from="me";G.conns.forEach(c=>{try{if(c.open)c.send(msg)}catch(e){}})}
+function sendRecap(c){/* spoiler-safe: found clues only, never the solution */try{c.send({t:"recap",found:G.found,links:G.links,chapter:G.chapter})}catch(e){}}
+/* action IDs so replay never duplicates a clue/link */
+let actionSeq=0;const seenActions=new Set();
+function actId(){return "a"+Date.now().toString(36)+"-"+(++actionSeq)}
+function onPeerData(d,c){if(!d||typeof d!=="object")return;
+ if(d.aid){if(seenActions.has(d.aid))return;seenActions.add(d.aid)}
+ if(d.t==="hello"){addPlayer(d.name||"Teammate");toast((d.name||"Teammate")+" joined.")}
+ else if(d.t==="chat")addChat(d.name||"Teammate",d.text,true);
+ else if(d.t==="clue")receiveClue(d.code,d.aid);
+ else if(d.t==="link")receiveLink(d.a,d.b,d.aid);
+ else if(d.t==="ping")toast("📍 Ping from teammate: "+(d.label||"look here"));
+ else if(d.t==="cursor"){/* live cursor: show a floating dot */showCursor(d.x,d.y)}
+ else if(d.t==="pause")toast("⏸ Teammate requested a pause.");
+ else if(d.t==="vote")recordVote(d.name||"Teammate",d.pick);
+ else if(d.t==="recap"){toast("📥 Late-joiner recap received: "+(d.found||[]).length+" clues found so far (no solution shared).");(d.found||[]).forEach(code=>{if(!G.found.includes(code))G.found.push(code)});updateTray()}
+ else if(d.t==="role"||d.t==="ready")renderParty()}
+function addPlayer(name){if(!G.players.some(p=>p.name===name))G.players.push({name,role:"field",ready:false});renderParty()}
+function showCursor(x,y){let d=$("#peerCursor");if(!d){d=document.createElement("div");d.id="peerCursor";d.textContent="👆";d.style.cssText="position:fixed;z-index:90;font-size:26px;pointer-events:none";document.body.appendChild(d)}d.style.left=(x||100)+"px";d.style.top=(y||100)+"px";setTimeout(()=>{if(d)d.remove()},2500)}
+document.addEventListener("pointermove",e=>{if(G.conns.length)broadcast({t:"cursor",x:e.clientX,y:e.clientY})},{passive:true});
+/* chat with profanity filter */
+const BAD=["damn","hell","shit","fuck","bitch"];
+function filterProfanity(s){let o=String(s);BAD.forEach(w=>{o=o.replace(new RegExp(w,"gi"),"***")});return o}
+function addChat(name,text,remote){if(G.muted.has(0)&&remote)return;const box=$("#chatBox");const p=document.createElement("p");p.innerHTML="<b>"+esc(name)+":</b> "+esc(filterProfanity(text));box.appendChild(p);box.scrollTop=box.scrollHeight}
+function sendChat(){const v=$("#chatInput").value.trim();if(!v)return;addChat("You",v,false);broadcast({t:"chat",name:"You",text:v,aid:actId()});$("#chatInput").value=""}
+function quickChat(msg){addChat("You",msg,false);broadcast({t:"chat",name:"You",text:msg,aid:actId()});toast("Quick chat sent: "+msg)}
+function requestPause(){G.paused=!G.paused;broadcast({t:"pause",aid:actId()});toast(G.paused?"⏸ Paused — resume when everyone agrees (or after a short timeout).":"▶ Resumed.");if(G.paused)setTimeout(()=>{if(G.paused){G.paused=false;toast("Pause timed out — resumed.")}},20000)}
+async function startFromLobby(){const n=parseInt($("#lobbyCase").value||"1",10);if(!G.caseData||G.caseNum!==n)await loadCase(n);G.chapter=0;saveGame();renderBriefing();showScreen("briefing");broadcast({t:"chat",name:"System",text:"Case "+n+" started.",aid:actId()})}
+</script>
+<script>
+"use strict";
+/* ============ BRIEFING / SCENE ============ */
+function curChapter(){return (G.caseData.chapters||[])[G.chapter]||{n:1,title:"Chapter",briefing:"",scene:{hotspots:[]},tools:[],puzzles:[],interrogations:[],report:{questions:[]}}}
+function renderBriefing(){const c=G.caseData,ch=curChapter();$("#briefTitle").textContent="Case "+G.caseNum+" — Chapter "+(ch.n||G.chapter+1)+": "+(ch.title||"");
+ const lines=(G.chapter===0&&c.coldOpen&&c.coldOpen.lines)||[{text:ch.briefing||c.premise||""}];
+ currentCineText=lines.map(l=>l.text).join(" ");
+ $("#briefBody").innerHTML=(ch.scene&&ch.scene.img?`<img src="${esc(ch.scene.img)}" alt="">`:"")+lines.map(l=>`<p>${esc(l.text)}</p>`).join("")+`<p class="sans" style="color:var(--mut)">${esc(ch.question||"")}</p>`;
+ $("#coachTip").textContent="🎓 Coach tip — Chapter "+(ch.n||G.chapter+1)+": "+(ch.mechanic||"Investigate, then link evidence on the board.");
+ startMusic("calm");saveGame()}
+function goScene(){renderScene();showScreen("scene")}
+function renderScene(){const ch=curChapter();const loc=(G.caseData.locations||[]).find(l=>l.id===ch.locationId);
+ $("#sceneTitle").textContent="Chapter "+(ch.n||G.chapter+1)+": "+(ch.title||"");
+ $("#sceneDesc").textContent=(loc?loc.name+" — "+loc.desc:"")+" · "+(ch.question||"");
+ $("#sceneLoc").textContent="📍 "+(loc?loc.name:ch.locationId||"Scene");
+ const box=$("#sceneBox");box.querySelectorAll(".hotspot").forEach(h=>h.remove());
+ const img=ch.scene&&ch.scene.img?`<img src="${esc(ch.scene.img)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55" alt="">`:"";
+ box.insertAdjacentHTML("afterbegin",img);
+ (ch.scene.hotspots||[]).forEach(h=>{const d=document.createElement("button");d.className="hotspot"+(h.tool?" hidden-tool":"");d.style.left=h.x+"%";d.style.top=h.y+"%";d.textContent="✦";d.title=h.label||"";d.dataset.hid=h.id;
+  if(G.found.includes((h.finding||{}).clueId))d.classList.add("found");
+  d.onclick=()=>inspectHotspot(h,d);box.appendChild(d)});
+ renderTools(ch);startMusic("calm")}
+function renderTools(ch){const unlocked=ch.tools||[];$("#toolWheel").innerHTML=TOOLS.map(t=>{const un=unlocked.includes(t.id);return `<button class="tool ${G.selectedTool===t.id?"on":""} ${un?"":"locked"}" ${un?"":'disabled title="Unlocks in a later chapter"'} onclick="selectTool('${t.id}')">${t.icon} ${t.name}${un?"":" 🔒"}</button>`}).join("")}
+function selectTool(id){if(G.observer){toast("Observer mode: tools disabled.");return}G.selectedTool=G.selectedTool===id?null:id;clickSnd();
+ document.querySelectorAll(".hotspot.hidden-tool").forEach(h=>{const ch=curChapter();const hs=(ch.scene.hotspots||[]).find(x=>x.id===h.dataset.hid);if(hs&&hs.tool===G.selectedTool)h.classList.add("tool-revealed");else h.classList.remove("tool-revealed")});
+ renderTools(curChapter());toast(G.selectedTool?TOOLS.find(t=>t.id===G.selectedTool).name+" selected — hidden clues glow blue.":"Tool put away.")}
+function inspectHotspot(h,el){/* camera-glide highlight */el.classList.add("glow");if(el.scrollIntoView)el.scrollIntoView({behavior:"smooth",block:"nearest"});
+ const f=h.finding||{};const ev=(G.caseData.evidence||[]).find(e=>e.id===f.clueId||e.code===f.clueId);
+ const code=ev?ev.code:f.clueId;
+ if(ev&&ev.roleExclusive&&ev.roleExclusive!==G.role&&G.conns.length){$("#findingPanel").innerHTML=`<b>🔒 Role-exclusive clue</b><p class="sans">This clue is for the ${ev.roleExclusive} — share it to the board to reveal it to the party.</p><button class="btn small" onclick="shareClue('${code}')">📤 Share to board</button>`;return}
+ addClue(code,f);
+ $("#findingPanel").innerHTML=`<b>${esc(f.title||h.label||"Finding")}</b><p class="sans">${esc(f.text||"")}</p>${ev?`<p class="sans" style="color:var(--mut)">${esc(ev.body||"")} ${ev.redHerring?"<span class='tag'>Red herring?</span>":""} ${ev.key?"<span class='tag'>⭐ Key clue</span>":""}</p><button class="btn small" onclick="zoomEvidence('${code}')">🔍 Zoom</button> <button class="btn small" onclick="annotateEvidence('${code}')">✏️ Note</button>`:""}`;
+ paperSnd();haptic(25)}
+function addClue(code,finding){if(!code)return;if(G.found.includes(code))return;G.found.push(code);G.contrib.clues++;updateTray();saveGame();broadcast({t:"clue",code,aid:actId()});toast("🧾 Clue added: "+code);swell()}
+function receiveClue(code,aid){if(!code||G.found.includes(code))return;G.found.push(code);updateTray();saveGame();toast("🧾 Teammate shared a clue: "+code)}
+function shareClue(code){addClue(code);toast("Shared to board — the party can see it now.")}
+function zoomEvidence(code){const ev=(G.caseData.evidence||[]).find(e=>e.code===code);if(!ev)return;openModal(`<h2>🔍 ${esc(ev.title)}</h2>${ev.img?`<img class="evimg" src="${esc(ev.img)}" alt="">`:""}<p class="sans" style="font-size:17px;line-height:1.6">${esc(ev.body||"")}</p><p class="sans" style="color:var(--mut)">${esc(ev.proves||"")}</p><label>Your note</label><textarea id="noteField" placeholder="Annotate this clue…">${esc(G.notes[code]||"")}</textarea><button class="btn" onclick="saveNote('${code}')">💾 Save note</button><button class="btn ghost" onclick="closeModal()">Close</button>`)}
+function annotateEvidence(code){zoomEvidence(code)}
+function saveNote(code){G.notes[code]=$("#noteField").value;saveGame();toast("Note saved on "+code);closeModal()}
+function finishScene(){const ch=curChapter();const missed=(ch.scene.hotspots||[]).filter(h=>{const c=(h.finding||{}).clueId;const ev=(G.caseData.evidence||[]).find(e=>e.id===c||e.code===c);return ev&&!G.found.includes(ev.code)});
+ if(missed.length){missed.forEach(h=>{const ev=(G.caseData.evidence||[]).find(e=>e.id===(h.finding||{}).clueId||e.code===(h.finding||{}).clueId);if(ev&&!G.found.includes(ev.code)){G.found.push(ev.code);G.notes[ev.code]=(G.notes[ev.code]||"")+" [Noted in file — unscanned on scene.]"}});toast("No clue is ever lost: "+missed.length+" unscanned hotspot(s) noted in your Case File.");updateTray();saveGame()}
+ renderInterrogation();showScreen("interrogation")}
+/* ============ HINTS (3 levels, audio, cost stars) ============ */
+function openHints(){if(G.observer){toast("Observer mode: hints disabled.");return}const h=G.caseData.hints||{nudge:[],direction:[],answer:[]};
+ const levels=[["nudge","💡 Nudge","A gentle push."],["direction","🧭 Direction","Where to look."],["answer","🎯 Answer","The direct answer."]];
+ openModal(`<h2>💡 Hints — free, but each use lowers final stars (−1)</h2><p class="sans">Used so far: ${G.hintsUsed}. Current level: ${["—","Nudge","Direction","Answer"][Math.min(G.hintLevel,3)]||"—"}</p>`+levels.map((l,i)=>`<button class="btn ${i<G.hintLevel?"ghost":""}" onclick="useHint(${i})">${l[1]} — ${l[2]}</button>`).join("")+`<button class="btn ghost" onclick="closeModal()">Close</button>`)}
+function useHint(i){const h=G.caseData.hints||{};const keys=["nudge","direction","answer"];const arr=h[keys[i]]||[];const text=arr[G.chapter%Math.max(1,arr.length)]||arr[0]||"No hint written for this chapter yet — check the Case File.";
+ G.hintLevel=Math.max(G.hintLevel,i+1);G.hintsUsed++;updateTray();saveGame();
+ openModal(`<h2>${["💡 Nudge","🧭 Direction","🎯 Answer"][i]}</h2><p class="sans" style="font-size:17px;line-height:1.6">${esc(text)}</p><p class="kbd">This hint cost 1 star. Hints used: ${G.hintsUsed}.</p><button class="btn" onclick="speak(${JSON.stringify(text).replace(/"/g,"&quot;")})">🔊 Play hint as audio (${settings.voice} voice)</button><button class="btn ghost" onclick="closeModal()">Close</button>`)}
+/* ============ MINI-PUZZLES ============ */
+function openPuzzle(){const ch=curChapter();const p=(ch.puzzles||[])[0];if(!p){toast("No puzzle in this chapter — the board is your puzzle.");return}
+ openModal(`<h2>🧩 ${esc(p.title||p.kind||"Mini-puzzle")}</h2><p class="sans">${esc(p.hint||"Solve it in under a minute. SKIP appears after 2 failed tries.")}</p><p class="sans" style="color:var(--mut)">Kind: ${esc(p.kind||"")}</p>`+(p.options||[]).map((o,i)=>`<button class="btn ghost" onclick="answerPuzzle(${i})">${esc(o)}</button>`).join("")+`<div id="puzzleMsg"></div><button class="btn ghost" id="puzzleSkip" style="display:none" onclick="closeModal();toast('Puzzle skipped — story continues.')">⏭ Skip puzzle</button><button class="btn ghost" onclick="closeModal()">Close</button>`)}
+function answerPuzzle(i){const ch=curChapter();const p=(ch.puzzles||[])[0];if(!p)return;
+ if(i===p.correct){toast("✅ Puzzle solved!");swell();if(p.clue)addClue(p.clue);closeModal();saveGame()}
+ else{G.puzzleFails++;$("#puzzleMsg").innerHTML="<p style='color:#ff9a8a'>Not quite — try again. ("+G.puzzleFails+"/2)</p>";if(G.puzzleFails>=2){const s=$("#puzzleSkip");if(s)s.style.display="block";toast("You can SKIP now — puzzles never block the story.")}}}
+/* ============ INTERROGATION ============ */
+function renderInterrogation(){const ch=curChapter();startMusic("tense");
+ const tabs=(ch.interrogations||[]).map((it,i)=>{const s=(G.caseData.suspects||[]).find(x=>x.id===it.suspectId);return `<button class="${i===0?"on":""}" onclick="selectSuspect('${it.suspectId}',this)">${esc(s?s.name:it.suspectId)}</button>`}).join("");
+ $("#suspectTabs").innerHTML=tabs||"<p>No interrogations this chapter — go to the board.</p>";
+ const first=(ch.interrogations||[])[0];if(first)selectSuspect(first.suspectId,null)}
+function selectSuspect(id,btn){if(btn){$$("#suspectTabs button").forEach(b=>b.classList.remove("on"));btn.classList.add("on")}
+ G.currentSuspect=id;const s=(G.caseData.suspects||[]).find(x=>x.id===id);if(!s)return;
+ $("#suspectFace").textContent="👤";$("#suspectName").textContent=s.name+" ("+s.age+")";$("#suspectRole").textContent=s.role+" — Secret: "+(s.secret||"—");
+ $("#pressureBar").style.width=(G.pressure[id]??50)+"%";$("#trustBar").style.width=(G.trust[id]??50)+"%";
+ const ch=curChapter();const it=(ch.interrogations||[]).find(x=>x.suspectId===id);
+ $("#questionList").innerHTML=(it?it.questions:[]).map(q=>`<button class="btn ghost" style="text-align:left" onclick="askQuestion('${q.id}')">${esc(q.text)}${q.confront?" <span class='tag'>⚔️ Challenge available</span>":""}</button>`).join("")||"<p class='sans'>No questions for this suspect in this chapter.</p>"}
+function askQuestion(qid){const ch=curChapter();const it=(ch.interrogations||[]).find(x=>x.suspectId===G.currentSuspect);const q=(it?it.questions:[]).find(x=>x.id===qid);if(!q)return;
+ const s=(G.caseData.suspects||[]).find(x=>x.id===G.currentSuspect);
+ let deltaP=q.mood==="tense"?12:q.mood==="breaks"?20:5, deltaT=q.mood==="tense"?-6:q.mood==="breaks"?-15:4;
+ G.pressure[G.currentSuspect]=Math.max(0,Math.min(100,(G.pressure[G.currentSuspect]??50)+deltaP));
+ G.trust[G.currentSuspect]=Math.max(0,Math.min(100,(G.trust[G.currentSuspect]??50)+deltaT));
+ $("#pressureBar").style.width=G.pressure[G.currentSuspect]+"%";$("#trustBar").style.width=G.trust[G.currentSuspect]+"%";
+ let extra="";
+ if(q.confront){const has=G.found.includes(q.confront);extra=has?`<p><b>⚔️ Challenge:</b> you present <b>${esc(q.confront)}</b> — it contradicts the answer. The suspect ${s&&s.lieList&&s.lieList.length?"falters: \""+esc(s.lieList[0])+"\" was a lie.":"breaks down and reveals more."}</p><button class="btn small" onclick="challengeSuspect('${qid}')">⚔️ Challenge with evidence</button>`:`<p class="sans" style="color:var(--mut)">⚔️ A Challenge is available here — but you don't hold the contradicting evidence yet (${esc(q.confront)}).</p>`}
+ $("#answerPanel").innerHTML=`<b>${esc(s?s.name:"")}</b><p class="sans" style="font-size:16px;line-height:1.6">"${esc(q.answer||"…")}"</p>${extra}<p class="kbd">Pressure ${G.pressure[G.currentSuspect]} · Trust ${G.trust[G.currentSuspect]}${settings.subs?" · Subtitles on":""}</p>`;
+ if(settings.subs)speak(q.answer||"");clickSnd();saveGame()}
+function challengeSuspect(qid){const ch=curChapter();const it=(ch.interrogations||[]).find(x=>x.suspectId===G.currentSuspect);const q=(it?it.questions:[]).find(x=>x.id===qid);if(!q||!q.confront)return;
+ if(!G.found.includes(q.confront)){toast("You need the contradicting evidence first.");return}
+ G.pressure[G.currentSuspect]=Math.min(100,(G.pressure[G.currentSuspect]??50)+20);G.trust[G.currentSuspect]=Math.max(0,(G.trust[G.currentSuspect]??50)-10);
+ $("#pressureBar").style.width=G.pressure[G.currentSuspect]+"%";$("#trustBar").style.width=G.trust[G.currentSuspect]+"%";
+ $("#answerPanel").innerHTML+=`<p style="color:#ffd75e"><b>⚔️ Challenged!</b> Presented <b>${esc(q.confront)}</b>. The suspect's story cracks — pressure up, trust down.</p>`;swell();saveGame()}
+function presentEvidence(){const list=G.found.map(c=>{const e=(G.caseData.evidence||[]).find(x=>x.code===c);return `<button class="btn small" onclick="toast('Presented ${esc(c)} — the suspect reacts. Pressure +8.');G.pressure[G.currentSuspect]=Math.min(100,(G.pressure[G.currentSuspect]||50)+8);saveGame();closeModal()">${esc(e?e.title:c)}</button>`}).join("")||"<p>No evidence yet.</p>";
+ openModal(`<h2>📎 Present Evidence</h2><p class="sans">Choose a clue from your tray to present to ${esc(G.currentSuspect||"the suspect")}.</p>${list}<button class="btn ghost" onclick="closeModal()">Cancel</button>`)}
+function goBoard(){renderBoard();showScreen("board")}
+</script>
+<script>
+"use strict";
+/* ============ DEDUCTION BOARD ============ */
+function boardTab(t){$("#tabLinks").classList.toggle("on",t==="links");$("#tabTimeline").classList.toggle("on",t==="timeline");$("#boardLinksPane").style.display=t==="links"?"block":"none";$("#boardTimelinePane").style.display=t==="timeline"?"block":"none";if(t==="timeline")renderTimeline()}
+function renderBoard(){const evs=(G.caseData.evidence||[]).filter(e=>G.found.includes(e.code));
+ const sus=(G.caseData.suspects||[]).map(s=>({code:"S:"+s.id,title:"👤 "+s.name,body:s.role,suspect:true}));
+ const cards=[...evs.map(e=>({code:e.code,title:e.title,body:e.proves||e.body||"",red:e.redHerring})),...sus];
+ $("#boardGrid").innerHTML=cards.length?cards.map(c=>{const linked=G.links.some(l=>l.includes(c.code));return `<div class="bcard ${linked?"linked":""} ${c.suspect?"suspect":""}" data-code="${esc(c.code)}" onclick="tapBoardCard('${esc(c.code)}',this)"><b>${esc(c.title)}</b><br><span class="sans" style="font-size:13px">${esc(c.body||"")}</span>${c.red?" <span class='tag'>?</span>":""}</div>`}).join(""):"<p class='sans'>No clues pinned yet — investigate the scene first.</p>";
+ $("#linkConfirm").innerHTML="";renderTimeline()}
+function renderTimeline(){const tl=G.caseData.timeline||[];$("#timelineList").innerHTML=tl.length?tl.map(t=>`<div class="card"><b>⏰ ${esc(t.t)}</b> — <span class="sans">${esc(t.label)}</span> ${t.hot?"<span class='tag' style='background:#b3402f;color:#fff'>⚠ Impossibility?</span>":""}</div>`).join(""):"<p class='sans'>No timeline events in this case file yet.</p>"}
+function tapBoardCard(code,el){if(G.pendingLink&&G.pendingLink!==code){proposeLink(G.pendingLink,code);G.pendingLink=null;$$(".bcard").forEach(b=>b.classList.remove("sel"))}
+ else{G.pendingLink=code;$$(".bcard").forEach(b=>b.classList.remove("sel"));el.classList.add("sel");toast("Selected "+code+" — tap a second card to propose a link.");clickSnd()}}
+function proposeLink(a,b){const key=a+"<>"+b;if(G.links.some(l=>(l[0]===a&&l[1]===b)||(l[0]===b&&l[1]===a))){toast("That link is already on the board.");return}
+ const correct=(G.caseData.boardLinks||[]).some(l=>(l[0]===a&&l[1]===b)||(l[0]===b&&l[1]===a));
+ const solo=G.conns.length===0;
+ $("#linkConfirm").innerHTML=`<div class="panel"><b>Proposed link:</b> ${esc(a)} ↔ ${esc(b)}<p class="sans">${solo?"Solo mode: confirm it yourself.":"Co-op: one other player must confirm this link."}</p><button class="btn small" onclick="confirmLink('${esc(a)}','${esc(b)}',${correct})">✅ Confirm link</button> <button class="btn small ghost" onclick="$('#linkConfirm').innerHTML=''">✖ Discard</button></div>`;
+ broadcast({t:"link",a,b,aid:actId()});toast("Link proposed — awaiting confirmation.")}
+function confirmLink(a,b,correct){if(G.links.some(l=>(l[0]===a&&l[1]===b)||(l[0]===b&&l[1]===a)))return;G.links.push([a,b]);G.contrib.links++;$("#linkConfirm").innerHTML="";
+ if(correct){swell();toast("✨ Correct link — it glows!")}else toast("Link pinned. (Wrong links stay quiet until the chapter report.)");
+ renderBoard();updateTray();saveGame()}
+function receiveLink(a,b,aid){if(!a||!b)return;if(G.links.some(l=>(l[0]===a&&l[1]===b)||(l[0]===b&&l[1]===a)))return;G.links.push([a,b]);renderBoard();updateTray();saveGame();toast("🔗 Teammate linked "+a+" ↔ "+b)}
+function goReport(){renderReport();showScreen("report")}
+/* ============ CHAPTER REPORT ============ */
+function renderReport(){const ch=curChapter();const qs=ch.report?ch.report.questions:[];G._reportAnswers={};
+ $("#reportQs").innerHTML=qs.length?qs.map((q,i)=>`<div class="card"><b>${esc(q.q)}</b>${q.options.map((o,j)=>`<button class="btn ghost" style="text-align:left" onclick="answerReport(${i},${j},this)">${esc(o)}</button>`).join("")}<div id="rq${i}"></div></div>`).join(""):"<p class='sans'>No report questions this chapter.</p>"}
+function answerReport(i,j,btn){const ch=curChapter();const q=(ch.report.questions||[])[i];if(!q||G._reportAnswers[i]!==undefined)return;G._reportAnswers[i]=j;
+ const ok=j===q.correct;if(!ok)G.reportWrong++;
+ $("#rq"+i).innerHTML=`<p class="sans">${ok?"✅ Correct.":"❌ Not quite — "+esc(q.explain||"check the Case File.")} ${ok?"":"(Stars −1, progress continues.)"}</p>`;
+ btn.style.borderColor=ok?"#2e9e6b":"#b3402f";updateTray();saveGame()}
+function nextChapter(){const total=(G.caseData.chapters||[]).length;
+ if(G.chapter+1<total){G.chapter++;G.puzzleFails=0;saveGame();renderBriefing();showScreen("briefing")}
+ else{renderFinale();showScreen("finale")}}
+/* ============ FINALE / VOTE / RESULT ============ */
+function renderFinale(){const s=G.caseData.solve||{options:{who:[],motive:[],method:[],keyProof:[]}};
+ const fill=(id,opts)=>{$(id).innerHTML=(opts||[]).map(o=>`<option value="${esc(o.id)}">${esc(o.label)}</option>`).join("")};
+ fill("#accWho",s.options.who);fill("#accMotive",s.options.motive);fill("#accMethod",s.options.method);fill("#accProof",s.options.keyProof);
+ $("#voteBox").innerHTML=G.conns.length?`<p class="sans">🗳️ Party vote in progress — ${G.players.length} player(s). Everyone must agree on culprit + motive + method. Tie → host decides.</p><div id="voteList"></div>`:`<p class="sans">Solo mode — your accusation is final.</p>`}
+function recordVote(name,pick){G.votes[name]=pick;const el=$("#voteList");if(el)el.innerHTML=Object.entries(G.votes).map(([n,p])=>`<p class="sans">🗳️ ${esc(n)}: ${esc(p.who||"")} / ${esc(p.motive||"")} / ${esc(p.method||"")}</p>`).join("")}
+function submitAccusation(){const pick={who:$("#accWho").value,motive:$("#accMotive").value,method:$("#accMethod").value,keyProof:$("#accProof").value};
+ if(G.conns.length){broadcast({t:"vote",name:"You",pick,aid:actId()});recordVote("You",pick);
+  const votes=Object.values(G.votes);const agree=votes.length>=Math.max(2,G.players.length)&&votes.every(v=>v.who===pick.who&&v.motive===pick.motive&&v.method===pick.method);
+  if(!agree){toast("🗳️ Vote recorded — waiting for the party to agree. (Tie → host decides.)");return}}
+ finishCase(pick)}
+function finishCase(pick){const s=G.caseData.solve||{};const okWho=pick.who===s.who,okMo=pick.motive===s.motive,okMe=pick.method===s.method,okProof=pick.keyProof===s.keyProof;
+ const correct=[okWho,okMo,okMe,okProof].filter(Boolean).length;
+ let stars=Math.max(1,5-G.hintsUsed-G.reportWrong-(4-correct));if(correct===4)stars=Math.max(stars,3);
+ G.stars=stars;try{const all=JSON.parse(localStorage.getItem("uc_stars")||"{}");all[G.caseNum]=Math.max(all[G.caseNum]||0,stars);localStorage.setItem("uc_stars",JSON.stringify(all))}catch(e){}
+ $("#resultTitle").textContent=correct===4?"✅ Case Closed — "+G.caseData.title:"⚖️ Case Closed — with doubts";
+ $("#resultBody").innerHTML=`<p><span class="stars" style="font-size:26px">${"★".repeat(stars)}${"☆".repeat(5-stars)}</span> <b>${stars}/5 stars</b></p>
+ <p class="sans">Accusation: ${correct}/4 correct — Culprit ${okWho?"✅":"❌"} · Motive ${okMo?"✅":"❌"} · Method ${okMe?"✅":"❌"} · Key proof ${okProof?"✅":"❌"}</p>
+ <p class="sans">Hints used: ${G.hintsUsed} · Report mistakes: ${G.reportWrong} · Clues found: ${G.found.length}/${(G.caseData.evidence||[]).length} · Links confirmed: ${G.links.length}</p>
+ <div class="sans">${s.solutionHTML||""}</div>
+ <p class="sans" style="color:var(--mut)">No single smoking gun: the solution needed ${((G.caseData.minEvidenceToSolve||[]).join(" + "))||"several clues combined"}.</p>`;
+ const closing=(G.caseData.closing&&G.caseData.closing.lines)||[];currentCineText=closing.map(l=>l.text).join(" ");
+ $("#closingCine").innerHTML=closing.map(l=>`<p>${esc(l.text)}</p>`).join("")||"<p>The truth, finally, on the record.</p>";
+ $("#recapBox").innerHTML=`<p class="sans">👤 You — clues ${G.contrib.clues} · links ${G.contrib.links} · role ${esc(G.role)}</p>`+G.players.filter(p=>!p.me).map(p=>`<p class="sans">👤 ${esc(p.name)} — role ${esc(p.role||"field")}</p>`).join("")+`<p class="sans">Party size: ${G.players.length} · Room: ${esc(G.room||"solo")}</p>`;
+ swell();saveGame();showScreen("result")}
+function shareResult(){const text=`🕵️ Unsolved Case — ${G.caseData?G.caseData.title:""}: I scored ${G.stars}/5 stars. Can you close the case?`;
+ if(navigator.share)navigator.share({title:"Unsolved Case",text}).catch(()=>{});
+ else copyShareCard()}
+function copyShareCard(){const text=`🕵️ UNSOLVED CASE — ${G.caseData?G.caseData.title:""}\n⭐ ${G.stars}/5 stars · 🧾 ${G.found.length} clues · 🔗 ${G.links.length} links\nPlay free: ${location.href}`;
+ if(navigator.clipboard)navigator.clipboard.writeText(text).then(()=>toast("Share card copied."));else toast(text)}
+/* ============ CASE FILE (always ≤2 taps, searchable, zoom + notes) ============ */
+function openCaseFile(){if(!G.caseData){toast("No case loaded yet — pick a case first.");showScreen("cases");return}
+ const evs=G.caseData.evidence||[];const found=evs.filter(e=>G.found.includes(e.code));const missing=evs.filter(e=>!G.found.includes(e.code));
+ openModal(`<h2>📁 Case File — ${esc(G.caseData.title)}</h2>
+ <input id="cfSearch" placeholder="🔍 Search clues, statements, history…" oninput="filterCaseFile(this.value)">
+ <div id="cfList">${caseFileHTML(found,missing)}</div>
+ <h3>Chapter history</h3><p class="sans">Chapter ${G.chapter+1} of ${G.caseData.chapters.length} · Stars penalty −${G.hintsUsed+G.reportWrong} · Hints used ${G.hintsUsed}</p>
+ <h3>Statements</h3>${(G.caseData.suspects||[]).map(s=>`<p class="sans"><b>${esc(s.name)}:</b> alibi — ${esc(s.alibi||"—")} · secret — ${esc(s.secret||"—")}</p>`).join("")}
+ <button class="btn" onclick="closeModal()">Close</button>`)}
+function caseFileHTML(found,missing){return `<h3>Found clues (${found.length})</h3>`+found.map(e=>`<div class="card"><b>${esc(e.title)}</b> <span class="tag">${esc(e.code)}</span><p class="sans">${esc(e.body||"")}</p><p class="sans" style="color:var(--mut)">${esc(e.proves||"")}</p>${G.notes[e.code]?`<p class="sans">✏️ Note: ${esc(G.notes[e.code])}</p>`:""}<button class="btn small" onclick="zoomEvidence('${esc(e.code)}')">🔍 Zoom / annotate</button></div>`).join("")+`<h3>Noted in file — not yet found (${missing.length})</h3><p class="sans" style="color:var(--mut)">Skipped clues appear here — nothing is permanently missable.</p>`+missing.map(e=>`<p class="sans">📝 ${esc(e.title)} <span class="tag">${esc(e.code)}</span> — <i>noted in file</i></p>`).join("")}
+function filterCaseFile(q){const list=$("#cfList");if(!list)return;const evs=G.caseData.evidence||[];const qq=q.toLowerCase();
+ const found=evs.filter(e=>G.found.includes(e.code)&&(e.title+e.body+e.code).toLowerCase().includes(qq));
+ const missing=evs.filter(e=>!G.found.includes(e.code)&&(e.title+e.body+e.code).toLowerCase().includes(qq));
+ list.innerHTML=caseFileHTML(found,missing)}
+/* ============ INIT ============ */
+function init(){loadAvatar();applySettingsBody();renderCases();renderLobby();
+ const sv=loadSave();if(sv){const b=$("#continueBtn");b.textContent="▶ Continue — Case "+sv.caseNum+", Chapter "+((sv.chapter||0)+1)}
+ const q=new URLSearchParams(location.search);const room=q.get("room"),cn=q.get("case");
+ if(room){$("#roomCode").value=room.toUpperCase();G.room=room.toUpperCase();updateShareLink();toast("Invite link opened — room "+room.toUpperCase()+". Tap Join in the lobby.")}
+ if(cn){$("#lobbyCase").value=cn}
+ if("speechSynthesis" in window)speechSynthesis.getVoices();
+ startMusic("calm");updateTray()}
+document.addEventListener("DOMContentLoaded",init);
+if(document.readyState!=="loading")init();
+</script>
+</body></html>

@@ -1,0 +1,1619 @@
+{
+ "boardLinks": [
+  [
+   "LEDGER-PAGE",
+   "BANK-STATEMENT"
+  ],
+  [
+   "LEDGER-PAGE",
+   "AUDIT-LETTER"
+  ],
+  [
+   "AUDIT-LETTER",
+   "PHONE-LOG"
+  ],
+  [
+   "TEA-CUP",
+   "FOXGLOVE-PACKET"
+  ],
+  [
+   "FOXGLOVE-PACKET",
+   "APOTHECARY-LOG"
+  ],
+  [
+   "APOTHECARY-LOG",
+   "TEA-TIN"
+  ],
+  [
+   "KEY-COPY-RECEIPT",
+   "LOCK-SCRATCH"
+  ],
+  [
+   "KEY-COPY-RECEIPT",
+   "WITNESS-STATEMENT"
+  ],
+  [
+   "WITNESS-STATEMENT",
+   "GLOVE-FIBRE"
+  ],
+  [
+   "BANK-STATEMENT",
+   "ASSOCIATION-STAMP"
+  ],
+  [
+   "RIVAL-NOTE",
+   "CIGARETTE-BUTT"
+  ],
+  [
+   "INHERITANCE-LETTER",
+   "WILL-DRAFT"
+  ]
+ ],
+ "chapters": [
+  {
+   "briefing": "The storeroom has been sealed as evidence for ten years. The door locks from the inside, yet the body was found alone with the door locked. Your job: find what the first investigators missed — starting with the tea.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "Home, doing the association accounts. Alone. I had no reason to be anywhere else.",
+       "confront": null,
+       "id": "q1",
+       "mood": "calm",
+       "requires": null,
+       "text": "Where were you the night Silas died?",
+       "unlockClue": null
+      },
+      {
+       "answer": "Never. Silas kept his own key. Why would I need one?",
+       "confront": "LOCK-SCRATCH",
+       "id": "q2",
+       "mood": "press",
+       "requires": null,
+       "text": "Did you have a key to this storeroom?",
+       "unlockClue": "KEY-COPY-RECEIPT"
+      }
+     ],
+     "suspectId": "henri-delacroix"
+    }
+   ],
+   "locationId": "storeroom",
+   "mechanic": "Scene investigation",
+   "n": 1,
+   "puzzles": [
+    {
+     "clue": "LEDGER-PAGE",
+     "correct": 1,
+     "done": "The reassembled page shows one rare-book sale recorded twice: a real sale, and a phantom twin. Someone was inventing sales.",
+     "hint": "The torn half of the ledger page was found in the waste bin. Match the fibres and the handwriting.",
+     "id": "pz-torn-note",
+     "kind": "torn-note",
+     "options": [
+      "A page about a missing rare book",
+      "A page recording the same sale twice — once real, once invented",
+      "A page listing Silas's personal debts"
+     ],
+     "title": "Reassemble the Torn Note",
+     "wrong": "The fibres don't match. Try again — look at the sale entries, not the totals.",
+     "correctText": "A page recording the same sale twice — once real, once invented"
+    }
+   ],
+   "question": "How did the killer get in — and out — of a locked room?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "The reassembled page records the same rare-book sale twice. Phantom sales are how money is skimmed.",
+      "id": "r1",
+      "options": [
+       "Silas's personal debts",
+       "One sale recorded twice — a real sale and a phantom twin",
+       "A list of stolen books"
+      ],
+      "q": "What does the torn ledger page actually show?",
+      "correctText": "One sale recorded twice — a real sale and a phantom twin"
+     },
+     {
+      "correct": 1,
+      "explain": "The scratches ring the inside of the lock — consistent with a copied key used from outside, not a pick.",
+      "id": "r2",
+      "options": [
+       "Silas locked himself in",
+       "A copied key was turned from the outside in a hurry",
+       "The lock was picked with a wire"
+      ],
+      "q": "What do the scratches on the lock suggest?",
+      "correctText": "A copied key was turned from the outside in a hurry"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "TEA-CUP",
+       "text": "A chipped enamel cup, half full. The tea inside smells faintly sweet — wrong for Silas's usual bitter blend.",
+       "title": "The Tea Cup"
+      },
+      "id": "hs-tea-cup",
+      "label": "Cold tea cup",
+      "x": 42,
+      "y": 58
+     },
+     {
+      "finding": {
+       "clueId": "LEDGER-PAGE",
+       "text": "The ledger is torn in half. The missing page covered the last month of rare-book sales.",
+       "title": "The Torn Ledger"
+      },
+      "id": "hs-ledger",
+      "label": "Torn ledger",
+      "x": 68,
+      "y": 44
+     },
+     {
+      "finding": {
+       "clueId": "LOCK-SCRATCH",
+       "text": "Fresh scratches ring the inside of the lock — as if a key was turned in a hurry, from the outside, with a copy.",
+       "title": "The Lock"
+      },
+      "id": "hs-lock",
+      "label": "Door lock",
+      "x": 82,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "STOREROOM-KEY",
+       "text": "Silas's own key hangs on its hook. It is worn smooth — but a second, newer key once hung beside it. The hook is bent.",
+       "title": "The Brass Key"
+      },
+      "id": "hs-key",
+      "label": "Brass key on a hook",
+      "x": 22,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "ANCHOR-02",
+       "text": "Tucked between two ledgers: a small black envelope sealed with a silver anchor in wax. No address. No name. It was never opened.",
+       "title": "The Black Envelope"
+      },
+      "id": "hs-envelope",
+      "label": "Black envelope",
+      "x": 55,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "MARKET-RECEIPT",
+       "text": "A market receipt for a foxglove tincture, dated the day before Silas died. The buyer's name is smudged beyond reading.",
+       "title": "Crumpled Receipt"
+      },
+      "id": "hs-receipt",
+      "label": "Crumpled receipt",
+      "x": 30,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "CIGARETTE-BUTT",
+       "text": "A hand-rolled cigarette butt by the door — Casimir Roux's brand. He swears he never came near the storeroom.",
+       "title": "Cigarette Butt"
+      },
+      "id": "hs-cigarette",
+      "label": "Cigarette butt",
+      "x": 88,
+      "y": 74
+     },
+     {
+      "finding": {
+       "clueId": "TEA-TIN",
+       "text": "Silas's tea tin, labelled in his own hand. Only two people knew his exact blend: Nadia — and Henri.",
+       "title": "The Tea Tin"
+      },
+      "id": "hs-tea-tin",
+      "label": "Tea tin",
+      "x": 48,
+      "y": 66
+     },
+     {
+      "finding": {
+       "clueId": "TEA-CUP",
+       "text": "The chair lies on its side, away from the desk — Silas stood up suddenly, then fell. Not a peaceful death.",
+       "title": "Fallen Chair"
+      },
+      "id": "hs-chair",
+      "label": "Fallen chair",
+      "x": 60,
+      "y": 80
+     }
+    ],
+    "img": "images/case2-location.jpg"
+   },
+   "title": "The Locked Storeroom",
+   "tools": [
+    "flashlight",
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "Silas's flat has been untouched for a decade. His daughter kept it exactly as he left it. Somewhere in these two rooms is the reason he died — and the reason someone tore a page out of his ledger.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "We disagreed. Families do. I would never have hurt him — I loved him.",
+       "confront": null,
+       "id": "q1",
+       "mood": "calm",
+       "requires": null,
+       "text": "You argued with your father about selling the stall?",
+       "unlockClue": null
+      },
+      {
+       "answer": "Audit? No. Father never mentioned the association's money to me. Ask Henri — he handled all of that.",
+       "confront": "AUDIT-LETTER",
+       "id": "q2",
+       "mood": "press",
+       "requires": null,
+       "text": "Did you know about the audit he ordered?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "odette-venn"
+    }
+   ],
+   "locationId": "venn-flat",
+   "mechanic": "Scene investigation + UV light",
+   "n": 2,
+   "puzzles": [],
+   "question": "What was Silas planning — and who knew about it?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "The draft letter on his desk orders a full audit — dated the day before his death, never sent.",
+      "id": "r1",
+      "options": [
+       "Sell the stall to Casimir Roux",
+       "Order a full audit of the association's books",
+       "Leave Port Anselm with Nadia"
+      ],
+      "q": "What was Silas about to do the day before he died?",
+      "correctText": "Order a full audit of the association's books"
+     },
+     {
+      "correct": 1,
+      "explain": "The telephone log shows an eleven-minute call to Henri the night before Silas died.",
+      "id": "r2",
+      "options": [
+       "His daughter Odette",
+       "Henri Delacroix",
+       "Casimir Roux"
+      ],
+      "q": "Who did Silas call last, the night before he died?",
+      "correctText": "Henri Delacroix"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "AUDIT-LETTER",
+       "text": "A draft letter, in Silas's hand, ordering a full audit of the association's books — dated the day before he died. It was never sent.",
+       "title": "The Audit Letter"
+      },
+      "id": "hs-audit",
+      "label": "Letter on the desk",
+      "x": 35,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "TORN-PHOTO",
+       "text": "A photograph of Silas and Nadia, torn in half and taped back together. Someone wanted this memory gone — or kept.",
+       "title": "Torn Photograph"
+      },
+      "id": "hs-photo",
+      "label": "Torn photograph",
+      "x": 60,
+      "y": 35
+     },
+     {
+      "finding": {
+       "clueId": "WILL-DRAFT",
+       "text": "An unfinished will. It leaves the stall to his apprentice Jules — not to his daughter. It was never signed.",
+       "title": "The Will Draft"
+      },
+      "id": "hs-will",
+      "label": "Will draft",
+      "x": 25,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "INHERITANCE-LETTER",
+       "text": "A furious letter from Odette demanding Silas sell the stall. Dated a week before his death — and never answered.",
+       "title": "Odette's Letter"
+      },
+      "id": "hs-inheritance",
+      "label": "Daughter's letter",
+      "x": 45,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "PHONE-LOG",
+       "text": "The last call Silas made was to Henri Delacroix, the night before he died. It lasted eleven minutes.",
+       "title": "Telephone Log"
+      },
+      "id": "hs-phone",
+      "label": "Old telephone log",
+      "x": 70,
+      "y": 62
+     },
+     {
+      "finding": {
+       "clueId": "APPRENTICE-BOOK",
+       "text": "A gap on the shelf where a first edition should stand. The facsimile that replaced it is still there, spine out.",
+       "title": "The Empty Shelf"
+      },
+      "id": "hs-books",
+      "label": "Empty shelf space",
+      "x": 15,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "RIVAL-NOTE",
+       "text": "'You will regret outbidding me, old man.' Signed, Casimir Roux. Loud, stupid — and dated in plain sight.",
+       "title": "Roux's Note"
+      },
+      "id": "hs-rival-note",
+      "label": "Threatening note",
+      "x": 80,
+      "y": 48
+     },
+     {
+      "finding": {
+       "clueId": "DEBT-NOTE",
+       "text": "A small IOU: Casimir Roux owes Silas 400 francs for a book. Petty money — not a motive for murder.",
+       "title": "The Debt Note"
+      },
+      "id": "hs-debt",
+      "label": "Debt note",
+      "x": 55,
+      "y": 72
+     }
+    ],
+    "img": "images/case2-location.jpg"
+   },
+   "title": "Two Rooms Above the Stall",
+   "tools": [
+    "flashlight",
+    "UV light"
+   ]
+  },
+  {
+   "briefing": "The association's office holds ten years of ledgers. The audit Silas ordered never happened — until now. Follow the phantom sales, and the money will lead you to the man who needed Silas silent.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "I shouted. I always shouted. Then I went to the harbour bar and stayed there all night. Ask anyone.",
+       "confront": null,
+       "id": "q1",
+       "mood": "press",
+       "requires": null,
+       "text": "You threatened Silas the day before he died.",
+       "unlockClue": null
+      },
+      {
+       "answer": "I smoke those, yes — I smoke them everywhere. That proves I walk past his stall, not that I killed him.",
+       "confront": "CIGARETTE-BUTT",
+       "id": "q2",
+       "mood": "press",
+       "requires": null,
+       "text": "Is this your cigarette butt, found by the storeroom door?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "casimir-roux"
+    },
+    {
+     "questions": [
+      {
+       "answer": "That… that was for the association office. A mistake by the locksmith, surely.",
+       "confront": "KEY-COPY-RECEIPT",
+       "id": "q1",
+       "mood": "press",
+       "requires": "KEY-COPY-RECEIPT",
+       "text": "Why is there a locksmith receipt for a duplicate storeroom key in your name?",
+       "unlockClue": null
+      },
+      {
+       "answer": "He… he talked about the audit. He said he trusted me to help him with it. He trusted me.",
+       "confront": "AUDIT-LETTER",
+       "id": "q2",
+       "mood": "press",
+       "requires": "PHONE-LOG",
+       "text": "Silas called you for eleven minutes the night before he died. What did he say?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "henri-delacroix"
+    }
+   ],
+   "locationId": "association-office",
+   "mechanic": "Analysis tools + interrogation",
+   "n": 3,
+   "puzzles": [
+    {
+     "clue": "LEDGER-PAGE",
+     "correct": 1,
+     "done": "A clear print on the torn page matches Henri Delacroix — the man who said he never touched the ledger.",
+     "hint": "Dust the torn page's edge — one print survived ten years under the paperclip.",
+     "id": "pz-fingerprint",
+     "kind": "fingerprint-lift",
+     "options": [
+      "Odette Venn's print",
+      "Henri Delacroix's print",
+      "Jules Abernathy's print"
+     ],
+     "title": "Lift the Print from the Ledger",
+     "wrong": "That print doesn't match the file. Dust the edge again, under the paperclip.",
+     "correctText": "Henri Delacroix's print"
+    }
+   ],
+   "question": "Whose alibi does not hold up — and where did the money go?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "Casimir and Odette are both confirmed by witnesses. Henri's alibi is his own word alone.",
+      "id": "r1",
+      "options": [
+       "Casimir Roux — the barman contradicts him",
+       "Henri Delacroix — home alone, no witness, no record",
+       "Odette Venn — the café owner contradicts her"
+      ],
+      "q": "Whose alibi does not hold up?",
+      "correctText": "Henri Delacroix — home alone, no witness, no record"
+     },
+     {
+      "correct": 2,
+      "explain": "Every phantom sale is in Henri's handwriting; every real sale is in Silas's.",
+      "id": "r2",
+      "options": [
+       "Silas Venn",
+       "Jules Abernathy",
+       "Henri Delacroix"
+      ],
+      "q": "Who handled every phantom rare-book sale?",
+      "correctText": "Henri Delacroix"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "BANK-STATEMENT",
+       "text": "The association account is short by a large sum — and every shortfall follows a phantom rare-book sale.",
+       "title": "Bank Statements"
+      },
+      "id": "hs-bank",
+      "label": "Bank statements",
+      "x": 30,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "BANK-STATEMENT",
+       "text": "Henri chaired every finance meeting for six years. No one else ever checked the books. No one was allowed to.",
+       "title": "Meeting Minutes"
+      },
+      "id": "hs-minutes",
+      "label": "Meeting minutes",
+      "x": 55,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "KEY-COPY-RECEIPT",
+       "text": "A receipt for a duplicate storeroom key, cut three weeks before Silas died. The customer: Henri Delacroix.",
+       "title": "Locksmith Receipt"
+      },
+      "id": "hs-locksmith",
+      "label": "Locksmith receipt",
+      "x": 70,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "GLOVE-FIBRE",
+       "text": "A dark wool fibre caught on the office chair — the same wool as Henri's overcoat, kept here overnight.",
+       "title": "Coat Fibre"
+      },
+      "id": "hs-fibre",
+      "label": "Coat fibre on a chair",
+      "x": 20,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "WITNESS-STATEMENT",
+       "text": "The market cleaner saw a man in a dark overcoat enter the market lane late that night. She could not see his face — but she remembers the coat.",
+       "title": "Cleaner's Statement"
+      },
+      "id": "hs-cleaner",
+      "label": "Cleaner's statement",
+      "x": 45,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "LEDGER-PAGE",
+       "text": "Every phantom sale is in Henri's handwriting. Every real sale is in Silas's. The two hands never mix — except once.",
+       "title": "Sales Register"
+      },
+      "id": "hs-sales",
+      "label": "Sales register",
+      "x": 80,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "AUDIT-LETTER",
+       "text": "The night Silas died is circled in red — with a note in Henri's hand: 'Audit — stop him.'",
+       "title": "Wall Calendar"
+      },
+      "id": "hs-calendar",
+      "label": "Wall calendar",
+      "x": 60,
+      "y": 25
+     },
+     {
+      "finding": {
+       "clueId": "BANK-STATEMENT",
+       "text": "The stamp used to approve phantom sales. It lived in Henri's desk drawer, and only he had the drawer key.",
+       "title": "Association Stamp"
+      },
+      "id": "hs-stamp",
+      "label": "Association stamp",
+      "x": 38,
+      "y": 80
+     }
+    ],
+    "img": "images/case2-location.jpg"
+   },
+   "title": "The Association's Books",
+   "tools": [
+    "magnifier",
+    "photo-compare"
+   ]
+  },
+  {
+   "briefing": "The tea in Silas's cup smelled wrong. Foxglove — digitalis — sweetens tea and stops a heart, and it looks like an accident to anyone who isn't looking. The apothecary's logbook remembers who bought it.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "I saw a man in a dark overcoat enter the market lane late. I did not see his face. I wish I had.",
+       "confront": null,
+       "id": "q1",
+       "mood": "calm",
+       "requires": null,
+       "text": "Did you see anyone near Silas's stall that night?",
+       "unlockClue": "WITNESS-STATEMENT"
+      },
+      {
+       "answer": "Only me — and Henri. Silas trusted Henri with everything. That was his mistake, wasn't it?",
+       "confront": null,
+       "id": "q2",
+       "mood": "calm",
+       "requires": null,
+       "text": "Who else knew Silas's tea blend?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "nadia-ferran"
+    },
+    {
+     "questions": [
+      {
+       "answer": "Yes. He was angry — then he forgave me. He said I could repay it by working. He was a good man. I didn't kill him.",
+       "confront": "APPRENTICE-BOOK",
+       "id": "q1",
+       "mood": "press",
+       "requires": null,
+       "text": "Silas confronted you about the stolen first edition?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "jules-abernathy"
+    }
+   ],
+   "locationId": "apothecary",
+   "mechanic": "Analysis tools + interrogation",
+   "n": 4,
+   "puzzles": [
+    {
+     "clue": "APOTHECARY-LOG",
+     "correct": 1,
+     "done": "Cleaned up, the tape is damning: the buyer asked how much foxglove would stop a heart — then bought it anyway.",
+     "hint": "The old answering-machine tape is noisy. Filter the hiss and the voice comes clear.",
+     "id": "pz-voicemail",
+     "kind": "voicemail-cleanup",
+     "options": [
+      "The buyer asked for foxglove 'for his garden'",
+      "The buyer asked for foxglove 'to stop a heart'",
+      "The buyer asked for sleeping herbs"
+     ],
+     "title": "Clean Up the Herbalist's Message",
+     "wrong": "That's the hiss talking. Filter again and listen to the exact words.",
+     "correctText": "The buyer asked for foxglove 'to stop a heart'"
+    }
+   ],
+   "question": "What was in the tea — and who bought it?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The residue in the cup matches the foxglove tincture batch sold days before Silas died.",
+      "id": "r1",
+      "options": [
+       "Foxglove tincture (digitalis)",
+       "Sleeping herbs",
+       "Rat poison from the market"
+      ],
+      "q": "What poisoned Silas's tea?",
+      "correctText": "Foxglove tincture (digitalis)"
+     },
+     {
+      "correct": 2,
+      "explain": "The logbook entry is signed 'H.D.' in Henri's own handwriting, three days before the murder.",
+      "id": "r2",
+      "options": [
+       "Casimir Roux",
+       "Jules Abernathy",
+       "H.D. — Henri Delacroix"
+      ],
+      "q": "Who signed for the foxglove tincture?",
+      "correctText": "H.D. — Henri Delacroix"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "APOTHECARY-LOG",
+       "text": "Three days before Silas died, someone bought foxglove tincture and signed 'H.D.' — Henri Delacroix's initials, in his own hand.",
+       "title": "The Logbook Entry"
+      },
+      "id": "hs-log",
+      "label": "Apothecary logbook",
+      "x": 40,
+      "y": 48
+     },
+     {
+      "finding": {
+       "clueId": "FOXGLOVE-PACKET",
+       "text": "An empty foxglove tincture packet behind the counter, dated the same week. The batch number matches the residue in Silas's cup.",
+       "title": "Empty Packet"
+      },
+      "id": "hs-packet",
+      "label": "Empty tincture packet",
+      "x": 62,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "APOTHECARY-LOG",
+       "text": "'The gentleman asked how much would stop a heart. I told him I would not sell it for that. He bought it for his garden, he said.'",
+       "title": "The Herbalist's Note"
+      },
+      "id": "hs-herbalist",
+      "label": "Herbalist's note",
+      "x": 25,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "FOXGLOVE-PACKET",
+       "text": "Dried foxglove, labelled with a skull. A small amount is missing — roughly one lethal dose.",
+       "title": "The Foxglove Jar"
+      },
+      "id": "hs-shelf",
+      "label": "Foxglove jar",
+      "x": 75,
+      "y": 35
+     },
+     {
+      "finding": {
+       "clueId": "TEA-TIN",
+       "text": "Silas's blend is on the chart — he bought it here for years. The foxglove's sweetness would hide perfectly in it.",
+       "title": "Tea Blend Chart"
+      },
+      "id": "hs-tea-blend",
+      "label": "Tea blend chart",
+      "x": 50,
+      "y": 68
+     },
+     {
+      "finding": {
+       "clueId": "WITNESS-STATEMENT",
+       "text": "The herbalist remembers the buyer came at dusk, in a dark overcoat, and paid in cash. She remembers the coat.",
+       "title": "The Shop Bell"
+      },
+      "id": "hs-door",
+      "label": "Shop bell",
+      "x": 85,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "APOTHECARY-LOG",
+       "text": "No other foxglove sale in the whole month. Whoever bought it, bought it for one purpose.",
+       "title": "Sales Ledger"
+      },
+      "id": "hs-ledger2",
+      "label": "Sales ledger",
+      "x": 32,
+      "y": 72
+     },
+     {
+      "finding": {
+       "clueId": "MARKET-RECEIPT",
+       "text": "From here you can see the market lane — and the back of Silas's stall. The buyer left toward the market.",
+       "title": "Window onto the Lane"
+      },
+      "id": "hs-window",
+      "label": "Window onto the lane",
+      "x": 58,
+      "y": 22
+     }
+    ],
+    "img": "images/case2-location.jpg"
+   },
+   "title": "The Herbalist's Log",
+   "tools": [
+    "UV light",
+    "fingerprint powder"
+   ]
+  },
+  {
+   "briefing": "Every thread is on the board now: the phantom sales, the audit, the poison, the copied key. Link the evidence, name the killer, and say how you know. One accusation. Make it count.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "…Silas was my friend. I didn't want — he was going to ruin everything. The audit, the money… I only meant to make him sleep. I didn't mean —",
+       "confront": "TEA-CUP",
+       "id": "q1",
+       "mood": "press",
+       "requires": "LEDGER-PAGE",
+       "text": "The phantom sales are in your handwriting. The poison was signed H.D. The key was cut in your name. What do you say now?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "henri-delacroix"
+    }
+   ],
+   "locationId": "association-office",
+   "mechanic": "Deduction board + finale",
+   "n": 5,
+   "puzzles": [],
+   "question": "Who killed Silas Venn — and how do you prove it?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "Only Henri had the motive (the audit), the means (the foxglove), and the access (the copied key) — all three, together.",
+      "id": "r1",
+      "options": [
+       "Henri Delacroix",
+       "Casimir Roux",
+       "Odette Venn"
+      ],
+      "q": "Who killed Silas Venn?",
+      "correctText": "Henri Delacroix"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "LEDGER-PAGE",
+       "text": "Phantom sales in Henri's hand, bank shortfalls after each one. The motive, in ink.",
+       "title": "Phantom Sales"
+      },
+      "id": "hs-board1",
+      "label": "Phantom sales thread",
+      "x": 30,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "AUDIT-LETTER",
+       "text": "Silas ordered the audit the day before he died — and told Henri about it on the phone.",
+       "title": "The Audit"
+      },
+      "id": "hs-board2",
+      "label": "Audit thread",
+      "x": 50,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "TEA-CUP",
+       "text": "Foxglove bought by 'H.D.', residue in the cup, sweetness hidden in Silas's own blend.",
+       "title": "The Poison"
+      },
+      "id": "hs-board3",
+      "label": "Poison thread",
+      "x": 70,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "KEY-COPY-RECEIPT",
+       "text": "A duplicate key in Henri's name, fresh scratches on the lock, a coat seen in the lane.",
+       "title": "The Key"
+      },
+      "id": "hs-board4",
+      "label": "Key thread",
+      "x": 40,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "WITNESS-STATEMENT",
+       "text": "Every other suspect is confirmed by witnesses. Only Henri's evening is his own word alone.",
+       "title": "The Alibi"
+      },
+      "id": "hs-board5",
+      "label": "Alibi thread",
+      "x": 60,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "RIVAL-NOTE",
+       "text": "A rival's threats, a daughter's anger, a stolen book — loud, human, and none of them murder.",
+       "title": "The Noise"
+      },
+      "id": "hs-board6",
+      "label": "Red herrings",
+      "x": 20,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "ANCHOR-02",
+       "text": "The black envelope with the silver anchor. It fits nothing in this case — and that is what troubles you most.",
+       "title": "The Envelope"
+      },
+      "id": "hs-board7",
+      "label": "The envelope",
+      "x": 80,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "AUDIT-LETTER",
+       "text": "A bookseller who did the honest thing, and told the wrong man. The board is ready. Name him.",
+       "title": "Silas Venn"
+      },
+      "id": "hs-board8",
+      "label": "Silas's photograph",
+      "x": 50,
+      "y": 30
+     }
+    ],
+    "img": "images/case2-location.jpg"
+   },
+   "title": "The Deduction Board",
+   "tools": [
+    "magnifier"
+   ]
+  }
+ ],
+ "closing": {
+  "lines": [
+   {
+    "img": "",
+    "text": "The storeroom door closes for the last time. This time, the key turns in the hand of the law.",
+    "voice": "narrator"
+   },
+   {
+    "img": "",
+    "text": "Silas Venn did not die of a tired heart. He died because he did the honest thing — and told the wrong man he was going to do it.",
+    "voice": "narrator"
+   },
+   {
+    "img": "",
+    "text": "Somewhere in the market, a stallholder finds a small black envelope sealed with a silver anchor. It was never delivered. It was never meant to be.",
+    "voice": "narrator"
+   }
+  ]
+ },
+ "coldOpen": {
+  "lines": [
+   {
+    "img": "",
+    "text": "The night market closes at midnight. The lanterns go out one by one, and the smell of rain on hot stone hangs over the stalls.",
+    "voice": "narrator"
+   },
+   {
+    "img": "",
+    "text": "Silas Venn locks his storeroom from the inside, the way he always does when he stays late with the accounts. He pours his evening tea. He opens the ledger.",
+    "voice": "narrator"
+   },
+   {
+    "img": "",
+    "text": "By morning the tea is cold, the ledger is torn, and Silas Venn is dead. The door is still locked. Nobody ever asked who held the other key.",
+    "voice": "narrator"
+   }
+  ],
+  "title": "Port Anselm — Ten Years Ago"
+ },
+ "coopClueMap": {
+  "analyst": [
+   "LEDGER-PAGE",
+   "APOTHECARY-LOG",
+   "FOXGLOVE-PACKET",
+   "TEA-TIN"
+  ],
+  "archivist": [
+   "AUDIT-LETTER",
+   "BANK-STATEMENT",
+   "KEY-COPY-RECEIPT",
+   "ANCHOR-02",
+   "ASSOCIATION-STAMP"
+  ],
+  "field": [
+   "TEA-CUP",
+   "LOCK-SCRATCH",
+   "GLOVE-FIBRE",
+   "STOREROOM-KEY",
+   "MARKET-RECEIPT"
+  ],
+  "interrogator": [
+   "PHONE-LOG",
+   "WITNESS-STATEMENT",
+   "NADIA-SEEN"
+  ]
+ },
+ "evidence": [
+  {
+   "body": "Chipped enamel cup, half full. Residue tests positive for foxglove (digitalis). The sweetness of the poison hid in Silas's own bitter blend.",
+   "chapter": 1,
+   "code": "TEA-CUP",
+   "id": "ev-tea-cup",
+   "img": "images/case2-location.jpg",
+   "key": true,
+   "proves": "Silas was poisoned, not taken by a heart attack — and the poison was in his evening tea.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "The Tea Cup"
+  },
+  {
+   "body": "Reassembled page shows one rare-book sale recorded twice: a real sale and a phantom twin. Henri's fingerprint is on the torn edge.",
+   "chapter": 1,
+   "code": "LEDGER-PAGE",
+   "id": "ev-ledger",
+   "img": "images/case2-location.jpg",
+   "key": true,
+   "proves": "Someone invented sales to skim money — and Henri handled the torn page.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "The Torn Ledger Page"
+  },
+  {
+   "body": "Fresh scratches ring the inside of the storeroom lock, consistent with a copied key turned from outside in a hurry.",
+   "chapter": 1,
+   "code": "LOCK-SCRATCH",
+   "id": "ev-lock",
+   "img": "images/case2-location.jpg",
+   "key": true,
+   "proves": "The 'locked room' was locked from outside with a copied key.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Lock Scratches"
+  },
+  {
+   "body": "Silas's own key hangs on its hook, worn smooth. The hook beside it is bent — a second, newer key once hung there.",
+   "chapter": 1,
+   "code": "STOREROOM-KEY",
+   "id": "ev-key",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "A second key existed; Silas's own key never left its hook.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "Silas's Brass Key"
+  },
+  {
+   "body": "A small black envelope sealed with a silver anchor in wax, tucked between ledgers, never opened. No address, no name. It fits nothing in this case.",
+   "chapter": 1,
+   "code": "ANCHOR-02",
+   "id": "ev-anchor",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Someone else was watching Silas — a fixer known only as 'the Anchorman' leaves such envelopes. Who he is, and why, is not yet known.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Black Envelope — Silver Anchor Seal"
+  },
+  {
+   "body": "A receipt for a foxglove tincture, dated the day before Silas died. The buyer's name is smudged beyond reading.",
+   "chapter": 1,
+   "code": "MARKET-RECEIPT",
+   "id": "ev-receipt",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Foxglove was bought in the market the day before the murder.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "Crumpled Receipt"
+  },
+  {
+   "body": "A hand-rolled butt of Casimir Roux's brand, by the storeroom door. Roux smokes them everywhere he walks.",
+   "chapter": 1,
+   "code": "CIGARETTE-BUTT",
+   "id": "ev-cigarette",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Nothing about the murder — Roux walked past the stall daily. A loud, false trail.",
+   "redHerring": true,
+   "roleExclusive": null,
+   "title": "Cigarette Butt"
+  },
+  {
+   "body": "Silas's tea blend, labelled in his hand. Only Nadia and Henri knew the exact blend — the poison needed that knowledge to hide.",
+   "chapter": 1,
+   "code": "TEA-TIN",
+   "id": "ev-tea-tin",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Only two people knew the blend well enough to hide foxglove in it.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "Silas's Tea Tin"
+  },
+  {
+   "body": "Draft letter in Silas's hand ordering a full audit of the association's books, dated the day before he died. Never sent — but Silas told Henri about it by phone.",
+   "chapter": 2,
+   "code": "AUDIT-LETTER",
+   "id": "ev-audit",
+   "img": "images/case2-location.jpg",
+   "key": true,
+   "proves": "Silas was about to expose the theft — giving the thief a deadline to act.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "The Audit Letter"
+  },
+  {
+   "body": "A photo of Silas and Nadia, torn in half and taped back together. A private grief, not a clue to murder.",
+   "chapter": 2,
+   "code": "TORN-PHOTO",
+   "id": "ev-photo",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Silas and Nadia were planning a life together — she had everything to lose by his death.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "Torn Photograph"
+  },
+  {
+   "body": "An unsigned draft leaving the stall to apprentice Jules, not to daughter Odette. Never signed, never valid.",
+   "chapter": 2,
+   "code": "WILL-DRAFT",
+   "id": "ev-will",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Silas favoured Jules — but the will had no legal force, so it gave no one a gain.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "Unfinished Will"
+  },
+  {
+   "body": "Odette's furious letter demanding Silas sell the stall, a week before his death. Loud family anger — with a café alibi behind it.",
+   "chapter": 2,
+   "code": "INHERITANCE-LETTER",
+   "id": "ev-inheritance",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Nothing about murder: Odette argued, but was at the Café du Port until 1 a.m., confirmed.",
+   "redHerring": true,
+   "roleExclusive": null,
+   "title": "Odette's Angry Letter"
+  },
+  {
+   "body": "Silas's last call: eleven minutes to Henri Delacroix, the night before he died.",
+   "chapter": 2,
+   "code": "PHONE-LOG",
+   "id": "ev-phone",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Henri knew about the audit before Silas died — Silas told him himself.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Telephone Log"
+  },
+  {
+   "body": "A rare first edition stolen by Jules and replaced with a facsimile. Silas had confronted him — and forgiven him.",
+   "chapter": 2,
+   "code": "APPRENTICE-BOOK",
+   "id": "ev-apprentice",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Nothing about murder: a theft, already discovered and forgiven, with a confirmed alibi behind it.",
+   "redHerring": true,
+   "roleExclusive": null,
+   "title": "The Missing First Edition"
+  },
+  {
+   "body": "'You will regret outbidding me, old man.' Signed, Casimir Roux, in plain sight, dated the day before.",
+   "chapter": 2,
+   "code": "RIVAL-NOTE",
+   "id": "ev-rival-note",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Nothing about murder: a loud, public threat from a man who then drank in public all night.",
+   "redHerring": true,
+   "roleExclusive": null,
+   "title": "Roux's Threatening Note"
+  },
+  {
+   "body": "IOU: Casimir Roux owes Silas 400 francs for a book. Petty money, documented, and owed the other way round.",
+   "chapter": 2,
+   "code": "DEBT-NOTE",
+   "id": "ev-debt",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Roux owed Silas — Silas's death made the debt harder, not easier, to collect.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "The Debt Note"
+  },
+  {
+   "body": "The association account is short by a large sum; every shortfall follows a phantom rare-book sale.",
+   "chapter": 3,
+   "code": "BANK-STATEMENT",
+   "id": "ev-bank",
+   "img": "images/case2-location.jpg",
+   "key": true,
+   "proves": "Real money was stolen, in step with the phantom sales.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Association Bank Statements"
+  },
+  {
+   "body": "Receipt for a duplicate storeroom key, cut three weeks before Silas died. Customer: Henri Delacroix.",
+   "chapter": 3,
+   "code": "KEY-COPY-RECEIPT",
+   "id": "ev-keycopy",
+   "img": "images/case2-location.jpg",
+   "key": true,
+   "proves": "Henri held the second key — the only way into the 'locked' room.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Locksmith Receipt — Duplicate Key"
+  },
+  {
+   "body": "A dark wool fibre on the office chair, matching Henri's overcoat — the coat the cleaner and Nadia both saw in the lane.",
+   "chapter": 3,
+   "code": "GLOVE-FIBRE",
+   "id": "ev-fibre",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Henri's coat was in the market lane that night.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Dark Wool Fibre"
+  },
+  {
+   "body": "The market cleaner saw a man in a dark overcoat enter the lane late that night. She could not see his face, but she remembers the coat.",
+   "chapter": 3,
+   "code": "WITNESS-STATEMENT",
+   "id": "ev-witness",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Someone in a dark overcoat was at the stall late — matching Henri's coat, not Roux's or Jules's.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Cleaner's Statement"
+  },
+  {
+   "body": "Three days before Silas died, foxglove tincture was sold to a buyer who signed 'H.D.' in Henri Delacroix's handwriting — and asked how much would stop a heart.",
+   "chapter": 4,
+   "code": "APOTHECARY-LOG",
+   "id": "ev-apothecary-log",
+   "img": "images/case2-location.jpg",
+   "key": true,
+   "proves": "Henri bought the poison, days before the murder, and knew what it would do.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Apothecary Logbook Entry"
+  },
+  {
+   "body": "Empty tincture packet behind the apothecary counter. Its batch number matches the residue in Silas's cup.",
+   "chapter": 4,
+   "code": "FOXGLOVE-PACKET",
+   "id": "ev-packet",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "The poison in the cup came from the apothecary's batch — the same batch 'H.D.' bought.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Empty Foxglove Packet"
+  },
+  {
+   "body": "Nadia saw the man in the dark overcoat enter the market lane late — and confirms only she and Henri knew Silas's tea blend.",
+   "chapter": 4,
+   "code": "NADIA-SEEN",
+   "id": "ev-nadia-seen",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Narrows the poisoner to two people — and Nadia was seen locking her own stall at midnight.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Nadia's Sighting"
+  },
+  {
+   "body": "The stamp approving phantom sales lived in Henri's desk drawer; only he had the drawer key.",
+   "chapter": 3,
+   "code": "ASSOCIATION-STAMP",
+   "id": "ev-stamp",
+   "img": "images/case2-location.jpg",
+   "key": false,
+   "proves": "Only Henri could have approved the phantom sales.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "Association Stamp"
+  }
+ ],
+ "free": true,
+ "hints": {
+  "answer": [
+   "Henri Delacroix skimmed the association's money through phantom sales, bought foxglove as 'H.D.', and poisoned Silas's tea before the audit — then locked the storeroom with his copied key."
+  ],
+  "direction": [
+   "Match the handwriting on the phantom sales to a suspect, then check the bank statements for the same dates.",
+   "The apothecary logbook entry is signed with initials. Compare the handwriting to the association minutes.",
+   "The lock was not picked — it was opened with a copied key. Find who had one cut."
+  ],
+  "nudge": [
+   "The ledger page was torn for a reason — what is missing from it?",
+   "Someone's alibi is only their own word. Check who has no witness.",
+   "The tea smelled sweet. What is sweet, and deadly, and sold in this market?"
+  ]
+ },
+ "id": "case2",
+ "locations": [
+  {
+   "desc": "A cramped book-lined storeroom behind stall 14. Dust, paper, and the smell of old tea. The door locks from the inside — and, it turns out, from the outside too.",
+   "id": "storeroom",
+   "img": "images/case2-location.jpg",
+   "name": "Venn's Storeroom, Night Market"
+  },
+  {
+   "desc": "Two rooms above the bookstall, untouched for a decade. Letters, photographs, and a will that was never finished.",
+   "id": "venn-flat",
+   "img": "images/case2-location.jpg",
+   "name": "Silas Venn's Flat"
+  },
+  {
+   "desc": "Ledgers, bank statements, and ten years of minutes in a damp back room above the fish hall.",
+   "id": "association-office",
+   "img": "images/case2-location.jpg",
+   "name": "Market Association Office"
+  },
+  {
+   "desc": "A narrow shop of dried herbs and tinctures on Rue des Épices. Its logbook remembers every customer — even the ones who signed a false name.",
+   "id": "apothecary",
+   "img": "images/case2-location.jpg",
+   "name": "Maison Herbal Apothecary"
+  }
+ ],
+ "minEvidenceToSolve": [
+  "LEDGER-PAGE",
+  "AUDIT-LETTER",
+  "BANK-STATEMENT",
+  "APOTHECARY-LOG",
+  "TEA-CUP",
+  "KEY-COPY-RECEIPT"
+ ],
+ "number": 2,
+ "palette": {
+  "accent": "#7a4a21",
+  "bg": "#14100c",
+  "primary": "#c9a227"
+ },
+ "premise": "Ten years ago, Silas Venn — bookseller at the Port Anselm night market — was found dead in his locked storeroom, a cold cup of tea at his elbow and his ledger torn in half. The police called it a heart attack. A new audit of the market association's books says otherwise: someone was stealing, Silas knew, and Silas was about to talk.",
+ "season": 1,
+ "solve": {
+  "cleared": [
+   {
+    "name": "Odette Venn",
+    "text": "She argued with her father, but she was at the Café du Port until 1 a.m. — confirmed. Her anger was grief, not murder."
+   },
+   {
+    "name": "Casimir Roux",
+    "text": "He threatened Silas loudly and publicly, then drank at the harbour bar all night — confirmed by the barman and three regulars."
+   },
+   {
+    "name": "Jules Abernathy",
+    "text": "He stole a book, was caught, and was forgiven. He spent the evening at home with his sister."
+   },
+   {
+    "name": "Nadia Ferran",
+    "text": "She loved Silas and was planning a future with him. She was seen locking her own stall at midnight."
+   }
+  ],
+  "keyProof": "APOTHECARY-LOG",
+  "method": "method-foxglove-tea",
+  "motive": "motive-embezzlement",
+  "options": {
+   "keyProof": [
+    {
+     "id": "APOTHECARY-LOG",
+     "label": "Apothecary log: 'H.D.' bought foxglove and asked how much stops a heart"
+    },
+    {
+     "id": "LEDGER-PAGE",
+     "label": "Torn ledger page showing a phantom sale in Henri's hand"
+    },
+    {
+     "id": "KEY-COPY-RECEIPT",
+     "label": "Locksmith receipt for a duplicate key in Henri's name"
+    },
+    {
+     "id": "RIVAL-NOTE",
+     "label": "Roux's threatening note"
+    }
+   ],
+   "method": [
+    {
+     "id": "method-foxglove-tea",
+     "label": "Poisoned Silas's evening tea with foxglove tincture, then locked the storeroom with a copied key"
+    },
+    {
+     "id": "method-stabbing",
+     "label": "Stabbed Silas and locked the door from inside"
+    },
+    {
+     "id": "method-strangling",
+     "label": "Strangled Silas during an argument"
+    },
+    {
+     "id": "method-fall",
+     "label": "Pushed Silas down the stairs"
+    }
+   ],
+   "motive": [
+    {
+     "id": "motive-embezzlement",
+     "label": "To stop Silas's audit exposing his embezzlement of association funds"
+    },
+    {
+     "id": "motive-inheritance",
+     "label": "To inherit the bookstall"
+    },
+    {
+     "id": "motive-rivalry",
+     "label": "Revenge for losing a book auction"
+    },
+    {
+     "id": "motive-theft",
+     "label": "To cover up the theft of a first edition"
+    }
+   ],
+   "who": [
+    {
+     "id": "henri-delacroix",
+     "label": "Henri Delacroix — association treasurer"
+    },
+    {
+     "id": "odette-venn",
+     "label": "Odette Venn — Silas's daughter"
+    },
+    {
+     "id": "casimir-roux",
+     "label": "Casimir Roux — rival bookseller"
+    },
+    {
+     "id": "jules-abernathy",
+     "label": "Jules Abernathy — apprentice"
+    },
+    {
+     "id": "nadia-ferran",
+     "label": "Nadia Ferran — spice merchant"
+    }
+   ]
+  },
+  "solutionHTML": "<h2>The Bookseller's Last Chapter — Solved</h2><p>Henri Delacroix had been skimming the market association's funds for years, inventing rare-book sales and pocketing the money. Silas Venn found the phantom entries, drafted an audit letter — and, trusting his friend, told Henri about it on the phone the night before he died.</p><p>Henri bought foxglove tincture at Maison Herbal, signing 'H.D.', and asked how much would stop a heart. He knew Silas's tea blend. That night he slipped the tincture into Silas's evening tea, waited, and locked the storeroom from outside with the duplicate key he had cut three weeks earlier — staging a locked room and a heart attack.</p><p>No single clue convicts him. The ledger proves the theft, the logbook proves the poison, and the key receipt proves the access. Together, they leave no one else standing.</p>",
+  "who": "henri-delacroix"
+ },
+ "subtitle": "A locked storeroom. A missing page. A ten-year-old debt.",
+ "suspects": [
+  {
+   "age": 52,
+   "alibi": "Claims he was home alone doing the association accounts all evening — no witness, no phone record.",
+   "id": "henri-delacroix",
+   "img": "images/case2-location.jpg",
+   "lieList": [
+    "I was home alone all evening doing the accounts.",
+    "I never had a key to Silas's storeroom.",
+    "The ledger discrepancy is a bookkeeping error, nothing more."
+   ],
+   "motive": "Silas had ordered a full audit and was going to name him. Exposure meant prison and ruin.",
+   "name": "Henri Delacroix",
+   "pressure": 50,
+   "role": "Market association treasurer; Silas's business partner",
+   "secret": "He has been skimming market association funds for years, routing them through rare-book sales that never happened.",
+   "trust": 50,
+   "trustIntro": "Warm, helpful, the first to offer you the association's files. He seems like the only honest man in the market.",
+   "truthList": [
+    "He and Silas argued the week before Silas died.",
+    "He handled every rare-book sale in the association.",
+    "He knew Silas's evening tea blend by heart."
+   ]
+  },
+  {
+   "age": 34,
+   "alibi": "At the Café du Port with two friends until 1 a.m.; the café owner confirms it.",
+   "id": "odette-venn",
+   "img": "images/case2-location.jpg",
+   "lieList": [
+    "My father and I never argued about money.",
+    "I never touched his ledger."
+   ],
+   "motive": "She stood to inherit the stall and its stock — and she had argued bitterly with Silas about selling it.",
+   "name": "Odette Venn",
+   "pressure": 50,
+   "role": "Silas's daughter; inherits the bookstall",
+   "secret": "She forged her father's signature once to take a loan against the shop, and has feared discovery ever since.",
+   "trust": 50,
+   "trustIntro": "Grief worn thin. She wants answers, but flinches every time the questions turn toward the family.",
+   "truthList": [
+    "She argued with Silas about selling the stall the week he died.",
+    "She was at the Café du Port until 1 a.m. — confirmed by the owner.",
+    "She did not know about the audit."
+   ]
+  },
+  {
+   "age": 61,
+   "alibi": "Drinking at the harbour bar until closing; the barman and three regulars confirm it.",
+   "id": "casimir-roux",
+   "img": "images/case2-location.jpg",
+   "lieList": [
+    "I never threatened Silas.",
+    "I never went near his storeroom that night."
+   ],
+   "motive": "A decade of rivalry; Silas had outbid him on a valuable estate collection days before his death.",
+   "name": "Casimir Roux",
+   "pressure": 50,
+   "role": "Rival antiquarian bookseller, stall 9",
+   "secret": "He owes money to half the market and once tried to buy Silas's stall out from under him with a forged offer.",
+   "trust": 50,
+   "trustIntro": "Blustering and bitter, quick to threaten, quicker to deny. He looks guilty of something — just not murder.",
+   "truthList": [
+    "He threatened Silas in front of witnesses the day before.",
+    "He was at the harbour bar all evening.",
+    "He did owe Silas money — a small, documented debt."
+   ]
+  },
+  {
+   "age": 29,
+   "alibi": "At home with his sister, who confirms he never left after 9 p.m.",
+   "id": "jules-abernathy",
+   "img": "images/case2-location.jpg",
+   "lieList": [
+    "I never took anything from the stall.",
+    "Silas never found out about the book."
+   ],
+   "motive": "Silas had discovered the theft and was going to dismiss him — and tell the association.",
+   "name": "Jules Abernathy",
+   "pressure": 50,
+   "role": "Silas's apprentice",
+   "secret": "He stole a rare first edition from the stall to pay a gambling debt, and replaced it with a facsimile.",
+   "trust": 50,
+   "trustIntro": "Nervous, earnest, and clearly hiding something. He loved Silas like a father — which is exactly why the theft eats him.",
+   "truthList": [
+    "He stole a first edition and replaced it with a facsimile.",
+    "Silas had confronted him about it two days before his death.",
+    "He was home with his sister all evening."
+   ]
+  },
+  {
+   "age": 44,
+   "alibi": "Closing her stall, then home; a neighbouring stallholder saw her lock up at midnight.",
+   "id": "nadia-ferran",
+   "img": "images/case2-location.jpg",
+   "lieList": [
+    "Silas and I were only friends.",
+    "I never went into his storeroom."
+   ],
+   "motive": "None for murder: she loved him and their future depended on him alive. Jealousy is the rumour, not the truth.",
+   "name": "Nadia Ferran",
+   "pressure": 50,
+   "role": "Spice merchant, stall 7; Silas's companion",
+   "secret": "She and Silas were planning to leave the market together and open a bookshop inland — a plan Silas had not yet told his daughter.",
+   "trust": 50,
+   "trustIntro": "Quiet dignity. She brings you Silas's favourite tea blend without being asked — and knows exactly who else knew it.",
+   "truthList": [
+    "She and Silas planned to leave the market together.",
+    "She saw Henri enter the market lane late that night.",
+    "She never handled Silas's tea that evening."
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "hot": false,
+   "label": "Henri has a duplicate storeroom key cut",
+   "t": "3 weeks before"
+  },
+  {
+   "hot": false,
+   "label": "Odette argues with Silas about selling the stall",
+   "t": "1 week before"
+  },
+  {
+   "hot": true,
+   "label": "'H.D.' buys foxglove tincture at the apothecary",
+   "t": "3 days before"
+  },
+  {
+   "hot": false,
+   "label": "Silas confronts Jules about the stolen first edition — and forgives him",
+   "t": "2 days before"
+  },
+  {
+   "hot": true,
+   "label": "Silas drafts the audit letter",
+   "t": "Day before, morning"
+  },
+  {
+   "hot": true,
+   "label": "Silas calls Henri for eleven minutes and tells him about the audit",
+   "t": "Day before, evening"
+  },
+  {
+   "hot": true,
+   "label": "A man in a dark overcoat enters the market lane",
+   "t": "Night of death, late"
+  },
+  {
+   "hot": true,
+   "label": "Silas drinks his poisoned tea; the door is locked from outside",
+   "t": "Night of death, midnight"
+  },
+  {
+   "hot": false,
+   "label": "Silas found dead; door still locked; ledger torn",
+   "t": "Morning after"
+  }
+ ],
+ "title": "The Bookseller's Last Chapter",
+ "twists": [
+  {
+   "at": "60%",
+   "body": "The apothecary's cleaned-up tape changes everything: the foxglove buyer didn't just buy poison — he asked, in plain words, how much of it would stop a heart. But the tape is old, the voice is muffled, and the herbalist admits she has sold foxglove to gardeners for years. Was the buyer a murderer — or a gardener who asked a careless question? And if Henri bought the poison, why did he sign his own initials?",
+   "caller": "The Herbalist",
+   "title": "The Buyer Asked How Much Would Stop a Heart"
+  },
+  {
+   "at": "finale",
+   "body": "Confronted, Henri breaks — but not the way you expect. He swears he only meant to make Silas sleep through the audit meeting, that he misjudged the dose, that he never meant to kill his friend. The ledger says theft. The poison says intent. The man in front of you says accident. The board, not his tears, decides which story is true.",
+   "title": "He Only Meant to Make Him Sleep"
+  }
+ ]
+}

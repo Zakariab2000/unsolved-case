@@ -1,0 +1,1608 @@
+{
+ "boardLinks": [
+  [
+   "C5-E12",
+   "C5-E05"
+  ],
+  [
+   "C5-E05",
+   "C5-E02"
+  ],
+  [
+   "C5-E02",
+   "C5-E19"
+  ],
+  [
+   "C5-E03",
+   "C5-E07"
+  ],
+  [
+   "C5-E03",
+   "C5-E18"
+  ],
+  [
+   "C5-E04",
+   "C5-E06"
+  ],
+  [
+   "C5-E04",
+   "C5-E07"
+  ],
+  [
+   "C5-E06",
+   "C5-E01"
+  ],
+  [
+   "C5-E13",
+   "C5-E05"
+  ],
+  [
+   "C5-E24",
+   "C5-E05"
+  ]
+ ],
+ "chapters": [
+  {
+   "briefing": "Salt air, low lights, and a dead curator in the back of the shark gallery. The aquarium says accident. The tea cup on her desk says otherwise. Start with the gallery: the tank, the lid, and the last thing she was counting.",
+   "interrogations": [],
+   "locationId": "shark-gallery",
+   "mechanic": "Tap to inspect — evidence tray",
+   "n": 1,
+   "puzzles": [],
+   "question": "Who was the last person to see Dr. Lena Marsh alive?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "The feeding log and Noah's own account put him with Marsh at 19:00. Dana's 21:10 keycard entry comes later, in Chapter 3.",
+      "id": "r1-1",
+      "options": [
+       "Dana Whitfield, at 21:10",
+       "Noah Kim, at the 19:00 feeding round",
+       "Sam Okafor, at 18:30",
+       "Rosa Delgado, at 17:00"
+      ],
+      "q": "Who was the last person to see Dr. Marsh alive, according to the evidence so far?",
+      "correctText": "Noah Kim, at the 19:00 feeding round"
+     },
+     {
+      "correct": 0,
+      "explain": "The lid was ajar and the water still moving when the body was found — the tank had been opened recently, after closing.",
+      "id": "r1-2",
+      "options": [
+       "The tank lid was open and the water was disturbed",
+       "A shark was out of its tank",
+       "The gallery lights were on",
+       "The tank was empty"
+      ],
+      "q": "What is wrong with the quarantine tank when you first see it?",
+      "correctText": "The tank lid was open and the water was disturbed"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C5-E01",
+       "text": "The quarantine tank lid stands open, the water still settling. The lid's hinges are new — the tank was opened after closing, not during the day.",
+       "title": "The open tank lid"
+      },
+      "id": "hs1-1",
+      "label": "Quarantine tank",
+      "x": 50,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A staff badge clipped to a lanyard, caught on the railing. Assistant curator. Not Marsh's — hers is on her desk.",
+       "title": "A dropped badge"
+      },
+      "id": "hs1-2",
+      "label": "Staff badge",
+      "x": 20,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A visitor's dropped programme from today's school tour. The last tour ended at 16:00. The gallery was empty after that.",
+       "title": "A school programme"
+      },
+      "id": "hs1-3",
+      "label": "School programme",
+      "x": 80,
+      "y": 80
+     },
+     {
+      "finding": {
+       "clueId": "C5-E14",
+       "text": "The feeding log: Noah Kim fed the sharks at 19:00, with Marsh present. Both signed. After 19:00, no staff entries — until one keycard, at 21:10.",
+       "title": "Feeding log"
+      },
+      "id": "hs1-4",
+      "label": "Feeding log",
+      "x": 65,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "The corridor is wet from the tank room to the gallery door. Someone carried water out — or carried something in.",
+       "title": "Wet floor"
+      },
+      "id": "hs1-5",
+      "label": "Wet floor",
+      "x": 35,
+      "y": 85
+     },
+     {
+      "finding": {
+       "clueId": "C5-E21",
+       "text": "A broken tank-cleaning pole lies by the tank. It looks like a weapon. It is not — the break is old, the pole is brittle, and it was in the store room all week.",
+       "title": "Broken cleaning pole"
+      },
+      "id": "hs1-6",
+      "label": "Broken pole",
+      "x": 75,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "The public gallery is quiet. The sharks are feeding. Nothing here looks like a murder scene — that is the point. It happened in the back.",
+       "title": "The main tank"
+      },
+      "id": "hs1-7",
+      "label": "Main tank",
+      "x": 45,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": "C5-E22",
+       "text": "The security log: the gallery cameras run until 21:10, then nothing until 21:40. Thirty minutes, gone. Somebody looped the feed — or somebody knew the gap.",
+       "title": "Camera gap"
+      },
+      "id": "hs1-8",
+      "label": "Camera log",
+      "x": 90,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A child's drawing of a shark, left on a bench. The aquarium is a place of wonder by day. Tonight it is a crime scene.",
+       "title": "A child's drawing"
+      },
+      "id": "hs1-9",
+      "label": "Child's drawing",
+      "x": 10,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C5-E23",
+       "text": "Tucked into the feeding log: a small black envelope, sealed with a silver anchor in wax. No name. Inside: 'The numbers don't add up. Follow the shipments.'",
+       "title": "Something in the logbook"
+      },
+      "id": "hs1-10",
+      "label": "The logbook",
+      "x": 60,
+      "y": 85
+     }
+    ],
+    "img": "images/case5-location.jpg"
+   },
+   "title": "The Shark Gallery",
+   "tools": [
+    "flashlight"
+   ]
+  },
+  {
+   "briefing": "The lab, detective. The tea cup, the water sample, the sedative log. Chemistry does not keep secrets the way people do. Run the tests, read the numbers, and see whose hands were on the bottles.",
+   "interrogations": [],
+   "locationId": "quarantine-lab",
+   "mechanic": "Lab analysis — reagent spray, sample tests",
+   "n": 2,
+   "puzzles": [
+    {
+     "clue": "C5-E18",
+     "correct": 0,
+     "done": "The water sample matches the clinic's sedative exactly — same compound, same dilution. The tank was not an accident scene. It was a disposal site.",
+     "hint": "Match the compound signature, not just the colour. Three samples, one match.",
+     "id": "pz2-1",
+     "kind": "sample-match",
+     "options": [
+      "The sedative concentration matches the missing clinic doses",
+      "The water is clean — no sedative present",
+      "The sample matches seawater only",
+      "The sample is contaminated and unreadable"
+     ],
+     "title": "Match the water sample",
+     "wrong": "That sample does not match. Run the comparison again, sample by sample.",
+     "correctText": "The sedative concentration matches the missing clinic doses"
+    }
+   ],
+   "question": "Was Dr. Marsh drugged before she died?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The sedative is a controlled veterinary drug. It is in her tea and in the tank water, at the same concentration as the missing clinic doses.",
+      "id": "r2-1",
+      "options": [
+       "Yes — the tea cup and the tank water both carry the clinic sedative",
+       "No — she drowned by accident",
+       "No — the sedative came from the tank itself",
+       "Unclear — the samples are contaminated"
+      ],
+      "q": "Was Dr. Marsh drugged before she died?",
+      "correctText": "Yes — the tea cup and the tank water both carry the clinic sedative"
+     },
+     {
+      "correct": 1,
+      "explain": "The sedative is locked in the vet clinic. The log shows doses missing, and the keycard record will show who took them.",
+      "id": "r2-2",
+      "options": [
+       "Anyone — it is sold over the counter",
+       "Only staff with clinic access",
+       "Only the vet",
+       "Only the aquarium's supplier"
+      ],
+      "q": "Who could have obtained the sedative?",
+      "correctText": "Only staff with clinic access"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C5-E03",
+       "text": "Her tea cup, still on the bench. The lab finds the clinic sedative in the dregs — a veterinary drug, in a human's tea.",
+       "title": "The tea cup"
+      },
+      "id": "hs2-1",
+      "label": "Tea cup",
+      "x": 30,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "C5-E18",
+       "text": "The quarantine tank water carries the same sedative, at the same concentration as the missing clinic doses. The tank was a disposal site, not an accident.",
+       "title": "Tank water sample"
+      },
+      "id": "hs2-2",
+      "label": "Water sample",
+      "x": 55,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C5-E07",
+       "text": "The vet clinic's sedative log: six doses signed out this week, only two used on animals. Four doses are missing — and the sign-out sheet is in a hand the vet does not recognise.",
+       "title": "Sedative log"
+      },
+      "id": "hs2-3",
+      "label": "Sedative log",
+      "x": 75,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Feeding charts, breeding charts, mortality charts. All of them neat. All of them signed by Marsh. And all of them wrong — the counts do not match the tanks.",
+       "title": "The charts"
+      },
+      "id": "hs2-4",
+      "label": "Breeding charts",
+      "x": 20,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C5-E10",
+       "text": "A treatment note in Rosa Delgado's hand: an illegal specimen — a protected reef fish — treated off the books. She had her own secret to protect.",
+       "title": "An off-book treatment"
+      },
+      "id": "hs2-5",
+      "label": "Treatment note",
+      "x": 85,
+      "y": 35
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Gloves, syringes, specimen jars. The lab is clean. The person who took the sedative was careful — but the log still shows the gap.",
+       "title": "The bench"
+      },
+      "id": "hs2-6",
+      "label": "The lab bench",
+      "x": 45,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C5-E02",
+       "text": "Marsh's breeding records, printed and annotated in red: the numbers do not match the tanks. Four rare specimens are listed as alive. The tanks say otherwise.",
+       "title": "Falsified breeding records"
+      },
+      "id": "hs2-7",
+      "label": "Breeding records",
+      "x": 65,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A net, a bucket, a pair of waders. The diver's kit. Sam Okafor's name is on the waders.",
+       "title": "Diver's kit"
+      },
+      "id": "hs2-8",
+      "label": "Diver's kit",
+      "x": 10,
+      "y": 75
+     },
+     {
+      "finding": {
+       "clueId": "C5-E20",
+       "text": "A second phone, hidden in the lab drawer, registered to no one on staff. Its messages are deleted — but the call log shows one number, called twice, on the night Marsh died.",
+       "title": "A second phone"
+      },
+      "id": "hs2-9",
+      "label": "Hidden phone",
+      "x": 40,
+      "y": 85
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "The fridge hums. Inside: samples, vaccines, and one bottle of sedative — half empty, seal broken, label smudged.",
+       "title": "The fridge"
+      },
+      "id": "hs2-10",
+      "label": "The fridge",
+      "x": 90,
+      "y": 75
+     }
+    ],
+    "img": "images/case5-location.jpg"
+   },
+   "title": "The Quarantine Lab",
+   "tools": [
+    "blood-reagent",
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "Her office, and the people who worked with her. The grant audit letter arrived the morning she died. The shipping manifest arrived the week before. Cross-check every alibi against the keycard record — the aquarium logs every door.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "I was home. Alone. I know how that sounds. The shipment was mine to arrange — it was my job. The manifest is a lie.",
+       "confront": "C5-E05",
+       "id": "q3-d1",
+       "mood": "hard",
+       "requires": null,
+       "text": "The shipping manifest shows rare specimens sold to a private collector. Your signature is on it.",
+       "unlockClue": "C5-E05"
+      },
+      {
+       "answer": "I went to the clinic for aspirin. I have headaches. That is all. The keycard — it logs every door, I cannot change that.",
+       "confront": "C5-E04",
+       "id": "q3-d2",
+       "mood": "firm",
+       "requires": null,
+       "text": "Your keycard opened the vet clinic at 21:05 — five minutes before the camera gap.",
+       "unlockClue": "C5-E04"
+      },
+      {
+       "answer": "The tank lid? I checked it at closing, like always. If it was open, someone opened it after me.",
+       "confront": "C5-E06",
+       "id": "q3-d3",
+       "mood": "hard",
+       "requires": null,
+       "text": "Your fingerprint is on the quarantine tank lid.",
+       "unlockClue": "C5-E06"
+      }
+     ],
+     "suspectId": "ops-dana"
+    },
+    {
+     "questions": [
+      {
+       "answer": "I faked the dive logs, yes. I was not diving — I was at my sister's, helping with her baby. I did not want the aquarium to know I was moonlighting.",
+       "confront": "C5-E08",
+       "id": "q3-n1",
+       "mood": "firm",
+       "requires": null,
+       "text": "Your dive logs are falsified. Where were you really?",
+       "unlockClue": "C5-E08"
+      },
+      {
+       "answer": "She showed me the breeding numbers. She said the counts were wrong. She said she would tell the board on Monday.",
+       "confront": null,
+       "id": "q3-n2",
+       "mood": "calm",
+       "requires": null,
+       "text": "What did Marsh show you the day she died?",
+       "unlockClue": "C5-E02"
+      }
+     ],
+     "suspectId": "assistant-noah"
+    },
+    {
+     "questions": [
+      {
+       "answer": "I treated a protected fish off the books. It would have died otherwise. I would lose my licence if the board knew — but I did not kill Lena.",
+       "confront": "C5-E10",
+       "id": "q3-r1",
+       "mood": "calm",
+       "requires": null,
+       "text": "You treated an illegal specimen off the books. What else are you hiding?",
+       "unlockClue": "C5-E10"
+      }
+     ],
+     "suspectId": "vet-rosa"
+    }
+   ],
+   "locationId": "curator-office",
+   "mechanic": "Interrogation — present evidence",
+   "n": 3,
+   "puzzles": [],
+   "question": "Who had access to the sedative — and the tank?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "Her keycard opened the vet clinic at 21:05, five minutes before the camera gap — and her fingerprint is on the tank lid.",
+      "id": "r3-1",
+      "options": [
+       "Noah Kim",
+       "Dana Whitfield",
+       "Rosa Delgado",
+       "Sam Okafor"
+      ],
+      "q": "Whose keycard opened the vet clinic at 21:05?",
+      "correctText": "Dana Whitfield"
+     },
+     {
+      "correct": 0,
+      "explain": "The manifest lists four rare specimens shipped to a private collector — the same four Marsh's red annotations say are missing from the tanks.",
+      "id": "r3-2",
+      "options": [
+       "Rare specimens were sold to a private collector",
+       "The aquarium bought new sharks",
+       "The shipments were fish food",
+       "The manifest is blank"
+      ],
+      "q": "What does the shipping manifest show?",
+      "correctText": "Rare specimens were sold to a private collector"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C5-E12",
+       "text": "An unsent email draft on Marsh's computer: 'I know about the shipments. The specimens are gone and the grant money follows them. I am telling the board on Monday.'",
+       "title": "The unsent email"
+      },
+      "id": "hs3-1",
+      "label": "Marsh's computer",
+      "x": 50,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C5-E05",
+       "text": "The shipping manifest: four rare specimens shipped to a private collector, signed by Dana Whitfield. The same four Marsh's annotations say are missing.",
+       "title": "Shipping manifest"
+      },
+      "id": "hs3-2",
+      "label": "Shipping manifest",
+      "x": 30,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C5-E13",
+       "text": "A grant audit letter, received the morning Marsh died: the funding body is auditing the aquarium's breeding programme. The timing is not a coincidence.",
+       "title": "Grant audit letter"
+      },
+      "id": "hs3-3",
+      "label": "Audit letter",
+      "x": 70,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C5-E04",
+       "text": "The keycard record: Dana Whitfield's card opened the vet clinic at 21:05. Five minutes before the camera gap. Five minutes before the tank lid was opened.",
+       "title": "Keycard record"
+      },
+      "id": "hs3-4",
+      "label": "Keycard log",
+      "x": 85,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "C5-E19",
+       "text": "Marsh's notebook, in her hand: specimen counts, tank by tank, with red circles where the numbers do not add up. 'Four missing. Ask D.'",
+       "title": "Marsh's notebook"
+      },
+      "id": "hs3-5",
+      "label": "Marsh's notebook",
+      "x": 15,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A framed photo of Marsh with a rescued turtle. She loved this place. Whoever killed her knew the building better than she did.",
+       "title": "A framed photo"
+      },
+      "id": "hs3-6",
+      "label": "Framed photo",
+      "x": 60,
+      "y": 75
+     },
+     {
+      "finding": {
+       "clueId": "C5-E09",
+       "text": "Gala receipts in Theo Ashford's name — the board chairman diverted grant money to a fundraising dinner. Embarrassing, not murder.",
+       "title": "Gala receipts"
+      },
+      "id": "hs3-7",
+      "label": "Gala receipts",
+      "x": 40,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "The window looks over the harbour. From here you can see the loading dock — where the specimens were shipped out at night.",
+       "title": "The window"
+      },
+      "id": "hs3-8",
+      "label": "The window",
+      "x": 90,
+      "y": 20
+     }
+    ],
+    "img": "images/case5-location.jpg"
+   },
+   "title": "The Curator's Office",
+   "tools": [
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "The harbour café, the loading dock, and the people who were not where they said they were. The shipments went out at night. Find the dock log, find the buyer, and find who stood on the dock with a keycard and a reason.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "I sold equipment, yes — old pumps, a spare net. Not specimens. Not ever. Check the listings. The dates will show you.",
+       "confront": "C5-E11",
+       "id": "q4-s1",
+       "mood": "firm",
+       "requires": null,
+       "text": "Your name is on a listing for aquarium equipment. What else did you sell?",
+       "unlockClue": "C5-E11"
+      },
+      {
+       "answer": "I was home by nine. Alone. I know. But I have never been in the clinic, and I have never touched that tank.",
+       "confront": null,
+       "id": "q4-s2",
+       "mood": "calm",
+       "requires": null,
+       "text": "Where were you between 21:00 and 22:00?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "diver-sam"
+    },
+    {
+     "questions": [
+      {
+       "answer": "The dinner was real. Two hundred guests. The photos are online. The grant money for the gala — I moved it, and I will answer for it. But I did not kill Lena.",
+       "confront": "C5-E09",
+       "id": "q4-t1",
+       "mood": "calm",
+       "requires": null,
+       "text": "You diverted grant money to your gala. What did Marsh say about it?",
+       "unlockClue": "C5-E09"
+      }
+     ],
+     "suspectId": "board-theo"
+    }
+   ],
+   "locationId": "harbor-cafe",
+   "mechanic": "Fingerprint puzzle — tank lid",
+   "n": 4,
+   "puzzles": [
+    {
+     "clue": "C5-E06",
+     "correct": 0,
+     "done": "Lifted clean from the tank lid: the print matches Dana Whitfield, the operations manager — the person who told you she only 'checked it at closing.'",
+     "hint": "The lid was wiped once, badly. Dust the hinge side — the print is where the wipe missed.",
+     "id": "pz4-1",
+     "kind": "fingerprint-lift",
+     "options": [
+      "The print matches Dana Whitfield",
+      "The print matches Noah Kim",
+      "The print matches Sam Okafor",
+      "The print is too smudged to read"
+     ],
+     "title": "Lift the print from the tank lid",
+     "wrong": "The lab disagrees. Dust again — the hinge side, where the wipe missed.",
+     "correctText": "The print matches Dana Whitfield"
+    }
+   ],
+   "question": "Who was on the loading dock that night?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The listings are dated, itemised, and match the store room's missing inventory. He is a small-time thief, not the killer.",
+      "id": "r4-1",
+      "options": [
+       "Sam Okafor sold old pumps and a net — not specimens",
+       "Sam Okafor sold the missing specimens",
+       "Sam Okafor sold nothing",
+       "Sam Okafor's listings are fake"
+      ],
+      "q": "What did Sam Okafor actually sell?",
+      "correctText": "Sam Okafor sold old pumps and a net — not specimens"
+     },
+     {
+      "correct": 1,
+      "explain": "A print on a lid she handles daily proves contact, not murder. It only becomes proof with the keycard, the sedative, and the manifest.",
+      "id": "r4-2",
+      "options": [
+       "It proves she killed Marsh",
+       "It proves nothing on its own — she manages the building",
+       "It proves she opened the tank that night",
+       "It proves she was in the gallery"
+      ],
+      "q": "What does Dana's fingerprint on the tank lid prove on its own?",
+      "correctText": "It proves nothing on its own — she manages the building"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C5-E17",
+       "text": "A bus ticket: Sam Okafor rode home at 21:15 and never came back. The ticket is timestamped, and the driver remembers him.",
+       "title": "Sam's bus ticket"
+      },
+      "id": "hs4-1",
+      "label": "Bus ticket",
+      "x": 25,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "C5-E11",
+       "text": "An online listing in Sam's name: old pumps, a spare net, a wetsuit. Small-time theft — the store room inventory matches exactly.",
+       "title": "Equipment listings"
+      },
+      "id": "hs4-2",
+      "label": "Equipment listings",
+      "x": 60,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C5-E16",
+       "text": "The clinic sign-in: Rosa Delgado was in the clinic until 22:00, witnessed by a nurse. She could not have taken the sedative and used it in the tank room at the same time.",
+       "title": "Clinic sign-in"
+      },
+      "id": "hs4-3",
+      "label": "Clinic sign-in",
+      "x": 80,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "C5-E15",
+       "text": "Dinner event photos: Theo Ashford on stage at 21:30, in front of two hundred guests. His alibi is public.",
+       "title": "Dinner photos"
+      },
+      "id": "hs4-4",
+      "label": "Dinner photos",
+      "x": 40,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "The dock is quiet. The crane is still. The night crew's log shows one truck, 23:40, three weeks ago — the last shipment.",
+       "title": "The loading dock"
+      },
+      "id": "hs4-5",
+      "label": "Loading dock",
+      "x": 70,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Coffee, gulls, and the smell of salt. The café owner remembers Marsh: she came here every morning, and she was worried this week.",
+       "title": "The café"
+      },
+      "id": "hs4-6",
+      "label": "The café",
+      "x": 15,
+      "y": 25
+     },
+     {
+      "finding": {
+       "clueId": "C5-E06",
+       "text": "The tank lid, bagged and dusted. The lab has lifted a print from the hinge side — where the wipe missed.",
+       "title": "The tank lid, bagged"
+      },
+      "id": "hs4-7",
+      "label": "Tank lid evidence",
+      "x": 50,
+      "y": 85
+     },
+     {
+      "finding": {
+       "clueId": "C5-E22",
+       "text": "The camera gap: 21:10 to 21:40. Thirty minutes, looped. Whoever did it knew the system — and knew exactly when to loop it.",
+       "title": "Camera gap"
+      },
+      "id": "hs4-8",
+      "label": "Camera log",
+      "x": 90,
+      "y": 45
+     }
+    ],
+    "img": "images/case5-location.jpg"
+   },
+   "title": "The Harbour Café & Dock",
+   "tools": [
+    "fingerprint-powder",
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "Everything is on the board: the manifest, the sedative, the keycard, the print, the email she never sent. Link the evidence. The answer is not one clue — it is three, braided together. Name the killer, the motive, the method, and the proof.",
+   "interrogations": [],
+   "locationId": "shark-gallery",
+   "mechanic": "Deduction board + final accusation",
+   "n": 5,
+   "puzzles": [],
+   "question": "Who killed Dr. Lena Marsh — and why?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "Rosa was in the clinic, witnessed, for the whole murder window. Her secret — the off-book treatment — is a licence matter, not a murder.",
+      "id": "r5-1",
+      "options": [
+       "Because she is the vet",
+       "Because the clinic sign-in puts her with a nurse until 22:00",
+       "Because she had no motive",
+       "Because she never met Marsh"
+      ],
+      "q": "Why is Dr. Rosa Delgado cleared?",
+      "correctText": "Because the clinic sign-in puts her with a nurse until 22:00"
+     },
+     {
+      "correct": 0,
+      "explain": "Noah's falsified dive logs are about moonlighting, not murder — and he was the one who told you Marsh was going to the board on Monday.",
+      "id": "r5-2",
+      "options": [
+       "He was with Marsh at 19:00 and the feeding log confirms it",
+       "He never worked at the aquarium",
+       "He has no keycard",
+       "He was on the bus"
+      ],
+      "q": "What clears Noah Kim?",
+      "correctText": "He was with Marsh at 19:00 and the feeding log confirms it"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Every clue pinned. Every string waiting. The pattern is there — follow the shipments, not the sharks.",
+       "title": "The deduction board"
+      },
+      "id": "hs5-1",
+      "label": "The board",
+      "x": 50,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "C5-E23",
+       "text": "ANCHOR-05. Someone knew the specimens were the story before Marsh's body was found. The seal is a silver anchor. Five cases, five envelopes — and the Unit still does not know who sends them.",
+       "title": "The black envelope"
+      },
+      "id": "hs5-2",
+      "label": "The envelope",
+      "x": 70,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C5-E24",
+       "text": "A voice memo on Marsh's phone, recorded the day she died: 'If the numbers don't add up, follow the shipments. The grant money follows them.'",
+       "title": "Marsh's voice memo"
+      },
+      "id": "hs5-3",
+      "label": "Voice memo",
+      "x": 30,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C5-E12",
+       "text": "'I am telling the board on Monday.' She never got to Monday. Somebody made sure of that.",
+       "title": "The unsent email"
+      },
+      "id": "hs5-4",
+      "label": "Unsent email",
+      "x": 80,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C5-E05",
+       "text": "Four specimens, one buyer, one signature. The manifest is the motive, written in ink.",
+       "title": "The manifest"
+      },
+      "id": "hs5-5",
+      "label": "The manifest",
+      "x": 20,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C5-E04",
+       "text": "21:05, the clinic door. 21:10, the cameras die. 21:40, the cameras return. The killer knew the building — and the gaps in it.",
+       "title": "The keycard, once more"
+      },
+      "id": "hs5-6",
+      "label": "Keycard log",
+      "x": 60,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "The sharks swim on, indifferent. The aquarium will open again tomorrow. It will not be the same place.",
+       "title": "The main tank"
+      },
+      "id": "hs5-7",
+      "label": "The main tank",
+      "x": 10,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C5-E03",
+       "text": "A veterinary sedative, in a human's tea. That is not an accident. That is a plan.",
+       "title": "The tea cup"
+      },
+      "id": "hs5-8",
+      "label": "Tea cup",
+      "x": 90,
+      "y": 60
+     }
+    ],
+    "img": "images/case5-location.jpg"
+   },
+   "title": "The Deduction Board",
+   "tools": []
+  }
+ ],
+ "closing": {
+  "lines": [
+   {
+    "img": "images/case5-location.jpg",
+    "text": "The aquarium reopens on Monday. The tanks are full, the sharks are calm, and the breeding records — for the first time in years — are true.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case5-location.jpg",
+    "text": "And in the feeding log, tucked between the pages, one more thing the police never logged: a small black envelope, sealed with a silver anchor.",
+    "voice": "narrator"
+   }
+  ]
+ },
+ "coldOpen": {
+  "lines": [
+   {
+    "img": "images/case5-location.jpg",
+    "text": "Glass, salt water, and the low hum of the pumps. The aquarium is beautiful after dark — and tonight, it is a crime scene.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case5-location.jpg",
+    "text": "Dr. Lena Marsh loved the sea. She counted its creatures the way other people count money — and she found the numbers did not add up.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case5-location.jpg",
+    "text": "The aquarium called it an accident. Her tea cup disagrees. You are the detective the Cold Case Unit sends when the obvious answer is too tidy.",
+    "voice": "narrator"
+   }
+  ],
+  "title": "Friday, 23:02 — The Port Anselm Aquarium"
+ },
+ "coopClueMap": {
+  "analyst": [
+   "C5-E03",
+   "C5-E07",
+   "C5-E18",
+   "C5-E20"
+  ],
+  "archivist": [
+   "C5-E02",
+   "C5-E05",
+   "C5-E09",
+   "C5-E12",
+   "C5-E13",
+   "C5-E15",
+   "C5-E19",
+   "C5-E23",
+   "C5-E24"
+  ],
+  "field": [
+   "C5-E01",
+   "C5-E10",
+   "C5-E14",
+   "C5-E16",
+   "C5-E21",
+   "C5-E22"
+  ],
+  "interrogator": [
+   "C5-E04",
+   "C5-E06",
+   "C5-E08",
+   "C5-E11",
+   "C5-E17"
+  ]
+ },
+ "evidence": [
+  {
+   "body": "The quarantine tank lid stands open, the water still settling. The hinges are new — the tank was opened after closing. Dana Whitfield's fingerprint was later lifted from the hinge side.",
+   "chapter": 1,
+   "code": "C5-E01",
+   "id": "C5-E01",
+   "img": "images/case5-location.jpg",
+   "key": true,
+   "proves": "The tank was opened after closing — the scene was staged.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Quarantine tank lid, open"
+  },
+  {
+   "body": "Marsh's breeding records, annotated in red: four rare specimens listed as alive, but the tanks say otherwise. The numbers were falsified to cover the sales.",
+   "chapter": 2,
+   "code": "C5-E02",
+   "id": "C5-E02",
+   "img": "images/case5-location.jpg",
+   "key": true,
+   "proves": "Specimens were sold and the records falsified to hide it.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Falsified breeding records"
+  },
+  {
+   "body": "Her tea cup, still on the lab bench. The lab finds a veterinary sedative in the dregs — a controlled drug, in a human's tea.",
+   "chapter": 2,
+   "code": "C5-E03",
+   "id": "C5-E03",
+   "img": "images/case5-location.jpg",
+   "key": true,
+   "proves": "Marsh was drugged before she died — this was a plan, not an accident.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Sedative in the tea cup"
+  },
+  {
+   "body": "Dana Whitfield's keycard opened the vet clinic at 21:05 — five minutes before the camera gap, and the only clinic entry that night.",
+   "chapter": 3,
+   "code": "C5-E04",
+   "id": "C5-E04",
+   "img": "images/case5-location.jpg",
+   "key": true,
+   "proves": "Dana took the sedative herself, on the night of the murder.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Dana's keycard at the vet clinic"
+  },
+  {
+   "body": "Four rare specimens shipped to a private collector, signed by Dana Whitfield. The same four Marsh's red annotations say are missing from the tanks.",
+   "chapter": 3,
+   "code": "C5-E05",
+   "id": "C5-E05",
+   "img": "images/case5-location.jpg",
+   "key": true,
+   "proves": "The motive: Dana was selling specimens and Marsh was about to expose her.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Shipping manifest — specimens sold"
+  },
+  {
+   "body": "A clean print lifted from the tank lid's hinge side, where the wipe missed. It matches Dana Whitfield — who said she only 'checked it at closing.'",
+   "chapter": 4,
+   "code": "C5-E06",
+   "id": "C5-E06",
+   "img": "images/case5-location.jpg",
+   "key": true,
+   "proves": "Dana opened the tank lid after closing, on the night of the murder.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Dana's fingerprint on the tank lid"
+  },
+  {
+   "body": "The vet clinic's sedative log: six doses signed out this week, only two used on animals. Four doses missing — and the sign-out handwriting is not the vet's.",
+   "chapter": 2,
+   "code": "C5-E07",
+   "id": "C5-E07",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "The sedative was taken from the clinic, not bought elsewhere.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Sedative log — four doses missing"
+  },
+  {
+   "body": "Noah Kim falsified his dive logs — he was at his sister's, moonlighting, not diving. His secret is about a second job, not a murder.",
+   "chapter": 3,
+   "code": "C5-E08",
+   "id": "C5-E08",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Noah's lie is about moonlighting; it does not place him at the murder.",
+   "redHerring": true,
+   "roleExclusive": "interrogator",
+   "title": "Noah's falsified dive logs"
+  },
+  {
+   "body": "Gala receipts in Theo Ashford's name: the board chairman diverted grant money to a fundraising dinner. Embarrassing — and public — but not murder.",
+   "chapter": 3,
+   "code": "C5-E09",
+   "id": "C5-E09",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Theo misused funds, but his alibi for the murder window is public and solid.",
+   "redHerring": true,
+   "roleExclusive": "archivist",
+   "title": "Theo's gala receipts"
+  },
+  {
+   "body": "A treatment note in Rosa Delgado's hand: she treated a protected reef fish off the books. A licence matter — and the reason she looked guilty.",
+   "chapter": 2,
+   "code": "C5-E10",
+   "id": "C5-E10",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Rosa's secret is an off-book treatment, not murder.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Rosa's off-book treatment"
+  },
+  {
+   "body": "An online listing in Sam Okafor's name: old pumps, a spare net, a wetsuit. Small-time theft — the store room inventory matches exactly, and no specimens were ever listed.",
+   "chapter": 4,
+   "code": "C5-E11",
+   "id": "C5-E11",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Sam stole equipment, not specimens.",
+   "redHerring": true,
+   "roleExclusive": "interrogator",
+   "title": "Sam's equipment listings"
+  },
+  {
+   "body": "An unsent email draft on Marsh's computer: 'I know about the shipments. The specimens are gone and the grant money follows them. I am telling the board on Monday.'",
+   "chapter": 3,
+   "code": "C5-E12",
+   "id": "C5-E12",
+   "img": "images/case5-location.jpg",
+   "key": true,
+   "proves": "Marsh had found the smuggling and planned to report it — the deadline that killed her.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Marsh's unsent email"
+  },
+  {
+   "body": "A grant audit letter, received the morning Marsh died: the funding body is auditing the aquarium's breeding programme. Dana's theft was about to be found by two people at once.",
+   "chapter": 3,
+   "code": "C5-E13",
+   "id": "C5-E13",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "The audit would have exposed the missing specimens within days.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Grant audit letter"
+  },
+  {
+   "body": "The feeding log: Noah Kim fed the sharks at 19:00, with Marsh present. Both signed. The last confirmed sighting of Marsh alive.",
+   "chapter": 1,
+   "code": "C5-E14",
+   "id": "C5-E14",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Marsh was alive at 19:00, with Noah — and Noah's whereabouts after are accounted for.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Feeding round log"
+  },
+  {
+   "body": "Dinner event photos: Theo Ashford on stage at 21:30, in front of two hundred guests. His alibi is public, photographed, and impossible to fake.",
+   "chapter": 4,
+   "code": "C5-E15",
+   "id": "C5-E15",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Theo was on stage during the murder window.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Dinner event photos"
+  },
+  {
+   "body": "The clinic sign-in: Rosa Delgado was in the clinic until 22:00, witnessed by a nurse. She could not have drugged the tea and staged the tank at the same time.",
+   "chapter": 4,
+   "code": "C5-E16",
+   "id": "C5-E16",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Rosa's alibi holds for the whole murder window.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Clinic sign-in — Rosa Delgado"
+  },
+  {
+   "body": "A bus ticket: Sam Okafor rode home at 21:15 and never came back. The driver remembers him; the ticket is timestamped.",
+   "chapter": 4,
+   "code": "C5-E17",
+   "id": "C5-E17",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Sam left the area before the murder window closed.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Sam's bus ticket"
+  },
+  {
+   "body": "The quarantine tank water carries the clinic sedative at the same concentration as the missing clinic doses. The tank was a disposal site, not an accident.",
+   "chapter": 2,
+   "code": "C5-E18",
+   "id": "C5-E18",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "The drowning was staged after the drugging.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Tank water sample"
+  },
+  {
+   "body": "Marsh's notebook, in her hand: specimen counts, tank by tank, red circles where the numbers do not add up. 'Four missing. Ask D.'",
+   "chapter": 3,
+   "code": "C5-E19",
+   "id": "C5-E19",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Marsh had already identified the missing specimens and suspected Dana.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Marsh's notebook"
+  },
+  {
+   "body": "A second phone, hidden in the lab drawer, registered to no one on staff. Its call log shows one number, called twice, on the night Marsh died — the buyer's number.",
+   "chapter": 2,
+   "code": "C5-E20",
+   "id": "C5-E20",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Dana coordinated with the buyer on the night of the murder.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Dana's second phone"
+  },
+  {
+   "body": "A broken tank-cleaning pole lies by the tank. It looks like a weapon. It is not — the break is old, the pole is brittle, and it sat in the store room all week.",
+   "chapter": 1,
+   "code": "C5-E21",
+   "id": "C5-E21",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "The pole is a red herring — an old break, not the weapon.",
+   "redHerring": true,
+   "roleExclusive": "field",
+   "title": "Broken cleaning pole"
+  },
+  {
+   "body": "The security log: the gallery cameras run until 21:10, then nothing until 21:40. Thirty minutes, looped. Whoever did it knew the system — and the gap.",
+   "chapter": 1,
+   "code": "C5-E22",
+   "id": "C5-E22",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "The murder was timed to the camera gap by someone who knew the system.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Camera gap 21:10–21:40"
+  },
+  {
+   "body": "A small black envelope sealed with a silver anchor in wax, tucked into the feeding log. One line, unsigned: 'The numbers don't add up. Follow the shipments.' Someone knew the specimens were the story before the body was found. This is the fifth such envelope the Unit has found.",
+   "chapter": 1,
+   "code": "C5-E23",
+   "id": "C5-E23",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "The season arc: the Anchorman is nudging the Unit toward the truth, case by case.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "ANCHOR-05 — The black envelope"
+  },
+  {
+   "body": "A voice memo on Marsh's phone, recorded the day she died: 'If the numbers don't add up, follow the shipments. The grant money follows them.'",
+   "chapter": 5,
+   "code": "C5-E24",
+   "id": "C5-E24",
+   "img": "images/case5-location.jpg",
+   "key": false,
+   "proves": "Marsh left a message for whoever came after her — and it points at the shipments.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Marsh's voice memo"
+  }
+ ],
+ "free": true,
+ "hints": {
+  "answer": [
+   "Dana Whitfield killed Marsh: the sedative in the tea, her keycard at the clinic at 21:05, and her print on the tank lid — with the manifest as the motive."
+  ],
+  "direction": [
+   "The sedative came from the clinic. Find whose keycard opened it at 21:05.",
+   "The manifest names the seller. Find what Marsh's notebook says about the missing specimens.",
+   "The fingerprint alone proves contact, not murder. Pair it with the keycard and the sedative."
+  ],
+  "nudge": [
+   "Follow the shipments, not the sharks.",
+   "The tea was drugged. Who could reach the clinic?",
+   "The cameras died for thirty minutes. Who knew the gap?"
+  ]
+ },
+ "id": "case5",
+ "locations": [
+  {
+   "desc": "Glass, salt water, the low hum of the pumps. The quarantine tank stands open in the back, where the public never goes.",
+   "id": "shark-gallery",
+   "img": "images/case5-location.jpg",
+   "name": "Aquarium — Shark Gallery"
+  },
+  {
+   "desc": "Reagent bottles, specimen jars, the sedative fridge. Chemistry does not keep secrets the way people do.",
+   "id": "quarantine-lab",
+   "img": "images/case5-location.jpg",
+   "name": "Quarantine Lab"
+  },
+  {
+   "desc": "Marsh's desk, her computer, her notebook. The woman who counted everything left her own sums behind.",
+   "id": "curator-office",
+   "img": "images/case5-location.jpg",
+   "name": "Curator's Office"
+  },
+  {
+   "desc": "Coffee, gulls, and the loading dock where the specimens went out at night. The harbour remembers every truck.",
+   "id": "harbor-cafe",
+   "img": "images/case5-location.jpg",
+   "name": "Harbour Café & Loading Dock"
+  }
+ ],
+ "minEvidenceToSolve": [
+  "C5-E03",
+  "C5-E04",
+  "C5-E06"
+ ],
+ "number": 5,
+ "palette": {
+  "accent": "#2E86AB",
+  "bg": "#0E1A24",
+  "primary": "#1B6E8C"
+ },
+ "premise": "Dr. Lena Marsh, curator of the Port Anselm Aquarium, is found dead in the back of the shark gallery on a Friday night — drowned in the quarantine tank, her tea cup still warm on the lab bench. The aquarium calls it a terrible accident. The tea cup says otherwise: it holds a veterinary sedative, and the tank holds the same drug, at the same concentration. Someone counted the specimens the way Marsh did, found the same gap, and decided she would never tell the board on Monday.",
+ "season": 1,
+ "solve": {
+  "cleared": [
+   {
+    "name": "Noah Kim",
+    "text": "With Marsh at 19:00 per the feeding log; his falsified dive logs are about moonlighting at his sister's, not murder."
+   },
+   {
+    "name": "Theo Ashford",
+    "text": "On stage at a dinner event at 21:30, in front of two hundred guests; his gala spending is a misuse of funds, not murder."
+   },
+   {
+    "name": "Dr. Rosa Delgado",
+    "text": "In the clinic until 22:00, witnessed by a nurse; her secret was an off-book treatment, not the sedative theft."
+   },
+   {
+    "name": "Sam Okafor",
+    "text": "On a bus home at 21:15, timestamped and remembered by the driver; he stole old pumps, not specimens."
+   }
+  ],
+  "keyProof": "proof-sedative-keycard-print",
+  "method": "method-sedative-drown",
+  "motive": "motive-specimens",
+  "options": {
+   "keyProof": [
+    {
+     "id": "proof-sedative-keycard-print",
+     "label": "Sedative in Marsh's tea + Dana's keycard at the clinic at 21:05 + Dana's print on the tank lid"
+    },
+    {
+     "id": "proof-pole",
+     "label": "The broken cleaning pole by the tank"
+    },
+    {
+     "id": "proof-divelogs",
+     "label": "Noah's falsified dive logs"
+    }
+   ],
+   "method": [
+    {
+     "id": "method-sedative-drown",
+     "label": "Sedative in her tea, then drowned in the quarantine tank and staged as an accident"
+    },
+    {
+     "id": "method-blunt",
+     "label": "Struck with the cleaning pole and thrown in the tank"
+    },
+    {
+     "id": "method-poison",
+     "label": "Poisoned outright with a lethal dose"
+    }
+   ],
+   "motive": [
+    {
+     "id": "motive-specimens",
+     "label": "Marsh was about to expose Dana's sale of rare specimens and grant fraud"
+    },
+    {
+     "id": "motive-gala",
+     "label": "Marsh threatened to expose Theo's gala spending"
+    },
+    {
+     "id": "motive-licence",
+     "label": "Marsh was about to report Rosa's off-book treatment"
+    },
+    {
+     "id": "motive-theft",
+     "label": "Revenge for Sam's equipment theft"
+    }
+   ],
+   "who": [
+    {
+     "id": "ops-dana",
+     "label": "Dana Whitfield — Operations Manager"
+    },
+    {
+     "id": "assistant-noah",
+     "label": "Noah Kim — Assistant Curator"
+    },
+    {
+     "id": "board-theo",
+     "label": "Theo Ashford — Board Chairman"
+    },
+    {
+     "id": "vet-rosa",
+     "label": "Dr. Rosa Delgado — Staff Veterinarian"
+    },
+    {
+     "id": "diver-sam",
+     "label": "Sam Okafor — Maintenance Diver"
+    }
+   ]
+  },
+  "solutionHTML": "<p>Dana Whitfield drugged Lena Marsh's tea with a veterinary sedative taken from the clinic — her keycard opened the clinic at 21:05 — then carried the unconscious woman to the quarantine tank and staged a drowning, looping the cameras for the thirty minutes she needed. Her fingerprint, lifted from the hinge side of the tank lid where her wipe missed, is the last link. The motive is the manifest: four rare specimens sold to a private collector, the grant money following them, and Marsh's unsent email — 'I am telling the board on Monday.' The audit letter that arrived that morning meant Dana was about to be exposed by two people at once.</p><p>No single clue convicts her. The print alone could be innocent — she manages the building. The keycard alone proves a clinic visit, not a murder. The sedative alone proves a drugging, not a killer. Together, they leave no one else: only Dana had the keycard, the manifest, the buyer on her second phone, and the reason to silence the one woman who had done the sums.</p>",
+  "who": "ops-dana"
+ },
+ "subtitle": "A curator drowns in her own aquarium. The tea cup says it was murder.",
+ "suspects": [
+  {
+   "age": 44,
+   "alibi": "Claims she was home alone from 20:30, checking emails. No witness, no call records to support it.",
+   "id": "ops-dana",
+   "img": "",
+   "lieList": [
+    "The manifest is a lie. I never signed it.",
+    "I was home all evening.",
+    "I only checked the tank lid at closing."
+   ],
+   "motive": "Marsh had found the specimen sales and the grant fraud, and was going to the board on Monday — the same week a grant audit landed. Exposure meant prison.",
+   "name": "Dana Whitfield",
+   "pressure": 50,
+   "role": "Operations Manager",
+   "secret": "She has been selling rare specimens to a private collector for two years and pocketing the money, falsifying the breeding records to cover the gap.",
+   "trust": 50,
+   "trustIntro": "Calm, professional, cooperative — until the manifest appears. Then the calm cracks.",
+   "truthList": [
+    "The shipment was mine to arrange. It was my job.",
+    "I went to the clinic for aspirin. I have headaches.",
+    "I checked the tank lid at closing, like always."
+   ]
+  },
+  {
+   "age": 27,
+   "alibi": "With Marsh at the 19:00 feeding round (logged, both signed). After that, at his sister's flat — she confirms, but only after 20:30.",
+   "id": "assistant-noah",
+   "img": "",
+   "lieList": [
+    "My dive logs are accurate.",
+    "I never left the aquarium that evening."
+   ],
+   "motive": "None against Marsh — she was his mentor, and he was the one who told the detective she was going to the board.",
+   "name": "Noah Kim",
+   "pressure": 50,
+   "role": "Assistant Curator",
+   "secret": "He falsified his dive logs for months — he was not diving, he was moonlighting at his sister's, helping with her baby.",
+   "trust": 50,
+   "trustIntro": "Earnest, nervous, protective of Marsh's memory. He volunteers the notebook before you ask.",
+   "truthList": [
+    "I faked the dive logs. I was at my sister's.",
+    "Marsh showed me the breeding numbers. She said she would tell the board on Monday.",
+    "I fed the sharks with her at 19:00. That is the last time I saw her."
+   ]
+  },
+  {
+   "age": 58,
+   "alibi": "On stage at a fundraising dinner from 20:30 to 23:00, in front of two hundred guests, photographed at 21:30.",
+   "id": "board-theo",
+   "img": "",
+   "lieList": [
+    "Every crown of grant money went to the aquarium.",
+    "I never touched the aquarium's accounts."
+   ],
+   "motive": "Marsh had questioned the gala spending — but she never threatened him, and his alibi is public.",
+   "name": "Theo Ashford",
+   "pressure": 50,
+   "role": "Board Chairman",
+   "secret": "He diverted grant money to fund his fundraising gala — a misuse of funds he believed the board would forgive.",
+   "trust": 50,
+   "trustIntro": "Polished, unbothered, delighted to show you the dinner photos. His alibi is the strongest in the case.",
+   "truthList": [
+    "The dinner was real. Two hundred guests. The photos are online.",
+    "I moved grant money to the gala, and I will answer for it.",
+    "Lena questioned the spending. She never threatened me."
+   ]
+  },
+  {
+   "age": 50,
+   "alibi": "In the vet clinic until 22:00, witnessed by a nurse. Her sign-in is logged and confirmed.",
+   "id": "vet-rosa",
+   "img": "",
+   "lieList": [
+    "I have never treated a specimen off the books.",
+    "I never used the sedative this week."
+   ],
+   "motive": "Marsh could have reported her off-book treatment — but Marsh never knew about it, and Rosa's alibi is witnessed.",
+   "name": "Dr. Rosa Delgado",
+   "pressure": 50,
+   "role": "Staff Veterinarian",
+   "secret": "She treated a protected reef fish off the books, without a licence to do so, because it would otherwise have died.",
+   "trust": 50,
+   "trustIntro": "Weary, honest once pressed, furious at the suggestion she would drug a colleague with her own medicine.",
+   "truthList": [
+    "I treated a protected fish off the books. It would have died otherwise.",
+    "I was in the clinic until ten. The nurse will tell you.",
+    "I would lose my licence if the board knew. I did not kill Lena."
+   ]
+  },
+  {
+   "age": 33,
+   "alibi": "Rode the bus home at 21:15, timestamped ticket, driver remembers him. Home alone after that — but the murder was over by 21:40.",
+   "id": "diver-sam",
+   "img": "",
+   "lieList": [
+    "I never sold anything from the aquarium.",
+    "I was at the aquarium until closing."
+   ],
+   "motive": "None against Marsh — she was the one who hired him, and he stole equipment, not lives.",
+   "name": "Sam Okafor",
+   "pressure": 50,
+   "role": "Maintenance Diver",
+   "secret": "He has been selling old aquarium equipment — pumps, nets, a wetsuit — online, a little at a time, for rent money.",
+   "trust": 50,
+   "trustIntro": "Defensive, then relieved when the listings are read properly. He is a small thief, not a killer.",
+   "truthList": [
+    "I sold equipment, yes — old pumps, a spare net. Not specimens.",
+    "I was home by nine. Alone. I know.",
+    "I have never been in the clinic, and I have never touched that tank."
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "hot": false,
+   "label": "Noah Kim and Marsh feed the sharks; both sign the log",
+   "t": "19:00"
+  },
+  {
+   "hot": false,
+   "label": "Marsh records her voice memo: 'follow the shipments'",
+   "t": "19:40"
+  },
+  {
+   "hot": false,
+   "label": "Marsh drafts the unsent email to the board",
+   "t": "20:15"
+  },
+  {
+   "hot": false,
+   "label": "Theo Ashford takes the stage at the fundraising dinner",
+   "t": "20:30"
+  },
+  {
+   "hot": true,
+   "label": "Dana's keycard opens the vet clinic; sedative taken",
+   "t": "21:05"
+  },
+  {
+   "hot": true,
+   "label": "Gallery cameras looped — the gap begins",
+   "t": "21:10"
+  },
+  {
+   "hot": false,
+   "label": "Sam Okafor boards the bus home",
+   "t": "21:15"
+  },
+  {
+   "hot": true,
+   "label": "Marsh's tea is drugged; she is carried to the quarantine tank",
+   "t": "21:25"
+  },
+  {
+   "hot": true,
+   "label": "Cameras return; tank lid left open",
+   "t": "21:40"
+  },
+  {
+   "hot": false,
+   "label": "Rosa Delgado signs out of the clinic",
+   "t": "22:00"
+  },
+  {
+   "hot": false,
+   "label": "Night guard finds Marsh in the tank room",
+   "t": "23:02"
+  }
+ ],
+ "title": "The Glass Tide",
+ "twists": [
+  {
+   "at": "60%",
+   "body": "The sedative log's sign-out handwriting is not the vet's — and Rosa admits the clinic's keycard reader has been broken for a month, so anyone with a staff card could have walked in unlogged. The keycard record suddenly proves less than it seemed — until you check whose card was used, and when.",
+   "caller": "Dr. Rosa Delgado",
+   "title": "The broken keycard reader"
+  },
+  {
+   "at": "finale",
+   "body": "The second phone's call log shows the buyer was called twice on the night Marsh died — but the second call was made after the murder, from the loading dock. Dana did not just kill Marsh. She finished the shipment that night, while the body was still warm in the tank room. And the buyer's number matches a name the Unit already knows — a name that will matter in Case 6.",
+   "title": "The second call"
+  }
+ ]
+}

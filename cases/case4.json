@@ -1,0 +1,1635 @@
+{
+ "boardLinks": [
+  [
+   "C4-E02",
+   "C4-E05"
+  ],
+  [
+   "C4-E05",
+   "C4-E06"
+  ],
+  [
+   "C4-E01",
+   "C4-E04"
+  ],
+  [
+   "C4-E07",
+   "C4-E12"
+  ],
+  [
+   "C4-E15",
+   "C4-E02"
+  ],
+  [
+   "C4-E11",
+   "C4-E12"
+  ],
+  [
+   "C4-E13",
+   "C4-E05"
+  ],
+  [
+   "C4-E19",
+   "C4-E04"
+  ],
+  [
+   "C4-E23",
+   "C4-E06"
+  ],
+  [
+   "C4-E03",
+   "C4-E01"
+  ]
+ ],
+ "chapters": [
+  {
+   "briefing": "Rain, candles, and a body at the bottom of the stairs. The parish says fall. Start with the scene itself: the nave, the organ, and the hymnal Renner left open. Note everything. The cathedral will not volunteer its secrets.",
+   "interrogations": [],
+   "locationId": "cathedral-nave",
+   "mechanic": "Tap to inspect — evidence tray",
+   "n": 1,
+   "puzzles": [],
+   "question": "Who was the last person to see Tobias Renner alive?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "The visitor book and Ida's own account put her at the cathedral at 19:30 — the last confirmed visit before the murder window. Hale's 21:40 sighting comes later, in Chapter 3.",
+      "id": "r1-1",
+      "options": [
+       "Celia Moreau, at 16:40",
+       "Ida Sorensen, at 19:30",
+       "Marcus Hale, at 21:40",
+       "Jonas Renner, two days ago"
+      ],
+      "q": "Who was the last person to see Tobias Renner alive, according to the evidence so far?",
+      "correctText": "Ida Sorensen, at 19:30"
+     },
+     {
+      "correct": 1,
+      "explain": "'M.H. — the fund is short 40,000. Talk tonight.' Renner was going to confront someone about money.",
+      "id": "r1-2",
+      "options": [
+       "A stolen hymnal",
+       "A shortfall in the restoration fund",
+       "A broken organ pipe",
+       "A choir member's debt"
+      ],
+      "q": "What does the hymnal margin note point to?",
+      "correctText": "A shortfall in the restoration fund"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C4-E03",
+       "text": "Renner lies at the bottom of the loft stairs, head toward the altar. No blood on the steps themselves — odd, for a fall down stone stairs.",
+       "title": "Body at the foot of the stairs"
+      },
+      "id": "hs1-1",
+      "label": "The body",
+      "x": 50,
+      "y": 82
+     },
+     {
+      "finding": {
+       "clueId": "C4-E02",
+       "text": "Renner's hymnal is open on the organ. In the margin, in his hand: 'M.H. — the fund is short 40,000. Talk tonight.'",
+       "title": "The open hymnal"
+      },
+      "id": "hs1-2",
+      "label": "The organ",
+      "x": 72,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A single leather glove under the third pew. Size small, expensive. Not the victim's.",
+       "title": "A dropped glove"
+      },
+      "id": "hs1-3",
+      "label": "Pews",
+      "x": 20,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Forty candles burning low. The stand was lit at the 19:00 service and never touched again.",
+       "title": "Forty candles"
+      },
+      "id": "hs1-4",
+      "label": "Candle stand",
+      "x": 88,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "From the nave, the loft railing looks intact. Nothing broken, nothing out of place — from down here.",
+       "title": "The loft railing"
+      },
+      "id": "hs1-5",
+      "label": "The loft",
+      "x": 45,
+      "y": 15
+     },
+     {
+      "finding": {
+       "clueId": "C4-E10",
+       "text": "Today's entries: Celia Moreau, 16:40. Ida Sorensen, 19:30. No entry for Marcus Hale — he has his own key.",
+       "title": "Visitor book"
+      },
+      "id": "hs1-6",
+      "label": "Visitor book",
+      "x": 60,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C4-E16",
+       "text": "Locked, untouched. The warden says he counted the collection in the vestry — but the box is still sealed.",
+       "title": "Collection box"
+      },
+      "id": "hs1-7",
+      "label": "Collection box",
+      "x": 10,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C4-E24",
+       "text": "Tucked inside the hymnal: a small black envelope, sealed with a silver anchor in wax. No name on it. Inside, one line: 'The choir sings out of tune. Look at the money, not the music.'",
+       "title": "Something between the pages"
+      },
+      "id": "hs1-8",
+      "label": "Hymnal pages",
+      "x": 80,
+      "y": 48
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Wet prints cross the nave toward the loft stairs — and only one set returns. The rain stopped at 21:00.",
+       "title": "Wet footprints"
+      },
+      "id": "hs1-9",
+      "label": "Wet footprints",
+      "x": 35,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C4-E18",
+       "text": "Tonight's rehearsal was cancelled by Renner at 18:00 — 'private meeting.' The choir never knew why.",
+       "title": "Rehearsal cancelled"
+      },
+      "id": "hs1-10",
+      "label": "Choir schedule",
+      "x": 65,
+      "y": 85
+     }
+    ],
+    "img": "images/case4-location.jpg"
+   },
+   "title": "The Nave",
+   "tools": [
+    "flashlight"
+   ]
+  },
+  {
+   "briefing": "Up the stairs, detective. The fall happened here — or was made to look like it happened here. Use the UV light on the railing and the floor. Dust remembers footsteps. Blood remembers light.",
+   "interrogations": [],
+   "locationId": "choir-loft",
+   "mechanic": "Flashlight + UV light",
+   "n": 2,
+   "puzzles": [
+    {
+     "clue": "C4-E13",
+     "correct": 1,
+     "done": "Reassembled: an invoice from a stonemason for restoration work that was never carried out — the fund's money, on paper, going nowhere.",
+     "hint": "The invoice number is the key — match the torn edges, not the numbers.",
+     "id": "pz2-1",
+     "kind": "torn-note",
+     "options": [
+      "The page is a hymn sheet",
+      "The page is a stonemason's invoice for work never done",
+      "The page is a choir roster",
+      "The page is a donation receipt"
+     ],
+     "title": "Reassemble the torn page",
+     "wrong": "The edges do not fit that way. Look at the tear pattern again.",
+     "correctText": "The page is a stonemason's invoice for work never done"
+    }
+   ],
+   "question": "Was the fall staged?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "Drag marks cross the loft floor, the stairs are clean, and the railing is undisturbed. He was killed in the loft and carried to the stairs.",
+      "id": "r2-1",
+      "options": [
+       "Yes — he slipped on the stairs",
+       "No — drag marks show the body was moved",
+       "No — he was pushed from the railing",
+       "Unclear — not enough evidence"
+      ],
+      "q": "Was Renner's fall genuine?",
+      "correctText": "No — drag marks show the body was moved"
+     },
+     {
+      "correct": 1,
+      "explain": "Latched from inside, the window rules out an outsider. The killer had a key or was let in.",
+      "id": "r2-2",
+      "options": [
+       "An intruder climbed in",
+       "The killer was already inside the cathedral",
+       "The window was broken",
+       "Nothing"
+      ],
+      "q": "What does the locked window prove?",
+      "correctText": "The killer was already inside the cathedral"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C4-E22",
+       "text": "No scuff, no break, no sign anyone went over it. A man falling from here would have hit the railing first.",
+       "title": "Railing, undisturbed"
+      },
+      "id": "hs2-1",
+      "label": "The railing",
+      "x": 50,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "C4-E03",
+       "text": "Two parallel drag marks cross the loft floor toward the stairs — a body, moved after death, not a man who fell.",
+       "title": "Drag marks in the dust"
+      },
+      "id": "hs2-2",
+      "label": "Dust on the floor",
+      "x": 30,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C4-E01",
+       "text": "A heavy brass candlestick stands on the loft floor, not on the altar where it belongs. Its base is wiped clean — too clean.",
+       "title": "A candlestick out of place"
+      },
+      "id": "hs2-3",
+      "label": "Brass candlestick",
+      "x": 70,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "C4-E22",
+       "text": "The loft window is latched from the inside. No one climbed in. Whoever did this was already in the building.",
+       "title": "Window locked from inside"
+      },
+      "id": "hs2-4",
+      "label": "The window",
+      "x": 15,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C4-E19",
+       "text": "A clear shoe print beside the drag marks — large, square-toed, a warden's shoe, not a musician's.",
+       "title": "Shoe print in the dust"
+      },
+      "id": "hs2-5",
+      "label": "Shoe print",
+      "x": 55,
+      "y": 75
+     },
+     {
+      "finding": {
+       "clueId": "C4-E08",
+       "text": "A woman's scarf, deep red, left on the organ bench. Ida Sorensen's — she admits she was here at 19:30.",
+       "title": "A scarf on the bench"
+      },
+      "id": "hs2-6",
+      "label": "The organ bench",
+      "x": 85,
+      "y": 35
+     },
+     {
+      "finding": {
+       "clueId": "C4-E17",
+       "text": "A brass-polish cloth tucked behind the organ, monogrammed M.H. The warden polishes the brass every afternoon.",
+       "title": "Polish cloth, monogrammed"
+      },
+      "id": "hs2-7",
+      "label": "Polish cloth",
+      "x": 40,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C4-E13",
+       "text": "A torn fragment of ledger paper, caught under the organ pedal. Columns of figures — and a stonemason's invoice number.",
+       "title": "Torn page fragment"
+      },
+      "id": "hs2-8",
+      "label": "Torn paper",
+      "x": 60,
+      "y": 25
+     },
+     {
+      "finding": {
+       "clueId": "C4-E03",
+       "text": "The stairs are clean. No blood, no scuffs, no sign of a body tumbling down them. The body was carried, not fallen.",
+       "title": "The stairs themselves"
+      },
+      "id": "hs2-9",
+      "label": "The stairs",
+      "x": 25,
+      "y": 80
+     },
+     {
+      "finding": {
+       "clueId": "C4-E01",
+       "text": "Under UV, the candlestick base shows a faint trace the wipe missed. The lab will need it — it is not what a fall leaves behind.",
+       "title": "UV: faint trace on the base"
+      },
+      "id": "hs2-10",
+      "label": "UV — the candlestick base",
+      "x": 75,
+      "y": 80
+     }
+    ],
+    "img": "images/case4-location.jpg"
+   },
+   "title": "The Loft",
+   "tools": [
+    "flashlight",
+    "uv-light"
+   ]
+  },
+  {
+   "briefing": "The archive keeps the parish's memory: visitor books, lock codes, phone records. And the people keep their stories. Cross-check every alibi against the paper. Someone's evening does not add up.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "The log — the log must be wrong. Or... I stepped out for air. Five minutes. That is all.",
+       "confront": "C4-E12",
+       "id": "q3-m1",
+       "mood": "firm",
+       "requires": null,
+       "text": "You said you were in the vestry all evening. The key log says you left at 21:35.",
+       "unlockClue": "C4-E12"
+      },
+      {
+       "answer": "He said we needed to talk. That is all. A talk is not a murder, detective.",
+       "confront": null,
+       "id": "q3-m2",
+       "mood": "calm",
+       "requires": null,
+       "text": "Renner called you at 20:52 about the fund. What did he say?",
+       "unlockClue": "C4-E15"
+      },
+      {
+       "answer": "Only Tobias and I. The code was changed last month. I... I see where you are going with this.",
+       "confront": "C4-E07",
+       "id": "q3-m3",
+       "mood": "calm",
+       "requires": null,
+       "text": "Who else knew the new loft lock code?",
+       "unlockClue": "C4-E07"
+      }
+     ],
+     "suspectId": "warden-marcus"
+    },
+    {
+     "questions": [
+      {
+       "answer": "I saw Marcus, near the stairs, at about twenty to ten. I did not want to say. I have said it now.",
+       "confront": null,
+       "id": "q3-d1",
+       "mood": "calm",
+       "requires": null,
+       "text": "Did you see anyone near the loft stairs that night?",
+       "unlockClue": "C4-E11"
+      },
+      {
+       "answer": "He did. I told him to pray on it. I did nothing. God forgive me — I did nothing.",
+       "confront": null,
+       "id": "q3-d2",
+       "mood": "calm",
+       "requires": null,
+       "text": "Did Renner confide in you about the fund?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "priest-dominic"
+    },
+    {
+     "questions": [
+      {
+       "answer": "I was there at half past seven. I left before eight. The scarf — I forgot it. That is the whole of it.",
+       "confront": "C4-E08",
+       "id": "q3-i1",
+       "mood": "firm",
+       "requires": null,
+       "text": "Your scarf was in the loft. You said you were never there that evening.",
+       "unlockClue": "C4-E08"
+      }
+     ],
+     "suspectId": "organist-ida"
+    }
+   ],
+   "locationId": "music-library",
+   "mechanic": "Interrogation — present evidence",
+   "n": 3,
+   "puzzles": [],
+   "question": "Whose alibi does not hold up?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "The vestry key log shows Hale left the vestry at 21:35, inside the murder window — contradicting his claim that he was counting money there all evening.",
+      "id": "r3-1",
+      "options": [
+       "Ida Sorensen",
+       "Marcus Hale",
+       "Celia Moreau",
+       "Jonas Renner"
+      ],
+      "q": "Whose alibi does not hold up?",
+      "correctText": "Marcus Hale"
+     },
+     {
+      "correct": 2,
+      "explain": "The code was changed last month and given to exactly two people: the victim and the warden.",
+      "id": "r3-2",
+      "options": [
+       "Ida Sorensen",
+       "Father Dominic",
+       "Only Renner and Marcus Hale",
+       "Celia Moreau"
+      ],
+      "q": "Who else knew the new loft lock code?",
+      "correctText": "Only Renner and Marcus Hale"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C4-E07",
+       "text": "The loft door code was changed last month. Only two people were given the new code: Renner and the warden, Marcus Hale.",
+       "title": "Loft lock code log"
+      },
+      "id": "hs3-1",
+      "label": "Lock code log",
+      "x": 30,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C4-E12",
+       "text": "The vestry key was used at 21:35 — the warden leaving the vestry, not sitting in it counting money. His alibi breaks here.",
+       "title": "Vestry key log"
+      },
+      "id": "hs3-2",
+      "label": "Key usage log",
+      "x": 60,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "C4-E15",
+       "text": "Last call: 20:52, to Marcus Hale. Duration 41 seconds. Renner's words, per the warden himself: 'We need to talk about the fund.'",
+       "title": "Renner's phone record"
+      },
+      "id": "hs3-3",
+      "label": "Phone records",
+      "x": 80,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C4-E23",
+       "text": "Last entry, dated today: 'If anything happens to me, look at the fund. M.H. knows I know.'",
+       "title": "Renner's diary"
+      },
+      "id": "hs3-4",
+      "label": "Parish diary",
+      "x": 45,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Nothing here but dust and devotion. The past is not the suspect.",
+       "title": "A century of hymnals"
+      },
+      "id": "hs3-5",
+      "label": "Old hymnals",
+      "x": 15,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Donations are up this year. The fund should be healthy. It is not.",
+       "title": "Donation records"
+      },
+      "id": "hs3-6",
+      "label": "Donation records",
+      "x": 70,
+      "y": 75
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A neat desk, a wax seal set, and a log of every envelope ever sent from this archive. The archivist smiles when you ask about it — and says nothing.",
+       "title": "The archivist's desk"
+      },
+      "id": "hs3-7",
+      "label": "The archivist's desk",
+      "x": 50,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": "C4-E09",
+       "text": "Jonas Renner on camera at the bar until 21:30. His alibi holds for most of the window — but the window runs to 22:10.",
+       "title": "Bar CCTV — Jonas Renner"
+      },
+      "id": "hs3-8",
+      "label": "Bar CCTV still",
+      "x": 90,
+      "y": 60
+     }
+    ],
+    "img": "images/case4-location.jpg"
+   },
+   "title": "The Library",
+   "tools": [
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "The warden's desk. The safe. The restoration ledger he handed you himself — the one he said was balanced to the crown. Dust it, light it, read what was erased. Numbers do not lie, but men rewrite them.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "I polished it. I told you — I polish the brass every afternoon. That proves nothing.",
+       "confront": "C4-E04",
+       "id": "q4-m1",
+       "mood": "hard",
+       "requires": null,
+       "text": "Your fingerprint is on the candlestick that killed him.",
+       "unlockClue": "C4-E04"
+      },
+      {
+       "answer": "...I don't know what you're — the bookkeeper. Ask the bookkeeper. I never touched the figures.",
+       "confront": "C4-E06",
+       "id": "q4-m2",
+       "mood": "hard",
+       "requires": null,
+       "text": "The ledger was altered. Forty thousand crowns, erased and rewritten.",
+       "unlockClue": "C4-E06"
+      }
+     ],
+     "suspectId": "warden-marcus"
+    },
+    {
+     "questions": [
+      {
+       "answer": "I knew. He told me himself, that afternoon. I cried, detective. I did not kill him for money I already knew I would never see.",
+       "confront": "C4-E20",
+       "id": "q4-c1",
+       "mood": "calm",
+       "requires": null,
+       "text": "The will codicil cut you out entirely. Did you know?",
+       "unlockClue": "C4-E20"
+      }
+     ],
+     "suspectId": "soprano-celia"
+    },
+    {
+     "questions": [
+      {
+       "answer": "Yes. Yes, I owe the money. And yes, I asked Tobias. He said no — and I went to the bar and drank. Ask the cameras.",
+       "confront": "C4-E21",
+       "id": "q4-j1",
+       "mood": "firm",
+       "requires": null,
+       "text": "A bookmaker's marker with your name on it. Sixty thousand crowns.",
+       "unlockClue": "C4-E21"
+      }
+     ],
+     "suspectId": "brother-jonas"
+    }
+   ],
+   "locationId": "vestry-office",
+   "mechanic": "Fingerprint puzzle + UV ledger",
+   "n": 4,
+   "puzzles": [
+    {
+     "clue": "C4-E04",
+     "correct": 0,
+     "done": "Lifted clean: the print on the candlestick base matches Marcus Hale, the warden — the man who said he never touched it that night.",
+     "hint": "Dust lightly, lift slowly — the print is under the wipe, not on top of it.",
+     "id": "pz4-1",
+     "kind": "fingerprint-lift",
+     "options": [
+      "The print matches Marcus Hale",
+      "The print matches Ida Sorensen",
+      "The print matches Jonas Renner",
+      "The print is too smudged to read"
+     ],
+     "title": "Lift the print from the candlestick",
+     "wrong": "The lab disagrees. Dust again, slower this time.",
+     "correctText": "The print matches Marcus Hale"
+    },
+    {
+     "clue": "C4-E06",
+     "correct": 0,
+     "done": "Under UV, the erased figures emerge: the fund was 40,000 crowns heavier before someone rewrote it. The hymnal was right.",
+     "hint": "UV at a low angle. The erased ink fluoresces; the new ink does not.",
+     "id": "pz4-2",
+     "kind": "ledger-reveal",
+     "options": [
+      "The original figures were 40,000 higher",
+      "The original figures match the new ones",
+      "The erasures are just wear",
+      "The ledger was never altered"
+     ],
+     "title": "Read the erased figures",
+     "wrong": "Look again under the UV — the ghost figures are there.",
+     "correctText": "The original figures were 40,000 higher"
+    }
+   ],
+   "question": "How was the ledger altered?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "UV reveals the original figures beneath the new ink: 40,000 crowns higher. The shortfall was hidden by rewriting, not by removing pages.",
+      "id": "r4-1",
+      "options": [
+       "Pages were torn out",
+       "Figures were erased and rewritten 40,000 lower",
+       "The ledger was replaced entirely",
+       "It was never altered"
+      ],
+      "q": "How was the ledger altered?",
+      "correctText": "Figures were erased and rewritten 40,000 lower"
+     },
+     {
+      "correct": 1,
+      "explain": "A print proves contact, not murder — Hale polishes the brass daily. It only becomes proof combined with the erased ledger and the broken alibi.",
+      "id": "r4-2",
+      "options": [
+       "That Hale killed Renner",
+       "Only that Hale handled the candlestick",
+       "That the candlestick is the weapon",
+       "Nothing at all"
+      ],
+      "q": "What does the fingerprint on the candlestick prove on its own?",
+      "correctText": "Only that Hale handled the candlestick"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C4-E06",
+       "text": "Neat columns, balanced totals — and under UV, erased figures beneath the ink. The original entries were 40,000 crowns higher.",
+       "title": "The restoration ledger"
+      },
+      "id": "hs4-1",
+      "label": "The ledger",
+      "x": 50,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "C4-E05",
+       "text": "Open. Inside: the collection money, counted and banded — and a second set of books, hidden behind the hymnals.",
+       "title": "The safe"
+      },
+      "id": "hs4-2",
+      "label": "The safe",
+      "x": 30,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C4-E04",
+       "text": "The brass candlestick from the loft, now in an evidence bag. The lab has lifted a print from the base — under the polish, under the wipe.",
+       "title": "The candlestick, bagged"
+      },
+      "id": "hs4-3",
+      "label": "The candlestick",
+      "x": 70,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C4-E16",
+       "text": "The warden's count sheet matches the collection box exactly. Whatever he stole, he did not steal it from the plate.",
+       "title": "Collection count sheet"
+      },
+      "id": "hs4-4",
+      "label": "Collection count sheet",
+      "x": 20,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C4-E05",
+       "text": "Invoices for restoration work, paid in full. The stonemason's yard has no record of the work. The firm does not exist.",
+       "title": "The stonemason's invoices"
+      },
+      "id": "hs4-5",
+      "label": "Stonemason invoices",
+      "x": 85,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "C4-E07",
+       "text": "A spare loft key in the desk drawer, cut last month — the same week the code was changed.",
+       "title": "A second key"
+      },
+      "id": "hs4-6",
+      "label": "The desk drawer",
+      "x": 60,
+      "y": 75
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Faces the courtyard. From here you can see the loft door — and anyone using it after dark.",
+       "title": "Vestry window"
+      },
+      "id": "hs4-7",
+      "label": "The window",
+      "x": 40,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": "C4-E12",
+       "text": "The warden's coat, still damp from the rain. He was outside after 21:00 — when he claims he never left the vestry.",
+       "title": "A wet coat"
+      },
+      "id": "hs4-8",
+      "label": "Coat hook",
+      "x": 75,
+      "y": 20
+     }
+    ],
+    "img": "images/case4-location.jpg"
+   },
+   "title": "The Vestry",
+   "tools": [
+    "fingerprint-powder",
+    "uv-light",
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "Everything is on the board now: the hymnal, the ledger, the key log, the print, the priest's word. Link the evidence. The answer is not one clue — it is three, braided together. Name the killer, the motive, the method, and the proof.",
+   "interrogations": [],
+   "locationId": "cathedral-nave",
+   "mechanic": "Deduction board + final accusation",
+   "n": 5,
+   "puzzles": [],
+   "question": "Who killed Tobias Renner — and why?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The scarf proves she was in the loft at 19:30 — which she admits. Neighbours heard her practising at home during the murder window.",
+      "id": "r5-1",
+      "options": [
+       "Because she has an alibi for the murder window",
+       "Because the scarf is not hers",
+       "Because the scarf was planted",
+       "Because scarves cannot be evidence"
+      ],
+      "q": "Why is Ida Sorensen's scarf NOT proof she killed Renner?",
+      "correctText": "Because she has an alibi for the murder window"
+     },
+     {
+      "correct": 1,
+      "explain": "Jonas had motive and a partial gap — but he could not open the loft door, and the cameras hold him for most of the window.",
+      "id": "r5-2",
+      "options": [
+       "He has no motive",
+       "He was on CCTV at the bar until 21:30 and never knew the loft code",
+       "He is the victim's brother",
+       "He owes no money"
+      ],
+      "q": "What single fact most undermines Jonas Renner as the killer?",
+      "correctText": "He was on CCTV at the bar until 21:30 and never knew the loft code"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Every clue pinned. Every string waiting. The pattern is there — follow the money, not the music.",
+       "title": "The deduction board"
+      },
+      "id": "hs5-1",
+      "label": "The board",
+      "x": 50,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "C4-E14",
+       "text": "A neighbour's recording of Ida practising at home, 20:00–21:00, timestamped. Her alibi holds.",
+       "title": "Ida's organ recording"
+      },
+      "id": "hs5-2",
+      "label": "Organ recording",
+      "x": 20,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C4-E20",
+       "text": "Renner cut Celia out of his will a month ago. She knew. She gains nothing from his death.",
+       "title": "The will codicil"
+      },
+      "id": "hs5-3",
+      "label": "Will codicil",
+      "x": 80,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C4-E21",
+       "text": "A bookmaker's marker: Jonas owes 60,000. Motive, yes — but the cameras hold him at the bar until 21:30, and the loft needed the code.",
+       "title": "Jonas's marker"
+      },
+      "id": "hs5-4",
+      "label": "Gambling marker",
+      "x": 30,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C4-E24",
+       "text": "ANCHOR-04. Someone knew Renner would die before he died — or knew the fund would be the story. The seal is a silver anchor. Who sends such a thing?",
+       "title": "The black envelope"
+      },
+      "id": "hs5-5",
+      "label": "The envelope",
+      "x": 70,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C4-E02",
+       "text": "'M.H. — the fund is short 40,000. Talk tonight.' He knew the initials. He knew the amount. He knew the night.",
+       "title": "The hymnal, once more"
+      },
+      "id": "hs5-6",
+      "label": "The hymnal",
+      "x": 50,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Forty voices. None of them saw anything. The cathedral protects its own — until it doesn't.",
+       "title": "Choir roster"
+      },
+      "id": "hs5-7",
+      "label": "Choir roster",
+      "x": 10,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C4-E07",
+       "text": "Locked by code. Two people knew it. One is dead.",
+       "title": "The loft door"
+      },
+      "id": "hs5-8",
+      "label": "The loft door",
+      "x": 90,
+      "y": 60
+     }
+    ],
+    "img": "images/case4-location.jpg"
+   },
+   "title": "The Deduction Board",
+   "tools": []
+  }
+ ],
+ "closing": {
+  "lines": [
+   {
+    "img": "images/case4-location.jpg",
+    "text": "The choir sings again on Sunday. The warden's pew is empty. The hymnal stays open on the organ — to the page where Tobias Renner wrote the truth.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case4-location.jpg",
+    "text": "And in the hymnal, tucked between the pages, one more thing the police never logged: a small black envelope, sealed with a silver anchor.",
+    "voice": "narrator"
+   }
+  ]
+ },
+ "coldOpen": {
+  "lines": [
+   {
+    "img": "images/case4-location.jpg",
+    "text": "Rain on the roof. Forty candles burning low. And at the bottom of the choir loft stairs, a man who will never conduct again.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case4-location.jpg",
+    "text": "Tobias Renner taught this city to sing. Tonight the cathedral is silent — and the silence is lying.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case4-location.jpg",
+    "text": "The police called it a fall. The hymnal on the organ disagrees. You are the detective the Cold Case Unit sends when the obvious answer is too tidy.",
+    "voice": "narrator"
+   }
+  ],
+  "title": "Tuesday, 22:14 — St. Anselm's Cathedral"
+ },
+ "coopClueMap": {
+  "analyst": [
+   "C4-E04",
+   "C4-E06",
+   "C4-E15",
+   "C4-E23"
+  ],
+  "archivist": [
+   "C4-E02",
+   "C4-E05",
+   "C4-E09",
+   "C4-E10",
+   "C4-E14",
+   "C4-E16",
+   "C4-E18",
+   "C4-E20",
+   "C4-E21",
+   "C4-E24"
+  ],
+  "field": [
+   "C4-E01",
+   "C4-E03",
+   "C4-E08",
+   "C4-E13",
+   "C4-E17",
+   "C4-E19",
+   "C4-E22"
+  ],
+  "interrogator": [
+   "C4-E07",
+   "C4-E11",
+   "C4-E12"
+  ]
+ },
+ "evidence": [
+  {
+   "body": "Heavy brass candlestick found on the loft floor, wiped clean. Under UV, a faint trace survives on the base. The lab confirms it is the weapon that struck Renner.",
+   "chapter": 2,
+   "code": "C4-E01",
+   "id": "C4-E01",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "The murder weapon; the blow came in the loft, not on the stairs.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Brass candlestick"
+  },
+  {
+   "body": "In Renner's hand: 'M.H. — the fund is short 40,000. Talk tonight.' The initials, the amount, and the meeting — written the day he died.",
+   "chapter": 1,
+   "code": "C4-E02",
+   "id": "C4-E02",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "Renner knew about the shortfall and planned to confront M.H. that night.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Hymnal margin note"
+  },
+  {
+   "body": "Two parallel drag marks cross the loft floor toward the stairs. The stairs themselves are clean. The body was moved after death.",
+   "chapter": 2,
+   "code": "C4-E03",
+   "id": "C4-E03",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "The fall was staged; Renner was killed in the loft and carried to the stairs.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Drag marks in loft dust"
+  },
+  {
+   "body": "A clean print lifted from the candlestick base, under the wipe. It matches Marcus Hale. He polishes the brass daily — but the print sits under the wipe, not over it.",
+   "chapter": 4,
+   "code": "C4-E04",
+   "id": "C4-E04",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "Hale handled the murder weapon on the night of the murder, after his last polishing round.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Warden's fingerprint on candlestick"
+  },
+  {
+   "body": "The official ledger, balanced to the crown — and a second, hidden set of books behind the hymnals in the safe. The two do not agree by exactly 40,000 crowns.",
+   "chapter": 4,
+   "code": "C4-E05",
+   "id": "C4-E05",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "The restoration fund was skimmed; the theft is documented.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Altered restoration ledger"
+  },
+  {
+   "body": "Under UV light, the ledger's original figures fluoresce beneath the new ink: 40,000 crowns higher. The shortfall was erased and rewritten, not lost.",
+   "chapter": 4,
+   "code": "C4-E06",
+   "id": "C4-E06",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "The ledger was deliberately altered to hide a 40,000-crown theft — the motive.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "UV-revealed erased figures"
+  },
+  {
+   "body": "The loft code was changed last month and given to exactly two people: Renner and Warden Marcus Hale.",
+   "chapter": 3,
+   "code": "C4-E07",
+   "id": "C4-E07",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "Only Hale could have opened the loft door that night.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Loft lock code log"
+  },
+  {
+   "body": "A deep red scarf on the organ bench, belonging to organist Ida Sorensen. She admits she was in the loft at 19:30 and forgot it.",
+   "chapter": 2,
+   "code": "C4-E08",
+   "id": "C4-E08",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "Ida was in the loft hours before the murder — nothing more.",
+   "redHerring": true,
+   "roleExclusive": "field",
+   "title": "Ida's scarf in the loft"
+  },
+  {
+   "body": "Jonas Renner on bar CCTV until 21:30. His alibi covers most of the murder window, but the window runs to 22:10.",
+   "chapter": 3,
+   "code": "C4-E09",
+   "id": "C4-E09",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "Jonas's alibi is partial — strong, but not complete.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Bar CCTV — Jonas Renner"
+  },
+  {
+   "body": "Today's entries: Celia Moreau 16:40, Ida Sorensen 19:30. No entry for Hale — he carries his own key and never signs in.",
+   "chapter": 1,
+   "code": "C4-E10",
+   "id": "C4-E10",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "Who visited the cathedral that day — and who never signs in.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Visitor book"
+  },
+  {
+   "body": "Father Dominic saw Marcus Hale near the loft stairs at about 21:40 — inside the murder window. He did not want to say it. He said it anyway.",
+   "chapter": 3,
+   "code": "C4-E11",
+   "id": "C4-E11",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "Hale was at the loft stairs during the murder window.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Father Dominic's statement"
+  },
+  {
+   "body": "The vestry key was used at 21:35 — Hale leaving the vestry, not sitting in it. His alibi collapses at this timestamp.",
+   "chapter": 3,
+   "code": "C4-E12",
+   "id": "C4-E12",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "Hale's alibi is false; he was moving through the cathedral at 21:35.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Vestry key usage log"
+  },
+  {
+   "body": "A torn fragment of ledger paper under the organ pedal, showing a stonemason's invoice number — for work that was never done.",
+   "chapter": 2,
+   "code": "C4-E13",
+   "id": "C4-E13",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "The theft mechanism: fake invoices for phantom restoration work.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Torn ledger page fragment"
+  },
+  {
+   "body": "A neighbour's recording of Ida Sorensen practising at home, 20:00–21:00, timestamped. Her alibi for the murder window holds.",
+   "chapter": 5,
+   "code": "C4-E14",
+   "id": "C4-E14",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "Ida was home during the murder window.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Organ practice recording"
+  },
+  {
+   "body": "20:52, to Marcus Hale, 41 seconds. 'We need to talk about the fund.' The meeting that killed him was arranged by the victim himself.",
+   "chapter": 3,
+   "code": "C4-E15",
+   "id": "C4-E15",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "Renner summoned Hale to discuss the fund, hours before his death.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Renner's last phone call"
+  },
+  {
+   "body": "Hale's count sheet matches the collection box exactly. Whatever he stole, he did not steal it from the plate — the congregation's money was safe.",
+   "chapter": 4,
+   "code": "C4-E16",
+   "id": "C4-E16",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "The theft was confined to the restoration fund; the collection was untouched.",
+   "redHerring": true,
+   "roleExclusive": "archivist",
+   "title": "Collection count sheet"
+  },
+  {
+   "body": "A brass-polish cloth monogrammed M.H., tucked behind the organ. Hale polishes the brass every afternoon — which is why his print on the candlestick needs the wipe beneath it to mean anything.",
+   "chapter": 2,
+   "code": "C4-E17",
+   "id": "C4-E17",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "Hale's innocent explanation for his print — and why the print's position defeats it.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Monogrammed polish cloth"
+  },
+  {
+   "body": "Renner cancelled tonight's rehearsal at 18:00 for a 'private meeting.' The choir never knew why — he wanted the cathedral empty.",
+   "chapter": 1,
+   "code": "C4-E18",
+   "id": "C4-E18",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "Renner cleared the cathedral for a private confrontation.",
+   "redHerring": true,
+   "roleExclusive": "archivist",
+   "title": "Cancelled rehearsal notice"
+  },
+  {
+   "body": "A large, square-toed shoe print beside the drag marks — a warden's shoe, not a musician's soft sole.",
+   "chapter": 2,
+   "code": "C4-E19",
+   "id": "C4-E19",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "A large man in hard shoes stood beside the body in the loft.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Shoe print in loft dust"
+  },
+  {
+   "body": "Renner cut Celia out of his will a month ago. She knew. She gains nothing from his death.",
+   "chapter": 5,
+   "code": "C4-E20",
+   "id": "C4-E20",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "Celia has no financial motive — the inheritance was already gone.",
+   "redHerring": true,
+   "roleExclusive": "archivist",
+   "title": "Will codicil"
+  },
+  {
+   "body": "A bookmaker's marker: Jonas Renner owes 60,000 crowns. Motive, yes — but he could not open the loft, and the cameras hold him until 21:30.",
+   "chapter": 5,
+   "code": "C4-E21",
+   "id": "C4-E21",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "Jonas's motive is real; his opportunity is not.",
+   "redHerring": true,
+   "roleExclusive": "archivist",
+   "title": "Bookmaker's marker"
+  },
+  {
+   "body": "The loft window is latched from the inside. No intruder climbed in. The killer was already in the building — with a key.",
+   "chapter": 2,
+   "code": "C4-E22",
+   "id": "C4-E22",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "No outsider; the killer had legitimate access.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Loft window, locked inside"
+  },
+  {
+   "body": "Last entry, dated today: 'If anything happens to me, look at the fund. M.H. knows I know.' Renner saw his own death coming and named the reason.",
+   "chapter": 3,
+   "code": "C4-E23",
+   "id": "C4-E23",
+   "img": "images/case4-location.jpg",
+   "key": true,
+   "proves": "Renner feared Hale and expected the confrontation to turn dangerous.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Renner's diary entry"
+  },
+  {
+   "body": "A small black envelope sealed with a silver anchor in wax, tucked inside the hymnal. One line, unsigned: 'The choir sings out of tune. Look at the money, not the music.' Someone knew the fund was the story before the body was cold. This is the fourth such envelope the Unit has found — one in each of the last four cases.",
+   "chapter": 1,
+   "code": "C4-E24",
+   "id": "C4-E24",
+   "img": "images/case4-location.jpg",
+   "key": false,
+   "proves": "The season arc: someone — the Anchorman — is nudging the Unit toward the truth, case by case.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "ANCHOR-04 — The black envelope"
+  }
+ ],
+ "free": true,
+ "hints": {
+  "answer": [
+   "Marcus Hale killed Renner: the erased ledger proves the theft, the key log breaks his alibi, and his print sits under the wipe on the candlestick."
+  ],
+  "direction": [
+   "The hymnal names M.H. and an amount. Find what the ledger hides under UV.",
+   "The vestry key log breaks one alibi at 21:35. Check who knew the loft code.",
+   "The fingerprint alone proves contact, not murder. Pair it with the erased figures and the broken alibi."
+  ],
+  "nudge": [
+   "Follow the money, not the music.",
+   "The fall doesn't fit the stairs. Look at the loft floor.",
+   "Someone in this cathedral never signs the visitor book."
+  ]
+ },
+ "id": "case4",
+ "locations": [
+  {
+   "desc": "Candlelight, wet stone, forty empty pews. The choir loft stairs rise into the dark at the back.",
+   "id": "cathedral-nave",
+   "img": "images/case4-location.jpg",
+   "name": "St. Anselm's Cathedral — Nave"
+  },
+  {
+   "desc": "The organ, the hymnals, the railing. From here the whole nave is visible — and so is everything that happened.",
+   "id": "choir-loft",
+   "img": "images/case4-location.jpg",
+   "name": "Choir Loft"
+  },
+  {
+   "desc": "Locked cabinets, visitor books, a century of parish records. Paper remembers what people forget.",
+   "id": "music-library",
+   "img": "images/case4-location.jpg",
+   "name": "Cathedral Music Library & Archive"
+  },
+  {
+   "desc": "The warden's desk, the safe, the restoration ledger. The money lives here. So does the lie.",
+   "id": "vestry-office",
+   "img": "images/case4-location.jpg",
+   "name": "Vestry Office"
+  }
+ ],
+ "minEvidenceToSolve": [
+  "C4-E04",
+  "C4-E06",
+  "C4-E12"
+ ],
+ "number": 4,
+ "palette": {
+  "accent": "#8B7D3C",
+  "bg": "#14141F",
+  "primary": "#C9A227"
+ },
+ "premise": "Tobias Renner, choirmaster of St. Anselm's Cathedral, is found dead at the foot of the choir loft stairs on a rainy Tuesday night. The parish calls it a tragic fall. His hymnal, open on the organ, says otherwise: in the margin, in his own hand, three words — 'the fund is short.' Someone in the choir wanted him silent, and the cathedral keeps its secrets in Latin.",
+ "season": 1,
+ "solve": {
+  "cleared": [
+   {
+    "name": "Ida Sorensen",
+    "text": "Her scarf proves a 19:30 visit she never denied; neighbours heard her practising at home during the murder window."
+   },
+   {
+    "name": "Celia Moreau",
+    "text": "At dinner with three friends, timestamped bill; the codicil had already cut her out, so she gained nothing."
+   },
+   {
+    "name": "Jonas Renner",
+    "text": "On CCTV at the bar until 21:30 and never knew the loft code; his debts are real, his opportunity is not."
+   },
+   {
+    "name": "Father Dominic Okafor",
+    "text": "Guilty of silence about the theft, not of murder — his sermon draft is timestamped 21:47, and he is the witness who put Hale at the stairs."
+   }
+  ],
+  "keyProof": "proof-print-ledger-keylog",
+  "method": "method-candlestick",
+  "motive": "motive-fund",
+  "options": {
+   "keyProof": [
+    {
+     "id": "proof-print-ledger-keylog",
+     "label": "Hale's print under the wipe on the candlestick + the UV-erased 40,000 in the ledger + the 21:35 key log breaking his alibi"
+    },
+    {
+     "id": "proof-scarf",
+     "label": "Ida's scarf left in the loft"
+    },
+    {
+     "id": "proof-will",
+     "label": "The will codicil cutting Celia out"
+    }
+   ],
+   "method": [
+    {
+     "id": "method-candlestick",
+     "label": "Struck once with the brass candlestick in the loft, body dragged to the stairs to fake a fall"
+    },
+    {
+     "id": "method-push",
+     "label": "Pushed down the loft stairs"
+    },
+    {
+     "id": "method-poison",
+     "label": "Poisoned before the service"
+    }
+   ],
+   "motive": [
+    {
+     "id": "motive-fund",
+     "label": "Renner was about to expose Hale's theft from the restoration fund"
+    },
+    {
+     "id": "motive-replace",
+     "label": "Renner was replacing Ida as organist"
+    },
+    {
+     "id": "motive-will",
+     "label": "Inheritance — Renner's will and house"
+    },
+    {
+     "id": "motive-reputation",
+     "label": "Protecting the parish's reputation"
+    }
+   ],
+   "who": [
+    {
+     "id": "warden-marcus",
+     "label": "Marcus Hale — Church Warden"
+    },
+    {
+     "id": "organist-ida",
+     "label": "Ida Sorensen — Organist"
+    },
+    {
+     "id": "soprano-celia",
+     "label": "Celia Moreau — Soprano"
+    },
+    {
+     "id": "brother-jonas",
+     "label": "Jonas Renner — Victim's Brother"
+    },
+    {
+     "id": "priest-dominic",
+     "label": "Father Dominic Okafor — Parish Priest"
+    }
+   ]
+  },
+  "solutionHTML": "<p>Marcus Hale met Tobias Renner in the choir loft at about 21:50, after Renner's 20:52 call summoned him to talk about the fund. When Renner showed him the figures, Hale struck him once with the brass candlestick, then dragged the body to the stairs and arranged the fall. He wiped the candlestick — but his print survived beneath the wipe — and he went back to the vestry, where the key log caught him leaving at 21:35. The motive is written in two places: Renner's hymnal, and the ledger's erased figures, 40,000 crowns rewritten to hide three years of theft through fake stonemason invoices.</p><p>No single clue convicts him. The print alone could be innocent — he polishes the brass daily. The ledger alone proves theft, not murder. The key log alone proves a lie, not a killing. Together, they leave no one else: only Hale knew the loft code, only Hale was seen at the stairs at 21:40, and only Hale had a reason to silence the one man who had done the sums.</p>",
+  "who": "warden-marcus"
+ },
+ "subtitle": "A choirmaster falls from the loft. The hymnbook says he was pushed.",
+ "suspects": [
+  {
+   "age": 52,
+   "alibi": "Claims he was alone in the vestry counting collection money from 21:00 to 22:30. No witness.",
+   "id": "warden-marcus",
+   "img": "",
+   "lieList": [
+    "I never argued with Tobias about money.",
+    "I was in the vestry counting the collection all evening.",
+    "The restoration fund is balanced to the crown."
+   ],
+   "motive": "Renner found the shortfall and told him they would 'talk about the fund' that night. Exposure meant prison and disgrace.",
+   "name": "Marcus Hale",
+   "pressure": 50,
+   "role": "Church Warden",
+   "secret": "He has been skimming the cathedral restoration fund for three years — 40,000 crowns, moved through a fake stonemason's invoice.",
+   "trust": 50,
+   "trustIntro": "Grieving, helpful, hands you the ledger himself. Too helpful.",
+   "truthList": [
+    "I polished the brass candlesticks that afternoon — of course my prints are in this building.",
+    "Tobias controlled the choir budget and I resented it.",
+    "I know the loft lock code. The warden always has."
+   ]
+  },
+  {
+   "age": 47,
+   "alibi": "Neighbours heard her practising at home on her own organ from 20:00 to 21:00, and she called a friend at 21:40.",
+   "id": "organist-ida",
+   "img": "",
+   "lieList": [
+    "I knew nothing about the restoration fund.",
+    "I was not at the cathedral that evening."
+   ],
+   "motive": "Professional humiliation and the loss of the only job she has ever had.",
+   "name": "Ida Sorensen",
+   "pressure": 50,
+   "role": "Organist",
+   "secret": "Renner was about to replace her as organist after twenty years, and she knew. She came to the cathedral that night to beg him to reconsider.",
+   "trust": 50,
+   "trustIntro": "Cold, precise, furious at the suggestion she would hurt him — and at the suggestion she was being replaced.",
+   "truthList": [
+    "I argued with Tobias about my position. He was going to replace me.",
+    "I left my scarf in the loft. I was there at 19:30 and left before eight.",
+    "I practised at home all evening. Ask my neighbours."
+   ]
+  },
+  {
+   "age": 29,
+   "alibi": "Dinner with three friends at a restaurant across town, 20:00 to 22:30. All three confirm, and the bill is timestamped.",
+   "id": "soprano-celia",
+   "img": "",
+   "lieList": [
+    "Tobias Renner was not my father.",
+    "I did not visit him this week."
+   ],
+   "motive": "Inheritance and twenty-nine years of resentment — but she stood to gain nothing, because the codicil had already cut her out.",
+   "name": "Celia Moreau",
+   "pressure": 50,
+   "role": "Soprano, St. Anselm's Choir",
+   "secret": "Tobias Renner was her father. He raised her in secret, then cut her out of his will when she chose the stage over the church.",
+   "trust": 50,
+   "trustIntro": "Defensive about her past, then quietly devastated. She visited him that afternoon to say goodbye, not to fight.",
+   "truthList": [
+    "I visited the cathedral that afternoon. We talked about the will. He would not change it.",
+    "I was at dinner with friends all evening. The restaurant has the bill.",
+    "I am angry at him. I am not a murderer."
+   ]
+  },
+  {
+   "age": 55,
+   "alibi": "At a bar until 21:30, on CCTV. The murder window opens at 21:00. His alibi covers most of the window, not all of it.",
+   "id": "brother-jonas",
+   "img": "",
+   "lieList": [
+    "I have no debts. My business is fine.",
+    "I never asked Tobias for money."
+   ],
+   "motive": "Inheritance — as next of kin he inherits the house and the shop, if Tobias dies before changing the will.",
+   "name": "Jonas Renner",
+   "pressure": 50,
+   "role": "Victim's Brother, Antique Dealer",
+   "secret": "He owes 60,000 crowns to a bookmaker and asked Tobias for a loan three days before the murder. Tobias refused.",
+   "trust": 50,
+   "trustIntro": "Nervous, sweating, quick to offer his bar receipt. The receipt is real. The gap after 21:30 is real too.",
+   "truthList": [
+    "I asked Tobias for a loan. He said no.",
+    "I was at the bar until half past nine. The cameras will show you.",
+    "I was at the cathedral two days ago. I did not go back."
+   ]
+  },
+  {
+   "age": 63,
+   "alibi": "In his study writing Sunday's sermon all evening. No witness, but his draft is timestamped in the word processor at 21:47.",
+   "id": "priest-dominic",
+   "img": "",
+   "lieList": [
+    "I knew nothing about the fund.",
+    "I saw no one near the loft that night."
+   ],
+   "motive": "Protecting the parish's reputation — the same motive that made him stay silent about the theft.",
+   "name": "Father Dominic Okafor",
+   "pressure": 50,
+   "role": "Parish Priest",
+   "secret": "He knew the restoration fund was short and said nothing, because a scandal would empty the pews and kill the parish.",
+   "trust": 50,
+   "trustIntro": "Calm, weary, honest about his own cowardice. He saw the warden near the loft stairs at 21:40 — and he will say so, once.",
+   "truthList": [
+    "Tobias confided in me about the ledger. I told him to pray on it. I did nothing.",
+    "I saw Marcus Hale near the loft stairs at about twenty to ten.",
+    "I was writing my sermon. The draft will show the time."
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "hot": false,
+   "label": "Celia Moreau visits Renner; they talk about the will",
+   "t": "16:40"
+  },
+  {
+   "hot": false,
+   "label": "Renner cancels tonight's rehearsal — 'private meeting'",
+   "t": "18:00"
+  },
+  {
+   "hot": false,
+   "label": "Ida Sorensen in the loft, leaves her scarf, goes home",
+   "t": "19:30"
+  },
+  {
+   "hot": false,
+   "label": "Ida practising at home (neighbours hear her)",
+   "t": "20:00"
+  },
+  {
+   "hot": true,
+   "label": "Renner calls Hale: 'We need to talk about the fund'",
+   "t": "20:52"
+  },
+  {
+   "hot": false,
+   "label": "Rain stops; murder window opens",
+   "t": "21:00"
+  },
+  {
+   "hot": true,
+   "label": "Vestry key used — Hale leaves the vestry",
+   "t": "21:35"
+  },
+  {
+   "hot": true,
+   "label": "Father Dominic sees Hale near the loft stairs",
+   "t": "21:40"
+  },
+  {
+   "hot": true,
+   "label": "Renner struck in the loft with the candlestick; body dragged to the stairs",
+   "t": "21:50"
+  },
+  {
+   "hot": false,
+   "label": "Cleaner finds the body; police called",
+   "t": "22:14"
+  }
+ ],
+ "title": "The Silent Choir",
+ "twists": [
+  {
+   "at": "60%",
+   "body": "Father Dominic admits he knew about the shortfall all along — and said nothing. If the parish's own priest covered for the theft, who else is protecting the warden? Or is the priest protecting himself: he was the only other person in the building with no witness that night.",
+   "caller": "Father Dominic",
+   "title": "The priest's confession"
+  },
+  {
+   "at": "finale",
+   "body": "The safe holds a second set of books — and they show the theft is older and bigger than Renner knew: three years, not three months. Hale was not stealing to cover a mistake. He was stealing because he believed the cathedral owed him. And Renner was not the first person to notice — the first was the bookkeeper, who left the parish suddenly, two years ago, and never spoke again.",
+   "title": "The second set of books"
+  }
+ ]
+}

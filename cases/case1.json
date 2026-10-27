@@ -1,0 +1,1737 @@
+{
+ "id": "case1",
+ "number": 1,
+ "title": "The Last Ferry",
+ "subtitle": "A coat on the pier. A friend with the answers. A ten-year-old lie.",
+ "season": 1,
+ "free": true,
+ "palette": {
+  "primary": "#1d3a4a",
+  "accent": "#d9a441",
+  "bg": "#0d1417"
+ },
+ "premise": "Ten years ago, Mara Ellison — accountant for Veyne Ferry Lines — vanished from the pier at Port Veyne. Only her coat was ever found, folded neatly on the cold stone, as if she had simply stepped out of it and into the dark water. The case went cold. Now a dockworker repairing the old ticket office has found something wedged behind a drawer that reopens everything: a page of Mara's diary, and a name she never got to say out loud. You are the new detective in the Cold Case Unit. The ferry still sails at 23:40. The people who knew Mara still live in this town. And the person who will help you most is the person you should have suspected first.",
+ "coldOpen": {
+  "title": "Port Veyne — ten years ago",
+  "lines": [
+   {
+    "img": "images/hero.jpg",
+    "text": "The last ferry of the night leaves Port Veyne at 23:40. It has done so for forty years, in fog, in rain, in weather that keeps every sane boat in harbour.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case1-ferrydeck.jpg",
+    "text": "On the night of 14 October, Mara Ellison bought a ticket for that ferry. She never came home. In the morning, her coat was found on the pier — folded, dry, and empty.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case1-harbor.jpg",
+    "text": "The police called it a drowning. The town called it a tragedy. Her best friend called it the worst night of her life — and then she went back to selling tickets, as if nothing had happened.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/hero.jpg",
+    "text": "Ten years later, a page of Mara's diary surfaces behind a drawer in the old ticket office. You are the detective they send when a cold case starts breathing again. Start at the harbour. Trust no one — especially the people who offer to help.",
+    "voice": "narrator"
+   }
+  ]
+ },
+ "closing": {
+  "lines": [
+   {
+    "img": "images/case1-ferrydeck.jpg",
+    "text": "Rosa Venn does not run. When the cuffs close, she looks out at the water the way she must have looked at it ten years ago — and for a second, she looks almost relieved.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case1-ferrydeck.jpg",
+    "text": "'She was going to tell them,' Rosa says quietly. 'Forty-one thousand. Three years of my life, gone in one meeting. I asked her to meet me on the deck so I could beg her. I brought the wrench to frighten her. I don't remember deciding to swing it.'",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/hero.jpg",
+    "text": "Mara Ellison's name goes back on the board — not as a drowning, but as a murder, solved. The ferry still sails at 23:40. But tonight, for the first time in ten years, the pier is not keeping her secret.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case1-archive.jpg",
+    "text": "One thing does not fit. Tucked in Mara's drawer, under everything else, was a small black envelope sealed with a silver anchor. No stamp. No return address. Someone else knew about the ledger before Mara died — and someone else was watching her. That envelope is not part of this case. Not yet.",
+    "voice": "narrator"
+   }
+  ]
+ },
+ "locations": [
+  {
+   "id": "harbor-office",
+   "name": "Harbour Ticket Office",
+   "desc": "A cramped wooden office on the pier, smelling of brine, old paper and coal smoke. The same desk, the same till, the same view of the water Mara Ellison saw every day.",
+   "img": "images/case1-harbor.jpg"
+  },
+  {
+   "id": "mara-apartment",
+   "name": "Mara's Apartment",
+   "desc": "A small second-floor flat above a chandlery, sealed for ten years. Dust on every surface — except where someone has recently wiped it clean.",
+   "img": "images/case1-apartment.jpg"
+  },
+  {
+   "id": "police-archive",
+   "name": "Police Archive & Interview Room",
+   "desc": "The Cold Case Unit's basement archive: ten years of statements, logs and photographs in cardboard boxes — and a bare interview room with one humming light.",
+   "img": "images/case1-archive.jpg"
+  },
+  {
+   "id": "ferry-deck",
+   "name": "Ferry Deck at Night",
+   "desc": "The old ferry, moored and rusting, its deck slick with night rain. This is where Mara Ellison spent the last minutes of her life.",
+   "img": "images/case1-ferrydeck.jpg"
+  }
+ ],
+ "suspects": [
+  {
+   "id": "rosa-venn",
+   "name": "Rosa Venn",
+   "age": 36,
+   "role": "Ticket-office clerk, Mara's best friend",
+   "secret": "She has been skimming cash fares from the ferry till for three years — about 41,000 missing in total.",
+   "motive": "Mara found the missing money in the ledger and was going to report her. Rosa would have lost her job, her home, and faced prison.",
+   "alibi": "Claims she went straight home after her shift and was asleep by 23:00 — but her gate badge logged at the pier gate at 23:37, three minutes before the ferry left.",
+   "trustIntro": "She meets you on the pier with two coffees and a sad smile. 'I was her best friend,' she says. 'Ask me anything. I want whoever did this found.' She hands you Mara's diary before you even ask for it — and stays to help you read it.",
+   "img": "images/case1-suspect-3.jpg",
+   "lieList": [
+    "I went straight home after my shift and was asleep by 23:00.",
+    "I never touched the ledger — Mara kept it locked away from everyone.",
+    "Mara and I never argued about money. We never argued about anything."
+   ],
+   "truthList": [
+    "I sold Mara the last ticket that night — the 23:40 sailing.",
+    "Mara and I spoke on the phone at 22:40 that evening.",
+    "I kept a spare key to her apartment. She trusted me with it."
+   ],
+   "pressure": 30,
+   "trust": 85
+  },
+  {
+   "id": "jonas-kett",
+   "name": "Captain Jonas Kett",
+   "age": 58,
+   "role": "Ferry captain",
+   "secret": "He drinks on duty and has falsified the ferry's safety logs for years.",
+   "motive": "Mara had found the falsified safety logs and threatened to report him to the maritime board — he would have lost his licence.",
+   "alibi": "Claims he never left the wheelhouse between 23:30 and 00:30 — but the wheelhouse log has an unexplained 20-minute gap.",
+   "trustIntro": "A weathered man in a captain's coat who answers questions like orders. 'I sailed that boat for thirty years,' he says. 'Ask the sea what happened to her. It won't answer either.'",
+   "img": "images/case1-suspect-1.jpg",
+   "lieList": [
+    "I never left the wheelhouse that night. Not for a second.",
+    "Mara never spoke to me about the safety logs.",
+    "I don't drink aboard my own boat. Never have."
+   ],
+   "truthList": [
+    "I saw Mara board the ferry at 23:39 — she was alone.",
+    "The ferry left the pier at 23:40 sharp, on schedule.",
+    "I heard a heavy thud on deck around midnight, but I thought it was cargo shifting."
+   ],
+   "pressure": 50,
+   "trust": 45
+  },
+  {
+   "id": "silas-bren",
+   "name": "Silas Bren",
+   "age": 41,
+   "role": "Deckhand, Mara's ex-fiancé",
+   "secret": "He borrowed a large sum from Mara during their engagement and never paid it back.",
+   "motive": "Bitter over the broken engagement, and Mara was about to take him to court for the money he owed her.",
+   "alibi": "Says he was at the Anchor & Chain pub all night — the barman remembers him, but the till tape shows he slipped out for nearly an hour around midnight.",
+   "trustIntro": "A broad-shouldered deckhand with rope-burned hands who flinches when you say Mara's name. 'She left me,' he says. 'That doesn't make me a killer.'",
+   "img": "images/case1-suspect-4.jpg",
+   "lieList": [
+    "I haven't spoken to Mara in months.",
+    "I never threatened her. Not once.",
+    "I was at the pub all night. Ask anyone."
+   ],
+   "truthList": [
+    "Mara ended the engagement, not me.",
+    "I owed her money — a lot of it — and I couldn't pay it back.",
+    "I was on the pier the next morning, looking for her, before anyone knew she was gone."
+   ],
+   "pressure": 55,
+   "trust": 40
+  },
+  {
+   "id": "hattie-loom",
+   "name": "Harriet 'Hattie' Loom",
+   "age": 47,
+   "role": "Owner, Veyne Ferry Lines",
+   "secret": "The ferry company is nearly bankrupt, and she forged insurance papers to keep the boats sailing.",
+   "motive": "Mara discovered the company was insolvent and planned to tell the board — exposure would have destroyed Hattie and the company.",
+   "alibi": "At a charity dinner from 19:00 to 23:30, photographed at her table — a genuine, verified alibi.",
+   "trustIntro": "Impeccably dressed, perfectly calm, and far too quick with her answers. 'Mara was a valued employee,' she says, in the tone of someone reading a press release.",
+   "img": "images/case1-suspect-2.jpg",
+   "lieList": [
+    "The company is in perfect financial health.",
+    "I barely knew Mara. She was one of many employees.",
+    "I was at the charity dinner all evening without leaving the room."
+   ],
+   "truthList": [
+    "Mara asked me for a meeting about the accounts the week she vanished.",
+    "I refused her a raise last year. She deserved it and I knew it.",
+    "I signed the insurance renewal myself. Every page of it."
+   ],
+   "pressure": 50,
+   "trust": 35
+  },
+  {
+   "id": "owen-marsh",
+   "name": "Owen Marsh",
+   "age": 29,
+   "role": "Mara's younger brother",
+   "secret": "He has serious gambling debts and owes money to a loan shark in the next town.",
+   "motive": "Mara's life-insurance payout and her share of their late mother's house would clear his debts in one stroke.",
+   "alibi": "Says he was asleep at home — his flatmate confirms he was home by 22:00 and never left.",
+   "trustIntro": "A tired young man in a borrowed jacket who cries when you mention his sister, then asks — a little too quickly — whether the insurance has paid out yet.",
+   "img": "",
+   "lieList": [
+    "I don't gamble anymore. I quit years ago.",
+    "Mara and I were close. We talked every week.",
+    "I didn't even know she had life insurance."
+   ],
+   "truthList": [
+    "I borrowed money from Mara more than once.",
+    "I last saw her three days before she vanished.",
+    "She was going to help me pay the debts — and then she stopped answering my calls."
+   ],
+   "pressure": 45,
+   "trust": 50
+  },
+  {
+   "id": "felix-anders",
+   "name": "Felix Anders",
+   "age": 33,
+   "role": "Night watchman, pier guard",
+   "secret": "He smuggles untaxed cigarettes in unmanifested cargo crates moving through the pier.",
+   "motive": "Mara caught him loading crates that were not on any manifest and threatened to report him.",
+   "alibi": "Claims he was on his rounds all night — but his round log has two unexplained gaps.",
+   "trustIntro": "A nervous man with a torch that never stops moving. 'I walk the pier, I check the gates, that's my job,' he says, three times, as if repetition makes it true.",
+   "img": "",
+   "lieList": [
+    "I never leave my post. Not once in ten years.",
+    "I didn't see anyone on the pier that night.",
+    "Every crate on this pier is company property, all of it."
+   ],
+   "truthList": [
+    "I saw a woman in a dark coat board the ferry that night.",
+    "The pier lights were out on the north side that night — I reported it twice.",
+    "I found a brass coat button near the gate the next morning."
+   ],
+   "pressure": 60,
+   "trust": 40
+  }
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "title": "The Ticket Office",
+   "locationId": "harbor-office",
+   "mechanic": "Tap to inspect, evidence tray",
+   "question": "Who was the last person to see the victim?",
+   "briefing": "Day one. The harbour smells of diesel and salt, and the ticket office hasn't changed in ten years — same desk, same till, same view of the pier where Mara Ellison's coat was found. Rosa Venn is waiting for you on the steps with two coffees. She was Mara's best friend, she worked this very desk, and she wants to help. Tap anything that looks out of place. Everything you find goes into your evidence tray — nothing you pick up can be lost, and nothing is ever truly missable: anything you skip will turn up later in the Case File. Start with the desk.",
+   "scene": {
+    "img": "images/case1-harbor.jpg",
+    "hotspots": [
+     {
+      "id": "hs1-desk",
+      "x": 22,
+      "y": 38,
+      "label": "The old desk",
+      "finding": {
+       "title": "The Desk",
+       "text": "Mara's desk, untouched for a decade. The drawer sticks — someone has forced it recently, and badly. Wedged behind it, folded small: a page torn from a diary. The handwriting is Mara's.",
+       "clueId": "DIARY-01"
+      }
+     },
+     {
+      "id": "hs1-till",
+      "x": 58,
+      "y": 44,
+      "label": "The cash till",
+      "finding": {
+       "title": "The Cash Till",
+       "text": "The till still works. Inside, a paper-clipped bundle of ticket stubs from the last sailing — 14 October, 23:40. The top stub is marked with the seller's initials: R.V. Rosa Venn sold Mara Ellison her ticket.",
+       "clueId": "TICKET-01"
+      }
+     },
+     {
+      "id": "hs1-gatelog",
+      "x": 78,
+      "y": 30,
+      "label": "Gate log book",
+      "finding": {
+       "title": "Gate Log Book",
+       "text": "The pier gate log for 14 October. Staff badges are stamped on entry. At 23:37 — three minutes before the ferry sailed — a badge was stamped: R. VENN. Rosa told you she went home after her shift. The log says she came back.",
+       "clueId": "GATE-01"
+      }
+     },
+     {
+      "id": "hs1-coat-hook",
+      "x": 12,
+      "y": 62,
+      "label": "Coat hook by the door",
+      "finding": {
+       "title": "The Empty Hook",
+       "text": "A single brass hook by the door, polished bright by ten years of hands. A photograph pinned beneath it shows Mara and Rosa on this very pier, laughing, arms around each other. The photo is dated two weeks before Mara vanished.",
+       "clueId": "PHOTO-01"
+      }
+     },
+     {
+      "id": "hs1-ferrylog",
+      "x": 45,
+      "y": 68,
+      "label": "Ferry departure log",
+      "finding": {
+       "title": "Ferry Departure Log",
+       "text": "The harbourmaster's log: the last ferry left at 23:40 on 14 October, on schedule, with 31 passengers aboard. One line is underlined in pencil: 'M. Ellison — ticket 0417.' She boarded. She never got off.",
+       "clueId": "LOG-01"
+      }
+     },
+     {
+      "id": "hs1-button",
+      "x": 86,
+      "y": 74,
+      "label": "Something glinting by the door",
+      "finding": {
+       "title": "Brass Coat Button",
+       "text": "A brass coat button, half-buried in the grime by the door. It matches the buttons on the ticket-office uniform coats — and Rosa Venn still wears hers. Someone in a uniform coat was in a hurry here, after dark.",
+       "clueId": "BUTTON-01"
+      }
+     },
+     {
+      "id": "hs1-window",
+      "x": 34,
+      "y": 18,
+      "label": "Window over the pier",
+      "finding": {
+       "title": "The Window",
+       "text": "From this window you can see the whole pier — and the exact spot where Mara's coat was found. Whoever stood here on the night of 14 October could watch the ferry leave without ever being seen from the pier below."
+      }
+     },
+     {
+      "id": "hs1-rota",
+      "x": 66,
+      "y": 82,
+      "label": "Staff rota board",
+      "finding": {
+       "title": "Staff Rota",
+       "text": "The rota for October, ten years ago. Rosa Venn was on duty until 23:00 on 14 October. Mara Ellison was not on duty at all that day — she came in anyway, to work on the accounts after hours."
+      }
+     },
+     {
+      "id": "hs1-kettle",
+      "x": 8,
+      "y": 42,
+      "label": "A cold kettle",
+      "finding": {
+       "title": "The Kettle",
+       "text": "A kettle, a chipped mug, a tin of tea. Two mugs on the draining board — Mara and Rosa took their tea together here every evening. Whoever made the last pot expected two people."
+      }
+     },
+     {
+      "id": "hs1-coat-photo",
+      "x": 50,
+      "y": 12,
+      "label": "Framed harbour photo",
+      "finding": {
+       "title": "The Harbour, Ten Years Ago",
+       "text": "A framed photograph of the ferry at dusk. On the back, in Mara's handwriting: 'The last ferry. I count the money, she counts the people. One of us is lying about the numbers.'"
+      }
+     }
+    ]
+   },
+   "tools": [
+    "evidence-tray",
+    "magnifier"
+   ],
+   "puzzles": [],
+   "interrogations": [],
+   "report": {
+    "questions": [
+     {
+      "id": "r1-q1",
+      "q": "Who was the last person to see Mara Ellison alive?",
+      "options": [
+       "Rosa Venn",
+       "Captain Jonas Kett",
+       "Silas Bren",
+       "Felix Anders"
+      ],
+      "correct": 0,
+      "explain": "The ticket stub for the 23:40 sailing is marked with the seller's initials R.V., and the gate log stamps Rosa's badge at 23:37. Rosa sold Mara the last ticket and walked her to the gate — she was the last person to see her alive.",
+      "correctText": "Rosa Venn"
+     },
+     {
+      "id": "r1-q2",
+      "q": "What time did the last ferry leave on 14 October?",
+      "options": [
+       "23:40",
+       "00:10",
+       "22:00",
+       "23:00"
+      ],
+      "correct": 0,
+      "explain": "The harbourmaster's departure log records the last ferry leaving at 23:40, on schedule, with 31 passengers — including Mara Ellison, ticket 0417.",
+      "correctText": "23:40"
+     }
+    ]
+   }
+  },
+  {
+   "n": 2,
+   "title": "The Sealed Flat",
+   "locationId": "mara-apartment",
+   "mechanic": "Flashlight, UV light",
+   "question": "Was the victim planning to leave town?",
+   "briefing": "Mara's flat has been sealed for ten years. Rosa lets you in with her spare key — she kept it all this time, she says, in case Mara came home. The flat is dark, the curtains drawn. Use your flashlight to search the rooms, and your UV light on anything that looks too clean: someone has wiped this flat down recently, and UV light remembers what cloths forget. Look for signs of a woman planning her next move — or a woman who never planned to leave at all.",
+   "scene": {
+    "img": "images/case1-apartment.jpg",
+    "hotspots": [
+     {
+      "id": "hs2-suitcase",
+      "x": 20,
+      "y": 70,
+      "label": "A packed suitcase",
+      "finding": {
+       "title": "The Packed Suitcase",
+       "text": "A suitcase by the door, packed with care: clothes folded, toiletries, a framed photo of Mara and her brother. This is not a bag packed in panic. This is a woman leaving town on purpose — and she never got to carry it out.",
+       "clueId": "SUIT-01"
+      }
+     },
+     {
+      "id": "hs2-desk",
+      "x": 62,
+      "y": 45,
+      "label": "Writing desk",
+      "finding": {
+       "title": "The Writing Desk",
+       "text": "The desk drawer is locked. Inside, when you pick it, lies the ferry company's cash ledger — and the numbers do not add up. Cash fares are missing, a little at a time, over three years. About 41,000 in total. Mara had circled the gaps in red ink.",
+       "clueId": "LEDGER-01"
+      }
+     },
+     {
+      "id": "hs2-diary",
+      "x": 74,
+      "y": 58,
+      "label": "Diary on the nightstand",
+      "finding": {
+       "title": "Mara's Diary",
+       "text": "The diary Rosa gave you is missing pages — but this one, tucked under the mattress, is intact. 'R. has been taking cash. I have proof. I told her I would give her one chance to confess before I go to the board.' R. Rosa.",
+       "clueId": "DIARY-01"
+      }
+     },
+     {
+      "id": "hs2-letter",
+      "x": 48,
+      "y": 30,
+      "label": "Letter on the mantel",
+      "finding": {
+       "title": "Letter of Resignation",
+       "text": "A typed letter, signed and dated 13 October — the day before she vanished. Mara resigns from Veyne Ferry Lines, effective immediately, and asks for her final pay to be sent to a mainland address. She was leaving Port Veyne for good.",
+       "clueId": "LETTER-01"
+      }
+     },
+     {
+      "id": "hs2-ticket",
+      "x": 36,
+      "y": 52,
+      "label": "Drawer — a ticket",
+      "finding": {
+       "title": "A One-Way Ticket",
+       "text": "In the drawer, under a stack of payslips: a one-way ferry ticket to the mainland, dated 15 October — the morning after she vanished. Mara was not running away. She had a plan, a ticket, and a new life waiting.",
+       "clueId": "TICKET-02"
+      }
+     },
+     {
+      "id": "hs2-envelope",
+      "x": 82,
+      "y": 40,
+      "label": "A black envelope",
+      "finding": {
+       "title": "The Black Envelope",
+       "text": "Tucked at the very back of the drawer, under everything else: a small black envelope, sealed with silver wax in the shape of an anchor. No stamp, no return address, no name. Inside, a single typed line: 'Stay quiet about the ledger. The ferry sails either way.' Someone else knew about the missing money before Mara died.",
+       "clueId": "ANCHOR-01"
+      }
+     },
+     {
+      "id": "hs2-uv",
+      "x": 58,
+      "y": 78,
+      "label": "UV light — the desk edge",
+      "finding": {
+       "title": "What the UV Light Finds",
+       "text": "Under UV light, the edge of the desk glows: someone wiped this surface clean — recently, and thoroughly. But they missed a spot underneath, where a few words were written in invisible ink, in Mara's hand: 'If anything happens to me, look in the ticket rolls.'",
+       "clueId": "UV-01"
+      }
+     },
+     {
+      "id": "hs2-photo",
+      "x": 14,
+      "y": 26,
+      "label": "Photos on the wall",
+      "finding": {
+       "title": "Photographs",
+       "text": "A wall of photographs: Mara and Rosa at school, at the harbour, at a birthday table. In every photo, Rosa's arm is around Mara. In the newest photo, Mara's smile doesn't reach her eyes."
+      }
+     },
+     {
+      "id": "hs2-phone",
+      "x": 88,
+      "y": 66,
+      "label": "An old mobile charger",
+      "finding": {
+       "title": "The Charger",
+       "text": "A phone charger, still plugged in — but no phone. Mara's mobile was never found. Whoever took it didn't want her last calls examined."
+      }
+     },
+     {
+      "id": "hs2-coat-stand",
+      "x": 30,
+      "y": 84,
+      "label": "Coat stand by the door",
+      "finding": {
+       "title": "The Coat Stand",
+       "text": "The coat stand is empty — except for a single woollen scarf, Rosa's, by the colour and the smell of her perfume. Rosa has been in this flat recently. She told you she hadn't been here in ten years."
+      }
+     }
+    ]
+   },
+   "tools": [
+    "flashlight",
+    "uv-light",
+    "evidence-tray"
+   ],
+   "puzzles": [
+    {
+     "id": "pz2-uv",
+     "kind": "uv-reveal",
+     "title": "Read the Invisible Ink",
+     "hint": "Sweep the UV light slowly along the desk edge. Mara hid words where no one would think to look — underneath.",
+     "options": [
+      "If anything happens to me, look in the ticket rolls.",
+      "The captain drinks. Someone must stop him.",
+      "I am leaving on the morning ferry. Do not follow me."
+     ],
+     "correct": 0,
+     "wrong": "The UV light shows nothing there — try the underside of the desk, where a cloth can't reach.",
+     "done": "Mara's hidden message glows into view: the ticket rolls are where the proof is.",
+     "clue": "UV-01",
+     "skippableAfterFails": 2,
+     "correctText": "If anything happens to me, look in the ticket rolls."
+    }
+   ],
+   "interrogations": [],
+   "report": {
+    "questions": [
+     {
+      "id": "r2-q1",
+      "q": "Was Mara Ellison planning to leave town?",
+      "options": [
+       "Yes — one-way ticket, packed case, resignation letter",
+       "No — she planned to stay in Port Veyne",
+       "She was planning a short holiday and intended to return"
+      ],
+      "correct": 0,
+      "explain": "The packed suitcase, the one-way ticket to the mainland dated 15 October, and her signed resignation letter dated 13 October all agree: Mara was leaving Port Veyne for good — after dealing with one last thing at work.",
+      "correctText": "Yes — one-way ticket, packed case, resignation letter"
+     },
+     {
+      "id": "r2-q2",
+      "q": "What had Mara discovered before she vanished?",
+      "options": [
+       "Cash missing from the ferry ledger — about 41,000 over three years",
+       "A smuggling ring moving goods through the pier",
+       "An affair between two of her colleagues"
+      ],
+      "correct": 0,
+      "explain": "The cash ledger in her desk shows fares missing a little at a time over three years, circled in red ink by Mara herself — and her diary names the thief with a single initial: R.",
+      "correctText": "Cash missing from the ferry ledger — about 41,000 over three years"
+     }
+    ]
+   }
+  },
+  {
+   "n": 3,
+   "title": "The Archive & The Interview Room",
+   "locationId": "police-archive",
+   "mechanic": "Interrogation, presenting evidence",
+   "question": "Whose alibi does not hold up?",
+   "briefing": "Ten years of paper, in boxes that smell of damp. The original investigation was thin — one detective, three days, a drowning verdict that suited everyone. Now you read it properly: statements, phone records, a CCTV still nobody followed up, and a torn note found in Mara's coat pocket that was filed and forgotten. Then you bring them in, one by one. In the interview room, watch the Pressure meter: press too hard and they shut down; earn their Trust and they talk. And when a suspect says something your evidence contradicts — Challenge it. A challenge, backed by proof, is how a liar breaks.",
+   "scene": {
+    "img": "images/case1-archive.jpg",
+    "hotspots": [
+     {
+      "id": "hs3-note",
+      "x": 24,
+      "y": 40,
+      "label": "Evidence bag — torn note",
+      "finding": {
+       "title": "The Torn Note",
+       "text": "Filed in Mara's coat pocket and forgotten for ten years: a torn note in Rosa's handwriting. 'Meet me on the deck after departure. Bring the ledger. We can fix this. — R.' Mara was lured onto that deck by someone she trusted.",
+       "clueId": "NOTE-01"
+      }
+     },
+     {
+      "id": "hs3-phone",
+      "x": 55,
+      "y": 34,
+      "label": "Phone records file",
+      "finding": {
+       "title": "Phone Records",
+       "text": "Mara's phone records, finally pulled. Her last call was at 22:40 on 14 October — to Rosa Venn, lasting six minutes. The call Rosa described as 'just saying goodnight' was the call that set the meeting.",
+       "clueId": "PHONE-01"
+      }
+     },
+     {
+      "id": "hs3-cctv",
+      "x": 76,
+      "y": 28,
+      "label": "CCTV still, pier camera 2",
+      "finding": {
+       "title": "CCTV Still",
+       "text": "A grainy still from pier camera 2, 23:38: two figures at the gate — one in a dark coat (Mara), one in a ticket-office uniform coat (Rosa). The original file labelled it 'unidentified persons, no value.' It is the last image of Mara Ellison alive.",
+       "clueId": "CCTV-01"
+      }
+     },
+     {
+      "id": "hs3-log",
+      "x": 42,
+      "y": 62,
+      "label": "Wheelhouse log",
+      "finding": {
+       "title": "The Wheelhouse Log",
+       "text": "Captain Kett's wheelhouse log for the night: entries every ten minutes — except a 20-minute gap between 23:50 and 00:10. Kett claims he never left the wheelhouse. The log cannot confirm it, and that gap is exactly when Mara died.",
+       "clueId": "LOG-02"
+      }
+     },
+     {
+      "id": "hs3-alibi",
+      "x": 64,
+      "y": 72,
+      "label": "Rosa's original statement",
+      "finding": {
+       "title": "Rosa's Statement — 15 October",
+       "text": "Rosa's signed statement from the morning after: 'I finished my shift at 23:00 and went straight home. I was asleep by 23:00.' But the gate log stamps her badge at 23:37, the CCTV shows her at the gate at 23:38, and her own phone called Mara at 22:40. Her alibi does not hold up — it never did.",
+       "clueId": "ALIBI-01"
+      }
+     },
+     {
+      "id": "hs3-dinner",
+      "x": 88,
+      "y": 52,
+      "label": "Charity dinner photos",
+      "finding": {
+       "title": "Hattie Loom's Alibi",
+       "text": "Photographs from the charity dinner, time-stamped 19:00 to 23:30: Hattie Loom at her table, in every frame, talking to the mayor. Whatever else she is guilty of, she was not on the pier that night. Her alibi holds.",
+       "clueId": "ALIBI-02"
+      }
+     },
+     {
+      "id": "hs3-voicemail",
+      "x": 16,
+      "y": 68,
+      "label": "Voicemail transcript",
+      "finding": {
+       "title": "Silas Bren's Voicemail",
+       "text": "A transcript of a voicemail Silas left Mara three weeks before she vanished: 'You'll regret this. I swear you'll regret this.' It sounds like a threat — until you check the date. It was about the broken engagement and the money, weeks before the ledger mattered. Angry, but old.",
+       "clueId": "RH-01"
+      }
+     },
+     {
+      "id": "hs3-iou",
+      "x": 34,
+      "y": 84,
+      "label": "Owen's IOU slips",
+      "finding": {
+       "title": "Owen Marsh's Gambling Debts",
+       "text": "IOU slips in Owen's name, totalling more than Mara's insurance payout. A real motive — on paper. But his flatmate confirms he was home by 22:00, and the loan shark's own ledger confirms Owen was paying him that same evening, miles from the pier.",
+       "clueId": "RH-02"
+      }
+     },
+     {
+      "id": "hs3-insurance",
+      "x": 70,
+      "y": 14,
+      "label": "Insurance file",
+      "finding": {
+       "title": "The Forged Insurance Papers",
+       "text": "Hattie Loom's forged insurance papers: the company was nearly bankrupt and she faked the renewal to keep the boats sailing. A genuine crime — but a financial one, committed at a desk, not on a ferry deck at midnight.",
+       "clueId": "RH-04"
+      }
+     },
+     {
+      "id": "hs3-coat-report",
+      "x": 50,
+      "y": 50,
+      "label": "Original coat report",
+      "finding": {
+       "title": "The Coat Report",
+       "text": "The original report on Mara's coat: found folded on the pier at 06:10, dry, with no sign of struggle. A folded coat is not how a drowning victim's coat is found. It is how a coat is placed — by someone who wanted the sea to take the blame."
+      }
+     }
+    ]
+   },
+   "tools": [
+    "evidence-tray",
+    "case-file"
+   ],
+   "puzzles": [],
+   "interrogations": [
+    {
+     "suspectId": "rosa-venn",
+     "questions": [
+      {
+       "id": "rosa-q1",
+       "text": "Walk me through the night Mara vanished — from your shift to the morning.",
+       "mood": "calm",
+       "answer": "I finished at 23:00, I went home, I slept. I woke up and she was gone. I've told this story a hundred times, detective. It doesn't change, because it's true."
+      },
+      {
+       "id": "rosa-q2",
+       "text": "You sold her the last ticket. Did you see her board the ferry?",
+       "mood": "neutral",
+       "answer": "Of course I saw her. I waved her off — I thought she was going to the mainland for a few days. She looked... tired. I wish I'd asked her to stay. God, I wish I'd asked."
+      },
+      {
+       "id": "rosa-q3",
+       "text": "Your gate badge logged at 23:37 — but you said you were home by 23:00. Explain that.",
+       "mood": "confrontational",
+       "answer": "That— that's wrong. The gate log must be wrong, or— I... I did go back. Alright. I went back because I was worried about her. I wanted to say goodbye properly. I watched the ferry leave and then I went home. That's all. That's all it was.",
+       "requires": "ALIBI-01",
+       "confront": true,
+       "unlockClue": "DIARY-02"
+      },
+      {
+       "id": "rosa-q4",
+       "text": "Did Mara ever mention missing money — the ledger, the fares?",
+       "mood": "tense",
+       "answer": "Mara counted everything. It was her job. If money was missing, she'd have found it — she found everything. But she never said a word to me about it. Not a word."
+      }
+     ]
+    },
+    {
+     "suspectId": "jonas-kett",
+     "questions": [
+      {
+       "id": "kett-q1",
+       "text": "Tell me about the night of 14 October, from the wheelhouse.",
+       "mood": "calm",
+       "answer": "We left at 23:40, on schedule, thirty-one souls aboard. I saw Miss Ellison board. After that, I watched the water. That's my job. The sea took her — ask it, not me."
+      },
+      {
+       "id": "kett-q2",
+       "text": "Your wheelhouse log has a 20-minute gap, 23:50 to 00:10. Where were you?",
+       "mood": "confrontational",
+       "answer": "I stepped out for air. Ten minutes, maybe twenty. A man can't stare at black water for four hours without stepping out once. I heard a thud on deck — I thought it was cargo. I should have checked. God forgive me, I should have checked.",
+       "requires": "LOG-02",
+       "confront": true,
+       "unlockClue": "CCTV-01"
+      },
+      {
+       "id": "kett-q3",
+       "text": "Did Mara threaten to report your safety logs?",
+       "mood": "tense",
+       "answer": "She asked questions. Aye, she asked questions about the logs. I told her the boats were safe and the paperwork was my business. She never reported me. If she had, I'd have lost my licence — but she didn't."
+      }
+     ]
+    }
+   ],
+   "report": {
+    "questions": [
+     {
+      "id": "r3-q1",
+      "q": "Whose alibi does not hold up?",
+      "options": [
+       "Rosa Venn",
+       "Captain Jonas Kett",
+       "Hattie Loom",
+       "Owen Marsh"
+      ],
+      "correct": 0,
+      "explain": "Rosa claims she was home asleep by 23:00 — but her gate badge logged at 23:37, the CCTV still shows her at the gate at 23:38, and she called Mara at 22:40. Kett's log has a gap but no proof he left the boat; Hattie's dinner alibi is photographed; Owen's flatmate confirms him home. Only Rosa's alibi collapses.",
+      "correctText": "Rosa Venn"
+     },
+     {
+      "id": "r3-q2",
+      "q": "What does the torn note found in Mara's coat prove?",
+      "options": [
+       "Someone she trusted lured Mara onto the ferry deck that night",
+       "Mara planned to meet the captain to discuss the safety logs",
+       "Mara wrote the note to herself as a reminder"
+      ],
+      "correct": 0,
+      "explain": "The note — 'Meet me on the deck after departure. Bring the ledger. We can fix this. — R.' — is in Rosa's handwriting. Mara went to the deck because someone she trusted asked her to, carrying the very ledger that condemned them.",
+      "correctText": "Someone she trusted lured Mara onto the ferry deck that night"
+     }
+    ]
+   }
+  },
+  {
+   "n": 4,
+   "title": "The Ferry Deck",
+   "locationId": "ferry-deck",
+   "mechanic": "Fingerprint mini-puzzle",
+   "question": "How did the murder weapon get on board?",
+   "briefing": "Night. Rain. The old ferry is moored where it has rusted for ten years, and the deck is exactly as the tide and the police left it — which is to say, nobody has ever really searched it. Mara's own hidden message told you where to look: the ticket rolls. Somewhere on this deck is the weapon that killed her, and the hands that held it left their mark. Dust the surfaces, lift the prints, and match them against the personnel file. And ask yourself the question the original investigation never asked: a heavy brass wrench doesn't walk onto a ferry by itself. How did it get here?",
+   "scene": {
+    "img": "images/case1-ferrydeck.jpg",
+    "hotspots": [
+     {
+      "id": "hs4-crate",
+      "x": 26,
+      "y": 62,
+      "label": "Crate of ticket rolls",
+      "finding": {
+       "title": "The Ticket-Roll Crate",
+       "text": "A wooden crate stencilled TICKET ROLLS, still lashed to the deck from the night of 14 October. The manifest says it was carried aboard by Rosa Venn herself, 'to restock the onboard office.' Hidden under the rolls, wrapped in oilcloth: a heavy brass mooring wrench. This is how the weapon got on board — in plain sight, in a crate no one would ever open.",
+       "clueId": "CRATE-01"
+      }
+     },
+     {
+      "id": "hs4-wrench",
+      "x": 48,
+      "y": 55,
+      "label": "Brass mooring wrench",
+      "finding": {
+       "title": "The Murder Weapon",
+       "text": "A brass mooring wrench, heavy enough to kill with one blow, its head dark with old blood. It was never logged as missing from the pier tool store — because Rosa signed it out that morning as 'ticket-office repairs.' She carried it aboard herself, inside the crate.",
+       "clueId": "WRENCH-01"
+      }
+     },
+     {
+      "id": "hs4-blood",
+      "x": 60,
+      "y": 72,
+      "label": "Dark stain under the boards",
+      "finding": {
+       "title": "Blood Under the Boards",
+       "text": "The reagent spray blooms blue under a loose deck board: blood, ten years old, soaked into the wood where no rain could reach it. Mara died here, on this deck — not in the water. The sea was only where her body was hidden.",
+       "clueId": "BLOOD-01"
+      }
+     },
+     {
+      "id": "hs4-chain",
+      "x": 76,
+      "y": 42,
+      "label": "Anchor chain, cut link",
+      "finding": {
+       "title": "The Cut Chain Link",
+       "text": "A link of anchor chain, cut clean through — and a matching length of chain missing from the deck locker. The killer weighted Mara's body with chain so it would sink and never surface. Whoever did this knew the ferry, knew the tide, and knew the chain locker.",
+       "clueId": "CHAIN-01"
+      }
+     },
+     {
+      "id": "hs4-print",
+      "x": 44,
+      "y": 38,
+      "label": "Dust the wrench handle",
+      "finding": {
+       "title": "Fingerprints on the Wrench",
+       "text": "Dusted and lifted: a clean set of prints on the wrench handle. Run them against the personnel file and they match one person, twelve points, no doubt — Rosa Venn.",
+       "clueId": "PRINT-01"
+      }
+     },
+     {
+      "id": "hs4-crates2",
+      "x": 14,
+      "y": 44,
+      "label": "Unmanifested crates",
+      "finding": {
+       "title": "Felix's Crates",
+       "text": "A stack of crates with no manifest, no stamps, no company marks — Felix Anders's smuggled cigarettes, still sitting here a decade later. A crime, certainly. But cigarettes don't explain a wrench, a chain, or a woman in the water.",
+       "clueId": "RH-03"
+      }
+     },
+     {
+      "id": "hs4-rail",
+      "x": 86,
+      "y": 58,
+      "label": "The starboard rail",
+      "finding": {
+       "title": "The Starboard Rail",
+       "text": "The rail where the body went over. The paint is scraped raw at exactly the height a body would catch as it was pushed — and the scrape is fresh enough, under the rust, to still hold fibres of dark wool. Coat wool."
+      }
+     },
+     {
+      "id": "hs4-wheelhouse",
+      "x": 68,
+      "y": 20,
+      "label": "Wheelhouse windows",
+      "finding": {
+       "title": "The Wheelhouse",
+       "text": "From the deck, the wheelhouse windows are dark mirrors — but from inside, the captain can see the whole deck. Kett says he saw nothing. Either he is lying, or he really was looking at the water when it happened."
+      }
+     },
+     {
+      "id": "hs4-lifeboat",
+      "x": 90,
+      "y": 78,
+      "label": "Lifeboat davit",
+      "finding": {
+       "title": "The Lifeboat",
+       "text": "The lifeboat hangs undisturbed in its davit, its cover stiff with ten years of salt. Nobody launched a boat that night. Whatever happened on this deck, it happened here — and ended over the rail."
+      }
+     },
+     {
+      "id": "hs4-ticket-machine",
+      "x": 34,
+      "y": 82,
+      "label": "Onboard ticket machine",
+      "finding": {
+       "title": "The Onboard Ticket Machine",
+       "text": "The onboard ticket machine, jammed open. Inside, the roll is the same batch as the crate — and the last ticket it ever printed is number 0417. Mara Ellison's ticket, printed twice: once at the office, once here. Rosa printed a second ticket aboard, so the count would look right."
+      }
+     }
+    ]
+   },
+   "tools": [
+    "fingerprint-powder",
+    "flashlight",
+    "blood-reagent",
+    "evidence-tray"
+   ],
+   "puzzles": [
+    {
+     "id": "pz4-fingerprint",
+     "kind": "fingerprint",
+     "title": "Lift the Print from the Wrench",
+     "hint": "Dust lightly — too much powder smudges the ridges. One smooth pull with the tape, then compare the whorls against the personnel file, print by print.",
+     "options": [
+      "Rosa Venn — 12-point match",
+      "Silas Bren — partial match",
+      "Felix Anders — smudged, no match",
+      "Inconclusive — print too degraded"
+     ],
+     "correct": 0,
+     "wrong": "That doesn't match — the ridges are smudged. Dust lighter, lift once, and try again.",
+     "done": "Print lifted clean and matched: twelve points, Rosa Venn, no doubt. Her hands were on the weapon.",
+     "clue": "PRINT-01",
+     "skippableAfterFails": 2,
+     "correctText": "Rosa Venn — 12-point match"
+    }
+   ],
+   "interrogations": [],
+   "report": {
+    "questions": [
+     {
+      "id": "r4-q1",
+      "q": "How did the murder weapon get on board the ferry?",
+      "options": [
+       "Hidden in a crate of ticket rolls carried aboard by Rosa Venn",
+       "Brought aboard by the captain in his kit bag",
+       "It was already on the ferry, part of the deck tools"
+      ],
+      "correct": 0,
+      "explain": "The crate manifest shows Rosa herself carried the ticket-roll crate aboard to 'restock the onboard office' — and the brass wrench was wrapped in oilcloth under the rolls. Mara's own hidden message said it: look in the ticket rolls.",
+      "correctText": "Hidden in a crate of ticket rolls carried aboard by Rosa Venn"
+     },
+     {
+      "id": "r4-q2",
+      "q": "Whose fingerprints are on the wrench?",
+      "options": [
+       "Rosa Venn's",
+       "Silas Bren's",
+       "Felix Anders's"
+      ],
+      "correct": 0,
+      "explain": "The lifted print matches Rosa Venn on twelve points against her personnel file. No other suspect's prints appear on the weapon.",
+      "correctText": "Rosa Venn's"
+     }
+    ]
+   }
+  },
+  {
+   "n": 5,
+   "title": "The Deduction Board",
+   "locationId": "police-archive",
+   "mechanic": "Linking, accusation",
+   "question": "Who, why, how?",
+   "briefing": "Everything is on the board now: twenty-nine pieces of evidence, six suspects, ten years of lies. This is the part no one can do for you. Link the evidence — drag a card to another and watch the string glow when the connection is real. A correct link glows; a wrong one stays quiet, and you won't be told until the chapter report. Build the timeline: place each event on the clock until someone's night stops making sense. Then, when you are ready, name the killer — and be ready to prove it, because the accusation needs all four answers: who, why, how, and the proof that ties them together. No single clue convicts Rosa Venn. Three of them, together, do.",
+   "scene": {
+    "img": "images/case1-archive.jpg",
+    "hotspots": [
+     {
+      "id": "hs5-board-diary",
+      "x": 18,
+      "y": 30,
+      "label": "Pin: Mara's diary",
+      "finding": {
+       "title": "Board — The Diary",
+       "text": "Pin the diary next to the ledger. 'R. has been taking cash. I have proof.' One initial, one thief, one reason to kill."
+      }
+     },
+     {
+      "id": "hs5-board-badge",
+      "x": 38,
+      "y": 26,
+      "label": "Pin: gate badge 23:37",
+      "finding": {
+       "title": "Board — The Badge",
+       "text": "Pin the 23:37 gate stamp next to Rosa's statement. She said she was home by 23:00. The gate says otherwise. The lie is the hinge everything turns on."
+      }
+     },
+     {
+      "id": "hs5-board-wrench",
+      "x": 58,
+      "y": 32,
+      "label": "Pin: the wrench",
+      "finding": {
+       "title": "Board — The Wrench",
+       "text": "Pin the wrench between the crate manifest and the fingerprint card. One hand carried it aboard, the same hand swung it."
+      }
+     },
+     {
+      "id": "hs5-board-note",
+      "x": 76,
+      "y": 28,
+      "label": "Pin: the torn note",
+      "finding": {
+       "title": "Board — The Note",
+       "text": "Pin the torn note beside the phone records. A six-minute call at 22:40, then a note: 'Meet me on the deck.' The trap was set by phone and sprung on the water."
+      }
+     },
+     {
+      "id": "hs5-board-envelope",
+      "x": 88,
+      "y": 55,
+      "label": "Pin: the black envelope",
+      "finding": {
+       "title": "Board — The Envelope",
+       "text": "Pin the black envelope off to one side, alone, with a question mark. It doesn't fit this case. Silver anchor, no name, a warning about the ledger. Some cases leave one thread loose — on purpose."
+      }
+     },
+     {
+      "id": "hs5-timeline",
+      "x": 50,
+      "y": 68,
+      "label": "Timeline strip",
+      "finding": {
+       "title": "Board — The Timeline",
+       "text": "Lay the night out on the clock: 22:40 the call, 23:37 the gate, 23:40 the sailing, midnight the thud Kett heard. Every event lands — except Rosa's claim to be home asleep. Her night has no hours in it at all."
+      }
+     },
+     {
+      "id": "hs5-cleared",
+      "x": 12,
+      "y": 62,
+      "label": "Cleared suspects",
+      "finding": {
+       "title": "Board — The Cleared",
+       "text": "Four faces with lines through them, and the reasons why: Hattie was photographed at dinner; Owen was home with his flatmate; Silas was at the pub until the barman swears otherwise; Felix was moving cigarettes, not murder weapons. Motive is not murder. Only one suspect has motive, means, opportunity — and a broken alibi."
+      }
+     },
+     {
+      "id": "hs5-accusation",
+      "x": 50,
+      "y": 88,
+      "label": "The accusation card",
+      "finding": {
+       "title": "Board — The Accusation",
+       "text": "One blank card, waiting for a name. When you write it, there is no going back — the case closes on your word. Make sure the proof is ready: the badge, the prints, and the note. Together, they are the whole case."
+      }
+     }
+    ]
+   },
+   "tools": [
+    "deduction-board",
+    "evidence-tray"
+   ],
+   "puzzles": [],
+   "interrogations": [
+    {
+     "suspectId": "rosa-venn",
+     "questions": [
+      {
+       "id": "rosa-final-q1",
+       "text": "One last chance, Rosa. Tell me what happened on the deck.",
+       "mood": "calm",
+       "answer": "I loved her. You have to believe that. I loved her, and she was going to destroy me over money. I asked her to meet me so I could beg her. I brought the wrench to frighten her — I never meant... I don't remember deciding. I remember the sound, and then the water."
+      },
+      {
+       "id": "rosa-final-q2",
+       "text": "Your fingerprints are on the wrench. The gate logged you at 23:37. The note is in your handwriting. Is there anything you want to add?",
+       "mood": "confrontational",
+       "answer": "No. No, there's nothing to add. I folded her coat on the pier. I wanted someone to find her — I wanted the sea to give her back. It never did. I'm sorry, Mara. I'm so sorry.",
+       "requires": "PRINT-01",
+       "confront": true,
+       "unlockClue": "BLOOD-01"
+      }
+     ]
+    }
+   ],
+   "report": {
+    "questions": [
+     {
+      "id": "r5-q1",
+      "q": "What was Rosa Venn's motive?",
+      "options": [
+       "Mara found her skimming cash fares and was going to expose her",
+       "Jealousy over Mara's relationship with Silas Bren",
+       "Mara's life-insurance payout"
+      ],
+      "correct": 0,
+      "explain": "The ledger shows about 41,000 missing over three years, and Mara's diary says 'R. has been taking cash. I have proof.' Mara gave Rosa one chance to confess before going to the board — and Rosa killed her instead.",
+      "correctText": "Mara found her skimming cash fares and was going to expose her"
+     },
+     {
+      "id": "r5-q2",
+      "q": "Which three items together prove Rosa was on the ferry that night?",
+      "options": [
+       "Gate badge 23:37 + fingerprints on the wrench + the 'Meet me on deck — R.' note",
+       "The coat + the CCTV still + the captain's log",
+       "The diary + the suitcase + the phone records"
+      ],
+      "correct": 0,
+      "explain": "No single item convicts her — but together they are airtight: the badge puts her at the gate, the prints put her hands on the weapon, and the note proves she lured Mara to the deck. Three threads, one killer.",
+      "correctText": "Gate badge 23:37 + fingerprints on the wrench + the 'Meet me on deck — R.' note"
+     }
+    ]
+   }
+  }
+ ],
+ "evidence": [
+  {
+   "id": "COAT-01",
+   "code": "COAT-01",
+   "title": "Mara's Coat",
+   "body": "Mara Ellison's coat, found folded neatly on the pier at 06:10 on 15 October, dry, with no sign of struggle. A folded coat is not how a drowning victim's coat is found — it is how a coat is placed, by someone who wanted the sea to take the blame.",
+   "img": "images/case1-ferrydeck.jpg",
+   "chapter": 1,
+   "roleExclusive": "field",
+   "key": true,
+   "redHerring": false,
+   "proves": "Mara did not drown by accident; the scene was staged."
+  },
+  {
+   "id": "TICKET-01",
+   "code": "TICKET-01",
+   "title": "Last Ticket Stub — 23:40",
+   "body": "Ticket stub 0417 for the 23:40 sailing, 14 October, marked with the seller's initials R.V. Rosa Venn sold Mara Ellison the last ticket of the night.",
+   "img": "images/case1-harbor.jpg",
+   "chapter": 1,
+   "roleExclusive": "field",
+   "key": true,
+   "redHerring": false,
+   "proves": "Rosa Venn was the last person to see Mara alive."
+  },
+  {
+   "id": "GATE-01",
+   "code": "GATE-01",
+   "title": "Pier Gate Log — 23:37",
+   "body": "The pier gate log stamps Rosa Venn's staff badge at 23:37 on 14 October — three minutes before the ferry sailed. Rosa claims she was home asleep by 23:00.",
+   "img": "images/case1-harbor.jpg",
+   "chapter": 1,
+   "roleExclusive": "field",
+   "key": true,
+   "redHerring": false,
+   "proves": "Rosa's alibi is false; she was at the pier minutes before departure."
+  },
+  {
+   "id": "BUTTON-01",
+   "code": "BUTTON-01",
+   "title": "Brass Coat Button",
+   "body": "A brass button from a ticket-office uniform coat, found by the office door. Rosa Venn still wears that uniform coat. Someone in uniform was in a hurry here, after dark.",
+   "img": "images/case1-harbor.jpg",
+   "chapter": 1,
+   "roleExclusive": "field",
+   "key": false,
+   "redHerring": false,
+   "proves": "A uniformed staff member — Rosa — was at the office late that night."
+  },
+  {
+   "id": "PHOTO-01",
+   "code": "PHOTO-01",
+   "title": "Photo — Mara and Rosa",
+   "body": "A photograph of Mara and Rosa on the pier, arms around each other, dated two weeks before Mara vanished. Best friends since school — the trust that made the trap possible.",
+   "img": "images/case1-harbor.jpg",
+   "chapter": 1,
+   "roleExclusive": "archivist",
+   "key": false,
+   "redHerring": false,
+   "proves": "Mara trusted Rosa completely — she would follow her anywhere."
+  },
+  {
+   "id": "LOG-01",
+   "code": "LOG-01",
+   "title": "Ferry Departure Log",
+   "body": "The harbourmaster's log: the last ferry left at 23:40 on 14 October, on schedule, with 31 passengers aboard, including 'M. Ellison — ticket 0417.' She boarded. She never got off.",
+   "img": "images/case1-harbor.jpg",
+   "chapter": 1,
+   "roleExclusive": "archivist",
+   "key": false,
+   "redHerring": false,
+   "proves": "Mara boarded the 23:40 ferry and never disembarked."
+  },
+  {
+   "id": "LEDGER-01",
+   "code": "LEDGER-01",
+   "title": "The Cash Ledger",
+   "body": "The ferry company's cash ledger, found locked in Mara's desk. Cash fares are missing a little at a time over three years — about 41,000 in total — circled in red ink by Mara herself.",
+   "img": "images/case1-apartment.jpg",
+   "chapter": 2,
+   "roleExclusive": "analyst",
+   "key": true,
+   "redHerring": false,
+   "proves": "Someone was stealing cash fares for years; Mara found it."
+  },
+  {
+   "id": "DIARY-01",
+   "code": "DIARY-01",
+   "title": "Mara's Diary Page",
+   "body": "'R. has been taking cash. I have proof. I told her I would give her one chance to confess before I go to the board.' The page was wedged behind the ticket-office desk drawer.",
+   "img": "images/case1-apartment.jpg",
+   "chapter": 2,
+   "roleExclusive": "interrogator",
+   "key": true,
+   "redHerring": false,
+   "proves": "The thief is 'R.' — and Mara confronted them before she died."
+  },
+  {
+   "id": "DIARY-02",
+   "code": "DIARY-02",
+   "title": "Diary Page — The Confrontation",
+   "body": "A second diary page, revealed when Rosa breaks under challenge: 'I gave her until the last ferry. If she confesses, I stay quiet. If not, I go to the board in the morning.' Mara's deadline was the night she died.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "interrogator",
+   "key": true,
+   "redHerring": false,
+   "proves": "Mara gave Rosa an ultimatum expiring on the night of the last ferry."
+  },
+  {
+   "id": "LETTER-01",
+   "code": "LETTER-01",
+   "title": "Letter of Resignation",
+   "body": "Mara's typed resignation letter, signed 13 October, effective immediately, asking for final pay to be sent to a mainland address. She was leaving Port Veyne for good.",
+   "img": "images/case1-apartment.jpg",
+   "chapter": 2,
+   "roleExclusive": "archivist",
+   "key": false,
+   "redHerring": false,
+   "proves": "Mara planned to leave town permanently after settling the ledger matter."
+  },
+  {
+   "id": "SUIT-01",
+   "code": "SUIT-01",
+   "title": "The Packed Suitcase",
+   "body": "A suitcase by Mara's door, packed with care — clothes, toiletries, a framed photo of her brother. A woman leaving town on purpose, who never got to carry it out.",
+   "img": "images/case1-apartment.jpg",
+   "chapter": 2,
+   "roleExclusive": "archivist",
+   "key": false,
+   "redHerring": false,
+   "proves": "Mara was leaving Port Veyne the morning after she vanished."
+  },
+  {
+   "id": "TICKET-02",
+   "code": "TICKET-02",
+   "title": "One-Way Ticket — 15 October",
+   "body": "A one-way ferry ticket to the mainland, dated 15 October, hidden under Mara's payslips. She had a plan, a ticket, and a new life waiting.",
+   "img": "images/case1-apartment.jpg",
+   "chapter": 2,
+   "roleExclusive": "archivist",
+   "key": false,
+   "redHerring": false,
+   "proves": "Mara intended to sail on the morning ferry — she never meant to be on the 23:40."
+  },
+  {
+   "id": "ANCHOR-01",
+   "code": "ANCHOR-01",
+   "title": "The Black Envelope",
+   "body": "A small black envelope sealed with silver wax in the shape of an anchor. No stamp, no return address. Inside, one typed line: 'Stay quiet about the ledger. The ferry sails either way.' Someone else knew about the missing money before Mara died. (Season arc seed — do not explain.)",
+   "img": "images/case1-archive.jpg",
+   "chapter": 2,
+   "roleExclusive": "archivist",
+   "key": true,
+   "redHerring": false,
+   "proves": "A third party — 'the Anchorman' — knew about the ledger and was watching Mara."
+  },
+  {
+   "id": "UV-01",
+   "code": "UV-01",
+   "title": "Invisible Ink — 'Look in the Ticket Rolls'",
+   "body": "Under UV light, invisible ink under Mara's desk reads: 'If anything happens to me, look in the ticket rolls.' Mara hid a message where only someone searching properly would find it.",
+   "img": "images/case1-apartment.jpg",
+   "chapter": 2,
+   "roleExclusive": "analyst",
+   "key": false,
+   "redHerring": false,
+   "proves": "Mara feared for her safety and hid the location of the proof."
+  },
+  {
+   "id": "PHONE-01",
+   "code": "PHONE-01",
+   "title": "Phone Records — 22:40 Call",
+   "body": "Mara's last call: 22:40 on 14 October, to Rosa Venn, six minutes long. The call Rosa described as 'just saying goodnight' was the call that set the meeting on the deck.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "interrogator",
+   "key": false,
+   "redHerring": false,
+   "proves": "Rosa spoke to Mara an hour before the ferry sailed."
+  },
+  {
+   "id": "LOG-02",
+   "code": "LOG-02",
+   "title": "Wheelhouse Log — 20-Minute Gap",
+   "body": "Captain Kett's wheelhouse log has a 20-minute gap, 23:50 to 00:10 — exactly when Mara died. Kett claims he never left the wheelhouse; the log cannot confirm it.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "analyst",
+   "key": false,
+   "redHerring": false,
+   "proves": "The captain's movements at the time of death are unaccounted for."
+  },
+  {
+   "id": "CCTV-01",
+   "code": "CCTV-01",
+   "title": "CCTV Still — 23:38",
+   "body": "Pier camera 2, 23:38: two figures at the gate — one in a dark coat (Mara), one in a ticket-office uniform coat (Rosa). Filed ten years ago as 'unidentified persons, no value.' It is the last image of Mara Ellison alive.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "analyst",
+   "key": false,
+   "redHerring": false,
+   "proves": "Rosa was with Mara at the gate minutes before the ferry left."
+  },
+  {
+   "id": "NOTE-01",
+   "code": "NOTE-01",
+   "title": "The Torn Note — 'Meet Me on the Deck'",
+   "body": "'Meet me on the deck after departure. Bring the ledger. We can fix this. — R.' Found in Mara's coat pocket, filed and forgotten. Written in Rosa's handwriting. Mara was lured onto the deck by someone she trusted.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "interrogator",
+   "key": true,
+   "redHerring": false,
+   "proves": "Rosa lured Mara onto the ferry deck with the ledger."
+  },
+  {
+   "id": "ALIBI-01",
+   "code": "ALIBI-01",
+   "title": "Rosa's Broken Alibi",
+   "body": "Rosa's signed statement: 'I finished my shift at 23:00 and went straight home. I was asleep by 23:00.' The gate log (23:37), the CCTV still (23:38) and the phone call (22:40) all contradict it. Her alibi never held up.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "interrogator",
+   "key": true,
+   "redHerring": false,
+   "proves": "Rosa lied about her whereabouts on the night of the murder."
+  },
+  {
+   "id": "ALIBI-02",
+   "code": "ALIBI-02",
+   "title": "Hattie's Dinner Alibi",
+   "body": "Time-stamped photographs place Hattie Loom at the charity dinner from 19:00 to 23:30, at her table, talking to the mayor. Whatever else she is guilty of, she was not on the pier that night.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "archivist",
+   "key": false,
+   "redHerring": false,
+   "proves": "Hattie Loom is cleared of the murder."
+  },
+  {
+   "id": "WRENCH-01",
+   "code": "WRENCH-01",
+   "title": "The Brass Mooring Wrench",
+   "body": "A heavy brass mooring wrench, its head dark with old blood, wrapped in oilcloth under the ticket rolls. Rosa signed it out of the pier tool store that morning as 'ticket-office repairs.'",
+   "img": "images/case1-ferrydeck.jpg",
+   "chapter": 4,
+   "roleExclusive": "field",
+   "key": true,
+   "redHerring": false,
+   "proves": "The murder weapon, hidden aboard by Rosa before the sailing."
+  },
+  {
+   "id": "PRINT-01",
+   "code": "PRINT-01",
+   "title": "Fingerprints — Rosa Venn",
+   "body": "Prints lifted from the wrench handle match Rosa Venn on twelve points against her personnel file. No other suspect's prints appear on the weapon.",
+   "img": "images/case1-ferrydeck.jpg",
+   "chapter": 4,
+   "roleExclusive": "analyst",
+   "key": true,
+   "redHerring": false,
+   "proves": "Rosa's hands were on the murder weapon."
+  },
+  {
+   "id": "CRATE-01",
+   "code": "CRATE-01",
+   "title": "Ticket-Roll Crate Manifest",
+   "body": "The manifest for the crate of ticket rolls: carried aboard by Rosa Venn herself, 'to restock the onboard office.' The crate is how the wrench got onto the ferry in plain sight.",
+   "img": "images/case1-ferrydeck.jpg",
+   "chapter": 4,
+   "roleExclusive": "field",
+   "key": true,
+   "redHerring": false,
+   "proves": "Rosa carried the weapon aboard, hidden in the crate."
+  },
+  {
+   "id": "CHAIN-01",
+   "code": "CHAIN-01",
+   "title": "The Cut Chain Link",
+   "body": "A link of anchor chain, cut clean through, with a matching length missing from the deck locker. The killer weighted Mara's body with chain so it would sink and never surface.",
+   "img": "images/case1-ferrydeck.jpg",
+   "chapter": 4,
+   "roleExclusive": "field",
+   "key": false,
+   "redHerring": false,
+   "proves": "The body was weighted and pushed overboard deliberately."
+  },
+  {
+   "id": "BLOOD-01",
+   "code": "BLOOD-01",
+   "title": "Blood Under the Deck Boards",
+   "body": "Reagent spray blooms blue under a loose deck board: ten-year-old blood, soaked into wood no rain could reach. Mara died on this deck — not in the water. The sea was only where her body was hidden.",
+   "img": "images/case1-ferrydeck.jpg",
+   "chapter": 4,
+   "roleExclusive": "field",
+   "key": false,
+   "redHerring": false,
+   "proves": "Mara was killed on the ferry deck, before going overboard."
+  },
+  {
+   "id": "RH-01",
+   "code": "RH-01",
+   "title": "Silas Bren's Voicemail",
+   "body": "'You'll regret this. I swear you'll regret this.' A voicemail Silas left Mara three weeks before she vanished — about the broken engagement and the money he owed, weeks before the ledger mattered. Angry, but old.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "interrogator",
+   "key": false,
+   "redHerring": true,
+   "proves": "Silas was angry at Mara — but weeks before the murder, over something else."
+  },
+  {
+   "id": "RH-02",
+   "code": "RH-02",
+   "title": "Owen Marsh's Gambling Debts",
+   "body": "IOU slips in Owen's name, totalling more than Mara's insurance payout — a real motive on paper. But his flatmate confirms he was home by 22:00, and the loan shark's ledger confirms Owen was paying him that evening, miles from the pier.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "archivist",
+   "key": false,
+   "redHerring": true,
+   "proves": "Owen had a motive — but a confirmed alibi."
+  },
+  {
+   "id": "RH-03",
+   "code": "RH-03",
+   "title": "Felix's Smuggled Cigarettes",
+   "body": "Crates with no manifest and no company marks — Felix Anders's untaxed cigarettes, still sitting on the ferry a decade later. A genuine crime, and the reason for his log gaps. Not a murder.",
+   "img": "images/case1-ferrydeck.jpg",
+   "chapter": 4,
+   "roleExclusive": "analyst",
+   "key": false,
+   "redHerring": true,
+   "proves": "Felix's secret explains his gaps — but not the wrench, the chain, or the body."
+  },
+  {
+   "id": "RH-04",
+   "code": "RH-04",
+   "title": "Hattie's Forged Insurance Papers",
+   "body": "Hattie Loom forged the company's insurance renewal — the ferry line was nearly bankrupt and she faked the papers to keep the boats sailing. A real crime, committed at a desk, not on a ferry deck at midnight.",
+   "img": "images/case1-archive.jpg",
+   "chapter": 3,
+   "roleExclusive": "archivist",
+   "key": false,
+   "redHerring": true,
+   "proves": "Hattie committed fraud — but she was photographed at dinner all night."
+  }
+ ],
+ "boardLinks": [
+  [
+   "DIARY-01",
+   "LEDGER-01"
+  ],
+  [
+   "TICKET-01",
+   "GATE-01"
+  ],
+  [
+   "NOTE-01",
+   "WRENCH-01"
+  ],
+  [
+   "WRENCH-01",
+   "PRINT-01"
+  ],
+  [
+   "ALIBI-01",
+   "GATE-01"
+  ],
+  [
+   "CRATE-01",
+   "WRENCH-01"
+  ],
+  [
+   "CHAIN-01",
+   "BLOOD-01"
+  ],
+  [
+   "LETTER-01",
+   "SUIT-01"
+  ],
+  [
+   "PHONE-01",
+   "NOTE-01"
+  ],
+  [
+   "LOG-01",
+   "LOG-02"
+  ],
+  [
+   "UV-01",
+   "DIARY-02"
+  ],
+  [
+   "ANCHOR-01",
+   "LEDGER-01"
+  ],
+  [
+   "CCTV-01",
+   "GATE-01"
+  ],
+  [
+   "PRINT-01",
+   "ALIBI-01"
+  ]
+ ],
+ "timeline": [
+  {
+   "t": "13 Oct",
+   "label": "Mara signs her resignation letter and buys a one-way ticket for the morning of 15 October.",
+   "hot": false
+  },
+  {
+   "t": "14 Oct, 21:15",
+   "label": "Mara stays late at the ticket office, working on the ledger. She circles the missing fares in red.",
+   "hot": false
+  },
+  {
+   "t": "14 Oct, 22:40",
+   "label": "Mara calls Rosa Venn — six minutes. The meeting on the ferry deck is arranged.",
+   "hot": true
+  },
+  {
+   "t": "14 Oct, 23:00",
+   "label": "Rosa's shift ends. She tells everyone she is going home. She does not.",
+   "hot": true
+  },
+  {
+   "t": "14 Oct, 23:37",
+   "label": "Rosa's badge is stamped at the pier gate. CCTV shows her with Mara at 23:38.",
+   "hot": true
+  },
+  {
+   "t": "14 Oct, 23:40",
+   "label": "The last ferry sails with 31 passengers, including Mara Ellison, ticket 0417.",
+   "hot": false
+  },
+  {
+   "t": "14 Oct, ~00:00",
+   "label": "A heavy thud on deck. Mara is struck with the brass wrench, weighted with chain, and pushed over the starboard rail.",
+   "hot": true
+  },
+  {
+   "t": "15 Oct, 06:10",
+   "label": "Mara's coat is found folded on the pier. Rosa is the one who 'finds' it — and reports her missing.",
+   "hot": true
+  }
+ ],
+ "twists": [
+  {
+   "at": "60%",
+   "caller": "The Ledger's Second Thief",
+   "title": "The money kept moving",
+   "body": "You turn one more page of the ledger — and freeze. The missing fares did not stop the night Mara vanished. Small amounts kept disappearing for weeks afterwards. If Rosa killed Mara to stop the exposure... why did the theft go on? Was there a second thief — or did Rosa simply keep stealing, confident no one would ever look again?"
+  },
+  {
+   "at": "finale",
+   "title": "The black envelope",
+   "body": "Just as the case closes, you remember the black envelope in Mara's drawer — sealed with a silver anchor, warning her to stay quiet about the ledger. It was delivered before she died. Someone else knew. Someone else was watching her. That thread does not belong to this case... but it belongs to someone."
+  }
+ ],
+ "hints": {
+  "nudge": [
+   "Rosa Venn is helping you a lot. Ask yourself: who benefits most from being close to the investigation?",
+   "Check the gate log against what Rosa told you in her statement. Times don't lie — people do.",
+   "Mara left a message about where the proof is hidden. Use the UV light in her flat."
+  ],
+  "direction": [
+   "Compare Rosa's 23:00 alibi with the 23:37 gate stamp and the 23:38 CCTV still. Her night doesn't add up.",
+   "The wrench was hidden in the ticket-roll crate — and the manifest says who carried that crate aboard.",
+   "Link the diary to the ledger, then the note to the wrench. The motive and the method meet in one person."
+  ],
+  "answer": [
+   "The culprit is Rosa Venn. Mara discovered Rosa was skimming cash fares and gave her until the last ferry to confess.",
+   "Rosa lured Mara onto the deck with a note, struck her with the brass wrench she smuggled aboard in the ticket-roll crate, weighted the body with anchor chain, and folded Mara's coat on the pier to stage a drowning.",
+   "The proof is three items together: her gate badge at 23:37, her fingerprints on the wrench, and the 'Meet me on the deck — R.' note."
+  ]
+ },
+ "solve": {
+  "who": "rosa-venn",
+  "motive": "MOTIVE-SKIM",
+  "method": "METHOD-WRENCH",
+  "keyProof": "COMBO-ROSA",
+  "options": {
+   "who": [
+    {
+     "id": "rosa-venn",
+     "label": "Rosa Venn — ticket-office clerk, Mara's best friend"
+    },
+    {
+     "id": "jonas-kett",
+     "label": "Captain Jonas Kett — ferry captain"
+    },
+    {
+     "id": "silas-bren",
+     "label": "Silas Bren — deckhand, Mara's ex-fiancé"
+    },
+    {
+     "id": "hattie-loom",
+     "label": "Harriet 'Hattie' Loom — owner, Veyne Ferry Lines"
+    },
+    {
+     "id": "owen-marsh",
+     "label": "Owen Marsh — Mara's younger brother"
+    },
+    {
+     "id": "felix-anders",
+     "label": "Felix Anders — night watchman"
+    }
+   ],
+   "motive": [
+    {
+     "id": "MOTIVE-SKIM",
+     "label": "Mara found Rosa skimming cash fares and was going to expose her to the board"
+    },
+    {
+     "id": "MOTIVE-LOGS",
+     "label": "Mara threatened to report the captain's falsified safety logs"
+    },
+    {
+     "id": "MOTIVE-DEBT",
+     "label": "Mara was about to take Silas to court over the money he owed her"
+    },
+    {
+     "id": "MOTIVE-INSURANCE",
+     "label": "Owen wanted Mara's life-insurance payout to clear his gambling debts"
+    }
+   ],
+   "method": [
+    {
+     "id": "METHOD-WRENCH",
+     "label": "Struck with a brass mooring wrench on the ferry deck, body weighted with anchor chain and pushed overboard"
+    },
+    {
+     "id": "METHOD-DROWN",
+     "label": "Pushed overboard alive — she drowned in the harbour"
+    },
+    {
+     "id": "METHOD-POISON",
+     "label": "Poisoned her tea in the ticket office before the sailing"
+    },
+    {
+     "id": "METHOD-STRUGGLE",
+     "label": "Killed in a struggle on the pier, then carried aboard"
+    }
+   ],
+   "keyProof": [
+    {
+     "id": "COMBO-ROSA",
+     "label": "Three items together: gate badge 23:37 + Rosa's fingerprints on the wrench + the 'Meet me on the deck — R.' note"
+    },
+    {
+     "id": "COMBO-KETT",
+     "label": "The captain's 20-minute log gap + the thud he heard on deck"
+    },
+    {
+     "id": "COMBO-SILAS",
+     "label": "The threatening voicemail + Silas's hour missing from the pub"
+    },
+    {
+     "id": "SINGLE-COAT",
+     "label": "Mara's folded coat on the pier, alone"
+    }
+   ]
+  },
+  "solutionHTML": "<h2>The Last Ferry — What Really Happened</h2><p>For three years, <strong>Rosa Venn</strong> skimmed cash fares from the Veyne Ferry Lines till — a little at a time, about <strong>41,000</strong> in total. She was the ticket clerk; nobody counted the cash but the accountant. And the accountant was her best friend.</p><p><strong>Mara Ellison</strong> found the gaps. She circled them in red ink in the ledger, wrote in her diary — <em>“R. has been taking cash. I have proof”</em> — and gave Rosa one chance: confess before the last ferry on 14 October, or Mara would go to the board in the morning. Mara had already resigned. She had a packed suitcase and a one-way ticket for the morning of the 15th. She was leaving Port Veyne for good — after doing the right thing, once.</p><p>Rosa did not confess. Instead she signed a brass mooring wrench out of the tool store as “ticket-office repairs,” wrapped it in oilcloth, and hid it in a crate of ticket rolls she carried aboard the ferry herself. At <strong>22:40</strong> she called Mara and, in Rosa's own handwriting, left a note in her coat pocket: <em>“Meet me on the deck after departure. Bring the ledger. We can fix this. — R.”</em></p><p>Mara boarded the <strong>23:40</strong> ferry, ticket 0417, trusting the person she loved most in the world. Rosa's badge logged at the pier gate at <strong>23:37</strong>; the pier camera caught them together at 23:38. On deck, after departure, Rosa struck Mara with the wrench, weighted her body with a length of cut anchor chain, and pushed her over the starboard rail. Then she folded Mara's coat neatly on the pier and “found” it in the morning, so the town would call it a drowning.</p><p>No single clue convicts her. Three of them, together, do: <strong>the gate badge at 23:37</strong> puts her at the pier when she swore she was home asleep; <strong>her fingerprints on the wrench</strong> put her hands on the weapon; and <strong>the note in her handwriting</strong> proves she lured Mara to the deck. Motive, means, opportunity — and a broken alibi.</p><p>One thread stays loose: the black envelope sealed with a silver anchor, warning Mara to stay quiet about the ledger. Someone else knew. Someone else was watching. That is not this case. That is the season.</p>",
+  "cleared": [
+   {
+    "name": "Captain Jonas Kett",
+    "text": "His log gap is real — he stepped out for air and heard the thud — but he never left the boat, never handled the wrench, and his drinking, while shameful, is not murder."
+   },
+   {
+    "name": "Silas Bren",
+    "text": "His voicemail was angry and weeks old, about a broken engagement. The barman confirms he was at the pub for most of the night, and he never boarded the ferry."
+   },
+   {
+    "name": "Harriet 'Hattie' Loom",
+    "text": "She forged insurance papers to save a bankrupt company — a genuine crime, for another court — but she was photographed at the charity dinner all evening."
+   },
+   {
+    "name": "Owen Marsh",
+    "text": "His gambling debts gave him a motive on paper, but his flatmate confirms he was home by 22:00, miles from the pier."
+   },
+   {
+    "name": "Felix Anders",
+    "text": "He smuggled cigarettes through the pier and lied about his rounds to hide it. His crates explain his gaps — but not the wrench, the chain, or the body."
+   }
+  ]
+ },
+ "minEvidenceToSolve": [
+  "TICKET-01",
+  "DIARY-01",
+  "LEDGER-01",
+  "ALIBI-01",
+  "WRENCH-01",
+  "PRINT-01",
+  "NOTE-01",
+  "CRATE-01"
+ ],
+ "coopClueMap": {
+  "field": [
+   "COAT-01",
+   "TICKET-01",
+   "GATE-01",
+   "BUTTON-01",
+   "CRATE-01",
+   "WRENCH-01",
+   "CHAIN-01",
+   "BLOOD-01"
+  ],
+  "analyst": [
+   "PRINT-01",
+   "UV-01",
+   "LEDGER-01",
+   "LOG-02",
+   "CCTV-01",
+   "RH-03"
+  ],
+  "interrogator": [
+   "DIARY-01",
+   "DIARY-02",
+   "NOTE-01",
+   "PHONE-01",
+   "ALIBI-01",
+   "RH-01"
+  ],
+  "archivist": [
+   "LOG-01",
+   "PHOTO-01",
+   "LETTER-01",
+   "SUIT-01",
+   "TICKET-02",
+   "ANCHOR-01",
+   "ALIBI-02",
+   "RH-02",
+   "RH-04"
+  ]
+ }
+}

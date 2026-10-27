@@ -1,0 +1,1641 @@
+{
+ "boardLinks": [
+  [
+   "COSTUME-INVENTORY",
+   "AUCTION-PHOTO"
+  ],
+  [
+   "AUCTION-PHOTO",
+   "SEAMSTRESS-LEDGER"
+  ],
+  [
+   "SEAMSTRESS-LEDGER",
+   "BANK-DEPOSIT"
+  ],
+  [
+   "BOARD-MINUTES",
+   "VOICEMAIL"
+  ],
+  [
+   "VOICEMAIL",
+   "REHEARSAL-SCHEDULE"
+  ],
+  [
+   "TEA-FLASK",
+   "ACONITE-LEAF"
+  ],
+  [
+   "ACONITE-LEAF",
+   "GLOVES-ACONITE"
+  ],
+  [
+   "GLOVES-ACONITE",
+   "PROP-LIST"
+  ],
+  [
+   "TEA-FLASK",
+   "TEA-BLEND"
+  ],
+  [
+   "TEA-BLEND",
+   "STAGE-LOG"
+  ],
+  [
+   "STAGE-LOG",
+   "CURTAIN-PHOTO"
+  ],
+  [
+   "COSTUME-TAG",
+   "COSTUME-INVENTORY"
+  ],
+  [
+   "DIRECTOR-LETTER",
+   "DIRECTOR-CONTRACT"
+  ],
+  [
+   "ACTRESS-NOTE",
+   "ACTRESS-DIARY"
+  ]
+ ],
+ "chapters": [
+  {
+   "briefing": "The final dress rehearsal never reached the curtain. Agathe Moreau, costume designer of the Théâtre des Marées, collapsed at her sewing table mid-scene and never got up. The house doctor called it a heart. The theatre called it a tragedy. The flask at her elbow says otherwise.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "I was in the wings, cueing the lights. Ask Théo — he saw me.",
+       "confront": null,
+       "id": "q1",
+       "mood": "calm",
+       "requires": null,
+       "text": "Where were you when Agathe collapsed?",
+       "unlockClue": null
+      },
+      {
+       "answer": "Agathe and I argued about the costumes, yes. She wanted more time. I wanted the show to open. Directors and designers always argue.",
+       "confront": null,
+       "id": "q2",
+       "mood": "press",
+       "requires": null,
+       "text": "You and Agathe argued that morning.",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "lucien-barbeau"
+    }
+   ],
+   "locationId": "stage",
+   "mechanic": "Scene investigation",
+   "n": 1,
+   "puzzles": [
+    {
+     "clue": "CURTAIN-PHOTO",
+     "correct": 1,
+     "done": "Enhanced, the house camera shows one person beside Agathe's table during the interval: Inès Marchand — the only person who touched the flask.",
+     "hint": "The house camera is grainy. Enhance the interval frame and watch the sewing table, not the stage.",
+     "id": "pz-cctv",
+     "kind": "cctv-enhance",
+     "options": [
+      "Camille Sorel, passing through the wings",
+      "Inès Marchand, standing beside Agathe's sewing table during the interval",
+      "Théo Lambert, checking the lights"
+     ],
+     "title": "Enhance the House Camera",
+     "wrong": "That frame is too blurred to be anyone. Enhance the interval frame and look at the sewing table.",
+     "correctText": "Inès Marchand, standing beside Agathe's sewing table during the interval"
+    }
+   ],
+   "question": "What was in Agathe's flask — and who touched it last?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "The enhanced house camera shows one person beside Agathe's table in the interval: Inès.",
+      "id": "r1",
+      "options": [
+       "Camille Sorel, passing through the wings",
+       "Inès Marchand — the only person seen at the sewing table during the interval",
+       "Théo Lambert, checking the lights"
+      ],
+      "q": "Who was last seen at Agathe's sewing table?",
+      "correctText": "Inès Marchand — the only person seen at the sewing table during the interval"
+     },
+     {
+      "correct": 0,
+      "explain": "The flask's residue is aconite — and aconite grows, listed as a prop, in the theatre's garden.",
+      "id": "r2",
+      "options": [
+       "Aconite (monkshood), from the theatre's own prop garden",
+       "Sleeping herbs from the apothecary",
+       "Rat poison from the cellar"
+      ],
+      "q": "What poisoned Agathe?",
+      "correctText": "Aconite (monkshood), from the theatre's own prop garden"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "TEA-FLASK",
+       "text": "Agathe's flask, still half full. The herbal tea inside smells faintly bitter — wrong for her usual blend. The lab will find aconite in it.",
+       "title": "The Tea Flask"
+      },
+      "id": "hs-flask",
+      "label": "Tea flask at the table",
+      "x": 45,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "CURTAIN-PHOTO",
+       "text": "The house camera above the stage. Its interval frame is grainy — but it saw the sewing table the whole time.",
+       "title": "The House Camera"
+      },
+      "id": "hs-camera",
+      "label": "House camera",
+      "x": 70,
+      "y": 25
+     },
+     {
+      "finding": {
+       "clueId": "SEWING-THREAD",
+       "text": "A spool of thread, cut clean. The costume Agathe was mending is not the one on the dummy — it is a copy, and the stitching is wrong.",
+       "title": "The Mended Costume"
+      },
+      "id": "hs-costume",
+      "label": "Costume on the dummy",
+      "x": 30,
+      "y": 48
+     },
+     {
+      "finding": {
+       "clueId": "ANCHOR-03",
+       "text": "Tucked inside the prompt book: a small black envelope sealed with a silver anchor in wax. No address. No name. It was never opened.",
+       "title": "The Black Envelope"
+      },
+      "id": "hs-envelope",
+      "label": "Black envelope in the prompt book",
+      "x": 60,
+      "y": 38
+     },
+     {
+      "finding": {
+       "clueId": "PROGRAMME-NOTE",
+       "text": "The programme credits Agathe for 'thirty years of costumes'. Someone has underlined her name twice, in pencil.",
+       "title": "The Programme"
+      },
+      "id": "hs-programme",
+      "label": "Rehearsal programme",
+      "x": 20,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "STAGE-LOG",
+       "text": "Théo's stage log: the interval lasted twelve minutes. Agathe never left her table. One person came to her — and left again.",
+       "title": "The Stage Log"
+      },
+      "id": "hs-stagelog",
+      "label": "Stage manager's log",
+      "x": 55,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "DIRECTOR-LETTER",
+       "text": "A love letter, unsigned, in the director's hand — addressed to Camille, not to Agathe. A theatre scandal, not a murder.",
+       "title": "The Love Letter"
+      },
+      "id": "hs-letter",
+      "label": "Letter on the prompt desk",
+      "x": 80,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "TEA-BLEND",
+       "text": "Agathe's tea blend is written on a card at her table. Only Inès ever prepared it for her — every rehearsal, without fail.",
+       "title": "The Tea Card"
+      },
+      "id": "hs-teacard",
+      "label": "Tea blend card",
+      "x": 38,
+      "y": 62
+     }
+    ],
+    "img": "images/case3-location.jpg"
+   },
+   "title": "Curtain Down",
+   "tools": [
+    "flashlight",
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "Agathe's workshop is a museum of thirty years of costumes — and a crime scene in its own right. Three originals are missing from the archive. Their replacements hang here, stitched by a careful hand that hoped nobody would look too closely.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "I prepared her tea every rehearsal. It was my job — my honour. I would never hurt her. She was like a mother to me.",
+       "confront": null,
+       "id": "q1",
+       "mood": "calm",
+       "requires": null,
+       "text": "You prepared Agathe's tea every rehearsal?",
+       "unlockClue": null
+      },
+      {
+       "answer": "I was at her table in the interval, yes. I brought her water. She was tired. I stayed a minute, no more.",
+       "confront": "CURTAIN-PHOTO",
+       "id": "q2",
+       "mood": "press",
+       "requires": null,
+       "text": "The camera shows you at her table during the interval.",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "ines-marchand"
+    }
+   ],
+   "locationId": "costume-workshop",
+   "mechanic": "Scene investigation + photo-compare",
+   "n": 2,
+   "puzzles": [
+    {
+     "clue": "COSTUME-TAG",
+     "correct": 1,
+     "done": "Side by side, the difference is plain: the original is hand-stitched with period thread; the hanging 'original' is machine-stitched with modern thread and a fresh tag.",
+     "hint": "Compare the hanging costume against the archive photograph. Look at the stitching and the tag, not the colour.",
+     "id": "pz-costume-compare",
+     "kind": "photo-compare",
+     "options": [
+      "The original: hand stitching, period thread, faded tag",
+      "The replica: modern thread, machine stitching, a new tag",
+      "They are identical — no difference at all"
+     ],
+     "title": "Original or Replica?",
+     "wrong": "Look closer — at the stitching and the tag. One of these was made last month, not last century.",
+     "correctText": "The replica: modern thread, machine stitching, a new tag"
+    }
+   ],
+   "question": "Which costumes are real — and which are copies?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The archive inventory lists three originals as present. The hanging costumes are machine-stitched replicas.",
+      "id": "r1",
+      "options": [
+       "Three original 19th-century costumes, replaced by replicas",
+       "One hat, stolen by a fan",
+       "Nothing — every costume is accounted for"
+      ],
+      "q": "What is missing from the archive?",
+      "correctText": "Three original 19th-century costumes, replaced by replicas"
+     },
+     {
+      "correct": 2,
+      "explain": "The tea card and the stage log agree: only Inès ever prepared Agathe's tea.",
+      "id": "r2",
+      "options": [
+       "Camille Sorel",
+       "Théo Lambert",
+       "Inès Marchand — she prepared Agathe's tea every rehearsal"
+      ],
+      "q": "Who prepared Agathe's tea?",
+      "correctText": "Inès Marchand — she prepared Agathe's tea every rehearsal"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "COSTUME-TAG",
+       "text": "The 'original' 1890 gown hangs here — machine-stitched, modern thread, a fresh tag. It is a replica, and a good one.",
+       "title": "The Replica Gown"
+      },
+      "id": "hs-gown",
+      "label": "Gown on the rail",
+      "x": 35,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "TEA-TIN",
+       "text": "Agathe's tea tin, her blend written in Inès's hand. Inès mixed it every morning of the run.",
+       "title": "The Tea Tin"
+      },
+      "id": "hs-teatin",
+      "label": "Tea tin",
+      "x": 60,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "THREAD-SPOOL",
+       "text": "A spool of modern thread, half used — the same thread as the replica gown. It should not be in a period-costume workshop.",
+       "title": "Modern Thread"
+      },
+      "id": "hs-thread",
+      "label": "Spool of modern thread",
+      "x": 25,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "WORKSHOP-KEY",
+       "text": "The workshop key hangs by the door. Three people hold copies: Agathe, Théo — and Inès.",
+       "title": "The Workshop Key"
+      },
+      "id": "hs-key",
+      "label": "Workshop key",
+      "x": 75,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "COSTUME-INVENTORY",
+       "text": "A pinned note in Agathe's hand: 'Check the 1890 gown. Stitching wrong?' She had noticed. She was going to say so.",
+       "title": "Agathe's Note"
+      },
+      "id": "hs-note",
+      "label": "Pinned note",
+      "x": 50,
+      "y": 35
+     },
+     {
+      "finding": {
+       "clueId": "GLOVES-ACONITE",
+       "text": "A pair of gardening gloves, tucked behind the sewing box. There is green sap on the cuffs — aconite sap.",
+       "title": "Gardening Gloves"
+      },
+      "id": "hs-gloves",
+      "label": "Gardening gloves",
+      "x": 68,
+      "y": 72
+     },
+     {
+      "finding": {
+       "clueId": "ACTRESS-NOTE",
+       "text": "A jealous note from Camille to Agathe: 'You gave her the solo costume. You always give her everything.' A rivalry, not a murder.",
+       "title": "Camille's Note"
+      },
+      "id": "hs-actressnote",
+      "label": "Jealous note",
+      "x": 15,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "SEWING-THREAD",
+       "text": "Agathe's own thimble, worn thin after thirty years. It sits where she left it — she expected to come back to it.",
+       "title": "Agathe's Thimble"
+      },
+      "id": "hs-thimble",
+      "label": "Worn thimble",
+      "x": 45,
+      "y": 75
+     }
+    ],
+    "img": "images/case3-location.jpg"
+   },
+   "title": "The Costume Workshop",
+   "tools": [
+    "magnifier",
+    "photo-compare"
+   ]
+  },
+  {
+   "briefing": "The theatre archive holds a century of costumes — and a ledger of sales that never went through the theatre. Somebody has been selling the past, one gown at a time. Agathe found out. The board meeting she requested would have ended it.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "The archive is my responsibility. If originals are missing, I should have noticed. I did not. That is my shame, not my crime.",
+       "confront": null,
+       "id": "q1",
+       "mood": "press",
+       "requires": null,
+       "text": "Three originals are missing from your archive. How?",
+       "unlockClue": null
+      },
+      {
+       "answer": "Agathe left a voicemail for the board chair the night before she died. I have the tape. She sounded frightened — of what, she did not say.",
+       "confront": null,
+       "id": "q2",
+       "mood": "calm",
+       "requires": null,
+       "text": "What did Agathe say the night before she died?",
+       "unlockClue": "VOICEMAIL"
+      }
+     ],
+     "suspectId": "theo-lambert"
+    },
+    {
+     "questions": [
+      {
+       "answer": "My sister and I disagreed about the play, yes — about the ending. Writers and designers always disagree. It was never hate.",
+       "confront": null,
+       "id": "q1",
+       "mood": "press",
+       "requires": null,
+       "text": "You and Agathe argued about the play's ending.",
+       "unlockClue": null
+      },
+      {
+       "answer": "I was in the stalls, watching the rehearsal. Fifty people saw me. Ask the lighting girl.",
+       "confront": null,
+       "id": "q2",
+       "mood": "calm",
+       "requires": null,
+       "text": "Where were you when she collapsed?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "bastien-moreau"
+    }
+   ],
+   "locationId": "theatre-archive",
+   "mechanic": "Analysis tools + interrogation",
+   "n": 3,
+   "puzzles": [
+    {
+     "clue": "VOICEMAIL",
+     "correct": 1,
+     "done": "Cleaned up, the voicemail is unmistakable: Agathe had found the missing costumes, knew who sold them, and was going to tell the board after the final rehearsal.",
+     "hint": "The old answering-machine tape is noisy. Filter the hiss and her words come clear.",
+     "id": "pz-voicemail",
+     "kind": "voicemail-cleanup",
+     "options": [
+      "Agathe says she is resigning after the show",
+      "Agathe says: 'I found the missing costumes. I know who sold them. I will tell the board after the final rehearsal.'",
+      "Agathe says she is afraid of the director"
+     ],
+     "title": "Clean Up Agathe's Voicemail",
+     "wrong": "That's the hiss talking. Filter again and listen to what she found — and when she was going to tell the board.",
+     "correctText": "Agathe says: 'I found the missing costumes. I know who sold them. I will tell the board after the final rehearsal.'"
+    }
+   ],
+   "question": "Who was selling the theatre's past — and who knew?",
+   "report": {
+    "questions": [
+     {
+      "correct": 1,
+      "explain": "The private ledger hidden in the archive lists three sales, dates, and buyers — in Inès's hand.",
+      "id": "r1",
+      "options": [
+       "Théo Lambert",
+       "Inès Marchand — her private ledger lists the sales",
+       "Bastien Moreau"
+      ],
+      "q": "Whose ledger lists the costume sales?",
+      "correctText": "Inès Marchand — her private ledger lists the sales"
+     },
+     {
+      "correct": 0,
+      "explain": "Her voicemail to the board chair says exactly that — giving the seller one rehearsal to stop her.",
+      "id": "r2",
+      "options": [
+       "Agathe was going to tell the board after the final rehearsal",
+       "Agathe was going to resign quietly",
+       "Agathe was going to burn the archive"
+      ],
+      "q": "What was Agathe about to do?",
+      "correctText": "Agathe was going to tell the board after the final rehearsal"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "COSTUME-INVENTORY",
+       "text": "The archive inventory: three originals listed as present — the 1890 gown, the 1912 cloak, the 1924 dress. All three are gone, replaced by replicas.",
+       "title": "The Inventory"
+      },
+      "id": "hs-inventory",
+      "label": "Archive inventory",
+      "x": 30,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "AUCTION-PHOTO",
+       "text": "A printed photograph from an auction site: the 1890 gown, sold six months ago, to a private collector. The theatre never authorised a sale.",
+       "title": "Auction Photograph"
+      },
+      "id": "hs-auction",
+      "label": "Auction photograph",
+      "x": 55,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "SEAMSTRESS-LEDGER",
+       "text": "A small private ledger, hidden behind the costume boxes: three sales, dates, buyers, amounts — all in Inès's handwriting.",
+       "title": "The Private Ledger"
+      },
+      "id": "hs-ledger",
+      "label": "Hidden private ledger",
+      "x": 70,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "BANK-DEPOSIT",
+       "text": "A bank slip, folded into the ledger: three large cash deposits, matching the sale dates exactly.",
+       "title": "Bank Deposits"
+      },
+      "id": "hs-bank",
+      "label": "Bank slip",
+      "x": 45,
+      "y": 68
+     },
+     {
+      "finding": {
+       "clueId": "BOARD-MINUTES",
+       "text": "Minutes of the board meeting Agathe requested — scheduled for the morning after the final rehearsal. She never lived to attend it.",
+       "title": "Board Minutes"
+      },
+      "id": "hs-board",
+      "label": "Board minutes",
+      "x": 20,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "PLAYWRIGHT-DRAFT",
+       "text": "Bastien's draft, with Agathe's furious notes in the margin: 'You stole my ending!' A family row over a play, not a murder.",
+       "title": "The Draft"
+      },
+      "id": "hs-draft",
+      "label": "Playwright's draft",
+      "x": 65,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "COSTUME-TAG",
+       "text": "The replica tags: printed last month, by a shop two streets from the theatre. The order was placed by 'I. Marchand'.",
+       "title": "Replica Tags"
+      },
+      "id": "hs-tags",
+      "label": "Replica tags",
+      "x": 80,
+      "y": 48
+     },
+     {
+      "finding": {
+       "clueId": "WORKSHOP-KEY",
+       "text": "The archive door: only three keys exist. One was Agathe's. One is Théo's. One is Inès's — and Inès was here alone, often, after hours.",
+       "title": "The Archive Door"
+      },
+      "id": "hs-door",
+      "label": "Archive door",
+      "x": 38,
+      "y": 80
+     }
+    ],
+    "img": "images/case3-location.jpg"
+   },
+   "title": "The Archive's Missing Past",
+   "tools": [
+    "UV light",
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "Aconite grows in the theatre's own prop garden, listed on the prop list as a harmless stage plant. Someone cut a stem the morning of the final rehearsal. The garden remembers — in sap, in footprints, and in the gloves left behind.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "I tend the garden. I cut a stem that morning, yes — for the stage, for the scene. Anyone could have taken it after me.",
+       "confront": "GLOVES-ACONITE",
+       "id": "q1",
+       "mood": "press",
+       "requires": null,
+       "text": "Your gloves have aconite sap on them.",
+       "unlockClue": null
+      },
+      {
+       "answer": "I… I needed the money. My mother is ill, the rent — no. No, I never sold anything. Agathe would have forgiven me. She always forgave me.",
+       "confront": "SEAMSTRESS-LEDGER",
+       "id": "q2",
+       "mood": "press",
+       "requires": "BANK-DEPOSIT",
+       "text": "Your ledger lists three sales. The bank deposits match them. Explain.",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "ines-marchand"
+    },
+    {
+     "questions": [
+      {
+       "answer": "Camille and I — it is not a secret, only a scandal. Agathe knew. She laughed about it. She would never have used it against us.",
+       "confront": "DIRECTOR-LETTER",
+       "id": "q1",
+       "mood": "press",
+       "requires": null,
+       "text": "This love letter is in your hand. Agathe knew about you and Camille.",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "lucien-barbeau"
+    }
+   ],
+   "locationId": "prop-garden",
+   "mechanic": "Scene investigation + interrogation",
+   "n": 4,
+   "puzzles": [],
+   "question": "Where did the poison come from — and whose hands cut it?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The gloves behind the sewing box carry aconite sap — and the garden's aconite stem was cut the morning of the rehearsal.",
+      "id": "r1",
+      "options": [
+       "Aconite sap on Inès's gardening gloves, matching the cut stem",
+       "A footprint in the garden mud",
+       "A torn leaf in Camille's dressing room"
+      ],
+      "q": "What ties the poison to a person?",
+      "correctText": "Aconite sap on Inès's gardening gloves, matching the cut stem"
+     },
+     {
+      "correct": 2,
+      "explain": "Only Inès had all three: the poison, the tea, and the moment alone with the flask.",
+      "id": "r2",
+      "options": [
+       "Théo Lambert",
+       "Camille Sorel",
+       "Inès Marchand — she cut the stem, prepared the tea, and was at the table in the interval"
+      ],
+      "q": "Who had the poison, the tea, and the moment?",
+      "correctText": "Inès Marchand — she cut the stem, prepared the tea, and was at the table in the interval"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "ACONITE-LEAF",
+       "text": "Aconite — monkshood — grows in the prop garden. One stem was cut cleanly the morning of the final rehearsal.",
+       "title": "The Cut Stem"
+      },
+      "id": "hs-aconite",
+      "label": "Cut aconite stem",
+      "x": 40,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "PROP-LIST",
+       "text": "The prop list names aconite as a stage plant — 'harmless on stage, deadly if eaten.' Someone in the theatre knew exactly what it was.",
+       "title": "The Prop List"
+      },
+      "id": "hs-proplist",
+      "label": "Prop list",
+      "x": 60,
+      "y": 35
+     },
+     {
+      "finding": {
+       "clueId": "GLOVES-ACONITE",
+       "text": "A second pair of gardening gloves hangs by the gate — clean. The sap-stained pair was hidden in the workshop, not left here.",
+       "title": "The Clean Gloves"
+      },
+      "id": "hs-cleangloves",
+      "label": "Clean gloves by the gate",
+      "x": 25,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "REHEARSAL-SCHEDULE",
+       "text": "The rehearsal schedule: the interval was twelve minutes, and only Inès was free — everyone else was on stage or in the wings.",
+       "title": "Rehearsal Schedule"
+      },
+      "id": "hs-schedule",
+      "label": "Rehearsal schedule",
+      "x": 70,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "ACONITE-LEAF",
+       "text": "A crushed aconite leaf on the garden path — dropped on the way back to the workshop, toward the sewing table.",
+       "title": "Crushed Leaf"
+      },
+      "id": "hs-leaf",
+      "label": "Crushed leaf on the path",
+      "x": 50,
+      "y": 72
+     },
+     {
+      "finding": {
+       "clueId": "WORKSHOP-KEY",
+       "text": "The garden gate: it locks from the theatre side. Only workshop key-holders can enter after hours — Agathe, Théo, and Inès.",
+       "title": "The Garden Gate"
+      },
+      "id": "hs-gate",
+      "label": "Garden gate",
+      "x": 82,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "DIRECTOR-CONTRACT",
+       "text": "A torn contract in the garden bin: the board was going to replace Lucien as director. A career ending, not a murder.",
+       "title": "Torn Contract"
+      },
+      "id": "hs-contract",
+      "label": "Torn contract in the bin",
+      "x": 32,
+      "y": 78
+     },
+     {
+      "finding": {
+       "clueId": "ACTRESS-DIARY",
+       "text": "Camille's diary, left on a bench: pages of jealousy over costumes and roles. She wanted the spotlight — not a corpse.",
+       "title": "Camille's Diary"
+      },
+      "id": "hs-diary",
+      "label": "Diary on a bench",
+      "x": 58,
+      "y": 22
+     }
+    ],
+    "img": "images/case3-location.jpg"
+   },
+   "title": "The Prop Garden",
+   "tools": [
+    "flashlight",
+    "fingerprint powder"
+   ]
+  },
+  {
+   "briefing": "Every thread is on the board now: the missing costumes, the money, the poison, the twelve-minute interval. Link the evidence, name the killer, and say how you know. One accusation. Make it count.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "…She found out. She was going to tell the board after the final rehearsal, and I couldn't — I couldn't lose everything. The tea was already made. I only put in a little. I thought it would make her ill, not — not this.",
+       "confront": "TEA-FLASK",
+       "id": "q1",
+       "mood": "press",
+       "requires": "SEAMSTRESS-LEDGER",
+       "text": "The ledger is in your hand. The deposits match. The gloves have aconite on them. The camera saw you at her table. What do you say now?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "ines-marchand"
+    }
+   ],
+   "locationId": "theatre-archive",
+   "mechanic": "Deduction board + finale",
+   "n": 5,
+   "puzzles": [],
+   "question": "Who killed Agathe Moreau — and how do you prove it?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "Only Inès had the motive (the board meeting), the means (the aconite and the tea), and the moment (the twelve-minute interval) — all three, together.",
+      "id": "r1",
+      "options": [
+       "Inès Marchand",
+       "Lucien Barbeau",
+       "Camille Sorel"
+      ],
+      "q": "Who killed Agathe Moreau?",
+      "correctText": "Inès Marchand"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "COSTUME-INVENTORY",
+       "text": "Three originals gone, three replicas in their place, three sales in a private ledger. The motive, in ink.",
+       "title": "The Missing Costumes"
+      },
+      "id": "hs-board1",
+      "label": "Costume thread",
+      "x": 30,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "VOICEMAIL",
+       "text": "Agathe found the seller and was going to tell the board after the final rehearsal — giving the seller one rehearsal to stop her.",
+       "title": "The Deadline"
+      },
+      "id": "hs-board2",
+      "label": "Deadline thread",
+      "x": 50,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "TEA-FLASK",
+       "text": "Aconite in the flask, aconite sap on the gloves, a cut stem in the garden. The poison, traced to one pair of hands.",
+       "title": "The Poison"
+      },
+      "id": "hs-board3",
+      "label": "Poison thread",
+      "x": 70,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "STAGE-LOG",
+       "text": "Twelve minutes, one person at the table, one flask touched. The moment, caught on camera.",
+       "title": "The Moment"
+      },
+      "id": "hs-board4",
+      "label": "Interval thread",
+      "x": 40,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "REHEARSAL-SCHEDULE",
+       "text": "Every other suspect was on stage or in the wings. Only Inès was free — and only Inès prepared the tea.",
+       "title": "The Alibis"
+      },
+      "id": "hs-board5",
+      "label": "Alibi thread",
+      "x": 60,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "DIRECTOR-LETTER",
+       "text": "A director's affair, an actress's jealousy, a brother's row over a play — loud, human, and none of them murder.",
+       "title": "The Noise"
+      },
+      "id": "hs-board6",
+      "label": "Red herrings",
+      "x": 20,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "ANCHOR-03",
+       "text": "The black envelope with the silver anchor. It fits nothing in this case — and that is what troubles you most.",
+       "title": "The Envelope"
+      },
+      "id": "hs-board7",
+      "label": "The envelope",
+      "x": 80,
+      "y": 65
+     },
+     {
+      "finding": {
+       "clueId": "VOICEMAIL",
+       "text": "A designer who did the honest thing, and told the wrong theatre she was going to do it. The board is ready. Name her.",
+       "title": "Agathe Moreau"
+      },
+      "id": "hs-board8",
+      "label": "Agathe's photograph",
+      "x": 50,
+      "y": 30
+     }
+    ],
+    "img": "images/case3-location.jpg"
+   },
+   "title": "The Deduction Board",
+   "tools": [
+    "magnifier"
+   ]
+  }
+ ],
+ "closing": {
+  "lines": [
+   {
+    "img": "",
+    "text": "The curtain falls on the final dress rehearsal. This time, it falls for Agathe — and for the truth.",
+    "voice": "narrator"
+   },
+   {
+    "img": "",
+    "text": "Agathe Moreau did not die of a tired heart. She died because she found the missing costumes, and gave the thief one rehearsal's warning before she told the board.",
+    "voice": "narrator"
+   },
+   {
+    "img": "",
+    "text": "Somewhere in the theatre, a stagehand finds a small black envelope sealed with a silver anchor. It was never delivered. It was never meant to be.",
+    "voice": "narrator"
+   }
+  ]
+ },
+ "coldOpen": {
+  "lines": [
+   {
+    "img": "",
+    "text": "The Théâtre des Marées smells of dust, greasepaint, and rain from the harbour. The final dress rehearsal is running, and the house is half dark.",
+    "voice": "narrator"
+   },
+   {
+    "img": "",
+    "text": "Agathe Moreau sits at her sewing table in the wings, mending a gown that is not what it pretends to be. She pours her evening tea. She does not see who has already touched the flask.",
+    "voice": "narrator"
+   },
+   {
+    "img": "",
+    "text": "By the interval she is gone — and the gown on the dummy is a copy, the original sold months ago to a stranger. Nobody ever asked who held the workshop key.",
+    "voice": "narrator"
+   }
+  ],
+  "title": "Port Anselm — The Final Dress Rehearsal"
+ },
+ "coopClueMap": {
+  "analyst": [
+   "TEA-FLASK",
+   "ACONITE-LEAF",
+   "COSTUME-TAG",
+   "GLOVES-ACONITE"
+  ],
+  "archivist": [
+   "COSTUME-INVENTORY",
+   "AUCTION-PHOTO",
+   "SEAMSTRESS-LEDGER",
+   "BOARD-MINUTES",
+   "ANCHOR-03"
+  ],
+  "field": [
+   "CURTAIN-PHOTO",
+   "PROP-LIST",
+   "WORKSHOP-KEY",
+   "SEWING-THREAD"
+  ],
+  "interrogator": [
+   "VOICEMAIL",
+   "STAGE-LOG",
+   "REHEARSAL-SCHEDULE",
+   "BANK-DEPOSIT"
+  ]
+ },
+ "evidence": [
+  {
+   "body": "Agathe's flask, half full. Lab residue tests positive for aconite (monkshood). The bitterness was masked by her herbal blend.",
+   "chapter": 1,
+   "code": "TEA-FLASK",
+   "id": "ev-flask",
+   "img": "images/case3-location.jpg",
+   "key": true,
+   "proves": "Agathe was poisoned with aconite in her evening tea — not taken by a heart attack.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "The Tea Flask"
+  },
+  {
+   "body": "The house camera's interval frame, enhanced: one person beside Agathe's sewing table — Inès Marchand, the only person who touched the flask.",
+   "chapter": 1,
+   "code": "CURTAIN-PHOTO",
+   "id": "ev-curtain",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Only Inès was at the table in the interval — the only chance to poison the flask.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Enhanced House Camera Frame"
+  },
+  {
+   "body": "The costume Agathe was mending is a replica: machine stitching, modern thread, a fresh tag — where an 1890 original should be.",
+   "chapter": 1,
+   "code": "SEWING-THREAD",
+   "id": "ev-thread",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "An original costume was swapped for a replica — and Agathe had noticed.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "The Mended Replica"
+  },
+  {
+   "body": "A small black envelope sealed with a silver anchor in wax, tucked inside the prompt book, never opened. No address, no name. It fits nothing in this case.",
+   "chapter": 1,
+   "code": "ANCHOR-03",
+   "id": "ev-anchor",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Someone else was watching Agathe — a fixer known only as 'the Anchorman' leaves such envelopes. Who he is, and why, is not yet known.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Black Envelope — Silver Anchor Seal"
+  },
+  {
+   "body": "The programme credits Agathe for thirty years of costumes. Her name is underlined twice, in pencil — by someone who admired her, or mourned her in advance.",
+   "chapter": 1,
+   "code": "PROGRAMME-NOTE",
+   "id": "ev-programme",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Agathe was respected across the theatre — no one in the company wanted her gone.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "The Rehearsal Programme"
+  },
+  {
+   "body": "Théo's stage log: the interval lasted twelve minutes; Agathe never left her table; one person came to her — and left again.",
+   "chapter": 1,
+   "code": "STAGE-LOG",
+   "id": "ev-stagelog",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "The poisoning window was twelve minutes, and only one person used it.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "The Stage Log"
+  },
+  {
+   "body": "A love letter in the director's hand, addressed to Camille, not to Agathe. Agathe knew and laughed about it.",
+   "chapter": 1,
+   "code": "DIRECTOR-LETTER",
+   "id": "ev-director-letter",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Nothing about murder: a theatre scandal Agathe knew about and did not care to use.",
+   "redHerring": true,
+   "roleExclusive": null,
+   "title": "The Director's Love Letter"
+  },
+  {
+   "body": "Agathe's tea blend, written on a card at her table. Only Inès ever prepared it for her — every rehearsal, without fail.",
+   "chapter": 1,
+   "code": "TEA-BLEND",
+   "id": "ev-teablend",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Only Inès knew the blend well enough to hide aconite in it.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "The Tea Blend Card"
+  },
+  {
+   "body": "The 'original' 1890 gown is machine-stitched with modern thread and a fresh tag. A replica, and a good one.",
+   "chapter": 2,
+   "code": "COSTUME-TAG",
+   "id": "ev-tag",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "The hanging 'original' is a recent replica — ordered by 'I. Marchand'.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "The Replica Gown's Tag"
+  },
+  {
+   "body": "Agathe's tea tin, her blend written in Inès's hand. Inès mixed it every morning of the run.",
+   "chapter": 2,
+   "code": "TEA-TIN",
+   "id": "ev-teatin",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Inès prepared the tea daily — she alone controlled what went into the flask.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "Agathe's Tea Tin"
+  },
+  {
+   "body": "A spool of modern thread, half used — the same thread as the replica gown. It should not be in a period-costume workshop.",
+   "chapter": 2,
+   "code": "THREAD-SPOOL",
+   "id": "ev-thread2",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "The replicas were made in this workshop, with this thread.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "Modern Thread"
+  },
+  {
+   "body": "The workshop key hangs by the door. Three people hold copies: Agathe, Théo — and Inès.",
+   "chapter": 2,
+   "code": "WORKSHOP-KEY",
+   "id": "ev-key",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Only three people could enter the workshop and archive after hours.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "The Workshop Key"
+  },
+  {
+   "body": "A pinned note in Agathe's hand: 'Check the 1890 gown. Stitching wrong?' She had noticed — and was going to say so.",
+   "chapter": 2,
+   "code": "COSTUME-INVENTORY",
+   "id": "ev-inventory",
+   "img": "images/case3-location.jpg",
+   "key": true,
+   "proves": "Three originals are listed as present but are gone, replaced by replicas — and Agathe had spotted it.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Archive Inventory — Three Originals Missing"
+  },
+  {
+   "body": "Gardening gloves tucked behind the sewing box, with green aconite sap on the cuffs — hidden, not left by the garden gate.",
+   "chapter": 2,
+   "code": "GLOVES-ACONITE",
+   "id": "ev-gloves",
+   "img": "images/case3-location.jpg",
+   "key": true,
+   "proves": "The poison was handled by the owner of these gloves — and they were hidden in the workshop.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Sap-Stained Gardening Gloves"
+  },
+  {
+   "body": "A jealous note from Camille to Agathe: 'You gave her the solo costume. You always give her everything.' A rivalry, not a murder.",
+   "chapter": 2,
+   "code": "ACTRESS-NOTE",
+   "id": "ev-actress-note",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Nothing about murder: Camille wanted the spotlight, and was on stage when Agathe collapsed.",
+   "redHerring": true,
+   "roleExclusive": null,
+   "title": "Camille's Jealous Note"
+  },
+  {
+   "body": "A printed photograph from an auction site: the 1890 gown, sold six months ago to a private collector. The theatre never authorised a sale.",
+   "chapter": 3,
+   "code": "AUCTION-PHOTO",
+   "id": "ev-auction",
+   "img": "images/case3-location.jpg",
+   "key": true,
+   "proves": "An original was actually sold — the theft is real, not a bookkeeping error.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Auction Photograph — The 1890 Gown Sold"
+  },
+  {
+   "body": "A small private ledger, hidden behind the costume boxes: three sales, dates, buyers, amounts — all in Inès's handwriting.",
+   "chapter": 3,
+   "code": "SEAMSTRESS-LEDGER",
+   "id": "ev-ledger",
+   "img": "images/case3-location.jpg",
+   "key": true,
+   "proves": "Inès sold the three missing originals herself.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "The Private Ledger"
+  },
+  {
+   "body": "A bank slip folded into the ledger: three large cash deposits, matching the three sale dates exactly.",
+   "chapter": 3,
+   "code": "BANK-DEPOSIT",
+   "id": "ev-bank",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "The sale money went to Inès — the deposits match her ledger to the day.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Bank Deposits Matching the Sales"
+  },
+  {
+   "body": "Minutes of the board meeting Agathe requested, scheduled for the morning after the final rehearsal. She never lived to attend it.",
+   "chapter": 3,
+   "code": "BOARD-MINUTES",
+   "id": "ev-board",
+   "img": "images/case3-location.jpg",
+   "key": true,
+   "proves": "Agathe was going to expose the seller to the board — giving the seller a deadline to act.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Board Meeting Minutes"
+  },
+  {
+   "body": "Bastien's draft, with Agathe's furious notes in the margin: 'You stole my ending!' A family row over a play, not a murder.",
+   "chapter": 3,
+   "code": "PLAYWRIGHT-DRAFT",
+   "id": "ev-draft",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Nothing about murder: a sibling argument about a play's ending, witnessed by fifty people in the stalls.",
+   "redHerring": true,
+   "roleExclusive": null,
+   "title": "The Playwright's Draft"
+  },
+  {
+   "body": "Agathe's voicemail to the board chair, cleaned up: 'I found the missing costumes. I know who sold them. I will tell the board after the final rehearsal.'",
+   "chapter": 3,
+   "code": "VOICEMAIL",
+   "id": "ev-voicemail",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Agathe knew the seller's identity and had set a deadline — the final rehearsal.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Agathe's Voicemail to the Board Chair"
+  },
+  {
+   "body": "Aconite — monkshood — in the prop garden. One stem was cut cleanly the morning of the final rehearsal; a crushed leaf marks the path back to the workshop.",
+   "chapter": 4,
+   "code": "ACONITE-LEAF",
+   "id": "ev-aconite",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "The poison came from the theatre's own garden, cut the morning Agathe died.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "The Cut Aconite Stem"
+  },
+  {
+   "body": "The prop list names aconite as a stage plant — 'harmless on stage, deadly if eaten.' Someone in the theatre knew exactly what it was.",
+   "chapter": 4,
+   "code": "PROP-LIST",
+   "id": "ev-proplist",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "The poison's nature was documented in the theatre — no outsider needed.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "The Prop List"
+  },
+  {
+   "body": "The rehearsal schedule: the interval was twelve minutes, and only Inès was free — everyone else was on stage or in the wings.",
+   "chapter": 4,
+   "code": "REHEARSAL-SCHEDULE",
+   "id": "ev-schedule",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Only Inès had a free twelve minutes to reach the flask.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Rehearsal Schedule"
+  },
+  {
+   "body": "A torn contract in the garden bin: the board was going to replace Lucien as director. A career ending, not a murder — and Lucien was in the wings when Agathe collapsed.",
+   "chapter": 4,
+   "code": "DIRECTOR-CONTRACT",
+   "id": "ev-contract",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Nothing about murder: Lucien's career was at risk, but he was seen in the wings at the time of death.",
+   "redHerring": false,
+   "roleExclusive": null,
+   "title": "The Director's Torn Contract"
+  },
+  {
+   "body": "Camille's diary, left on a bench: pages of jealousy over costumes and roles. She wanted the spotlight — not a corpse — and was on stage when Agathe died.",
+   "chapter": 4,
+   "code": "ACTRESS-DIARY",
+   "id": "ev-diary",
+   "img": "images/case3-location.jpg",
+   "key": false,
+   "proves": "Nothing about murder: jealousy, documented, with a stage full of witnesses behind it.",
+   "redHerring": true,
+   "roleExclusive": null,
+   "title": "Camille's Diary"
+  }
+ ],
+ "free": true,
+ "hints": {
+  "answer": [
+   "Inès Marchand sold three original costumes, Agathe found out and was going to tell the board after the final rehearsal — so Inès cut aconite from the prop garden and put it in the tea she alone prepared, during the twelve-minute interval."
+  ],
+  "direction": [
+   "Match the handwriting in the private ledger to a suspect, then check the bank deposits against the sale dates.",
+   "The gloves behind the sewing box carry aconite sap. Ask who tends the prop garden.",
+   "The interval was twelve minutes. Check the rehearsal schedule for who was free."
+  ],
+  "nudge": [
+   "Three originals are missing. What replaced them — and who could have made the copies?",
+   "The tea was poisoned. Who prepared it every rehearsal?",
+   "Agathe left a voicemail the night before she died. What did she find?"
+  ]
+ },
+ "id": "case3",
+ "locations": [
+  {
+   "desc": "The stage of the Théâtre des Marées at dress rehearsal: half-dark house, a sewing table in the wings, and a flask that should never have been touched.",
+   "id": "stage",
+   "img": "images/case3-location.jpg",
+   "name": "Théâtre des Marées — Stage"
+  },
+  {
+   "desc": "Agathe's domain: rails of costumes, sewing boxes, and a gown that is not what it pretends to be.",
+   "id": "costume-workshop",
+   "img": "images/case3-location.jpg",
+   "name": "Costume Workshop"
+  },
+  {
+   "desc": "A century of costumes in a damp room under the stalls — and a private ledger hidden behind the boxes.",
+   "id": "theatre-archive",
+   "img": "images/case3-location.jpg",
+   "name": "Theatre Archive"
+  },
+  {
+   "desc": "A walled courtyard garden where stage plants grow — including aconite, listed on the prop list as harmless.",
+   "id": "prop-garden",
+   "img": "images/case3-location.jpg",
+   "name": "Theatre Prop Garden"
+  }
+ ],
+ "minEvidenceToSolve": [
+  "COSTUME-INVENTORY",
+  "AUCTION-PHOTO",
+  "SEAMSTRESS-LEDGER",
+  "VOICEMAIL",
+  "TEA-FLASK",
+  "GLOVES-ACONITE",
+  "CURTAIN-PHOTO"
+ ],
+ "number": 3,
+ "palette": {
+  "accent": "#8a2b2b",
+  "bg": "#120d0d",
+  "primary": "#c9a227"
+ },
+ "premise": "At the final dress rehearsal of the Théâtre des Marées, costume designer Agathe Moreau collapsed at her sewing table and never got up. The house called it a heart. The flask at her elbow says poison — and the archive says three of the theatre's original costumes have been sold, one by one, to strangers. Agathe had found the seller. She was going to name them after the final rehearsal.",
+ "season": 1,
+ "solve": {
+  "cleared": [
+   {
+    "name": "Lucien Barbeau",
+    "text": "His affair with Camille was an open secret Agathe laughed about. He was in the wings, seen, when Agathe collapsed."
+   },
+   {
+    "name": "Camille Sorel",
+    "text": "Jealous of the costumes and the roles, but on stage in front of fifty people when Agathe died."
+   },
+   {
+    "name": "Théo Lambert",
+    "text": "He runs the archive and should have noticed the theft — his shame, not his crime. He was cueing lights in the interval."
+   },
+   {
+    "name": "Bastien Moreau",
+    "text": "He argued with his sister about the play's ending. He was in the stalls, watched by fifty people."
+   }
+  ],
+  "keyProof": "SEAMSTRESS-LEDGER",
+  "method": "method-aconite-tea",
+  "motive": "motive-costume-theft",
+  "options": {
+   "keyProof": [
+    {
+     "id": "SEAMSTRESS-LEDGER",
+     "label": "Private ledger in Inès's hand listing the three costume sales"
+    },
+    {
+     "id": "TEA-FLASK",
+     "label": "Aconite residue in Agathe's tea flask"
+    },
+    {
+     "id": "GLOVES-ACONITE",
+     "label": "Aconite sap on gardening gloves hidden in the workshop"
+    },
+    {
+     "id": "DIRECTOR-LETTER",
+     "label": "The director's love letter to Camille"
+    }
+   ],
+   "method": [
+    {
+     "id": "method-aconite-tea",
+     "label": "Put aconite from the prop garden into Agathe's tea flask during the twelve-minute interval"
+    },
+    {
+     "id": "method-stabbing",
+     "label": "Stabbed Agathe at her sewing table"
+    },
+    {
+     "id": "method-strangling",
+     "label": "Strangled Agathe in the wings"
+    },
+    {
+     "id": "method-fall",
+     "label": "Pushed Agathe from the stage"
+    }
+   ],
+   "motive": [
+    {
+     "id": "motive-costume-theft",
+     "label": "To stop Agathe exposing her sale of three original costumes"
+    },
+    {
+     "id": "motive-jealousy",
+     "label": "Jealousy over the solo costume"
+    },
+    {
+     "id": "motive-affair",
+     "label": "To hide the director's affair"
+    },
+    {
+     "id": "motive-play",
+     "label": "Revenge over the play's ending"
+    }
+   ],
+   "who": [
+    {
+     "id": "ines-marchand",
+     "label": "Inès Marchand — seamstress, Agathe's protégée"
+    },
+    {
+     "id": "lucien-barbeau",
+     "label": "Lucien Barbeau — director"
+    },
+    {
+     "id": "camille-sorel",
+     "label": "Camille Sorel — leading actress"
+    },
+    {
+     "id": "theo-lambert",
+     "label": "Théo Lambert — stage manager"
+    },
+    {
+     "id": "bastien-moreau",
+     "label": "Bastien Moreau — playwright, Agathe's brother"
+    }
+   ]
+  },
+  "solutionHTML": "<h2>The Final Dress Rehearsal — Solved</h2><p>Inès Marchand, the seamstress Agathe had mentored like a daughter, had been selling the theatre's original 19th-century costumes — the 1890 gown, the 1912 cloak, the 1924 dress — and replacing them with replicas sewn in the workshop. The money went into her bank account, deposit by deposit, matching her private ledger.</p><p>Agathe noticed the wrong stitching, found the sales, and left a voicemail for the board chair: she knew who sold them, and she would tell the board after the final rehearsal. Inès cut aconite from the prop garden that morning, hid the sap-stained gloves behind her sewing box, and — the only person free in the twelve-minute interval, the only person who ever prepared Agathe's tea — put it in the flask.</p><p>No single clue convicts her. The ledger proves the theft, the gloves prove the poison, and the camera proves the moment. Together, they leave no one else standing.</p>",
+  "who": "ines-marchand"
+ },
+ "subtitle": "A final rehearsal. A poisoned flask. A theatre selling its past.",
+ "suspects": [
+  {
+   "age": 27,
+   "alibi": "Claims she was at Agathe's table for only a minute, bringing water — then in the workshop. No one saw her after the interval.",
+   "id": "ines-marchand",
+   "img": "images/case3-location.jpg",
+   "lieList": [
+    "I never sold any costumes.",
+    "I never cut aconite from the garden.",
+    "I was only at her table for a minute, bringing water."
+   ],
+   "motive": "Agathe had found the costume sales and was going to tell the board after the final rehearsal — ending Inès's income and her freedom.",
+   "name": "Inès Marchand",
+   "pressure": 50,
+   "role": "Seamstress; Agathe's protégée",
+   "secret": "She has been selling original costumes from the theatre archive and replacing them with replicas, pocketing the money.",
+   "trust": 50,
+   "trustIntro": "Devoted, tearful, the daughter Agathe never had. She seems like the last person who would hurt her — which is exactly why everyone trusts her.",
+   "truthList": [
+    "She prepared Agathe's tea every rehearsal.",
+    "She was at Agathe's table during the interval.",
+    "She tends the prop garden."
+   ]
+  },
+  {
+   "age": 58,
+   "alibi": "In the wings, cueing the lights; Théo saw him there throughout the interval.",
+   "id": "lucien-barbeau",
+   "img": "images/case3-location.jpg",
+   "lieList": [
+    "Agathe and I never argued.",
+    "There is nothing between Camille and me."
+   ],
+   "motive": "Agathe knew about his affair with Camille and his contract was about to be ended by the board — but neither gave him a reason to kill her.",
+   "name": "Lucien Barbeau",
+   "pressure": 50,
+   "role": "Director of the Théâtre des Marées",
+   "secret": "He is having an affair with his leading actress, Camille Sorel, and the board was about to replace him as director.",
+   "trust": 50,
+   "trustIntro": "Theatrical, defensive, quick to make it about the show. He looks guilty of vanity — and he is.",
+   "truthList": [
+    "He argued with Agathe about the costumes that morning.",
+    "He was in the wings during the interval.",
+    "Agathe knew about the affair and laughed about it."
+   ]
+  },
+  {
+   "age": 31,
+   "alibi": "On stage, in front of fifty people, for the whole rehearsal.",
+   "id": "camille-sorel",
+   "img": "images/case3-location.jpg",
+   "lieList": [
+    "I never wrote Agathe a jealous note.",
+    "Agathe and I were close friends."
+   ],
+   "motive": "Jealousy: Agathe gave the solo costume to another actress, and Camille believed she was being passed over.",
+   "name": "Camille Sorel",
+   "pressure": 50,
+   "role": "Leading actress",
+   "secret": "She is having an affair with the director, and she has been keeping a diary of every slight she believes Agathe dealt her.",
+   "trust": 50,
+   "trustIntro": "Bright, brittle, performing even off stage. Her jealousy is real — and it is also the loudest, most useless clue in the case.",
+   "truthList": [
+    "She wrote Agathe a jealous note about the solo costume.",
+    "She was on stage when Agathe collapsed.",
+    "She knew nothing about the missing costumes."
+   ]
+  },
+  {
+   "age": 40,
+   "alibi": "Cueing lights in the wings; the lighting operator confirms it.",
+   "id": "theo-lambert",
+   "img": "images/case3-location.jpg",
+   "lieList": [
+    "I checked the archive every month.",
+    "I never let anyone into the archive alone."
+   ],
+   "motive": "None for murder: the missing costumes are his professional shame, and Agathe's death made it worse, not better.",
+   "name": "Théo Lambert",
+   "pressure": 50,
+   "role": "Stage manager; keeper of the archive",
+   "secret": "He stopped checking the archive months ago and let Inès work there alone after hours — he trusted her completely.",
+   "trust": 50,
+   "trustIntro": "Tired, honest, and ashamed. He hands you the voicemail tape himself — the one clue that breaks the case open.",
+   "truthList": [
+    "He did not check the archive for months.",
+    "Agathe left a voicemail for the board chair the night before she died.",
+    "He was cueing lights during the interval."
+   ]
+  },
+  {
+   "age": 47,
+   "alibi": "In the stalls, watching the rehearsal; fifty people saw him there.",
+   "id": "bastien-moreau",
+   "img": "images/case3-location.jpg",
+   "lieList": [
+    "My sister and I never argued about the play.",
+    "I never touched her costumes."
+   ],
+   "motive": "A long sibling row over the play's ending — Agathe rewrote his final scene, and he never forgave her for it.",
+   "name": "Bastien Moreau",
+   "pressure": 50,
+   "role": "Playwright; Agathe's brother",
+   "secret": "He plagiarised the play's ending from an unpublished manuscript Agathe had shown him years ago — and Agathe knew.",
+   "trust": 50,
+   "trustIntro": "Wounded pride in a good coat. He argues about art as if it were blood — because in his family, it is.",
+   "truthList": [
+    "He argued with Agathe about the play's ending.",
+    "He was in the stalls when she collapsed.",
+    "He did not know about the costume sales."
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "hot": false,
+   "label": "Inès sells the 1890 gown to a private collector",
+   "t": "6 months before"
+  },
+  {
+   "hot": false,
+   "label": "Inès sells the 1912 cloak and the 1924 dress",
+   "t": "3 months before"
+  },
+  {
+   "hot": false,
+   "label": "Agathe notices the wrong stitching on the 1890 gown",
+   "t": "1 week before"
+  },
+  {
+   "hot": true,
+   "label": "Agathe leaves a voicemail for the board chair: she knows who sold the costumes",
+   "t": "Night before"
+  },
+  {
+   "hot": true,
+   "label": "Inès cuts an aconite stem in the prop garden",
+   "t": "Morning of the rehearsal"
+  },
+  {
+   "hot": false,
+   "label": "Agathe mends the replica gown at her sewing table",
+   "t": "Rehearsal, afternoon"
+  },
+  {
+   "hot": true,
+   "label": "Twelve-minute interval: Inès is the only person at Agathe's table; she touches the flask",
+   "t": "Interval"
+  },
+  {
+   "hot": true,
+   "label": "Agathe drinks her tea and collapses at her sewing table",
+   "t": "After the interval"
+  },
+  {
+   "hot": false,
+   "label": "The house doctor calls it a heart attack; the flask is filed away, untested",
+   "t": "Evening"
+  }
+ ],
+ "title": "The Final Dress Rehearsal",
+ "twists": [
+  {
+   "at": "60%",
+   "body": "The cleaned-up voicemail changes everything: Agathe had found the missing costumes and knew who sold them — but she never names the seller on the tape. She says she will tell the board 'after the final rehearsal,' giving the thief a whole performance to stop her. Was the killer protecting a secret — or protecting someone else? And if Agathe knew, why did she drink the tea her killer prepared?",
+   "caller": "Théo Lambert",
+   "title": "She Knew — But She Never Named the Seller"
+  },
+  {
+   "at": "finale",
+   "body": "Confronted, Inès breaks — but not the way you expect. She swears she only meant to make Agathe ill, just ill enough to miss the board meeting, that she misjudged the dose, that Agathe was like a mother to her. The ledger says theft. The gloves say intent. The woman in front of you says accident. The board, not her tears, decides which story is true.",
+   "title": "She Only Meant to Make Her Ill"
+  }
+ ]
+}

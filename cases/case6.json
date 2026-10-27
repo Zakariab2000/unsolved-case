@@ -1,0 +1,1658 @@
+{
+ "boardLinks": [
+  [
+   "C6-E05",
+   "C6-E06"
+  ],
+  [
+   "C6-E06",
+   "C6-E21"
+  ],
+  [
+   "C6-E13",
+   "C6-E05"
+  ],
+  [
+   "C6-E03",
+   "C6-E04"
+  ],
+  [
+   "C6-E04",
+   "C6-E01"
+  ],
+  [
+   "C6-E17",
+   "C6-E02"
+  ],
+  [
+   "C6-E19",
+   "C6-E13"
+  ],
+  [
+   "C6-E08",
+   "C6-E09"
+  ],
+  [
+   "C6-E09",
+   "C6-E10"
+  ],
+  [
+   "C6-E11",
+   "C6-E20"
+  ],
+  [
+   "C6-E07",
+   "C6-E24"
+  ],
+  [
+   "C6-E23",
+   "C6-E05"
+  ]
+ ],
+ "chapters": [
+  {
+   "briefing": "This one is personal, detective. The victim founded this Unit. The body is in our own archive room, the file he was carrying is gone, and someone has been sending us envelopes for a year. Start where he died — and read everything he left behind.",
+   "interrogations": [],
+   "locationId": "unit-archive",
+   "mechanic": "Tap to inspect — evidence tray",
+   "n": 1,
+   "puzzles": [],
+   "question": "What was Captain Voss carrying when he died?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "Voss's diary and the empty file slot both point to the same thing: a sealed file from the 1998 Harbor Lights trial, which he was about to hand to the Unit.",
+      "id": "r1-1",
+      "options": [
+       "A sealed file from the 1998 Harbor Lights trial",
+       "His retirement papers",
+       "A birthday card for his daughter",
+       "A court summons"
+      ],
+      "q": "What was Captain Voss carrying when he died?",
+      "correctText": "A sealed file from the 1998 Harbor Lights trial"
+     },
+     {
+      "correct": 0,
+      "explain": "ANCHOR-06, tucked into Voss's desk drawer — the sixth such envelope the Unit has found. This one is addressed to you.",
+      "id": "r1-2",
+      "options": [
+       "A small black envelope, sealed with a silver anchor",
+       "A parking ticket",
+       "A newspaper clipping",
+       "A blank sheet of paper"
+      ],
+      "q": "What was found in Voss's desk drawer?",
+      "correctText": "A small black envelope, sealed with a silver anchor"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Captain Harlan Voss, 68, founder of the Cold Case Unit, slumped over the archive table. No wound, no struggle. His thermos is beside him, half empty. His heart medicine is on the table too.",
+       "title": "The body"
+      },
+      "id": "hs1-1",
+      "label": "The body",
+      "x": 50,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C6-E01",
+       "text": "Voss's thermos, half empty, still warm. The coffee inside smells wrong — sweet, chemical. The lab will need this first.",
+       "title": "The thermos"
+      },
+      "id": "hs1-2",
+      "label": "The thermos",
+      "x": 65,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "C6-E17",
+       "text": "Voss's heart medication bottle. The count is short by six tablets — a week's worth, taken at once, would stop a heart like his.",
+       "title": "Heart medication"
+      },
+      "id": "hs1-3",
+      "label": "Medication bottle",
+      "x": 35,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "C6-E07",
+       "text": "An annotated master list in Voss's hand: six case numbers, each with a note — 'envelope received,' 'file buried,' 'reopen.' The six cases of Season 1. He was connecting them.",
+       "title": "Voss's master list"
+      },
+      "id": "hs1-4",
+      "label": "The master list",
+      "x": 80,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A framed photograph: Voss and a young detective, 1998, outside the courthouse. The young detective is Elias Vane — the archivist. They were partners once.",
+       "title": "A photograph, 1998"
+      },
+      "id": "hs1-5",
+      "label": "Photograph, 1998",
+      "x": 20,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C6-E11",
+       "text": "Tucked into the desk drawer: a small black envelope, sealed with a silver anchor. ANCHOR-06. Addressed, in careful handwriting, to the detective on this case. To you.",
+       "title": "ANCHOR-06"
+      },
+      "id": "hs1-6",
+      "label": "The desk drawer",
+      "x": 70,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "The archive shelves stretch into the dark. Every cold case the Unit has ever touched lives here. Somebody has been reading them very carefully, for a very long time.",
+       "title": "The shelves"
+      },
+      "id": "hs1-7",
+      "label": "The shelves",
+      "x": 15,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "C6-E18",
+       "text": "The archive camera looped from 22:00 to 22:30 — the same thirty-minute trick as the aquarium in Case 5. Somebody in this city knows the same gaps.",
+       "title": "Camera gap"
+      },
+      "id": "hs1-8",
+      "label": "Camera log",
+      "x": 90,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "C6-E22",
+       "text": "Voss's diary, last entry, dated today: 'E. has been moving the pieces for years. Tonight I finally understand why. I am giving the Unit the file. Whatever happens, the truth is in the archive.'",
+       "title": "Voss's diary"
+      },
+      "id": "hs1-9",
+      "label": "Voss's diary",
+      "x": 45,
+      "y": 80
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A wax seal set on the archivist's desk — an anchor, in silver. It has been here for years. Nobody ever asked about it. Nobody ever should have.",
+       "title": "A wax seal set"
+      },
+      "id": "hs1-10",
+      "label": "The archivist's desk",
+      "x": 60,
+      "y": 20
+     }
+    ],
+    "img": "images/case6-location.jpg"
+   },
+   "title": "The Archive Room",
+   "tools": [
+    "flashlight"
+   ]
+  },
+  {
+   "briefing": "The lab, detective. The thermos, the medication, the seal wax. Chemistry and fingerprints do not care who the victim was — or who the killer is. Run the tests. Then read the envelope. It was written for you.",
+   "interrogations": [],
+   "locationId": "forensic-lab",
+   "mechanic": "Lab analysis — reagent spray, fingerprint, handwriting",
+   "n": 2,
+   "puzzles": [
+    {
+     "clue": "C6-E09",
+     "correct": 0,
+     "done": "The handwriting comparison is conclusive: the envelope notes were written by the same hand that writes the archive's catalog annotations — Elias Vane, the archivist.",
+     "hint": "Compare the loop of the 'g' and the slant of the 't'. The catalog and the envelopes were written by one hand.",
+     "id": "pz2-1",
+     "kind": "handwriting-match",
+     "options": [
+      "The envelope notes match Elias Vane's catalog annotations",
+      "The envelope notes match Corinne Hale's handwriting",
+      "The envelope notes match Captain Voss's handwriting",
+      "The handwriting is printed, not written"
+     ],
+     "title": "Match the handwriting",
+     "wrong": "The examiner disagrees. Look at the letter forms again — the 'g' is the giveaway.",
+     "correctText": "The envelope notes match Elias Vane's catalog annotations"
+    },
+    {
+     "clue": "C6-E08",
+     "correct": 0,
+     "done": "The wax seal on every envelope matches the stamp in the archivist's desk drawer — the same anchor, the same silver wax, the same hand that pressed it.",
+     "hint": "Measure the anchor's flukes. No two stamps wear alike.",
+     "id": "pz2-2",
+     "kind": "seal-match",
+     "options": [
+      "The anchor seal matches the stamp in the archivist's desk drawer",
+      "The anchor seal matches a commercial stamp",
+      "The anchor seal matches the courthouse seal",
+      "The seal is too damaged to compare"
+     ],
+     "title": "Match the wax seal",
+     "wrong": "Look closer at the wear pattern on the flukes. The match is there.",
+     "correctText": "The anchor seal matches the stamp in the archivist's desk drawer"
+    }
+   ],
+   "question": "Who wrote the anchor envelopes?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The handwriting matches his catalog annotations, the seal matches his desk stamp, and the paper is archive stock. The Anchorman works in this building.",
+      "id": "r2-1",
+      "options": [
+       "Elias Vane, the unit archivist",
+       "Corinne Hale",
+       "Captain Voss himself",
+       "An unknown outsider"
+      ],
+      "q": "Who wrote the anchor envelopes?",
+      "correctText": "Elias Vane, the unit archivist"
+     },
+     {
+      "correct": 0,
+      "explain": "The bottle is short by six tablets. The thermos carries the dissolved drug. Voss was poisoned with his own medicine.",
+      "id": "r2-2",
+      "options": [
+       "Six tablets — a lethal overdose for a heart like Voss's",
+       "One tablet — his normal dose",
+       "None — the bottle is full",
+       "Twelve tablets — a month's supply"
+      ],
+      "q": "How many tablets are missing from Voss's medication bottle?",
+      "correctText": "Six tablets — a lethal overdose for a heart like Voss's"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C6-E02",
+       "text": "The lab report: the thermos coffee contains six dissolved tablets of Voss's own heart medication — a lethal overdose for a man with his condition. He was poisoned with his own prescription.",
+       "title": "Lab report — the thermos"
+      },
+      "id": "hs2-1",
+      "label": "Lab report",
+      "x": 50,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C6-E08",
+       "text": "The wax seal on every anchor envelope matches the stamp in the archivist's desk drawer — the same anchor, the same silver wax, the same wear on the flukes.",
+       "title": "The seal match"
+      },
+      "id": "hs2-2",
+      "label": "Seal comparison",
+      "x": 30,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C6-E09",
+       "text": "The handwriting on the envelope notes matches Elias Vane's catalog annotations — the same looped 'g', the same slant. The envelopes were written by the archivist.",
+       "title": "Handwriting match"
+      },
+      "id": "hs2-3",
+      "label": "Handwriting comparison",
+      "x": 70,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C6-E10",
+       "text": "The envelopes are printed on archive-issue paper — the same stock the Unit uses for case files. An outsider could not have obtained it. The sender works in this building.",
+       "title": "Archive paper"
+      },
+      "id": "hs2-4",
+      "label": "Paper analysis",
+      "x": 85,
+      "y": 35
+     },
+     {
+      "finding": {
+       "clueId": "C6-E04",
+       "text": "A clean print lifted from the thermos lid, under the rim where the wipe missed. It does not belong to Voss. It belongs to Corinne Hale.",
+       "title": "Print on the thermos lid"
+      },
+      "id": "hs2-5",
+      "label": "Thermos lid print",
+      "x": 20,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "C6-E03",
+       "text": "The pharmacy record: Corinne Hale collected Voss's prescription refill three days ago — a refill he never asked for, signed for in her name.",
+       "title": "Pharmacy record"
+      },
+      "id": "hs2-6",
+      "label": "Pharmacy record",
+      "x": 60,
+      "y": 75
+     },
+     {
+      "finding": {
+       "clueId": "C6-E11",
+       "text": "ANCHOR-06, opened: 'You are reading this because Harlan is dead, and because I could not save him. I am the Anchorman. I sent the envelopes. I have spent twenty-eight years moving the pieces so the truth could find its own way home. The file he was carrying will tell you why.' — E.V.",
+       "title": "The confession letter"
+      },
+      "id": "hs2-7",
+      "label": "ANCHOR-06, opened",
+      "x": 40,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A microscope, a fume hood, a drying rack of prints. The lab is quiet. The evidence is not.",
+       "title": "The lab bench"
+      },
+      "id": "hs2-8",
+      "label": "The lab bench",
+      "x": 10,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C6-E24",
+       "text": "Vane's own ledger, found in the archive basement: a log of every envelope he ever sent — six in this season, and twenty-two more going back to 1998. Dates, cases, and one line each: what the envelope pointed at.",
+       "title": "The Anchorman's ledger"
+      },
+      "id": "hs2-9",
+      "label": "The Anchorman's ledger",
+      "x": 75,
+      "y": 85
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A rack of test tubes, labelled and waiting. One of them holds the answer to a question nobody has asked yet: who else touched the thermos?",
+       "title": "Sample rack"
+      },
+      "id": "hs2-10",
+      "label": "Sample rack",
+      "x": 90,
+      "y": 70
+     }
+    ],
+    "img": "images/case6-location.jpg"
+   },
+   "title": "The Forensic Lab",
+   "tools": [
+    "blood-reagent",
+    "fingerprint-powder",
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "The courthouse basement, and the people who were in Voss's life at the end. The sealed file is the motive — find who wanted it buried, and find who was in the archive that night. Cross-check every alibi against the sign-out log.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "I collected his refill because he asked me to. He was my father's oldest friend. I brought him his medicine. That is all I did.",
+       "confront": "C6-E03",
+       "id": "q3-c1",
+       "mood": "hard",
+       "requires": null,
+       "text": "You collected Voss's prescription refill three days ago. Why?",
+       "unlockClue": "C6-E03"
+      },
+      {
+       "answer": "I never touched his thermos. I never — ...I brought him coffee that night. I brought him coffee. That is all.",
+       "confront": "C6-E04",
+       "id": "q3-c2",
+       "mood": "hard",
+       "requires": null,
+       "text": "Your fingerprint is on the thermos lid.",
+       "unlockClue": "C6-E04"
+      },
+      {
+       "answer": "The file does not exist. Harlan was an old man chasing ghosts. There was no sealed file.",
+       "confront": "C6-E05",
+       "id": "q3-c3",
+       "mood": "hard",
+       "requires": null,
+       "text": "What was in the sealed file Voss was carrying?",
+       "unlockClue": "C6-E05"
+      }
+     ],
+     "suspectId": "lawyer-corinne"
+    },
+    {
+     "questions": [
+      {
+       "answer": "Yes. I sent the envelopes. Every one of them. I am the Anchorman. I did not kill Harlan — he was my partner, my friend, the only man who ever understood. Ask me anything else.",
+       "confront": null,
+       "id": "q3-e1",
+       "mood": "calm",
+       "requires": null,
+       "text": "Did you send the anchor envelopes?",
+       "unlockClue": "C6-E11"
+      },
+      {
+       "answer": "I was cataloguing in the basement. The cameras there have been broken for a year. I know how that looks. I was cataloguing.",
+       "confront": null,
+       "id": "q3-e2",
+       "mood": "calm",
+       "requires": null,
+       "text": "Where were you between 22:00 and 22:30?",
+       "unlockClue": null
+      },
+      {
+       "answer": "In 1998, evidence was buried in the Harbor Lights trial — a witness statement that would have freed an innocent man. I found the copy. I could not prove who buried it. So I spent twenty-eight years nudging the Unit to reopen the cases it touched. Six this season. Harlan found my list, and he was going to give the Unit the file.",
+       "confront": null,
+       "id": "q3-e3",
+       "mood": "calm",
+       "requires": null,
+       "text": "Why did you send the envelopes?",
+       "unlockClue": "C6-E20"
+      }
+     ],
+     "suspectId": "archivist-elias"
+    },
+    {
+     "questions": [
+      {
+       "answer": "We fought. I told him the Unit was eating him alive. He cut me out of his will the next week. I did not kill my father for a house I never wanted.",
+       "confront": "C6-E14",
+       "id": "q3-m1",
+       "mood": "firm",
+       "requires": null,
+       "text": "Your father cut you out of his will a week ago.",
+       "unlockClue": "C6-E14"
+      }
+     ],
+     "suspectId": "daughter-mara"
+    }
+   ],
+   "locationId": "courthouse-records",
+   "mechanic": "Interrogation — present evidence",
+   "n": 3,
+   "puzzles": [],
+   "question": "Who wanted the sealed file buried?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The pharmacy record shows she collected Voss's refill, and her print is on the thermos lid. No one else touched his medicine.",
+      "id": "r3-1",
+      "options": [
+       "Corinne Hale",
+       "Elias Vane",
+       "Mara Voss",
+       "Jo Malone"
+      ],
+      "q": "Who handled Voss's medication before he died?",
+      "correctText": "Corinne Hale"
+     },
+     {
+      "correct": 0,
+      "explain": "The sealed file held the exculpatory witness statement from the 1998 Harbor Lights trial — buried by the defence, never disclosed.",
+      "id": "r3-2",
+      "options": [
+       "A witness statement that would have freed an innocent man",
+       "Voss's retirement letter",
+       "A list of the Unit's cases",
+       "A parking fine"
+      ],
+      "q": "What was buried in the 1998 Harbor Lights trial?",
+      "correctText": "A witness statement that would have freed an innocent man"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C6-E05",
+       "text": "The sealed file, recovered from the courthouse vault: the 1998 Harbor Lights trial. Inside, a witness statement — exculpatory, never disclosed — that would have freed a man who died in prison.",
+       "title": "The sealed file"
+      },
+      "id": "hs3-1",
+      "label": "The sealed file",
+      "x": 50,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C6-E06",
+       "text": "The buried witness statement, in full: a dockworker saw the accused twenty miles away at the time of the murder. The defence never disclosed it. The man died in prison in 2009.",
+       "title": "The buried statement"
+      },
+      "id": "hs3-2",
+      "label": "Witness statement",
+      "x": 30,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C6-E21",
+       "text": "The 1998 trial transcript: Voss was the arresting officer. Hale was the defence attorney. Vane was the young detective who found the statement — and watched it vanish.",
+       "title": "Trial transcript"
+      },
+      "id": "hs3-3",
+      "label": "Trial transcript",
+      "x": 70,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C6-E13",
+       "text": "Voss's final call: 21:05, to Corinne Hale. Duration two minutes. His diary says he told her he was giving the Unit the file that night.",
+       "title": "Voss's final call"
+      },
+      "id": "hs3-4",
+      "label": "Phone records",
+      "x": 85,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C6-E19",
+       "text": "Hale's calendar, recovered from her office: 'Voss — 21:30, archive.' She had a meeting with him, in the archive, on the night he died. She denied ever going.",
+       "title": "Hale's calendar"
+      },
+      "id": "hs3-5",
+      "label": "Hale's calendar",
+      "x": 15,
+      "y": 45
+     },
+     {
+      "finding": {
+       "clueId": "C6-E12",
+       "text": "A car matching Hale's was seen near the Unit at 22:40 — after the camera gap, after Voss was already dead. She came back, or she never left.",
+       "title": "Car sighting"
+      },
+      "id": "hs3-6",
+      "label": "Car sighting",
+      "x": 60,
+      "y": 75
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Rows of boxes, each one a life. The basement smells of dust and old paper. The truth has been down here for twenty-eight years.",
+       "title": "The basement shelves"
+      },
+      "id": "hs3-7",
+      "label": "Basement shelves",
+      "x": 40,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": "C6-E23",
+       "text": "Hale's fingerprint on the sealed file's folder — she handled the file before Voss did. She knew what was in it, and she knew what it would cost her.",
+       "title": "Print on the file folder"
+      },
+      "id": "hs3-8",
+      "label": "File folder print",
+      "x": 90,
+      "y": 65
+     }
+    ],
+    "img": "images/case6-location.jpg"
+   },
+   "title": "The Courthouse Basement",
+   "tools": [
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "Voss's home, and the last people in his life. His daughter's fight, the informant's fear, the young detective's leak. Everyone had a reason to be angry with him. Only one had a reason to kill him — and only one touched his thermos.",
+   "interrogations": [
+    {
+     "questions": [
+      {
+       "answer": "Harlan was going to name me in new testimony. I was his informant for twenty years. I begged him not to. I did not kill him — he was the only one who ever protected me.",
+       "confront": "C6-E15",
+       "id": "q4-j1",
+       "mood": "firm",
+       "requires": null,
+       "text": "You left Voss a threatening note last week.",
+       "unlockClue": "C6-E15"
+      },
+      {
+       "answer": "I was at the shelter all night. Twenty people saw me. Ask them. I have never been in that archive room.",
+       "confront": null,
+       "id": "q4-j2",
+       "mood": "calm",
+       "requires": null,
+       "text": "Where were you on the night Voss died?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "informant-jo"
+    },
+    {
+     "questions": [
+      {
+       "answer": "I leaked a file to a journalist, yes. A closed case, nothing live. Voss found out and was furious. He was going to suspend me. I did not kill him for a suspension.",
+       "confront": "C6-E16",
+       "id": "q4-a1",
+       "mood": "firm",
+       "requires": null,
+       "text": "You leaked a Unit file to a journalist. Voss was about to suspend you.",
+       "unlockClue": "C6-E16"
+      },
+      {
+       "answer": "I called him at 20:40. He did not answer. The call log will show it. I never went to the archive that night.",
+       "confront": null,
+       "id": "q4-a2",
+       "mood": "calm",
+       "requires": null,
+       "text": "When did you last speak to Voss?",
+       "unlockClue": null
+      }
+     ],
+     "suspectId": "detective-ana"
+    }
+   ],
+   "locationId": "voss-home",
+   "mechanic": "Interrogation — present evidence",
+   "n": 4,
+   "puzzles": [
+    {
+     "clue": "C6-E04",
+     "correct": 0,
+     "done": "Lifted clean from the thermos lid, under the rim where the wipe missed: the print matches Corinne Hale — the woman who said she never touched his thermos.",
+     "hint": "The lid was wiped once, badly. Dust the underside of the rim — the print is where the wipe missed.",
+     "id": "pz4-1",
+     "kind": "fingerprint-lift",
+     "options": [
+      "The print matches Corinne Hale",
+      "The print matches Elias Vane",
+      "The print matches Mara Voss",
+      "The print is too smudged to read"
+     ],
+     "title": "Lift the print from the thermos lid",
+     "wrong": "The lab disagrees. Dust again — the underside of the rim, where the wipe missed.",
+     "correctText": "The print matches Corinne Hale"
+    }
+   ],
+   "question": "Who else was angry with Voss — and who acted on it?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The shelter log and twenty witnesses hold him for the whole night. His fear of being named was real — but he never left the shelter.",
+      "id": "r4-1",
+      "options": [
+       "Jo Malone was at the shelter all night, seen by twenty people",
+       "Jo Malone has no alibi",
+       "Jo Malone's note proves he killed Voss",
+       "Jo Malone was in the archive"
+      ],
+      "q": "What clears Jo Malone?",
+      "correctText": "Jo Malone was at the shelter all night, seen by twenty people"
+     },
+     {
+      "correct": 0,
+      "explain": "Ana's leak is a disciplinary matter, not a murder — and her 20:40 call went unanswered, placing her away from the archive.",
+      "id": "r4-2",
+      "options": [
+       "She leaked a file to a journalist and Voss was about to suspend her",
+       "She stole Voss's medication",
+       "She was in the archive at 22:00",
+       "She wrote the anchor envelopes"
+      ],
+      "q": "What was Det. Ana Reyes hiding?",
+      "correctText": "She leaked a file to a journalist and Voss was about to suspend her"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": "C6-E14",
+       "text": "A letter from Mara Voss to her father: 'You chose the Unit over your family. I am done.' And his reply, unsent: 'I am sorry. The will is changed. Forgive me.' The fight was real — and so was his regret.",
+       "title": "Mara's letter"
+      },
+      "id": "hs4-1",
+      "label": "Mara's letter",
+      "x": 30,
+      "y": 40
+     },
+     {
+      "finding": {
+       "clueId": "C6-E15",
+       "text": "A note from Jo Malone, left at Voss's door last week: 'Don't name me. I have a family now.' A threat, or a plea — and the shelter log puts him twenty miles away that night.",
+       "title": "Jo Malone's note"
+      },
+      "id": "hs4-2",
+      "label": "Jo's note",
+      "x": 60,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C6-E16",
+       "text": "A journalist's email to Det. Ana Reyes, thanking her for the leaked file. Voss found out and was about to suspend her — a career matter, not a murder.",
+       "title": "The leaked file"
+      },
+      "id": "hs4-3",
+      "label": "Journalist's email",
+      "x": 80,
+      "y": 35
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Voss's armchair, his reading lamp, his medals in a frame. The man lived for the Unit. The Unit was his family — and his family knew it.",
+       "title": "The living room"
+      },
+      "id": "hs4-4",
+      "label": "The living room",
+      "x": 15,
+      "y": 55
+     },
+     {
+      "finding": {
+       "clueId": "C6-E04",
+       "text": "The thermos, bagged and dusted. The lab has lifted a print from the underside of the rim — where the wipe missed.",
+       "title": "The thermos, bagged"
+      },
+      "id": "hs4-5",
+      "label": "Thermos evidence",
+      "x": 50,
+      "y": 75
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A shelf of old case files, bound in string. Voss kept copies of everything — including, somewhere in here, the first envelope.",
+       "title": "Voss's case files"
+      },
+      "id": "hs4-6",
+      "label": "Case files",
+      "x": 70,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "A window over the harbour. From here you can see the Unit's building, across the water, its archive light burning late.",
+       "title": "The window"
+      },
+      "id": "hs4-7",
+      "label": "The window",
+      "x": 90,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C6-E22",
+       "text": "Voss's diary, the final page: 'E. has been moving the pieces for years. Tonight I finally understand why. I am giving the Unit the file.'",
+       "title": "The diary, once more"
+      },
+      "id": "hs4-8",
+      "label": "The diary",
+      "x": 40,
+      "y": 85
+     }
+    ],
+    "img": "images/case6-location.jpg"
+   },
+   "title": "Voss's Home",
+   "tools": [
+    "fingerprint-powder",
+    "magnifier"
+   ]
+  },
+  {
+   "briefing": "Everything is on the board now: the thermos, the pharmacy record, the sealed file, the confession letter, the ledger of twenty-eight years. Link the evidence. The answer is twofold — who killed Harlan Voss, and who has been sending the envelopes. They are not the same person. That is the point.",
+   "interrogations": [],
+   "locationId": "unit-archive",
+   "mechanic": "Deduction board + final accusation",
+   "n": 5,
+   "puzzles": [],
+   "question": "Who killed Captain Voss — and who is the Anchorman?",
+   "report": {
+    "questions": [
+     {
+      "correct": 0,
+      "explain": "The handwriting, the seal, the archive paper, and his own confession letter all name him. He is the Anchorman — and he is not the killer.",
+      "id": "r5-1",
+      "options": [
+       "Elias Vane, the unit archivist",
+       "Corinne Hale",
+       "Captain Voss himself",
+       "Jo Malone"
+      ],
+      "q": "Who is the Anchorman?",
+      "correctText": "Elias Vane, the unit archivist"
+     },
+     {
+      "correct": 0,
+      "explain": "Her print on the file folder, the pharmacy record, and the print on the thermos lid form a single chain: she knew the file would end her career, and she stopped the man carrying it.",
+      "id": "r5-2",
+      "options": [
+       "She handled the sealed file before Voss did and knew what it would cost her",
+       "She was Voss's lawyer",
+       "She wrote the anchor envelopes",
+       "She was at the shelter"
+      ],
+      "q": "Why is Corinne Hale the killer — and not the Anchorman?",
+      "correctText": "She handled the sealed file before Voss did and knew what it would cost her"
+     }
+    ]
+   },
+   "scene": {
+    "hotspots": [
+     {
+      "finding": {
+       "clueId": null,
+       "text": "Every clue pinned. Every string waiting. Two answers, one board: the killer, and the man who spent twenty-eight years pointing the Unit at the truth.",
+       "title": "The deduction board"
+      },
+      "id": "hs5-1",
+      "label": "The board",
+      "x": 50,
+      "y": 50
+     },
+     {
+      "finding": {
+       "clueId": "C6-E11",
+       "text": "ANCHOR-06. 'I am the Anchorman. I sent the envelopes. I have spent twenty-eight years moving the pieces so the truth could find its own way home.'",
+       "title": "The confession letter"
+      },
+      "id": "hs5-2",
+      "label": "ANCHOR-06",
+      "x": 70,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C6-E24",
+       "text": "Twenty-eight years of envelopes. Twenty-eight cases. Six this season. One hand, one seal, one purpose: the truth, delivered slowly, because the truth delivered loudly got buried.",
+       "title": "The Anchorman's ledger"
+      },
+      "id": "hs5-3",
+      "label": "The ledger",
+      "x": 30,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C6-E05",
+       "text": "The sealed file. A witness statement, buried in 1998, that would have freed an innocent man. This is what Voss died carrying.",
+       "title": "The sealed file"
+      },
+      "id": "hs5-4",
+      "label": "The sealed file",
+      "x": 80,
+      "y": 30
+     },
+     {
+      "finding": {
+       "clueId": "C6-E04",
+       "text": "Her print, on his thermos, under the rim where the wipe missed. The last thing she touched before she left him to die.",
+       "title": "The thermos lid"
+      },
+      "id": "hs5-5",
+      "label": "The thermos lid",
+      "x": 20,
+      "y": 70
+     },
+     {
+      "finding": {
+       "clueId": "C6-E03",
+       "text": "She collected his refill. She signed for it. She brought him the coffee. The medicine that saved his life, turned into the thing that took it.",
+       "title": "The pharmacy record"
+      },
+      "id": "hs5-6",
+      "label": "Pharmacy record",
+      "x": 60,
+      "y": 20
+     },
+     {
+      "finding": {
+       "clueId": null,
+       "text": "The archive is quiet. The shelves hold every case the Unit has ever touched. Somewhere in here is the next envelope — already written, already sealed, already waiting.",
+       "title": "The shelves"
+      },
+      "id": "hs5-7",
+      "label": "The shelves",
+      "x": 10,
+      "y": 60
+     },
+     {
+      "finding": {
+       "clueId": "C6-E07",
+       "text": "Six cases, one list, one hand: Voss had connected the envelopes before he died. He was going to give the Unit the file — and the truth about the Anchorman.",
+       "title": "Voss's master list"
+      },
+      "id": "hs5-8",
+      "label": "The master list",
+      "x": 90,
+      "y": 60
+     }
+    ],
+    "img": "images/case6-location.jpg"
+   },
+   "title": "The Deduction Board",
+   "tools": []
+  }
+ ],
+ "closing": {
+  "lines": [
+   {
+    "img": "images/case6-location.jpg",
+    "text": "The courtroom is silent when the sealed file is read aloud. A man who died in prison in 2009 is declared innocent, twenty-eight years late. His daughter weeps. The city finally knows what was buried.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case6-location.jpg",
+    "text": "Elias Vane is not charged. He broke no law — he only ever pointed. He resigns from the archive, and on his last day he leaves one thing on the detective's desk: a small black envelope, sealed with a silver anchor. Inside, a single line: 'There are more files. You know where to look.'",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case6-location.jpg",
+    "text": "Season One is closed. The Anchorman is known. But the archive is deep, the shelves are long — and somewhere in the dark, the next envelope is already waiting.",
+    "voice": "narrator"
+   }
+  ]
+ },
+ "coldOpen": {
+  "lines": [
+   {
+    "img": "images/case6-location.jpg",
+    "text": "The Cold Case Unit was founded by one man: Captain Harlan Voss. Tonight he is dead in his own archive room — and the file he was carrying is gone.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case6-location.jpg",
+    "text": "Six cases. Six black envelopes. One silver anchor. The Unit has been following a stranger's breadcrumbs for a year, and tonight the trail ends here, in the dark between the shelves.",
+    "voice": "narrator"
+   },
+   {
+    "img": "images/case6-location.jpg",
+    "text": "You are the detective the Unit sends when the case is its own. Solve the murder. Then find the man who has been sending the envelopes — and ask him why.",
+    "voice": "narrator"
+   }
+  ],
+  "title": "Saturday, 07:12 — The Cold Case Unit"
+ },
+ "coopClueMap": {
+  "analyst": [
+   "C6-E02",
+   "C6-E03",
+   "C6-E04",
+   "C6-E08",
+   "C6-E09",
+   "C6-E10"
+  ],
+  "archivist": [
+   "C6-E05",
+   "C6-E06",
+   "C6-E07",
+   "C6-E11",
+   "C6-E20",
+   "C6-E21",
+   "C6-E22",
+   "C6-E24"
+  ],
+  "field": [
+   "C6-E01",
+   "C6-E12",
+   "C6-E14",
+   "C6-E15",
+   "C6-E16",
+   "C6-E17",
+   "C6-E18"
+  ],
+  "interrogator": [
+   "C6-E13",
+   "C6-E19",
+   "C6-E23"
+  ]
+ },
+ "evidence": [
+  {
+   "body": "Voss's thermos, half empty, still warm when found. The coffee inside smells wrong — sweet, chemical. The lab finds six dissolved tablets of his own heart medication.",
+   "chapter": 1,
+   "code": "C6-E01",
+   "id": "C6-E01",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "The murder weapon: Voss's own medication, dissolved in his coffee.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Voss's thermos"
+  },
+  {
+   "body": "The lab report: the thermos coffee contains six dissolved tablets of Voss's heart medication — a lethal overdose for a man with his condition. He was poisoned with his own prescription.",
+   "chapter": 2,
+   "code": "C6-E02",
+   "id": "C6-E02",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "Voss was murdered by overdose, not by a heart attack.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Lab report — overdose"
+  },
+  {
+   "body": "The pharmacy record: Corinne Hale collected Voss's prescription refill three days ago — a refill he never asked for, signed for in her name.",
+   "chapter": 2,
+   "code": "C6-E03",
+   "id": "C6-E03",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "Hale obtained the murder weapon herself, days in advance.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Pharmacy record — Hale's refill"
+  },
+  {
+   "body": "A clean print lifted from the thermos lid, under the rim where the wipe missed. It does not belong to Voss. It belongs to Corinne Hale — who said she never touched his thermos.",
+   "chapter": 2,
+   "code": "C6-E04",
+   "id": "C6-E04",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "Hale handled the thermos on the night Voss died.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Hale's fingerprint on the thermos lid"
+  },
+  {
+   "body": "The sealed file, recovered from the courthouse vault: the 1998 Harbor Lights trial. Inside, a witness statement — exculpatory, never disclosed — that would have freed a man who died in prison in 2009.",
+   "chapter": 3,
+   "code": "C6-E05",
+   "id": "C6-E05",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "The motive: Voss was about to deliver the file that would end Hale's career.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "The sealed file — Harbor Lights, 1998"
+  },
+  {
+   "body": "The buried witness statement, in full: a dockworker saw the accused twenty miles away at the time of the murder. The defence never disclosed it. The man died in prison.",
+   "chapter": 3,
+   "code": "C6-E06",
+   "id": "C6-E06",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "An innocent man died in prison because the statement was buried.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "The buried witness statement"
+  },
+  {
+   "body": "An annotated master list in Voss's hand: six case numbers, each with a note — 'envelope received,' 'file buried,' 'reopen.' The six cases of Season 1. He had connected the envelopes before he died.",
+   "chapter": 1,
+   "code": "C6-E07",
+   "id": "C6-E07",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "Voss knew the six cases were linked — and knew who was linking them.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Voss's master list of six cases"
+  },
+  {
+   "body": "The wax seal on every anchor envelope matches the stamp in the archivist's desk drawer — the same anchor, the same silver wax, the same wear on the flukes.",
+   "chapter": 2,
+   "code": "C6-E08",
+   "id": "C6-E08",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "The Anchorman's seal lives in the archivist's desk.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Wax seal match"
+  },
+  {
+   "body": "The handwriting on the envelope notes matches Elias Vane's catalog annotations — the same looped 'g', the same slant. The envelopes were written by the archivist.",
+   "chapter": 2,
+   "code": "C6-E09",
+   "id": "C6-E09",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "Vane wrote the envelope notes.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Handwriting match — Vane"
+  },
+  {
+   "body": "The envelopes are printed on archive-issue paper — the same stock the Unit uses for case files. An outsider could not have obtained it. The sender works in this building.",
+   "chapter": 2,
+   "code": "C6-E10",
+   "id": "C6-E10",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "The Anchorman works inside the Cold Case Unit.",
+   "redHerring": false,
+   "roleExclusive": "analyst",
+   "title": "Archive-issue paper"
+  },
+  {
+   "body": "ANCHOR-06, found in Voss's desk drawer and addressed to the detective: 'You are reading this because Harlan is dead, and because I could not save him. I am the Anchorman. I sent the envelopes. I have spent twenty-eight years moving the pieces so the truth could find its own way home. The file he was carrying will tell you why.' — E.V.",
+   "chapter": 1,
+   "code": "C6-E11",
+   "id": "C6-E11",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "The Anchorman confesses: Elias Vane sent every envelope.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "ANCHOR-06 — The confession letter"
+  },
+  {
+   "body": "A car matching Hale's was seen near the Unit at 22:40 — after the camera gap, after Voss was already dead. She came back, or she never left.",
+   "chapter": 3,
+   "code": "C6-E12",
+   "id": "C6-E12",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "Hale was at the Unit on the night of the murder.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Car sighting near the Unit"
+  },
+  {
+   "body": "Voss's final call: 21:05, to Corinne Hale. Duration two minutes. His diary says he told her he was giving the Unit the file that night — the call that signed his death warrant.",
+   "chapter": 3,
+   "code": "C6-E13",
+   "id": "C6-E13",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "Hale knew Voss was delivering the file that night.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Voss's final phone call"
+  },
+  {
+   "body": "A letter from Mara Voss to her father: 'You chose the Unit over your family. I am done.' And his reply, unsent: 'I am sorry. The will is changed. Forgive me.' The fight was real — and so was his regret.",
+   "chapter": 4,
+   "code": "C6-E14",
+   "id": "C6-E14",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "Mara's motive is grief, not murder — and Voss had already relented.",
+   "redHerring": true,
+   "roleExclusive": "field",
+   "title": "Mara's letter and the changed will"
+  },
+  {
+   "body": "A note from Jo Malone, left at Voss's door last week: 'Don't name me. I have a family now.' A threat, or a plea — and the shelter log puts him twenty miles away that night, seen by twenty people.",
+   "chapter": 4,
+   "code": "C6-E15",
+   "id": "C6-E15",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "Jo's fear was real; his opportunity was not.",
+   "redHerring": true,
+   "roleExclusive": "field",
+   "title": "Jo Malone's threatening note"
+  },
+  {
+   "body": "A journalist's email to Det. Ana Reyes, thanking her for the leaked file. Voss found out and was about to suspend her — a career matter, not a murder.",
+   "chapter": 4,
+   "code": "C6-E16",
+   "id": "C6-E16",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "Ana's secret is a leak, not a killing.",
+   "redHerring": true,
+   "roleExclusive": "field",
+   "title": "Ana's leaked file"
+  },
+  {
+   "body": "Voss's heart medication bottle. The count is short by six tablets — a week's worth, taken at once, would stop a heart like his.",
+   "chapter": 1,
+   "code": "C6-E17",
+   "id": "C6-E17",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "Six tablets were removed from the bottle — the exact dose found in the thermos.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Medication bottle — six short"
+  },
+  {
+   "body": "The archive camera looped from 22:00 to 22:30 — the same thirty-minute trick as the aquarium in Case 5. Somebody in this city knows the same gaps — and Hale's calendar puts her in the archive at 21:30.",
+   "chapter": 1,
+   "code": "C6-E18",
+   "id": "C6-E18",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "The murder was timed to a camera gap by someone who knew the system.",
+   "redHerring": false,
+   "roleExclusive": "field",
+   "title": "Camera gap 22:00–22:30"
+  },
+  {
+   "body": "Hale's calendar, recovered from her office: 'Voss — 21:30, archive.' She had a meeting with him, in the archive, on the night he died. She denied ever going.",
+   "chapter": 3,
+   "code": "C6-E19",
+   "id": "C6-E19",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "Hale was in the archive with Voss on the night he died — and lied about it.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Hale's calendar — 21:30, archive"
+  },
+  {
+   "body": "Vane's own account, given freely in interrogation: in 1998, evidence was buried in the Harbor Lights trial. He found the copy. He could not prove who buried it. So he spent twenty-eight years nudging the Unit to reopen the cases it touched.",
+   "chapter": 3,
+   "code": "C6-E20",
+   "id": "C6-E20",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "The Anchorman's motive: atonement for evidence he watched get buried.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Vane's confession — why he sent the envelopes"
+  },
+  {
+   "body": "The 1998 trial transcript: Voss was the arresting officer. Hale was the defence attorney. Vane was the young detective who found the statement — and watched it vanish.",
+   "chapter": 3,
+   "code": "C6-E21",
+   "id": "C6-E21",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "All three principals of this case were present at the original burial in 1998.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Trial transcript, 1998"
+  },
+  {
+   "body": "Voss's diary, last entry, dated today: 'E. has been moving the pieces for years. Tonight I finally understand why. I am giving the Unit the file. Whatever happens, the truth is in the archive.'",
+   "chapter": 1,
+   "code": "C6-E22",
+   "id": "C6-E22",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "Voss had identified the Anchorman — and decided to protect him by delivering the file himself.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "Voss's diary — 'E. has been moving the pieces'"
+  },
+  {
+   "body": "Hale's fingerprint on the sealed file's folder — she handled the file before Voss did. She knew what was in it, and she knew what it would cost her.",
+   "chapter": 3,
+   "code": "C6-E23",
+   "id": "C6-E23",
+   "img": "images/case6-location.jpg",
+   "key": false,
+   "proves": "Hale knew the file's contents before Voss delivered it.",
+   "redHerring": false,
+   "roleExclusive": "interrogator",
+   "title": "Hale's print on the file folder"
+  },
+  {
+   "body": "Vane's own ledger, found in the archive basement: a log of every envelope he ever sent — six in this season, and twenty-two more going back to 1998. Dates, cases, and one line each: what the envelope pointed at.",
+   "chapter": 2,
+   "code": "C6-E24",
+   "id": "C6-E24",
+   "img": "images/case6-location.jpg",
+   "key": true,
+   "proves": "The complete record of the Anchorman's work: twenty-eight envelopes, twenty-eight cases, one purpose.",
+   "redHerring": false,
+   "roleExclusive": "archivist",
+   "title": "The Anchorman's ledger"
+  }
+ ],
+ "free": true,
+ "hints": {
+  "answer": [
+   "Corinne Hale killed Voss: she collected his refill, her print is on the thermos lid, and the sealed file would have ended her career. The Anchorman is Elias Vane — the archivist — who sent the envelopes for twenty-eight years to undo the burial of evidence in 1998."
+  ],
+  "direction": [
+   "The medication is the weapon. Find who collected the refill and whose print is on the thermos lid.",
+   "The sealed file is the motive. Find what was buried in 1998 and who buried it.",
+   "The envelopes were written by someone in this building. Match the handwriting and the seal."
+  ],
+  "nudge": [
+   "The thermos is the weapon. Who brought the coffee?",
+   "The file Voss was carrying is the motive. Who wanted it buried?",
+   "The seal lives in this building. Whose desk holds it?"
+  ]
+ },
+ "id": "case6",
+ "locations": [
+  {
+   "desc": "Rows of shelves, a single desk lamp, and the body of the man who founded the Unit. The truth lives here — filed, sealed, and waiting.",
+   "id": "unit-archive",
+   "img": "images/case6-location.jpg",
+   "name": "Cold Case Unit — Archive Room"
+  },
+  {
+   "desc": "Microscopes, reagent bottles, and the print on a thermos lid. The lab does not care who the victim was.",
+   "id": "forensic-lab",
+   "img": "images/case6-location.jpg",
+   "name": "Forensic Lab"
+  },
+  {
+   "desc": "The courthouse basement, where the 1998 Harbor Lights file has slept for twenty-eight years. Dust, boxes, and one sealed folder.",
+   "id": "courthouse-records",
+   "img": "images/case6-location.jpg",
+   "name": "Courthouse Records Basement"
+  },
+  {
+   "desc": "Voss's armchair, his medals, his daughter's letter. The man lived for the Unit. The Unit was his family — and his family knew it.",
+   "id": "voss-home",
+   "img": "images/case6-location.jpg",
+   "name": "Captain Voss's Home"
+  }
+ ],
+ "minEvidenceToSolve": [
+  "C6-E03",
+  "C6-E04",
+  "C6-E05"
+ ],
+ "number": 6,
+ "palette": {
+  "accent": "#C0C0C8",
+  "bg": "#0B0B12",
+  "primary": "#8C8C9E"
+ },
+ "premise": "Captain Harlan Voss, founder of the Cold Case Unit, is found dead in his own archive room on a Saturday morning — no wound, no struggle, his thermos half empty beside him. The file he was carrying is gone. And in his desk drawer is the sixth black envelope sealed with a silver anchor — addressed to you. Six cases. Six envelopes. One hand behind them all. Solve the murder of the man who built the Unit, and you will finally learn who the Anchorman is — and why he has been moving the pieces for twenty-eight years.",
+ "season": 1,
+ "solve": {
+  "cleared": [
+   {
+    "name": "Elias Vane",
+    "text": "He is the Anchorman — he sent the envelopes for twenty-eight years — but he is not the killer: he was cataloguing in the basement, and his confession is freely given, with the ledger to prove it."
+   },
+   {
+    "name": "Mara Voss",
+    "text": "Her fight with her father was real, but Voss had already relented and changed the will back; she was at work, verified by three colleagues."
+   },
+   {
+    "name": "Jo Malone",
+    "text": "At the shelter all night, seen by twenty people; his note was a plea, not a threat."
+   },
+   {
+    "name": "Det. Ana Reyes",
+    "text": "Her leak was a disciplinary matter; her 20:40 call to Voss went unanswered, and she never entered the archive that night."
+   }
+  ],
+  "keyProof": "proof-refill-print-file",
+  "method": "method-overdose",
+  "motive": "motive-sealed-file",
+  "options": {
+   "keyProof": [
+    {
+     "id": "proof-refill-print-file",
+     "label": "Hale collected Voss's refill + her print on the thermos lid + the sealed file she wanted buried"
+    },
+    {
+     "id": "proof-letter",
+     "label": "Mara's letter and the changed will"
+    },
+    {
+     "id": "proof-note",
+     "label": "Jo Malone's threatening note"
+    }
+   ],
+   "method": [
+    {
+     "id": "method-overdose",
+     "label": "Six heart-medication tablets dissolved in his thermos coffee"
+    },
+    {
+     "id": "method-blunt",
+     "label": "Struck with an archive box"
+    },
+    {
+     "id": "method-strangle",
+     "label": "Strangled in the archive"
+    }
+   ],
+   "motive": [
+    {
+     "id": "motive-sealed-file",
+     "label": "Voss was about to deliver the sealed 1998 file proving Hale buried exculpatory evidence"
+    },
+    {
+     "id": "motive-will",
+     "label": "Inheritance — the changed will"
+    },
+    {
+     "id": "motive-naming",
+     "label": "Voss was about to name Jo Malone in new testimony"
+    },
+    {
+     "id": "motive-suspension",
+     "label": "Voss was about to suspend Ana Reyes"
+    }
+   ],
+   "who": [
+    {
+     "id": "lawyer-corinne",
+     "label": "Corinne Hale — Defence Attorney"
+    },
+    {
+     "id": "archivist-elias",
+     "label": "Elias Vane — Unit Archivist (the Anchorman)"
+    },
+    {
+     "id": "daughter-mara",
+     "label": "Mara Voss — Captain's Daughter"
+    },
+    {
+     "id": "informant-jo",
+     "label": "Jo 'Fingers' Malone — Former Informant"
+    },
+    {
+     "id": "detective-ana",
+     "label": "Det. Ana Reyes — Cold Case Unit"
+    }
+   ]
+  },
+  "solutionHTML": "<p>Corinne Hale killed Captain Harlan Voss on the night he was going to deliver the sealed file from the 1998 Harbor Lights trial — the file proving she, as defence attorney, had buried a witness statement that would have freed an innocent man. Voss called her at 21:05 to tell her he was giving the Unit the file that night. She met him in the archive at 21:30 — her own calendar says so — brought him coffee, and dissolved six tablets of his own heart medication in his thermos. She collected the refill herself three days earlier, signing for it in her own name. Her fingerprint, lifted from the underside of the thermos lid where her wipe missed, is the last link.</p><p>And the Anchorman is Elias Vane, the Unit's own archivist — Voss's partner from 1998, the young detective who found the buried witness statement and watched it vanish. He could not prove who buried it, so for twenty-eight years he nudged the Cold Case Unit to reopen the cases the burial had touched — one black envelope, one silver anchor seal, one line pointing at the buried thread. Six envelopes this season; twenty-two more before it. He did not kill Voss. He loved him. Voss had finally found Vane's list and was going to deliver the file himself — and Hale killed him to stop it.</p><p>No single clue convicts Hale. The print alone could be a coffee run. The pharmacy record alone proves a favour. The file alone proves a motive, not a murder. Together, they leave no one else: only Hale knew the file was coming that night, only Hale had the medicine, and only Hale's print is on the lid.</p>",
+  "who": "lawyer-corinne"
+ },
+ "subtitle": "The Unit's founder is dead in his own archive. The sixth envelope is addressed to you.",
+ "suspects": [
+  {
+   "age": 46,
+   "alibi": "Claims she was home alone from 21:00, preparing a brief. No witness. Her calendar says 'Voss — 21:30, archive,' and a car matching hers was seen near the Unit at 22:40.",
+   "id": "lawyer-corinne",
+   "img": "",
+   "lieList": [
+    "I never touched his thermos.",
+    "The file does not exist. Harlan was an old man chasing ghosts.",
+    "I was home all evening."
+   ],
+   "motive": "Voss was about to deliver the sealed 1998 file proving she buried exculpatory evidence — the end of her career, her reputation, and her freedom.",
+   "name": "Corinne Hale",
+   "pressure": 50,
+   "role": "Defence Attorney",
+   "secret": "In 1998, as defence attorney in the Harbor Lights trial, she buried a witness statement that would have freed her own client — because disclosing it would have exposed her firm's corruption. The man died in prison in 2009.",
+   "trust": 50,
+   "trustIntro": "Composed, precise, furious at the accusation. She denies the file exists — until the print on its folder is shown to her.",
+   "truthList": [
+    "I collected his refill because he asked me to. He was my father's oldest friend.",
+    "I brought him coffee that night.",
+    "I handled the sealed file. I knew what was in it."
+   ]
+  },
+  {
+   "age": 61,
+   "alibi": "Cataloguing in the archive basement from 21:00 to 23:00. The basement cameras have been broken for a year — no footage, but the catalog entries he made are timestamped through the night.",
+   "id": "archivist-elias",
+   "img": "",
+   "lieList": [
+    "I do not know who sends the envelopes.",
+    "I have never been in Voss's office.",
+    "I was not in the archive that night."
+   ],
+   "motive": "None against Voss — Voss was his partner, his friend, the only man who ever understood. His motive is the opposite: he spent twenty-eight years trying to undo what was buried.",
+   "name": "Elias Vane",
+   "pressure": 50,
+   "role": "Cold Case Unit Archivist — THE ANCHORMAN",
+   "secret": "He IS the Anchorman. For twenty-eight years he has sent black envelopes sealed with a silver anchor, nudging the Cold Case Unit to reopen the cases whose original files were compromised — six this season, twenty-two before it.",
+   "trust": 50,
+   "trustIntro": "Quiet, precise, unafraid. He admits everything the moment the handwriting is matched — and asks only that you read the ledger.",
+   "truthList": [
+    "Yes. I sent the envelopes. Every one of them.",
+    "I was cataloguing in the basement. The cameras there have been broken for a year.",
+    "In 1998, evidence was buried in the Harbor Lights trial. I found the copy. I could not prove who buried it."
+   ]
+  },
+  {
+   "age": 34,
+   "alibi": "At work until 23:00, verified by three colleagues and her office keycard. She never went near the Unit that night.",
+   "id": "daughter-mara",
+   "img": "",
+   "lieList": [
+    "My father and I were close.",
+    "I never fought with him about the Unit."
+   ],
+   "motive": "Inheritance — but Voss had already relented and changed the will back, and she never knew he had cut her out in the first place.",
+   "name": "Mara Voss",
+   "pressure": 50,
+   "role": "Captain's Daughter, Schoolteacher",
+   "secret": "She and her father fought bitterly the week before he died — she told him the Unit was eating him alive — and he cut her out of his will the next day. He changed it back before he died; she never knew.",
+   "trust": 50,
+   "trustIntro": "Grief first, anger second. She fought with him, and she will not pretend otherwise. But she was at work all night.",
+   "truthList": [
+    "We fought. I told him the Unit was eating him alive.",
+    "He cut me out of his will. I did not know he changed it back.",
+    "I was at work until eleven. Ask my colleagues."
+   ]
+  },
+  {
+   "age": 57,
+   "alibi": "At the shelter all night, seen by twenty people, logged in at 20:00 and out at 07:00. He never left the building.",
+   "id": "informant-jo",
+   "img": "",
+   "lieList": [
+    "I never threatened Voss.",
+    "I have not spoken to him in years."
+   ],
+   "motive": "Voss was going to name him in new testimony — but Jo's fear was of exposure, and he was twenty miles away, witnessed, all night.",
+   "name": "Jo 'Fingers' Malone",
+   "pressure": 50,
+   "role": "Former Informant",
+   "secret": "He was Voss's informant for twenty years, and Voss was about to name him in new testimony about the Harbor Lights trial. He begged Voss not to.",
+   "trust": 50,
+   "trustIntro": "Frightened, then relieved when the shelter log is read. His note was a plea, not a threat.",
+   "truthList": [
+    "Harlan was going to name me in new testimony. I begged him not to.",
+    "I was at the shelter all night. Twenty people saw me.",
+    "I have never been in that archive room."
+   ]
+  },
+  {
+   "age": 29,
+   "alibi": "Her 20:40 call to Voss went unanswered (call log confirms); she was at her flat from 21:00, on a video call with a friend until 23:00.",
+   "id": "detective-ana",
+   "img": "",
+   "lieList": [
+    "I have never leaked a file.",
+    "Voss and I had no problems."
+   ],
+   "motive": "Voss was about to suspend her for leaking a file — a career blow, not a reason to kill the man who recruited her.",
+   "name": "Det. Ana Reyes",
+   "pressure": 50,
+   "role": "Cold Case Unit Detective",
+   "secret": "She leaked a closed-case file to a journalist, and Voss found out. He was going to suspend her the next morning.",
+   "trust": 50,
+   "trustIntro": "Young, defensive, then honest. She leaked the file. She did not kill her captain.",
+   "truthList": [
+    "I leaked a file to a journalist, yes. A closed case, nothing live.",
+    "Voss found out and was furious. He was going to suspend me.",
+    "I called him at 20:40. He did not answer."
+   ]
+  }
+ ],
+ "timeline": [
+  {
+   "hot": false,
+   "label": "Ana Reyes calls Voss at 20:40; he does not answer",
+   "t": "20:40"
+  },
+  {
+   "hot": true,
+   "label": "Voss calls Hale: 'I am giving the Unit the file tonight'",
+   "t": "21:05"
+  },
+  {
+   "hot": false,
+   "label": "Vane cataloguing in the basement (timestamped entries)",
+   "t": "21:00"
+  },
+  {
+   "hot": true,
+   "label": "Hale meets Voss in the archive (her calendar: 21:30, archive)",
+   "t": "21:30"
+  },
+  {
+   "hot": true,
+   "label": "Hale dissolves six tablets in Voss's thermos coffee",
+   "t": "21:35"
+  },
+  {
+   "hot": true,
+   "label": "Archive cameras looped — the gap begins",
+   "t": "22:00"
+  },
+  {
+   "hot": true,
+   "label": "Voss collapses in the archive room",
+   "t": "22:15"
+  },
+  {
+   "hot": false,
+   "label": "Cameras return; Hale's car seen near the Unit",
+   "t": "22:40"
+  },
+  {
+   "hot": false,
+   "label": "Mara Voss leaves work",
+   "t": "23:00"
+  },
+  {
+   "hot": false,
+   "label": "Vane's final catalog entry of the night",
+   "t": "23:00"
+  },
+  {
+   "hot": false,
+   "label": "Cleaner finds Voss; the Unit is called",
+   "t": "07:12"
+  }
+ ],
+ "title": "The Anchorman",
+ "twists": [
+  {
+   "at": "60%",
+   "body": "Elias Vane admits it freely: he IS the Anchorman. He sent every envelope, for twenty-eight years. And his alibi for the murder is the weakest in the room — the basement cameras have been broken for a year. Is the man who pointed the Unit at the truth also the man who killed the one person who found him out?",
+   "caller": "Elias Vane",
+   "title": "The archivist confesses"
+  },
+  {
+   "at": "finale",
+   "body": "The sealed file is recovered from the courthouse vault — and it names the person who buried the witness statement in 1998: not Vane, not Voss, but the defence attorney herself, Corinne Hale. The Anchorman was never the villain. He was the only person in the building who spent twenty-eight years trying to undo a crime the law had already forgiven. And Voss died because he finally agreed with him.",
+   "title": "The file names the burier"
+  }
+ ]
+}
